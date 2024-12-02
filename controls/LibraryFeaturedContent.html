@@ -1,0 +1,82 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Template for the Hub control</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    
+    <script src="/Framework/corefx.js"></script>        
+    <script src="/Framework/imageLoader.js"></script>
+    
+    <script src="/Framework/serviceLocator.js"></script>
+    
+    <script src="/ViewModels/social/shareFactory.js"></script>
+    <script src="/ViewModels/social/shareSender.js"></script>
+    <script src="/ViewModels/social/shareHost.js"></script>
+
+    <script src="/Controls/thumbnailButton.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+    <script src="/Framework/launchAppAction.js"></script>
+</head>
+<body>
+    <div data-ent-templateid="noContentPaneDetailsTemplate" 
+         data-win-control="WinJS.Binding.Template">
+
+        <div class="iconButtonTwoLine"
+            data-win-control="MS.Entertainment.UI.Controls.IconButtonTwoLine"
+            data-win-bind="
+                winControl.icon: linkIcon;
+                winControl.subText: stringId;
+                winControl.action: linkAction;
+                winControl.stringId: linkStringId">
+        </div>
+    </div>
+
+    <div data-ent-templateid='noContentPaneTemplate' data-win-control="WinJS.Binding.Template">
+        
+        <div class="noContentPane removeFromDisplay" data-ent-member="noContentPane" >
+            <div class="noContentTextContainer">
+                <div class="noContentPaneTitle label text-panelHeader"
+                        data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{wrap: true}"
+                        data-win-bind="winControl.text: title">
+                </div>
+                <div class="noContentPaneDescription label"
+                        data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{wrap: true}"
+                        data-win-bind="winControl.text: description">
+                </div>
+
+                <div class="noContentPaneDetails" data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                        data-win-bind="winControl.dataSource: details;"
+                        data-win-options="{itemTemplate: 'Controls/LibraryFeaturedContent.html#noContentPaneDetailsTemplate'}"
+                        data-win-automationid="noContentPaneDetails">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-ent-templateid='libraryGamesContentTemplate' data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.UI.Controls.NoContentPane"
+             class="primaryPanelComponent gamesLibraryEmpty"
+             data-ent-member="_emptyContent"
+             data-win-bind="winControl.model: emptyLibraryModel"
+             data-win-automationid="gamesLibraryEmpty">
+        </div>
+        <div class="dashboardMyGames dashboardHubContent win-ui-light"
+             data-ent-member="_content"
+             data-win-automationid="libraryGamesContent"
+             data-win-control ="MS.Entertainment.UI.Controls.FlexibleItemsControl"
+             data-win-options="{propertyName: 'mediaType',
+                                containerStyle: 'dashboardSmallGridItemSquare',
+                                enableClickEvents: true,
+                                itemSize: MS.Entertainment.Utilities.cardItemSizeWithMargin,
+                                itemTemplates: [{ value: Microsoft.Entertainment.Queries.ObjectType.game, template: '/Components/Games/GamesSharedTemplates.html#dashboardGameTemplateNoGenre'}]}"
+             data-win-bind="winControl.dataSource: items;">
+       </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Compare Achievements Gallery</title>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+</head>
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="achievementsGalleryTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="achievementsGalleryControl" style="display: -ms-grid; -ms-grid-columns: 380px 1fr;">
+            
+           <div style="display: -ms-grid; -ms-grid-columns: 195px 195px;
+                       -ms-grid-row: 1; -ms-grid-column: 2; -ms-grid-row-align: end;">
+
+                <div class="listHeader label text-small"
+                    data-win-bind="textContent: model.primaryProfile.gamerTag;
+                                   showSecondary: showSecondary MS.Entertainment.Utilities.toggleClassName">
+                </div>
+
+                <div class="listHeader label text-small"
+                    data-win-bind="textContent: model.secondaryProfile.gamerTag;
+                                   hideFromDisplay: showSecondary MS.Entertainment.Utilities.toggleClassNameNegate;">
+                </div>
+
+            </div>
+
+            
+            <div class="achievementItemContainer"
+                style="-ms-grid-row: 2; -ms-grid-column: 1; -ms-grid-column-span: 2;"
+                data-win-control="MS.Entertainment.UI.Controls.ListViewModelGalleryControl"
+                data-ent-member="_galleryControl"
+                data-win-automationid="achievementsGallery"
+                data-win-options="{
+                    itemTemplate: 'Components/Immersive/Games/AchievementsGalleryControl.html#achievementsItemTemplate',
+                    layout: MS.Entertainment.UI.Controls.GalleryControl.Layout.list,
+                    forceInteractive: true,
+                    tap: MS.Entertainment.UI.Controls.GalleryControl.Tap.toggleSelect,
+                    selectionMode: MS.Entertainment.UI.Controls.GalleryControl.SelectionMode.single,
+                    invokeBehavior: MS.Entertainment.UI.Controls.GalleryControl.InvokeBehavior.none,
+                    focusFirstItemOnPageLoad: true }"
+                data-win-bind="winControl.dataSource: achievementsDataSource;
+                    showSecondary: listViewModel.showSecondary MS.Entertainment.Utilities.toggleClassName;
+                    winControl.listViewModel: listViewModel;">
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="achievementsItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="compareAchievementsItemContainer">
+
+            <div class="achievement"
+                data-win-bind="winControl.model: data;
+                    showSecondary: listViewModel.showSecondary MS.Entertainment.Utilities.toggleClassName"
+                data-win-control="MS.Entertainment.UI.Controls.AchievementDetails">
+            </div>
+
+            <div class="primary"
+                data-win-bind="winControl.model: data.primaryAchievement;
+                    showSecondary: listViewModel.showSecondary MS.Entertainment.Utilities.toggleClassName"
+                data-win-control="MS.Entertainment.UI.Controls.AchievementGamerDetailsSelector">
+            </div>
+
+            <div class="secondary"
+                data-win-bind="winControl.model: data.secondaryAchievement;
+                    winControl.visibility: listViewModel.showSecondary"
+                data-win-control="MS.Entertainment.UI.Controls.AchievementGamerDetailsSelector">
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid='achievementDetailsTemplate' data-win-control="WinJS.Binding.Template">
+        <div class="control-immersiveListViewItem">
+
+            <div class="part-imageContainer">
+                   <div data-win-bind="winControl.uri: model.imageUri"
+                        data-win-control="MS.Entertainment.Social.MiniProfileImage"
+                        data-win-options="{height: '60px', width: '60px'}"></div>
+            </div>
+            
+            <div class="part-textContainer">
+                <div class="part-title label text-listItem"
+                    data-win-bind="textContent: model.title">
+                </div>
+
+                <div class="part-subTitle text-metadata maxLines-two-xxSmall"
+                    data-win-bind="textContent: model.displayDescription">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="earnedAchievementGamerDetailsTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="compareAchievementGamerDetails">
+            
+            <div class="compareAchievementScore">
+                <div class="hiddenNarratorText label">
+                    <div data-win-bind="textContent: valueNarratorString"></div>
+                </div>
+
+                <div aria-hidden="true">
+                    <div class="icon inlineGlyphSmall label" 
+                        data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineGamerScore MS.Entertainment.Formatters.formatIcon">
+                    </div>
+
+                    <div class="compareAchievementsMetaDataContainer compareAchievementScoreText label"
+                        data-win-bind="textContent: value MS.Entertainment.Formatters.formatDecimalNumber">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="compareAchievementSecondaryText label"
+                data-win-bind="textContent: earnedStringDateOnly">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="unearnedAchievementGamerDetailsTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="compareAchievementGamerDetails">
+            <div class="hiddenNarratorText label">
+                    <div data-win-bind="textContent: valueNarratorString"></div>
+            </div>
+
+            <div aria-hidden="true">
+                <div class="icon inlineGlyphSmall label"
+                    data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineGamerScore MS.Entertainment.Formatters.formatIcon">
+                </div>
+
+                <div class="compareAchievementsMetaDataContainer compareAchievementSecondaryText label"
+                    data-win-bind="textContent: valueDisplay">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

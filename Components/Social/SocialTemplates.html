@@ -1,0 +1,261 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Social Templates</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/actionIdentifiers.js"></script>
+    <script src="/Framework/action.js"></script>
+    <script src="/Framework/navigateAction.js"></script>
+    <script src="/Framework/externalNavigateAction.js"></script>
+    <script src="/Framework/disabled.js"></script>
+
+    
+    <script src="/Controls/galleryGroupHeader.js"></script>
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/thumbnailButton.js"></script>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/Components/Social/achievementThumbnailButton.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../Animations/SocialAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+    <link rel="Stylesheet" type="text/css" href="../../styles/Galleries.css" />
+</head>
+
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="groupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <span data-win-bind="textContent: media.name"></span>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="achievementsByGameGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="achievementByGame">
+            <div class="achievementGameDetailsControl"
+                data-win-control="MS.Entertainment.Social.AchievementGameDetails"
+                data-win-bind="winControl.activity: data.media">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="achievementsByDateGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="achievementByDate">
+            <div class="achievementDateAbbreviationControl"
+                data-win-control="MS.Entertainment.UI.Controls.AchievementDateAbbreviationGroupHeader" 
+                data-win-automationid="dateAbbreviationGroupHeader"
+                data-win-bind="winControl.model: data"
+                data-ent-showanimation="galleryItemShow">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="achievementByGameItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="achievementThumbnailControl"
+             data-win-bind="unearnedAchievement: data.earnedString MS.Entertainment.Utilities.toggleClassNameOnEmptyString;">
+
+            <div class="achievementThumbnail cardThumbnailButton" data-ent-member="thumbnailButton" data-ent-event="click: clicked">
+
+                <div class="imageContainer" data-ent-member="imageContainer">
+                    <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                         data-win-bind="winControl.target: data.imageUri"
+                         data-win-options="{desiredImageSize: {width: 65, height: 65},
+                             enableDelayInitialization: true }"
+                         data-ent-showanimation="fadeIn"
+                         class="imageHolder" 
+                         width="65" height="65" />
+                </div>
+
+                
+                <div class="primarySecondaryTextContainer"
+                     style="-ms-grid-column: 4; -ms-grid-row: 2;">
+                    <div class="primaryText specificLineCount label text-cardTitle" data-win-bind="textContent: data.title"></div>
+                </div>
+
+                <div class="textContainer"
+                     style="-ms-grid-column: 2; -ms-grid-column-span: 3; -ms-grid-row: 3;"
+                     data-ent-member="textContainer">
+
+                    <div class="quaternaryText" style="display: -ms-grid; -ms-grid-columns: auto 10px 1fr;">
+                        <div class="gamerScoreContainer text-metadata" style="display: -ms-grid; -ms-grid-columns: auto 1fr; -ms-grid-column: 1;">
+                            <div class="hiddenNarratorText">
+                                <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                     data-win-bind="winControl.text: data.valueNarratorString"></div>
+                            </div>
+                            <div aria-hidden="true">
+                                <div class="icon inlineGlyphSmall"
+                                    data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                    data-win-options="{text: MS.Entertainment.UI.Icon.inlineGamerScore, autoResizeFont: false, disableLayoutPass: true}"></div>
+                                <div class="gamerScoreLabel label"
+                                    data-win-bind="textContent: data.valueDisplay"></div>
+                            </div>
+                        </div>
+
+                        <div class="label text-metadata"
+                             style="-ms-grid-column: 3; -ms-grid-row-align: center;"
+                             data-win-bind="textContent: data.earnedStringDateOnly"></div>
+                    </div>
+
+                    <div class="tertiaryText label specificLineCount text-metadata" data-win-bind="textContent: data.displayDescription"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="achievementByDateItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div>
+            <div class="achievementThumbnailControl" 
+                data-win-control="MS.Entertainment.Social.AchievementThumbnailButton" 
+                data-win-automationid="achievementItem"
+                data-win-bind="winControl.imagePrimaryUrl: data.imageUri;
+                    winControl.primaryText: data.title;
+                    winControl.secondaryText: data.media.name;
+                    winControl.tertiaryText: data.displayDescription;
+                    winControl.quaternaryText: data.earnedString;
+                    winControl.gamerScore: data.value;"
+                data-win-options="{containerWidth: '295px',
+                    containerHeight: '165px',
+                    imageContainerWidth: '70px',
+                    imageContainerHeight: '70px',
+                    imageWidth: '65px',
+                    imageHeight: '65px',
+                    primaryTextLineCount: 2,
+                    secondaryTextLineCount: 1,
+                    tertiaryTextLineCount: 3,
+                    quaternaryTextLineCount: 1 }"
+                data-ent-showanimation="galleryItemShow">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniAchievementByDateItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div>
+            <div data-win-control="MS.Entertainment.Social.MiniProfileActionImage" 
+                data-win-automationid="miniAchievementItem"
+                data-win-bind="winControl.uri: data.imageUri;
+                    winControl.actionParam.args.selectAchievement: data;"
+                data-ent-action="MS.Entertainment.UI.Actions.ActionIdentifiers.navigate"
+                data-win-options="{
+                    width: '55px',
+                    height: '55px',
+                    actionParam: { page: 'socialDetails', hub: 'socialAchievements', args: { selectAchievement: null } } }">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniActivityItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div>
+            <div class="miniActivityItemThumbnail"
+                data-win-control="MS.Entertainment.Social.MiniProfileActionImage" 
+                data-win-automationid="miniAchievementItem"
+                data-win-bind="winControl.uri: data.imageUri;
+                    winControl.actionParam.args.selectActivity: data;
+                    winControl.actionParam.args.userXuid: listViewModel.profile.userXuid;
+                    winControl.actionParam.args.userModel: listViewModel.profile.userModel;"
+                data-ent-action="MS.Entertainment.UI.Actions.ActionIdentifiers.navigate"
+                data-win-options="{
+                    width: '55px', 
+                    height: '75px',
+                    actionParam: { page: 'socialCompareActivitiesPage', args: { selectActivity: null, userXuid: null, userModel: null } } }">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="activityItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="activityThumbnail">
+            <div data-win-control="MS.Entertainment.UI.Controls.ThumbnailButton" 
+                data-win-automationid="socialSummaryItem"
+                data-win-bind="
+                    winControl.imagePrimaryUrl: imageUri;
+                    winControl.primaryText: media.name;
+                    winControl.doclick: itemClicked"
+                data-win-options="{isInPackage: true,
+                    imageWidth: '137px',
+                    imageHeight: '220px'}">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="friendsItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="miniProfileAvatar friendsItem acc-keyboardFocusTarget win-focusable"
+            data-win-control="MS.Entertainment.Social.MiniProfileAvatar"
+            role="button"
+            data-win-automationid="friendGalleryItem"
+            data-win-options="{
+                chatBubblePriority: MS.Entertainment.Social.chatBubblePriorityOrder.friend,
+                showBubble: true }"
+            data-win-bind="winControl.model: this">
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,649 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+.games .panel.gamesActivityPanel, .games .panel.gamesWindowsPanel, .games .panel.gamesXboxPanel, .games .panel.homeSpotlight
+{
+    margin-left: 0
+}
+.games .dashboard .homeSpotlight .panelFragmentWrapper
+{
+    width: auto;
+    display: -ms-grid;
+    -ms-grid-columns: 975px 80px
+}
+.games .dashboard .gamesWindowsPanel .panelFragmentWrapper
+{
+    width: auto;
+    display: -ms-grid;
+    -ms-grid-columns: 975px 80px
+}
+.games .gamesLibraryEmpty, .games .gamesLibraryEmpty .noContentPane
+{
+    width: 375px
+}
+@media screen and (-ms-high-contrast)
+{
+    .games .nowPlayingPopover
+    {
+        margin: -2px
+    }
+}
+.games .nowPlayingPopover .nowPlayingPlaylistGrid
+{
+    width: 0;
+    height: 0
+}
+.games .nowPlayingPopover .nowPlayingOverlay
+{
+    -ms-grid-rows: 145px 1fr auto auto
+}
+.games .homeHub .nowPlayingTileShowing .nowPlayingLocation
+{
+    visibility: hidden
+}
+.games .dashboardPanel.socialFriendsPanel
+{
+    width: 1145px
+}
+.games .dashboard .socialFriendsPanel .panelFragmentWrapper
+{
+    width: auto;
+    display: -ms-grid;
+    -ms-grid-columns: 1140px
+}
+.games .dashboard .homeSpotlight .panelFragmentLoading, .games .dashboard .gamesWindowsPanel .panelFragmentLoading, .games .dashboard .homeSpotlight .panelFragmentFailed, .games .dashboard .gamesWindowsPanel .panelFragmentFailed
+{
+    width: 975px
+}
+.games .dashboard .socialFriendsPanel .panelFragmentFailed, .games .dashboard .socialFriendsPanel .panelFragmentLoading
+{
+    width: 820px
+}
+@media screen and (max-height: 1079px)
+{
+    .games .dashboard .panelFragmentContainer
+    {
+        height: 505px
+    }
+}
+@media screen and (min-height: 1080px)
+{
+    .games .dashboard .homeSpotlight .panelFragmentWrapper, .games .dashboard .gamesWindowsPanel .panelFragmentWrapper
+    {
+        width: auto;
+        display: -ms-grid;
+        -ms-grid-columns: 750px 80px
+    }
+    .games .dashboard .homeSpotlight .panelFragmentLoading, .games .dashboard .gamesWindowsPanel .panelFragmentLoading, .games .dashboard .homeSpotlight .panelFragmentFailed, .games .dashboard .gamesWindowsPanel .panelFragmentFailed
+    {
+        width: 750px
+    }
+    .games .dashboard .panelFragmentContainer, .games .dashboard .socialFriendsPanel .panelFragmentContainer.panelFragmentFailed, .games .dashboard .socialFriendsPanel .panelFragmentContainer.panelFragmentLoading
+    {
+        height: 675px
+    }
+    .games .dashboard .socialFriendsPanel .panelFragmentContainer
+    {
+        height: 800px
+    }
+}
+.games .dashboard .gamesActivityPanel .panelFragmentWrapper, .games .dashboard .gamesActivityPanel .panelFragmentLoading, .games .dashboard .gamesXboxPanel .panelFragmentWrapper, .games .dashboard .gamesXboxPanel .panelFragmentLoading
+{
+    width: auto;
+    min-width: 295px
+}
+.games .dashboard .gamesActivityPanel .panelFragmentFailed, .games .dashboard .gamesXboxPanel .panelFragmentFailed
+{
+    width: calc(100% - 80px)
+}
+.games .dashboard .gamesActivityPanel .panelFragmentWrapper, .games .dashboard .gamesXboxPanel .panelFragmentWrapper
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 80px
+}
+.games .dashboardPanel>.panelFailed
+{
+    width: 445px;
+    left: 80px
+}
+html[dir=rtl] .games .dashboardPanel>.panelFailed
+{
+    right: 80px
+}
+.games .dashboardPanel.homeSpotlight>.panelFailed, .games .dashboardPanel.gamesWindowsPanel>.panelFailed
+{
+    height: 335px
+}
+.games .dashboardPanel.gamesWindowsPanel>.panelFailed
+{
+    top: 225px
+}
+@media screen and (min-height: 1080px)
+{
+    .games .dashboardPanel.gamesWindowsPanel>.panelFailed
+    {
+        top: 395px
+    }
+}
+.games .dashboardPanel.homeSpotlight .baseGrid2Column, .games .dashboardPanel.homeSpotlight .grid_1RowHeroWidescreenTall, .games .dashboardPanel.homeSpotlight .grid_3RowHeroTopWidescreen
+{
+    position: relative
+}
+.games .dashboardPanel.homeSpotlight .dashboardGridItemContent, .games .dashboardPanel.homeSpotlight .heroPrimaryContentContainer
+{
+    opacity: 0
+}
+@media screen and (min-height: 900px)
+{
+    .games .dashboardPanel.homeSpotlight .heroPrimaryContentContainer
+    {
+        -ms-grid-columns: 670px
+    }
+}
+.dashboardPanel.homeSpotlight .heroItemContainer
+{
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr
+}
+.games .dashboardGridItemContent .thumbnailButton
+{
+    width: 100%;
+    height: 100%;
+    opacity: 1
+}
+.games .dashboardGridItemContent .thumbnailButton .imageContainer
+{
+    width: 100%;
+    height: auto;
+    position: relative
+}
+.games .dashboardGridItemContent .thumbnailButton .imageHolder
+{
+    display: -ms-grid;
+    -ms-grid-columns: 100%;
+    -ms-grid-rows: 100%
+}
+.games .dashboardGridItemContent .thumbnailButton img
+{
+    -ms-grid-column-align: center
+}
+.games .dashboardGridItemContent.engaged .imageContainer
+{
+    display: -ms-grid;
+    width: 670px;
+    -ms-grid-columns: 100%;
+    -ms-grid-rows: 1fr
+}
+.games .dashboardGridItemContent.engaged .imageContainer .imageHolder
+{
+    height: 100%;
+    -ms-grid-column-align: center
+}
+.games .dashboardGridItemContent .thumbnailButton .content
+{
+    width: 100%;
+    position: relative
+}
+.games .gamerscoreProgress
+{
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: auto 5px 1fr
+}
+.games .achievements .gamerscoreProgress
+{
+    -ms-grid-row: 4
+}
+.games .gamerscoreProgress .icon
+{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1
+}
+.games .gamerscoreProgress .label
+{
+    -ms-grid-row: 1;
+    -ms-grid-column: 3
+}
+.games .engagePanel
+{
+    -ms-flex-align: stretch;
+    height: 100%
+}
+.games .engagePanel .horizontalFlow
+{
+    -ms-flex: 1 1 auto;
+    margin-left: 5px;
+    width: 100%
+}
+.games .gamesEngageIconContainer
+{
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-rows: 100%;
+    -ms-grid-columns: 100%;
+    transform: translateY(0);
+    transition-duration: 2000ms;
+    transition-property: transform
+}
+.gamesEngageIconContainer.animategamesEngageIconContainer
+{
+    transform: translateY(-165px)
+}
+.games .gamesEngageIconSpan
+{
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto auto 1fr;
+    -ms-grid-rows: 45px auto;
+    height: 100%
+}
+.games .gamesEngageIconSpan .win-commandimage
+{
+    width: auto
+}
+.games .engagePanel .horizontalFlow:first-child
+{
+    margin-left: 0
+}
+html[dir=rtl] .games .engagePanel .horizontalFlow
+{
+    margin-left: 0;
+    margin-right: 5px
+}
+html[dir=rtl] .games .engagePanel .horizontalFlow:first-child
+{
+    margin-right: 0
+}
+.games .engagePanel .actionTile
+{
+    width: auto
+}
+.games .engagePanel .actionTile button.iconButton.win-command
+{
+    width: 220px;
+    -ms-grid-rows: 100%;
+    overflow: hidden;
+    display: block
+}
+.games .engagePanel .actionTile
+{
+    background-color: transparent
+}
+.games .engagePanel .actionTile .textContainer.celebration
+{
+    display: -ms-grid;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    height: 165px;
+    -ms-grid-rows: 1fr auto auto 1fr;
+    -ms-grid-columns: 20px auto 20px;
+    margin-bottom: 8px;
+    transform: translateY(0);
+    transition-duration: 2000ms;
+    transition-property: transform
+}
+.engagePanel .actionTile .textContainer.celebration.animateCelebrationText
+{
+    transform: translateY(-165px)
+}
+.games .engagePanel .actionTile .textContainer.celebration .win-label.title
+{
+    max-height: 50px
+}
+.games .engagePanel .actionTile .textContainer.celebration .win-label.subTitle
+{
+    max-height: 65px
+}
+.games .engagePanel .actionTile .textContainer.celebration .win-label
+{
+    -ms-grid-column: 2;
+    text-align: left;
+    -ms-grid-row-span: 1;
+    margin: 0;
+    max-height: inherit;
+    max-width: 192px
+}
+html[dir=rtl] .games .engagePanel .actionTile .textContainer.celebration .win-label
+{
+    -ms-grid-column: 2;
+    text-align: right
+}
+.games .engagePanel .actionTile .textContainer.link
+{
+    display: -ms-grid;
+    -ms-grid-column: 1;
+    text-align: center;
+    -ms-grid-row: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    -ms-grid-rows: auto auto
+}
+.games .engagePanel .actionTile button.iconButton.win-command .win-label.subtitle
+{
+    -ms-grid-row: 2;
+    -ms-grid-row-align: start
+}
+.games .dashboardPanel .signedOutPanel
+{
+    position: relative
+}
+.collectionGamesGallery .emptyGalleryPanel .failedPanelMessage
+{
+    margin-bottom: 20px
+}
+.noGamesContentPane .noContentPaneDescription, .games .emptyFriendsListContainer .failedPanelMessage
+{
+    margin-bottom: 30px
+}
+.games .noContentTextContainer, .games .emptyFriendsListContainer .failedPanelTextContainer
+{
+    top: 0
+}
+.games .emptyFriendsListContainer .failedPanelTextContainer
+{
+    margin-top: 35px
+}
+.games .noContentPaneTitle
+{
+    margin-bottom: 0
+}
+.games .failedPanelContainer .failedPanelTitle
+{
+    margin-bottom: 8px
+}
+.games .failedPanelContainer .failedPanelIcon
+{
+    margin-bottom: 15px;
+    margin-left: -23px
+}
+html[dir=rtl] .games .failedPanelContainer .failedPanelIcon
+{
+    margin-right: -23px;
+    margin-left: 0
+}
+.games .dashboardPanel .signedOutPanel .failedPanelMessage
+{
+    margin-bottom: 35px
+}
+.games .dashboardPanel .signedOutPanel .failedPanelTextContainer
+{
+    width: calc(100% - 96px)
+}
+.games .dashboardPanel .failedPanelTextContainer .panelHeaderLink
+{
+    margin: 0 -8px
+}
+.games .dashboardPanel .failedPanelTextContainer .panelHeaderLink .actionLinkLabel
+{
+    max-width: 550px
+}
+.games .dashboardPanel .playGameAction:not(.removeFromDisplay)
+{
+    height: 100%;
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-rows: auto 1fr;
+    -ms-grid-columns: 100%;
+    padding: 0;
+    border: 0
+}
+.games .dashboardPanel .playGameAction .label
+{
+    margin: 25px;
+    text-align: left;
+    max-height: 80px
+}
+html[dir=rtl] .games .dashboardPanel .playGameAction .label
+{
+    text-align: right
+}
+.games .dashboardPanel .playGameAction img
+{
+    -ms-grid-row: 2;
+    -ms-grid-row-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 200px
+}
+.games .friendsPanel .iconButtonTwoLine .iconButton.win-command .textContainer, .games .emptyFriendsListContainer .iconButtonTwoLine .iconButton.win-command .textContainer
+{
+    -ms-grid-row-align: center
+}
+.games .gamesActivityPanel .noContentTextContainer
+{
+    margin-top: 30px
+}
+.games .dashboardPanel .playGameAction .failedPanelTextContainer .failedPanelTitle
+{
+    margin-bottom: 8px
+}
+.games .dashboardGridItemContent .arcContainer
+{
+    width: 30px;
+    height: 30px
+}
+.games .dashboardGridItemContent.engaged .content
+{
+    display: -ms-grid;
+    -ms-grid-columns: 100%;
+    -ms-grid-rows: 1fr 120px 40px
+}
+.games .dashboardGridItemContent.engaged .textContainer
+{
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+    -ms-grid-columns: 30px 1fr;
+    -ms-grid-rows: 40px 50px 40px
+}
+.overview .contextButtonContainer
+{
+    max-height: 150px
+}
+.games .achievements .secondaryUserProgressContainer .listHeader
+{
+    display: -ms-grid
+}
+.games .achievements .secondaryUserProgressContainer .panelHeaderLink
+{
+    padding: 0 8px 0 0;
+    width: 100%
+}
+.games .achievements .secondaryUserProgressContainer .icon
+{
+    margin-bottom: 0
+}
+html[dir=rtl] .games .achievements .secondaryUserProgressContainer .panelHeaderLink
+{
+    padding: 0 0 0 8px
+}
+.games .compareAchievements button:not([disabled]).link.panelHeaderLink:hover, .games .compareAchievements button:not([disabled]).link.panelHeaderLink:active, .games .compareAchievements button:not([disabled]).link.panelHeaderLink:active:hover
+{
+    opacity: .8
+}
+.userProgressContainers.compareAchievements
+{
+    -ms-grid-rows: 25px 106px 25px 106px 25px
+}
+.userProgressContainers.compareAchievements .userProgressContainer
+{
+    -ms-grid-rows: 120px
+}
+.userProgressContainers.compareAchievements .secondaryUserProgressContainer
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 4
+}
+.userProgressContainers.compareAchievements .progressContainer
+{
+    -ms-grid-columns: 95px 25px 1fr
+}
+.userProgressContainers.compareAchievements .label.progressTextPercentage {
+    margin-top: 0
+}
+.immersiveTwoColumn .inlineCaretButton.related
+{
+    margin-left: 10px
+}
+.games .immersiveDetailsContainer .gamesImmersiveRelatedItems
+{
+    -ms-flex-direction: row
+}
+html[dir=rtl] .immersiveTwoColumn .inlineCaretButton.related
+{
+    margin-left: 0;
+    margin-right: 10px
+}
+.games .overview .metaDataContainer .imageContainer
+{
+    max-height: 250px
+}
+.games .gamesImmersiveRelatedItems
+{
+    width: 807px
+}
+@media screen and (max-height: 800px)
+{
+    .games .gamesImmersiveRelatedItems .gamesRelatedImage .relatedHeroItemImage.tall
+    {
+        width: 175px
+    }
+    .games .gamesImmersiveRelatedItems
+    {
+        width: 570px
+    }
+    .modernExtrasOverview .win-template:nth-child(3) {
+        display: none
+    }
+}
+.games .achievementsGallery .achievementThumbnail .tertiaryText.label
+{
+    white-space: normal
+}
+.screenshotContainer
+{
+    height: 562px;
+    margin: 20px 20px 0 20px;
+    -ms-grid-row: 1
+}
+.screenshotLayoutBox
+{
+    display: -ms-flexbox;
+    -ms-flex-direction: column
+}
+.screenshotLocators
+{
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 8px;
+    white-space: nowrap;
+    display: -ms-flexbox;
+    -ms-flex-pack: start;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    width: 100%;
+    -ms-grid-row: 2
+}
+html[dir=rtl] .screenshotLocators
+{
+    margin-right: 20px;
+    margin-left: 0
+}
+.screenshotLocators .win-template
+{
+    margin-right: 5px;
+    width: 20px;
+    height: 4px;
+    background-color: gray
+}
+html[dir=rtl] .screenshotLocators .win-template
+{
+    margin-left: 5px;
+    margin-right: 0
+}
+.screenshotLocatorSelected
+{
+    margin-right: 5px;
+    width: 20px;
+    height: 4px
+}
+html[dir=rtl] .screenshotLocatorSelected
+{
+    margin-left: 5px;
+    margin-right: 0
+}
+.screenshotContainer .win-flipview
+{
+    height: 562px
+}
+.gameDetailsProgressContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 30px 1fr;
+    width: 100%
+}
+.gameDetailsLeaderboardRanking
+{
+    padding-bottom: 15px
+}
+.games .dashboardGridItemContent.engaged .gameProgress
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 10px 1fr;
+    width: 100%
+}
+.games .dashboardGridItemContent.engaged .gameProgress
+{
+    width: auto
+}
+.gameDetailsArcContainer
+{
+    width: 88px;
+    height: 88px;
+    padding-top: 30px
+}
+.popOverContentContainer .gameDetailsArcContainer
+{
+    width: 88px;
+    width: 102px;
+    height: 88px;
+    height: 102px;
+    padding-top: 30px;
+    padding-top: 7px
+}
+.progressContainer
+{
+    -ms-grid-column: 3
+}
+.achievements .progressContainer
+{
+    -ms-grid-column: 1
+}
+.popOverProgressContainer
+{
+    margin-bottom: 30px;
+    margin-top: 14px
+}
+.games .leaderboards .primaryLeaderboardHeader
+{
+    margin-bottom: 0
+}
+.games .modernExtraContent
+{
+    outline: none
+}
+.games .modernExtraTitleContainer
+{
+    max-width: 300px;
+    white-space: normal
+}
+.games .gamesRelatedImage img
+{
+    display: block
+}
+@media screen and (-ms-high-contrast)
+{
+    .arcContainer
+    {
+        display: none
+    }
+}

@@ -1,0 +1,44 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Volume Bar</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/utilities.js"></script>
+        
+        <script src="/Framework/shell.js"></script>   
+        <script src="/Framework/corefx.js"></script>
+
+        
+        <script src="/Controls/Overlay.js" ></script>
+        <script src="/Controls/TransportControls/TransportControls.js" ></script>
+</head>
+<body>
+    <div data-ent-templateid="volumeControl" class="volumeContainer win-ui-light" data-win-control="WinJS.Binding.Template">
+        <div class="volumeIcon acc-keyboardFocusTarget"
+            data-win-control="MS.Entertainment.UI.Controls.IconButton"
+            data-win-options="{
+                tabIndex: 0, 
+                isToggleButton: true, 
+                accessibilityStringId: String.id.IDS_TRANSPORT_CONTROLS_MUTE_LABEL }"
+            data-win-bind ="winControl.icon: iconType"
+            data-ent-event="click: onStateChange;"
+            data-ent-member="muteButton">
+        </div>
+    
+        <div class="volumeRange win-focusable">
+            <input id="volValue"
+                type="range" 
+                class="win-vertical acc-keyboardFocusTarget"
+                data-win-bind="
+                    value: volumeValue; 
+                    label: IDS_TRANSPORT_CONTROLS_VOLUME_SLIDER_LABEL MS.Entertainment.Framework.AccUtils.setAriaAttributeFromStaticStringId;
+                    mute: _volumeControllerService.mute MS.Entertainment.Utilities.toggleClassName"
+                data-ent-event="change: onValueChange"/>
+        </div>
+    </div>
+</body>
+</html>

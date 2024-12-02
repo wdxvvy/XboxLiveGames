@@ -1,0 +1,75 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/settings.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/social.css" />
+    <title>Send Message Dialog</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Controls/Label.js"></script>
+    <script src="/Components/Social/SendMessage.js"></script>
+    <script src="/Controls/LoadingControl.js"></script>
+    <script src="/Controls/EditBox.js"></script>
+</head>
+<body>
+    <div data-ent-templateid="SendMessageTemplate" data-win-control="WinJS.Binding.Template">
+            
+        <div class="control-sendMessage">
+            <div style="-ms-grid-row-span: 2;"
+                data-win-control="MS.Entertainment.Social.MiniProfileAvatar"
+                data-ent-member="_avatarControl"
+                data-win-options="{ showChatBubble: false,
+                                    alwaysAnimate: true,
+                                    avatarRenderMode: MS.Entertainment.UI.Controls.avatarRenderMode.play,
+                                    avatarDisplay: MS.Entertainment.UI.Controls.avatarDisplay.any }"
+                data-win-bind="winControl.model: sender">
+            </div>
+
+            <div class="messageBubblePointer"></div>
+
+            <div class="part-editBox"
+                data-win-control="MS.Entertainment.UI.Controls.EditBox"
+                data-ent-member="_messageEditBox"
+                data-win-automationid="messageEditBox"
+                data-win-options="{ editType: MS.Entertainment.UI.Controls.EditBox.EditTypes.multiLine,
+                                    maxLength: 250,
+                                    rows: 8,
+                                    watermarkStringId: String.id.IDS_SOCIAL_SEND_MESSAGE_POPOVER_WATERMARK,
+                                    autoFocus: true,
+                                    showRemainingChars: true }">
+            </div>
+
+            <div class="sendMessageErrorContainer hidden"
+                aria-live="polite"
+                style="-ms-grid-column: 3; -ms-grid-row: 2;"
+                data-win-bind="hidden: errorText MS.Entertainment.Utilities.toggleClassNameNegate;">
+                
+                <div class="icon inlineGlyph label"
+                    data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineError MS.Entertainment.Formatters.formatIcon;">
+                </div>
+                
+                <div class="label"
+                    style="-ms-grid-column: 3; -ms-grid-row-align: center;"
+                    data-win-bind="textContent: errorText;">
+                </div>
+            </div>
+
+            <div class="hidden"
+                aria-live="polite"
+                style="-ms-grid-column: 3; -ms-grid-row: 2;"
+                data-win-bind="hidden: messageSent MS.Entertainment.Utilities.toggleClassNameNegate;">
+                
+                <div class="label"
+                    data-win-bind="textContent: String.id.IDS_SOCIAL_SEND_MESSAGE_POPOVER_CONFIRM MS.Entertainment.Formatters.formatStringId;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

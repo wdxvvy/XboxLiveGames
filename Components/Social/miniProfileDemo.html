@@ -1,0 +1,68 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Games Demo Spotlight</title>
+    <script src="/Components/Social/SocialDemoModel.js"></script>
+    <script src="/Components/InlineDetails/GamesInlineDetailsDemo.js"></script>
+</head>
+<body>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniProfileAvatarDemoTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="container" data-ent-member="container">
+
+            
+            
+
+            <div class="grid_myProfileDemo demo">
+                
+                <div style="-ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-row-span: 2; -ms-grid-column-span: 2;" class="imageMyProfileBackgroundDemo"></div>
+                <div style="-ms-grid-column: 1; -ms-grid-row: 1;" class="imageMyProfileAvatarDemo"></div>
+                <div class="grid_myProfileContentDemo" onclick="MS.Entertainment.Games.GamesDemo.gamesSocialClicked()">
+                    
+                    <img class="imageMyProfileImageDemo" src="/Images/Demo/profile_image.png"/>
+                    
+                    <div class="myProfileTitleText primaryText text-xxLarge"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_SOCIAL_FIRST_LINE MS.Entertainment.Formatters.formatStringId"></div>
+                    <div class="myProfileContentText secondaryText text-medium"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_SOCIAL_SECOND_LINE MS.Entertainment.Formatters.formatStringId"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniProfileFriendsDemoTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="demoFriendsGrid">
+
+            <img class="friendsImage" src="/Images/Demo/three_avatars_large.png" style="width: 1065px; height: 700px;"/>
+    
+            
+            <div class="chatBubbleContainer"
+                 data-ent-member="chatBubble">
+             
+                <div class="chatBubble" style="-ms-grid-row: 1;">
+                    <div class="chatBubbleLabel chatBubblePrimaryLabel label text-small"
+                         style="-ms-grid-column: 2; -ms-grid-row: 2;"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_SOCIAL_TEXT_BUBBLE MS.Entertainment.Formatters.formatStringId">
+                    </div>
+                </div>
+                <div class="chatBubblePointer"
+                     style="-ms-grid-row: 2;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <title>WebHostDialog Control Template</title>
+        <script src="/Framework/debug.js"></script>
+
+        
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/utilities.js"></script>
+
+        
+        <script src="/Framework/shell.js"></script>   
+        <script src="/Framework/corefx.js"></script>
+
+        
+        <script src="/Controls/Overlay.js" ></script>
+        <script src="/Controls/Dialog.js" ></script>
+        <script src="/Controls/WebHostDialog.js" ></script>
+    </head>
+    <body>
+        <div data-ent-templateid="webHostDialogTemplate" data-win-control="WinJS.Binding.Template">
+            
+            <div class="overlayBackground"
+                 data-ent-member="overlayBackground"></div>
+
+            
+            <div class="overlayContainer dialogContainerBackground webHostOverlayContainer"
+                 data-ent-member="overlayContainer"
+                 data-win-bind="style.top: top; style.bottom: bottom" role="dialog" aria-label="">
+
+                <div class="dialogContainer"
+                     data-ent-member="dialogContainer"
+                     data-win-bind="style.left: left; style.right: right">
+
+                    
+                    <div class="overlayContent dialogContent webHostDialogContent"
+                         data-ent-member="overlayContent"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Immersive Achievements More</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Components/Immersive/Shared/MoreGalleryControl.js"></script>
+    <script src="/Components/Immersive/Games/LeaderboardsGalleryControl.js"></script>
+    <script src="/ViewModels/Social/leaderboardViewModel.js"></script>
+</head>
+<body>
+    <div class="leaderboards"
+        data-win-control="MS.Entertainment.UI.Controls.LeaderboardsGalleryControl"
+        data-win-bind="winControl.dataContext: viewModel;"
+        data-win-options="{
+            itemTemplate: 'Components/Immersive/Games/Leaderboards.html#immersiveLeaderboardItemTemplate',
+        }">
+    </div>
+
+</body>
+</html>

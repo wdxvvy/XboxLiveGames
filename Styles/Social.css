@@ -1,0 +1,2025 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+.compareActivitiesPanel
+{
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+.compareActivitiesGalleryContainer
+{
+    position: relative;
+    width: calc(100vw - 120px);
+    height: 100%;
+    margin-left: 120px;
+    margin-right: 0;
+    margin-top: 4px;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 335px 1fr
+}
+html[dir=rtl] .compareActivitiesGalleryContainer
+{
+    margin-left: 0;
+    margin-right: 120px
+}
+.compareActivitiesGalleryContainer .panelFragmentLoading, .compareActivitiesGalleryContainer .panelFragmentFailed, .compareActivitiesGalleryContainer .panelModifierContainer, .compareActivitiesGalleryContainer .win-surface
+{
+    margin-left: 0
+}
+html[dir=rtl] .compareActivitiesGalleryContainer .panelFragmentLoading, html[dir=rtl] .compareActivitiesGalleryContainer .panelFragmentFailed, html[dir=rtl] .compareActivitiesGalleryContainer .panelModifierContainer, html[dir=rtl] .compareActivitiesGalleryContainer .win-surface
+{
+    margin-right: 0
+}
+.compareHeaderContainer
+{
+    margin-top: 0
+}
+.compareActivitiesGallery
+{
+    position: relative;
+    width: 100%;
+    margin-top: -4px
+}
+.compareActivitiesGallery .emptyGalleryContainer
+{
+    margin: 4px 50px 0 5px;
+    height: 505px
+}
+html[dir=rtl] .compareActivitiesGallery .emptyGalleryContainer
+{
+    margin: 4px 5px 0 50px;
+    height: 505px
+}
+.compareGamesColumn
+{
+    display: -ms-grid;
+    -ms-grid-columns: 15px 1fr 15px;
+    -ms-grid-rows: 270px 115px 2px 2px 1px 115px
+}
+@media screen and (min-height: 1080px)
+{
+    .compareGamesColumn
+    {
+        -ms-grid-rows: 440px 115px 2px 2px 1px 115px
+    }
+}
+.compareHeaderContainer .compareGamesColumn
+{
+    -ms-grid-columns: 25px 1fr 25px
+}
+.compareGamesColumn hr
+{
+    margin: 0
+}
+.compareHeaderTextContainer
+{
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 25px 1fr 25px;
+    -ms-grid-rows: 20px 1fr auto 20px
+}
+.compareHeaderText
+{
+    -ms-grid-row-align: end
+}
+.compareGameThumbnailContainer
+{
+    display: -ms-grid;
+    -ms-grid-rows: 15px 1fr;
+    overflow: hidden
+}
+.compareGameThumbnail .primaryText
+{
+    margin-top: 8px
+}
+.compareGameThumbnail, .compareGameThumbnail .imageContainer
+{
+    width: 154px;
+    height: 211px
+}
+@media screen and (min-height: 1080px)
+{
+    .compareGameThumbnail, .compareGameThumbnail .imageContainer
+    {
+        width: 278px;
+        height: 381px
+    }
+}
+.compareGameThumbnail .imageContainer img
+{
+    width: 100%;
+    height: auto
+}
+.gamerGameTileContainer
+{
+    padding-top: 26px
+}
+.gamerHeaderTile
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 10px 1fr
+}
+.gamerHeaderTileImage, .socialCompareActivitiesPage .gamerHeaderTileImage img
+{
+    width: 64px;
+    height: 64px
+}
+.gamerGameTile
+{
+    overflow: hidden
+}
+.gamerGameTile.compareGalleryTile.compareGalleryDefaultText
+{
+    margin-top: 26px
+}
+.compareGamesColumn .icon, .compareGameMetaDataText.label, .compareGallerySecondaryMetaDataContainer .label, .gamerHeaderMetaData
+{
+    display: inline-block
+}
+.compareGamesColumn .compareGalleryTile:not(.gamerHeaderTile) .icon
+{
+    margin-left: -1px
+}
+.compareGameMetaDataText
+{
+    max-width: 134px
+}
+@media screen and (min-height: 1080px)
+{
+    .compareGameMetaDataText
+    {
+        max-width: 258px
+    }
+}
+.fractionProgressText
+{
+    direction: ltr
+}
+.gamerGameTile>.label, .gamerHeaderMetaData>.label
+{
+    margin-left: 4px
+}
+html[dir=rtl] .gamerGameTile>.label, html[dir=rtl] .gamerHeaderMetaData>.label
+{
+    margin-left: 0;
+    margin-right: 4px
+}
+.compareGallerySecondaryMetaDataContainer
+{
+    margin-top: -3px
+}
+.gamerGameTile.compareGalleryTile.compareGalleryDefaultText>div>div>.label:first-of-type, .gamerGameTile>.label, .gamerHeaderMetaData>.label
+{
+    margin-bottom: 6px
+}
+.snappedImmersiveDetailsLeaderBoardGallery
+{
+    width: calc(100vw - 40px);
+    height: 100%;
+    margin-right: 20px;
+    margin-left: 20px
+}
+.inlineDetailsLeaderBoardEntry
+{
+    float: left;
+    width: calc((100% / 2) - 1px);
+    height: 50px;
+    margin-top: 0;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 0;
+    padding-left: 20px;
+    text-align: left;
+    border: 0 solid;
+    cursor: pointer
+}
+.panel.socialFindFriendsPanel
+{
+    width: 244px
+}
+img.findFriendButtonImage
+{
+    width: 124px;
+    height: 124px
+}
+button.bigFindFriendButton
+{
+    box-sizing: content-box;
+    padding: 0;
+    width: 124px;
+    height: 124px;
+    position: relative;
+    top: 320px;
+    margin-left: 110px
+}
+html[dir=rtl] button.bigFindFriendButton
+{
+    margin-left: 0;
+    margin-right: 110px
+}
+html[dir=ltr] .findFriendIconButton
+{
+    float: right
+}
+html[dir=rtl] .findFriendIconButton
+{
+    float: right
+}
+html[dir=ltr] .findFriendLabel
+{
+    text-align: left
+}
+html[dir=rtl] .findFriendLabel, html[dir=rtl] .findFriendSearchBox
+{
+    text-align: right
+}
+.findFriendSearchProgressContainer
+{
+    position: relative;
+    display: -ms-grid;
+    -ms-grid-columns: auto auto auto;
+    float: right;
+    margin: 5% 0
+}
+.findFriendWaitCursor
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 7px 0 0
+}
+.findFriendSearchingLabel
+{
+    margin: 10% 0
+}
+.friendsGalleryContainer
+{
+    position: absolute;
+    width: 100vw;
+    margin: 0 2px;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+.avatarLoading
+{
+    background-size: 220px 441px;
+    background-image: url('/Images/avatar-body.png');
+    background-repeat: no-repeat
+}
+.dashboardHost .avatarLoading
+{
+    margin-top: 60px;
+    background-size: 220px 441px;
+    background-image: url('/Images/avatar-body.png');
+    background-repeat: no-repeat
+}
+html[dir=ltr] .avatarLoading
+{
+    background-position: 27px 116px
+}
+html[dir=ltr] .dashboardHost .avatarLoading
+{
+    background-position: 24px 275px
+}
+html[dir=ltr] .socialFriends .avatarLoading, html[dir=ltr] .socialProfile .avatarLoading, html[dir=ltr] .socialFriendsOfFriend .avatarLoading
+{
+    background-position: 27px 86px
+}
+html[dir=rtl] .avatarLoading
+{
+    background-position: 137px 116px
+}
+html[dir=rtl] .dashboardHost .avatarLoading
+{
+    background-position: 135px 275px
+}
+html[dir=rtl] .socialFriends .avatarLoading, html[dir=rtl] .socialProfile .avatarLoading, html[dir=rtl] .socialFriendsOfFriend .avatarLoading
+{
+    background-position: 137px 86px
+}
+@media screen and (max-height: 1079px)
+{
+    .dashboardHost .avatarLoading
+    {
+        margin-top: 0;
+        background-size: 220px 441px;
+        background-image: url('/Images/avatar-body.png');
+        background-repeat: no-repeat
+    }
+    html[dir=ltr] .dashboardHost .avatarLoading
+    {
+        background-position: 25px 126px
+    }
+    html[dir=ltr] .socialFriends .avatarLoading, html[dir=ltr] .socialProfile .avatarLoading, html[dir=ltr] .socialFriendsOfFriend .avatarLoading
+    {
+        background-position: 27px 126px
+    }
+    html[dir=rtl] .dashboardHost .avatarLoading
+    {
+        background-position: 135px 126px
+    }
+    html[dir=rtl] .socialFriends .avatarLoading, html[dir=rtl] .socialProfile .avatarLoading, html[dir=rtl] .socialFriendsOfFriend .avatarLoading
+    {
+        background-position: 137px 126px
+    }
+}
+.dashboardHost .friendsGalleryContainer
+{
+    position: static;
+    width: 1140px;
+    height: 100%;
+    overflow: visible
+}
+.friendsGallery
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 2px
+}
+.socialFriendsPanel .panelContainer
+{
+    overflow: hidden
+}
+html[dir=ltr] .dashboardHost .friendsGallery, html[dir=rtl] .dashboardHost .friendsGallery
+{
+    position: static;
+    padding: 0
+}
+.friendsPanelSignedIn
+{
+    height: 100%
+}
+.friendsGallery>.win-template
+{
+    display: inline-block;
+    overflow: hidden;
+    width: 380px;
+    height: 580px;
+    padding: 2px
+}
+.dashboardContent .friendsGallery>.win-template
+{
+    padding-right: 0;
+    padding-left: 0
+}
+.friendsGallery .miniProfileAvatar.friendsItem
+{
+    height: 100%
+}
+@media screen and (min-height: 1080px)
+{
+    .dashboardContent .friendsGallery>.win-template
+    {
+        height: inherit
+    }
+}
+.dashboardPanel .friendsGallery
+{
+    overflow: visible
+}
+.dashboardPanel .friendsGallery>.win-template
+{
+    overflow: visible
+}
+.friendGalleryEmpty
+{
+    height: calc(100% - 200px)
+}
+@media screen and (max-height: 1080px)
+{
+    .miniProfileHubStrip .panelFragmentWrapper
+    {
+        top: 0
+    }
+}
+.emptyFriendsListContainer.removeFromDisplay
+{
+    display: none
+}
+.emptyFriendsListContainer .miniProfilePanelControlsSignedOut
+{
+    display: -ms-grid;
+    -ms-grid-columns: 445px 615px;
+    -ms-grid-rows: 1fr;
+    width: 1060px
+}
+.emptyFriendsListContainer .miniProfilePanelControlsSignedOut .failedPanelTitle
+{
+    white-space: pre-wrap
+}
+.emptyFriendsListContainer .miniProfilePanelControlsSignedOut .win-template
+{
+    -ms-grid-column: 2
+}
+.emptyFriendsListContainer .miniProfilePanelControlsSignedOut .imageSignOutSocialHubFriendsWithShadow
+{
+    -ms-grid-column: 1;
+    -ms-grid-column-align: start;
+    -ms-grid-row-align: end
+}
+.emptyFriendsListContainer .miniProfilePanelControlsSignedOut .emptyFriendsListTitle
+{
+    -ms-grid-column: 1;
+    -ms-grid-column-align: start;
+    padding: 35px;
+    width: calc(100% - 70px);
+    max-height: 185px
+}
+.friendInlineDetailsContainer
+{
+    position: absolute;
+    width: 180px;
+    padding: 30px
+}
+.galleryHubStrip .friendInlineDetailsContainer, .dashboard .friendInlineDetailsContainer
+{
+    height: 418px
+}
+.friendsGallery .friendInlineDetailsContainer
+{
+    height: 445px
+}
+.friendInlineDetailsLoadingContainer
+{
+    position: absolute;
+    width: 230px;
+    height: 300px;
+    margin-top: 100px
+}
+.friendInlineDetailsGamerTag
+{
+    width: 100%
+}
+.friendInlineGamerScoreText
+{
+    margin-bottom: 10px
+}
+.popOver.friend .friendInlineGamerScoreText
+{
+    margin-bottom: 0
+}
+.popOver.friend .friendInlineGamerScoreText .icon.inlineGlyph
+{
+    margin-top: -6px
+}
+.friendInlineGamerScore, .friendInlineMembershipTypeDash, .friendInlineMembershipType
+{
+    float: left;
+    position: relative
+}
+.friendInlineMembershipTypeDash
+{
+    margin-left: 4px;
+    margin-right: 4px
+}
+.gamerScoreContainer>div
+{
+    display: -ms-inline-flexbox
+}
+.gamerScoreContainer .gamerScoreLabel
+{
+    padding-top: 1px
+}
+.gamerScoreContainer>div.removeFromDisplay
+{
+    display: none
+}
+.gamerScoreContainer .imageGamerScoreSmall
+{
+    margin-top: 2px;
+    margin-bottom: -2px
+}
+.gamerScoreContainer .inlineGlyphSmall
+{
+    opacity: 1
+}
+.profileDetailsGamerTag
+{
+    margin-left: -2px
+}
+.miniProfileAvatarContainer
+{
+    position: relative;
+    top: 50px
+}
+.miniProfileControlsContainer
+{
+    width: 165px
+}
+.miniFriendControlsShadow
+{
+    width: 220px;
+    height: 50px;
+    margin-left: -30px;
+    bottom: 0;
+    position: absolute
+}
+.miniProfileControlsShadow
+{
+    width: 185px;
+    height: 75px;
+    top: 515px;
+    position: absolute
+}
+.miniProfileAvatarAndBubbleContainer
+{
+    position: relative
+}
+.win-focused .miniProfileAvatarAndBubbleContainer
+{
+    opacity: .5
+}
+.miniProfileAvatarAndBubbleContainer .chatBubbleContainer
+{
+    z-index: 1;
+    position: absolute;
+    float: left;
+    width: 368px;
+    display: -ms-grid;
+    -ms-grid-columns: 100%;
+    -ms-grid-rows: auto auto
+}
+html[dir=rtl] .miniProfileAvatarAndBubbleContainer .chatBubbleContainer
+{
+    float: right
+}
+html[dir=ltr] .miniProfileAvatarContainer .chatBubbleContainer
+{
+    margin-left: 0
+}
+html[dir=rtl] .miniProfileAvatarContainer .chatBubbleContainer
+{
+    margin-right: 0
+}
+.dashboardHost .chatBubbleContainer
+{
+    top: 260px
+}
+.dashboardHost .avatarControlContainer
+{
+    position: relative;
+    top: 140px
+}
+.socialFriends .avatarControlContainer, .socialProfile .avatarControlContainer, .socialFriendsOfFriend .avatarControlContainer
+{
+    position: relative;
+    top: -110px
+}
+.poppedOverAvatarPosition, .poppedOverAvatarDashboardPosition, .poppedOverAvatarFriendProfilePosition
+{
+    position: absolute;
+    width: 270px
+}
+.poppedOverAvatarDashboardPosition .avatarControlContainer
+{
+    position: relative;
+    top: 338px
+}
+.socialFriends~.poppedOverAvatarPosition, .socialFriendsOfFriend~.poppedOverAvatarPosition
+{
+    position: relative;
+    top: 90px
+}
+.socialProfile~.poppedOverAvatarFriendProfilePosition
+{
+    position: relative;
+    top: 200px
+}
+@media screen and (max-height: 1079px)
+{
+    .dashboardHost .chatBubbleContainer, .socialProfile .chatBubbleContainer
+    {
+        top: 0
+    }
+    .dashboardHost .avatarControlContainer, .socialFriends .avatarControlContainer, .socialProfile .avatarControlContainer, .socialFriendsOfFriend .avatarControlContainer
+    {
+        top: -70px
+    }
+    .poppedOverAvatarDashboardPosition .avatarControlContainer
+    {
+        top: 103px
+    }
+    .socialFriends~.poppedOverAvatarPosition, .socialProfile~.poppedOverAvatarFriendProfilePosition, .socialFriendsOfFriend~.poppedOverAvatarPosition
+    {
+        top: 105px
+    }
+}
+@media screen and (min-height: 1200px)
+{
+    .poppedOverAvatarDashboardPosition .avatarControlContainer
+    {
+        top: 418px
+    }
+    .socialFriends~.poppedOverAvatarPosition, .socialFriendsOfFriend~.poppedOverAvatarPosition
+    {
+        top: 170px
+    }
+    .socialProfile~.poppedOverAvatarFriendProfilePosition
+    {
+        top: 280px
+    }
+}
+@media screen and (min-height: 1201px)
+{
+    .poppedOverAvatarDashboardPosition .avatarControlContainer
+    {
+        top: 518px
+    }
+    .socialFriends~.poppedOverAvatarPosition, .socialFriendsOfFriend~.poppedOverAvatarPosition
+    {
+        top: 270px
+    }
+    .socialProfile~.poppedOverAvatarFriendProfilePosition
+    {
+        top: 380px
+    }
+}
+.leftColumn .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+{
+    position: relative;
+    top: -70px
+}
+@media screen and (min-height: 1080px)
+{
+    .leftColumn .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+    {
+        top: 140px
+    }
+}
+.leftColumn.gamercardAvatar .miniProfileAvatarAndBubbleContainer .avatarControlContainer, .leftColumn.userMessageAvatar .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+{
+    position: relative
+}
+.leftColumn.gamercardAvatar .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+{
+    top: -50px
+}
+@media screen and (min-height: 1080px)
+{
+    .root~.profilePopOverOverlay .leftColumn.gamercardAvatar .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+    {
+        top: -110px
+    }
+}
+.miniSocialGalleryContainer
+{
+    position: relative;
+    width: 100%;
+    min-height: 42px
+}
+.miniSocialGallery
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%
+}
+.miniSocialGallery .listFlowLeft
+{
+    position: relative;
+    width: 55px;
+    height: 55px;
+    overflow: hidden
+}
+.friendInlineDetailsContainer .miniSocialGallery .listFlowLeft
+{
+    width: 55px;
+    height: 75px
+}
+.miniSocialGallery .listFlowLeft>div
+{
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+.miniSocialGalleryLabel
+{
+    padding: 10px 14px 10px 14px;
+    position: absolute;
+    bottom: 0
+}
+.miniSocialGalleryLabelOnly
+{
+    position: relative
+}
+.miniSocialGalleryOverlay
+{
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+.miniActivityItemThumbnail
+{
+    width: 50px;
+    height: 70px
+}
+.miniProfileControl
+{
+    width: 100%;
+    min-height: 42px;
+    margin: 3px 0 -2px 0;
+    padding: 8px 12px 9px 12px
+}
+.miniProfileControlPosition
+{
+    text-align: left
+}
+.miniProfileGamerScore
+{
+    position: relative
+}
+.miniProfileGamerScore div
+{
+    float: right;
+    position: relative;
+    display: inline-block
+}
+.miniProfileGamerScore .imageGamerScore
+{
+    top: 6px
+}
+.editProfileErrorContainer, .sendMessageErrorContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 6px 1fr
+}
+.editProfileErrorContainer .label, .sendMessageErrorContainer .label
+{
+    white-space: normal
+}
+.editProfileEditBoxLabel
+{
+    padding-top: 20px
+}
+.editProfileEditBox .editInput
+{
+    width: calc(100% - 20px)
+}
+.editProfileEditBox .editMultiline
+{
+    width: calc(100% - 30px);
+    padding-left: 5px;
+    padding-right: 5px
+}
+.beaconControlContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 6px 1fr 2px auto;
+    -ms-grid-rows: auto auto auto 10px 1fr
+}
+.beaconControlContainer button, .popOver.game .bodyContainer .bodyContent.beaconLink
+{
+    padding: 2px;
+    margin: 0
+}
+.beaconButtonContainer .inlineDetailsOverviewActionButtonGame
+{
+    width: 80px;
+    height: 30px;
+    vertical-align: central;
+    margin-bottom: 20px;
+    padding-top: 10px
+}
+.beaconControlContainer .icon, .beaconControlContainer .errorMessage
+{
+    margin-top: 14px
+}
+.beaconButtonContainer
+{
+    margin-bottom: 4px
+}
+.beaconButton
+{
+    -ms-flex-preferred-size: 50%
+}
+.beaconComment
+{
+    text-align: left;
+    padding: 4px
+}
+html[dir=rtl] .beaconComment
+{
+    text-align: right
+}
+.popOver.game .bodyContainer .bodyContent.beaconComment
+{
+    margin-top: 0;
+    outline: none
+}
+.beaconCommentText
+{
+    display: block;
+    -ms-grid-row: 2;
+    margin-top: 3px
+}
+.beaconCommentEditTitle
+{
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 10px auto
+}
+.beaconTitle
+{
+    -ms-grid-row-align: end;
+    padding: 4px
+}
+.notificationContainer .beaconTitle
+{
+    padding: 2px
+}
+.beaconComment, .beaconCommentEditBox .editInput
+{
+    width: 100%
+}
+.beaconCommentEditBox
+{
+    margin-top: 13px
+}
+.beaconLink
+{
+    text-align: left
+}
+html[dir=rtl] .beaconLink
+{
+    text-align: right
+}
+button.imageActionLink, button:hover.imageActionLink, button:hover:active.imageActionLink, button:hover:focus.imageActionLink, button:hover:focus:active.imageActionLink, button:focus:active.imageActionLink .beaconControlContainer button, .beaconControlContainer button:hover, .beaconControlContainer button:active, .beaconControlContainer button:active:hover, .notificationContainer .beaconControlContainer .label, .notificationContainer .beaconControlContainer .label:hover, .notificationContainer .beaconControlContainer .label:active, .notificationContainer .beaconControlContainer .label:active:hover, .beaconControlContainer button.win-command.iconButton, .beaconControlContainer button.win-command.iconButton:hover, .beaconControlContainer button.win-command.iconButton:active, .beaconControlContainer button.win-command.iconButton:active:hover
+{
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    outline-color: transparent
+}
+.showKeyboardFocus button:focus.imageActionLink, .showKeyboardFocus .beaconControlContainer button:focus, .showKeyboardFocus .beaconControlContainer button:hover:focus, .showKeyboardFocus .beaconControlContainer button:active:hover:focus, .showKeyboardFocus .beaconControlContainer button:-ms-keyboard-active, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:hover:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:active:hover:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:-ms-keyboard-active, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:focus, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:hover:focus, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:active:hover:focus, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:-ms-keyboard-active
+{
+    border-style: solid;
+    border-width: 2px;
+    outline-color: transparent
+}
+.miniProfileHubStrip .hubStripScroller
+{
+    overflow-x: visible
+}
+.miniProfileHubStrip .hubStripScroller .hub:nth-child(2)
+{
+    display: none
+}
+.miniProfileHubStrip .panelFragmentLoading, .miniProfileHubStrip .panelFragmentFailed
+{
+    width: 400px
+}
+.miniProfileHubStrip.galleryHubStrip .panelModifierContainer
+{
+    height: 0
+}
+.profileFriendsPanelContainer
+{
+    float: left;
+    margin-left: 200px
+}
+.miniFriendsPanelContainer.profileFriendsPanelContainer .friendsPanel, .profileFriendsPanelContainer .friendsGalleryContainer
+{
+    height: auto;
+    width: auto;
+    overflow-x: hidden
+}
+.miniProfileTopFriendsControl
+{
+    width: 1280px
+}
+.miniProfileTopFriendsContainer
+{
+    position: relative;
+    top: 50px;
+    margin-left: -30px
+}
+html[dir=rtl] .miniProfileTopFriendsContainer
+{
+    margin-left: 700px
+}
+.socialProfileFriendsPanel .miniProfileTopFriendsContainer
+{
+    top: 0
+}
+.socialProfileFriendsPanel .panelTitle
+{
+    margin-top: 60px;
+    margin-left: 120px
+}
+html[dir=rtl] .socialProfileFriendsPanel .panelTitle
+{
+    margin-left: 0;
+    margin-right: 120px
+}
+.miniProfileTopFriendsContainer>.friendInlineDetailsContainer
+{
+    padding: 30px 30px 30px 30px
+}
+.friendsPanel
+{
+    width: 340px;
+    height: 445px
+}
+.dashboardHost .friendsPanel
+{
+    width: auto;
+    height: 100%
+}
+.galleryHubStrip .friendsPanel
+{
+    width: 1000px
+}
+.friendsPanelFriendsSignedOut
+{
+    position: absolute;
+    top: 60px;
+    margin: 0 75px
+}
+@media screen and (min-height: 1080px)
+{
+    .friendsPanelFriendsSignedOut
+    {
+        position: absolute;
+        top: 220px
+    }
+}
+.miniProfileDetailsPanel
+{
+    width: 730px;
+    height: 100%
+}
+.dashboardPanel .miniProfilePanelContainer .popOver.friend, .socialProfileAvatar .miniProfilePanelContainer .popOver.friend
+{
+    height: 505px;
+    padding-top: 4px
+}
+.popOver.friend .bodyContainer
+{
+    margin-top: -12px
+}
+.miniProfilePanelContainer
+{
+    display: -ms-grid
+}
+@media screen and (min-height: 1080px)
+{
+    .dashboard .miniProfilePanelContainer
+    {
+        position: relative
+    }
+    .dashboard .miniProfilePanelContainer .popOver.friend
+    {
+        height: 675px
+    }
+}
+.miniProfilePanelControlsSignedOut
+{
+    position: absolute;
+    width: 730px;
+    height: 505px
+}
+@media screen and (min-height: 900px)
+{
+    .miniProfilePanelControlsSignedOut
+    {
+        height: 675px
+    }
+}
+.socialFriendsGallery .miniProfilePanelControlsSignedOut, .socialPendingFriendsGallery .miniProfilePanelControlsSignedOut
+{
+    position: relative;
+    margin-left: 120px
+}
+html[dir=rtl] .socialFriendsGallery .miniProfilePanelControlsSignedOut, html[dir=rtl] .socialPendingFriendsGallery .miniProfilePanelControlsSignedOut
+{
+    margin-left: 0;
+    margin-right: 120px
+}
+.miniProfileDetailsPanel.removeFromDisplay
+{
+    display: none
+}
+.chatBubble
+{
+    width: auto;
+    min-width: 240px;
+    height: 80px;
+    -ms-grid-column-align: center;
+    display: -ms-grid;
+    -ms-grid-columns: 10px auto 10px auto 20px;
+    -ms-grid-rows: 10px 1fr 1px 34px 10px
+}
+.chatBubblePointer
+{
+    -ms-grid-column-align: center;
+    border-style: solid;
+    border-width: 6px;
+    border-right-color: transparent;
+    border-bottom-color: transparent
+}
+html[dir=rtl] .chatBubblePointer
+{
+    border-left-color: transparent
+}
+.chatBubbleLabel
+{
+    max-height: 40px;
+    overflow: hidden
+}
+.chatBubbleLabel
+{
+    min-width: 200px;
+    max-width: 268px
+}
+.chatBubbleSecondaryLabel
+{
+    white-space: normal
+}
+.achievementPageContainer
+{
+    position: relative;
+    height: calc(100% - 100px)
+}
+.achievementsGallery
+{
+    position: relative;
+    width: 100vw;
+    height: 100%
+}
+.achievementThumbnail .gamerScoreLabel
+{
+    float: left;
+    margin-right: 1px
+}
+.achievementThumbnail .imageGamerScoreSmall
+{
+    float: left;
+    margin-top: 1px;
+    margin-right: 6px
+}
+.achievementsGallery .achievementByDate
+{
+    width: 165px;
+    height: 165px;
+    padding: 0
+}
+.achievementsGallery .achievementByGame
+{
+    width: 240px;
+    height: 505px;
+    padding: 0
+}
+.achievementsGallery .win-groupheader, html[dir=rtl] .achievementsGallery .win-groupheader
+{
+    padding: 0
+}
+.achievementsGallery .win-surface
+{
+    margin-top: 4px
+}
+@media screen and (min-height: 1080px)
+{
+    .achievementsGallery .achievementByGame
+    {
+        height: 675px
+    }
+}
+.achievementsGallery .achievementByDate .achievementDateAbbreviationControl, .achievementsGallery .achievementByGame .achievementGameDetailsControl
+{
+    width: 100%;
+    height: 100%
+}
+.achievementsGallery .achievementByGame .achievementGameDetailsControl .headerContainer
+{
+    height: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 20px 1fr 20px;
+    -ms-grid-rows: 20px auto 1fr 18px
+}
+.achievementsGallery .achievementByDate .dateAbbreviationGroupHeader
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: -ms-grid;
+    -ms-grid-columns: 15px 1fr 15px;
+    -ms-grid-rows: 15px 1fr 15px
+}
+.dateAbbreviationGroupHeader .groupHeaderMonth, .dateAbbreviationGroupHeader .groupHeaderMonthDate, .dateAbbreviationGroupHeader .groupHeaderOfflineAchievement
+{
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-align: end;
+    position: relative;
+    width: auto;
+    bottom: 0;
+    left: 0;
+    max-height: 125px;
+    word-wrap: break-word
+}
+.achievementsGallery .dateAbbreviationGroupHeader
+{
+    white-space: normal
+}
+.games .achievementPageContainer .achievementGameDetailsThumbnail .imageContainer
+{
+    height: 274px
+}
+.achievementGameDetailsThumbnail .primaryText
+{
+    margin-top: 10px;
+    white-space: normal
+}
+.achievementsGallery .achievementByGame .achievementGameDetailsControl .headerMetaDataContainer
+{
+    -ms-grid-row-align: end;
+    display: -ms-grid;
+    -ms-grid-rows: auto 8px auto
+}
+.gamerScoreAchievementMetaDataContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 20px auto
+}
+.achievementGameDetailsProgressContainer
+{
+    margin-bottom: -9px
+}
+.gamerScoreAchievementMetaDataContainer
+{
+    margin-bottom: -2px
+}
+.achievementGameDetailsMetaDataText
+{
+    display: inline-block;
+    max-width: 75px
+}
+.achievementThumbnail
+{
+    display: -ms-grid;
+    -ms-grid-columns: 15px 65px 15px 185px 15px;
+    -ms-grid-rows: 15px 65px 70px 15px
+}
+.achievementThumbnail .imageContainer
+{
+    position: relative;
+    margin-top: 0;
+    -ms-grid-column: 2;
+    -ms-grid-row: 2
+}
+.achievementThumbnail .imageHolder
+{
+    -ms-grid-columns: 65px
+}
+.achievementThumbnail .textContainer
+{
+    margin-top: 0;
+    padding-top: 0
+}
+.achievementThumbnail .primaryText .label.specificLineCount
+{
+    padding-bottom: 2px
+}
+.achievementThumbnail .secondaryText
+{
+    margin-top: 0
+}
+.achievementThumbnail .primaryText, .achievementThumbnail .tertiaryText
+{
+    margin-top: 2px
+}
+.achievementThumbnail .tertiaryText
+{
+    -ms-grid-row: 2
+}
+.achievementThumbnail .quaternaryText
+{
+    -ms-grid-row: 1;
+    margin-top: 6px;
+    margin-bottom: 0
+}
+.achievementThumbnail .quaternaryText .label.specificLineCount
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal
+}
+.achievementThumbnail.cardThumbnailButton .primaryText
+{
+    max-height: 32.4pt
+}
+.achievementThumbnail.cardThumbnailButton .tertiaryText
+{
+    max-height: 38.6pt
+}
+.activityPageContainer
+{
+    position: relative;
+    padding: 60px 60px 0 105px;
+    height: calc(100% - 60px)
+}
+.activityGalleryContainer
+{
+    width: calc(100vw - 300px);
+    height: 460px;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr
+}
+.activityGallery
+{
+    overflow: hidden
+}
+.smallSummaryCollectionTile
+{
+    width: 64px;
+    height: 64px
+}
+.largeSummaryCollectionTile
+{
+    width: 162px;
+    height: 220px
+}
+.socialSummaryLabel
+{
+    margin-bottom: 10px;
+    position: relative
+}
+.allButton
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%
+}
+.allButton .allButtonText
+{
+    margin: 5px 5px 5px 5px
+}
+.avatarEditorAvatarContainer
+{
+    position: absolute;
+    top: -80px;
+    max-height: calc(100vh + 90px);
+    max-width: 900px;
+    overflow: hidden
+}
+html[dir=ltr] .avatarEditorAvatarContainer
+{
+    right: 0
+}
+html[dir=rtl] .avatarEditorAvatarContainer
+{
+    left: 0
+}
+@media screen and (min-height: 1200px)
+{
+    .avatarEditorAvatarContainer
+    {
+        top: 0
+    }
+}
+@media screen and (min-height: 1440px)
+{
+    .avatarEditorAvatarContainer
+    {
+        top: 80px
+    }
+}
+@media screen and (max-width: 1279px)
+{
+    html[dir=ltr] .avatarEditorAvatarContainer .avatarVideo
+    {
+        margin-left: -30%
+    }
+    html[dir=rtl] .avatarEditorAvatarContainer .avatarVideo
+    {
+        margin-right: -30%
+    }
+}
+.avatarEditorGalleryPanelGallery, .avatarEditorGalleryPanelGallery .win-listview
+{
+    width: calc(100vw - 840px);
+    min-width: 420px;
+    height: 420px
+}
+.avatarEditorGalleryPanelGallery .win-item
+{
+    width: 128px;
+    height: 128px
+}
+.avatarEditorGalleryPanelButtonsContainer, .avatarEditorGallerySavingCursorContainer
+{
+    position: relative;
+    display: -ms-grid;
+    -ms-grid-columns: auto auto auto
+}
+.avatarEditorGallerySavingLabel
+{
+    margin-top: 15px
+}
+.avatarEditorGallerySaveWaitCursor
+{
+    top: 0;
+    left: 0;
+    position: relative
+}
+.avatarEditorGalleryPanelButtonsContainer button.win-command.iconButton
+{
+    width: auto;
+    margin-right: 40px
+}
+html[dir=rtl] .avatarEditorGalleryPanelButtonsContainer button.win-command.iconButton
+{
+    margin-right: 0;
+    margin-left: 40px
+}
+.avatarEditorGalleryPanelButtonsContainer button.win-command.iconButton .label
+{
+    margin-bottom: 2px
+}
+.avatarEditorGalleryPanelSave .label, .avatarEditorGalleryPanelCancel .label
+{
+    text-align: left
+}
+.avatarEditorAssetThumbnailItemRoot
+{
+    position: relative
+}
+.avatarEditorAssetThumbnailItem, .avatarEditorRemoveItem, .avatarEditorColorItem
+{
+    width: 128px;
+    height: 128px
+}
+.avatarEditorAssetThumbnailItem, .avatarEditorColorItem
+{
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 5px
+}
+.avatarEditorAssetThumbnailItem img
+{
+    width: 118px;
+    height: 118px;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center
+}
+.avatarEditorAssetThumbnailItemSelected
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 5px
+}
+.avatarEditorAssetThumbnailItemTileContainer
+{
+    position: absolute;
+    top: 0;
+    right: 7px
+}
+.avatarBodySizeControlRoot
+{
+    display: -ms-grid
+}
+.avatarEditorBodySizeButton
+{
+    width: 128px;
+    height: 128px;
+    cursor: pointer;
+    margin: 4px
+}
+.avatarEditorBodySizeButton .win-command.iconButton
+{
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+    max-height: 128px;
+    height: 100%
+}
+.avatarEditorBodySizeButton .iconButton .win-commandring
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    border-width: 4px;
+    width: 64px;
+    height: 64px
+}
+.avatarEditorBodySizeButton[disabled]
+{
+    cursor: default
+}
+.avatarEditorBodySizeButton[disabled] .win-command.iconButton
+{
+    opacity: .4
+}
+.avatarHubStrip
+{
+    display: -ms-grid;
+    -ms-grid-columns: 120px 1fr;
+    -ms-grid-rows: 110px 10px 1fr
+}
+@media screen and (min-height: 1080px)
+{
+    .avatarHubStrip
+    {
+        -ms-grid-rows: 120px 25px 1fr
+    }
+}
+@media screen and (min-height: 1200px)
+{
+    .avatarHubStrip
+    {
+        -ms-grid-rows: 140px 85px 1fr
+    }
+}
+@media screen and (min-height: 1440px)
+{
+    .avatarHubStrip
+    {
+        -ms-grid-rows: 200px 125px 1fr
+    }
+}
+.avatarHubStrip .hubStripScroller
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+    -ms-grid-column-span: 2
+}
+.avatarHubStrip>.win-template
+{
+    height: 100%
+}
+.avatarHubStrip .hubNavigationClippingContainer
+{
+    -ms-grid-column: 2;
+    -ms-grid-row: 1
+}
+.avatarHubStrip .panelModifierContainer
+{
+    position: relative;
+    width: auto
+}
+.avatarHubStrip .hub
+{
+    margin-right: 0;
+    margin-left: 120px
+}
+html[dir=rtl] .avatarHubStrip .hub
+{
+    margin-right: 120px;
+    margin-left: 0
+}
+.avatarEditorGalleryPanelButtonsContainer .win-commandicon
+{
+    width: 32px;
+    height: 32px
+}
+.avatarSelectionPageHost
+{
+    margin-top: -5%;
+    display: -ms-grid;
+    -ms-grid-columns: 90vw 1fr;
+    -ms-grid-rows: 1fr;
+    position: absolute;
+    top: -103px
+}
+.avatarSelectionGallery
+{
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center
+}
+.avatarSelectionItemContainer
+{
+    display: -ms-grid;
+    width: 100%;
+    -ms-grid-columns: 20vw;
+    -ms-grid-rows: auto 40px;
+    max-width: 400px
+}
+.avatarSelectionItem
+{
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    width: 270px;
+    margin-top: 150px
+}
+.avatarSelectionItem>div
+{
+    margin-top: -150px
+}
+.avatarSelectionRefreshButton .link, .avatarSelectionButton .link
+{
+    min-height: 40px;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    width: 100%
+}
+.avatarSelectionRefreshButton .actionLinkLabel, .avatarSelectionButton .actionLinkLabel
+{
+    vertical-align: middle
+}
+.avatarSelectionButton
+{
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    margin-top: 10px;
+    margin-right: 5px;
+    width: auto
+}
+.avatarSelectionRefreshButtonContainer
+{
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center;
+    display: -ms-grid;
+    -ms-grid-rows: 180px
+}
+.avatarSelectionRefreshButton
+{
+    -ms-grid-row-align: end;
+    position: relative;
+    right: 10%;
+    width: 110px;
+    height: 110px
+}
+.avatarSelectionRefreshButton button.win-command.iconButton, .avatarSelectionRefreshButton .win-commandicon, .avatarSelectionRefreshButton .win-commandicon .win-commandimage
+{
+    width: 110px;
+    height: 110px;
+    margin: 0;
+    padding: 0
+}
+.avatarSelectionRefreshButton button.win-command.iconButton
+{
+    max-height: none
+}
+.avatarSelectionRefreshButton button.win-command .win-commandring
+{
+    border-width: 0
+}
+.avatarSelectionRefreshButton .link
+{
+    min-height: 80px
+}
+.achievementGameDetailsButton
+{
+    width: 200px;
+    height: 50px;
+    margin-top: 15px
+}
+.achievementGameDetailsButton .link
+{
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 3px
+}
+.achievementGameDetailsButton .actionLinkLabel
+{
+    text-align: left
+}
+.profilePopOverContainer
+{
+    display: -ms-grid;
+    -ms-grid-rows: 530px;
+    -ms-grid-columns: 300px 430px;
+    background-color: #828282
+}
+.profilePopOverDetails
+{
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: #a7a7a7
+}
+.profilePopOverAvatar
+{
+    -ms-grid-column-align: end;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    top: 0
+}
+.profilePopOverOverlay .overlayContainer
+{
+    width: 730px;
+    height: 530px;
+    position: absolute;
+    top: 110px
+}
+@media screen and (min-height: 1080px)
+{
+    .profilePopOverOverlay .overlayContainer
+    {
+        top: 130px
+    }
+}
+@media screen and (min-height: 1200px)
+{
+    .profilePopOverOverlay .overlayContainer
+    {
+        top: 210px
+    }
+}
+@media screen and (min-height: 1440px)
+{
+    .profilePopOverOverlay .overlayContainer
+    {
+        top: 310px
+    }
+}
+.profilePopOverDashboardOverlay .overlayContainer
+{
+    width: 730px;
+    height: 530px;
+    position: absolute;
+    top: 170px
+}
+@media screen and (min-height: 1080px)
+{
+    .profilePopOverDashboardOverlay .overlayContainer
+    {
+        top: 345px
+    }
+    .socialProfile~.profilePopOverDashboardOverlay .overlayContainer
+    {
+        top: 200px
+    }
+}
+@media screen and (min-height: 1200px)
+{
+    .profilePopOverDashboardOverlay .overlayContainer
+    {
+        top: 425px
+    }
+    .socialProfile~.profilePopOverDashboardOverlay .overlayContainer
+    {
+        top: 278px
+    }
+}
+@media screen and (min-height: 1201px)
+{
+    .socialProfile~.profilePopOverDashboardOverlay .overlayContainer
+    {
+        top: 378px
+    }
+}
+@media screen and (min-height: 1440px)
+{
+    .profilePopOverDashboardOverlay .overlayContainer
+    {
+        top: 525px
+    }
+}
+.profilePopOverDetails .friendInlineDetailsLoadingContainer
+{
+    margin-top: 80px;
+    margin-left: 100px
+}
+html[dir=rtl] .profilePopOverDetails .friendInlineDetailsLoadingContainer
+{
+    margin-left: 0;
+    margin-right: 100px
+}
+.profilePopOverDetails .friendInlineDetailsContainer
+{
+    margin-top: 60px;
+    margin-left: 100px
+}
+html[dir=rtl] .profilePopOverDetails .friendInlineDetailsContainer
+{
+    margin-left: 0;
+    margin-right: 100px
+}
+.gamerPic
+{
+    -ms-grid-row-span: 2
+}
+.gamerInfo
+{
+    display: -ms-grid;
+    -ms-grid-columns: 64px 15px 1fr 15px;
+    -ms-grid-rows: auto 1fr
+}
+.gamerInfoText
+{
+    -ms-grid-column: 3;
+    margin-top: -9px
+}
+.gamerInfoSubText
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto auto;
+    margin-top: 4px
+}
+.gamerInfoSubText .friendInlineDisplayNameText
+{
+    margin-top: 1px;
+    margin-right: 14px;
+    -ms-grid-column: 1;
+    max-width: 300px;
+    white-space: normal;
+    overflow: hidden
+}
+html[dir=rtl] .gamerInfoSubText .friendInlineDisplayNameText
+{
+    margin-right: 0;
+    margin-left: 14px
+}
+.gamerInfoSubText .friendInlineGamerScore
+{
+    margin: 1px -2px 0 -2px
+}
+.gamerInfoSubText .inlineGamerScoreContainer
+{
+    float: none;
+    vertical-align: top
+}
+.gamerInfoSubText .imageGamerScoreSmall
+{
+    float: none;
+    vertical-align: top;
+    margin-top: 4px
+}
+.profileButtons .itemList
+{
+    display: -ms-flexbox;
+    -ms-flex-flow: row wrap;
+    margin-bottom: -5px;
+    padding: 2px
+}
+.profileButtons>.itemList>.win-template
+{
+    -ms-flex: 1;
+    -ms-flex-preferred-size: 50%
+}
+.profileButtons>.itemList>.win-template.addFriendButton, .profileButtons>.itemList>.win-template.cancelFriendButton
+{
+    -ms-flex: 2;
+    -ms-flex-preferred-size: 100%
+}
+.profileButtons button.iconButton:nth-of-type(odd)
+{
+    padding-right: 5px
+}
+html[dir=rtl] .profileButtons button.iconButton:nth-of-type(odd)
+{
+    padding-right: 0;
+    padding-left: 5px
+}
+.profileButtons .listDivider:first-of-type
+{
+    margin-top: 9px
+}
+.socialProfileAvatar
+{
+    margin-left: 120px
+}
+html[dir=rtl] .socialProfileAvatar
+{
+    margin-left: 0;
+    margin-right: 120px
+}
+.socialProfileAvatar .leftColumn .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+{
+    position: relative
+}
+.socialProfileFriendsPanel .panelTitle
+{
+    margin-top: 0
+}
+.socialProfileFriendsPanel .profileFriendsPanelContainer
+{
+    margin-left: 60px
+}
+html[dir=rtl] .socialProfileFriendsPanel .profileFriendsPanelContainer
+{
+    margin-left: 0;
+    margin-right: 60px
+}
+.socialOfflineErrorPanelText
+{
+    padding-top: 20px
+}
+@media screen and (min-height: 1080px)
+{
+    .socialProfileAvatar .leftColumn .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+    {
+        top: 0
+    }
+    .socialProfileFriendsPanel .profileFriendsPanelContainer
+    {
+        margin-top: 110px
+    }
+}
+.hiddenNarratorText
+{
+    position: absolute;
+    overflow: hidden;
+    width: 0
+}
+@media screen and (-ms-high-contrast)
+{
+    .avatarEditorBodySizeButton[disabled] .win-command.iconButton
+    {
+        opacity: 1
+    }
+    .avatarEditorAssetThumbnailItem
+    {
+        border-style: none
+    }
+    .miniProfileAvatarAndBubbleContainer .chatBubbleContainer
+    {
+        padding-top: 2px
+    }
+    .messageBubblePointer
+    {
+        visibility: hidden
+    }
+}
+.inlineLockIcon:after
+{
+    content: '';
+    font-family: 'Segoe Xbox Symbol'
+}
+.inlineGamerScoreIcon:after
+{
+    content: '';
+    font-family: 'Segoe Xbox Symbol'
+}
+.inlineGameIcon:after
+{
+    content: '';
+    font-family: 'Segoe Xbox Symbol'
+}
+.inlineAchievementsIcon:after
+{
+    content: '';
+    font-family: 'Segoe Xbox Symbol'
+}
+.userMessageAvatar .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+{
+    position: relative;
+    top: -110px
+}
+.messageBubble
+{
+    margin-bottom: 15px;
+    margin-top: 15px
+}
+.textMessage .messageBubble
+{
+    height: 150px;
+    padding: 15px;
+    margin: 0
+}
+.messageBubblePointer
+{
+    position: relative;
+    display: inline-block;
+    border-style: solid;
+    border-width: 10px;
+    border-top-color: transparent;
+    width: 0;
+    height: 0;
+    top: 125px
+}
+html[dir=ltr] .messageBubblePointer
+{
+    left: 7px;
+    border-left-color: transparent
+}
+html[dir=rtl] .messageBubblePointer
+{
+    right: 7px;
+    border-right-color: transparent
+}
+.popOver .userMessageDetails .gameThumbnail .cardThumbnailButton
+{
+    -ms-grid-columns: 0 99px 15px 1fr 15px
+}
+.popOver .userMessageDetails .gameThumbnail
+{
+    width: 100%
+}
+.popOver .userMessageDetails .cardThumbnailButton .imageContainer
+{
+    -ms-grid-row: 1;
+    -ms-grid-column: 2
+}
+.popOver .userMessageDetails .cardThumbnailButton .quaternaryText
+{
+    text-align: right
+}
+.popOver .userMessageDetails .bodyContainer
+{
+    margin-top: 0
+}
+.popOver .userMessageDetails .messageBubblePointer
+{
+    left: -18px;
+    border-right-color: #f5f5f5;
+    border-bottom-color: #f5f5f5
+}
+html[dir=rtl] .popOver .userMessageDetails .messageBubblePointer
+{
+    left: 0;
+    right: -18px;
+    border-left-color: #fff;
+    border-right-color: #ebebeb;
+    border-bottom-color: #fff
+}
+.popOver .userMessageDetails .messageBubble
+{
+    background: none;
+    padding: 10px 0 40px 0;
+    height: auto
+}
+.popOver .gameInviteMessage
+{
+    display: -ms-grid;
+    margin-top: 10px;
+    -ms-grid-rows: auto 15px auto
+}
+.popOver .gameInviteDetailsContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 20px 1fr 5px;
+    -ms-grid-row: 3
+}
+.popOver .gameDetailsInviteMeta
+{
+    display: -ms-grid;
+    -ms-grid-column: 3;
+    -ms-grid-rows: 5px auto auto 1fr 5px
+}
+html[dir=rtl] .popOver .userMessageDetails .cardThumbnailButton .quaternaryText
+{
+    text-align: left
+}
+.control-sendMessage
+{
+    display: -ms-grid;
+    -ms-grid-rows: auto 1fr;
+    -ms-grid-columns: auto 26px 1fr
+}
+.control-sendMessage .miniProfileAvatarAndBubbleContainer .avatarControlContainer
+{
+    position: relative;
+    top: -200px;
+    height: 630px
+}
+.control-sendMessage .miniProfileAvatarAndBubbleContainer
+{
+    height: 430px
+}
+.control-sendMessage .part-editBox
+{
+    margin-top: 40px;
+    -ms-grid-column: 3
+}
+.control-sendMessage .messageBubblePointer
+{
+    top: 100px;
+    -ms-grid-column: 2
+}
+.control-sendMessage .editBox textArea
+{
+    max-width: calc(100% - 20px);
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none
+}
+@media screen and (-ms-high-contrast)
+{
+    .control-sendMessage .editBox textarea
+    {
+        padding: 8px;
+        border-width: 2px;
+        border-style: solid;
+        outline-style: none
+    }
+    .showKeyboardFocus .control-sendMessage .editBox textarea:focus
+    {
+        padding: 6px;
+        border-width: 4px
+    }
+}
+.control-sendMessage .dialogContent
+{
+    overflow-y: hidden
+}

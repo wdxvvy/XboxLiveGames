@@ -1,0 +1,83 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Friends Page</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Controls/Editbox.js"></script>
+    <script src="/Controls/LoadingControl.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/friendsGallery.js"></script>
+    <script src="/Components/Social/findFriends.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+    
+</head>
+
+<body>
+
+    
+    <div data-ent-templateid="friendsGalleryPanelTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="friendsGalleryContainer friendsGalleryContainerWithAddButton"
+             role="region"
+             data-win-control="MS.Entertainment.Social.FriendsGallery"
+             data-ent-member="_friendsGallery"
+             data-win-options="{ detailPanelWidth: 730, 
+                                 detailPanelEdgePadding: 40,
+                                 showLoading: false,
+                                 friendButtonType: MS.Entertainment.Social.friendButtonType.findFriendsButton,
+                                 friendButtonTemplate: 'Components/Social/friendsGallery.html#findFriendsButtonTemplate',
+                                 friendGalleryType: MS.Entertainment.Social.friendGalleryType.mutual }"
+             data-win-bind="winControl.userModel: dataContext.userModel;
+                            winControl.hub: hub">
+        </div>
+    </div>
+
+    
+    <div data-ent-templateid="friendsOfFriendGalleryPanelTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="friendsGalleryContainer"
+             role="region"
+             data-win-control="MS.Entertainment.Social.FriendsGallery"
+             data-win-options="{ detailPanelWidth: 730, detailPanelEdgePadding: 40, friendGalleryType: MS.Entertainment.Social.friendGalleryType.mutual, currentUserAsFriend: true }"
+             data-win-bind="winControl.userModel: dataContext.userModel;
+                 winControl.hub: hub">
+        </div>
+    </div>
+
+    
+    <div data-ent-templateid="pendingFriendsGalleryPanelTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="friendsGalleryContainer"
+             role="region"
+             data-win-control="MS.Entertainment.Social.FriendsGallery"
+             data-win-options="{ detailPanelWidth: 730, detailPanelEdgePadding: 40, friendGalleryType: MS.Entertainment.Social.friendGalleryType.pending }"
+             data-win-bind="winControl.userModel: dataContext.userModel;
+                 winControl.hub: hub">
+        </div>
+    </div>
+</body>
+</html>

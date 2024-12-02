@@ -1,0 +1,60 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Games Immersive Related</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Components/Immersive/Shared/Related.js"></script>
+    <script src="/Components/Immersive/Shared/RelatedItems.js"></script>
+    <script src="/Controls/Label.js"></script>
+</head>
+<body>
+    
+    
+    
+    <div data-ent-templateid="ImmersiveRelatedItemsTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="gamesImmersiveRelatedItems"
+             data-win-control ="MS.Entertainment.UI.Controls.FlexibleItemsControl"
+             data-win-options="{
+                propertyName: 'mediaType',
+                raisePanelReady: true,
+                itemSize: { width: 269, height: 195 },
+                rowLayout: true,
+                skipSettingWidth: true,
+                fixedRowCount: 2,
+                fixedColumnCount: 3,
+                reflowOnWindowSizeChanged: true,
+                enableClickEvents: true,
+                keyboardNavigable: true,
+                itemTemplates: [{ value: Microsoft.Entertainment.Queries.ObjectType.game, template: '/Components/Immersive/Games/GamesRelatedItems.html#GamesImmersiveRelatedItemTemplate'}]}"
+             data-win-bind="winControl.dataSource: dataContext.items;">
+       </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="GamesImmersiveRelatedItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="gamesRelatedImage imageContainer win-focusable"
+             data-win-bind="clickDataContext: this WinJS.Binding.oneTime"
+             role="button"
+             tabindex="0">
+            <div class="hiddenNarratorText">
+                <div class="label"
+                     data-win-bind="textContent: title"></div>
+            </div>
+            <img class="relatedHeroItemImage"
+                data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                data-win-bind="winControl.target: instance WinJS.Binding.oneTime;"
+                data-win-options="{
+                    desiredImageSize: { height: 269, width: 195 },
+                    defaultImagePath: '' }"
+                data-ent-showanimation="fadeIn" />
+        </div>
+    </div>
+
+</body>
+</html>

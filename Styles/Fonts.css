@@ -1,0 +1,318 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+@font-face {
+    font-family: "Segoe Xbox Symbol";
+    src: url('../fonts/SegXboxSym.woff');
+    font-weight: 300;
+    font-style: normal
+}
+body, input, button, option, select, textarea, .win-textarea, .win-type-xx-large, .win-type-x-large, .win-type-large, .win-type-medium, .win-type-small, .win-type-x-small, .win-type-xx-small
+{
+    font-feature-settings: "kern" 1,"dlig" 1,"ss20" 1
+}
+.text-fixedWidthNumerals
+{
+    font-feature-settings: "kern" 1,"dlig" 1,"tnum" 1
+}
+.text-xxSmall, .text-subTitle, .text-metadata, .collectionFilterLink .text-panelHeader, .collectionMusicModifier .text-filterDescription, .immersiveOneColumn .textContainer p, .popOver .inPlaceDetailsItemActions .win-label.label, .actions .win-label.label.subtitle, .immersiveOneColumn .win-label.label.subtitle, .failedPanelDetails .win-label.label.subtitle, .failedPanelNotifications .win-label.label.subtitle, .inPlaceDetailsItemActions .iconButton .win-label.label, .noContentPaneDetails .win-label.label.subtitle, #htmlSnapped .metaDataContainer p, .snapped .metaDataContainer p, #htmlSnapped .appBarIconLabel.win-label.label, .snapped .appBarIconLabel.win-label.label, .control-starRating .part-totalRatings, .control-starRating .part-userRatedIndicator, .games .engagePanel .actionTile button.iconButton.win-command .win-label.subtitle, .cloudNotification button .textContainer .win-label.label.subtitle, .verticalListItem .win-semanticzoom-button::before
+{
+    font-size: 9pt;
+    letter-spacing: .04em
+}
+.maxLines-two-xxSmall {
+    max-height: 24.75pt
+}
+.maxLines-three-xxSmall {
+    max-height: 38.25pt
+}
+.maxLines-four-xxSmall {
+    max-height: 65.25pt
+}
+.text-xSmall, .text-bodyContent, .text-preferencesGroupHeader, .text-notificationTitle, .verticalSubPivotItem .text-filterItem, .actionListFlyout .text-panelHeader, .musicSubscriptionLink .text-panelHeader, .relatedActionContainer .text-panelHeader, #htmlSnapped .opportunityTitle, .snapped .opportunityTitle, .popOver .win-label.label, .actions .win-label.label, .actionCell .win-label.label, .immersiveOneColumn .win-label.label, .immersiveViewMoreOneColumn .win-label.label, .immersiveHeroActions .win-label.label, .avatarEditorGalleryPanelButtonsContainer .win-label.label, .findFriendFlyout .win-label.label, #htmlSnapped .win-label.label, .snapped .win-label.label, .avatarSelectionButton .win-label.label, .failedPanelNotifications .win-label.label, .control-metaCritic .part-metaCriticScore, .cloudNotification .clearIcon button .win-commandimage.iconSpan, .cloudNotification .clearIcon button .win-commandimage.iconSpanPressed, .cloudNotification .clearIcon button.iconButton .win-commandimage.modifier, .musicBrandActionLink button.link.acc-keyboardFocusTarget.internalActionLink div.actionLinkLabel.label.text-panelHeader
+{
+    font-size: 11pt;
+    letter-spacing: .04em
+}
+.maxLines-two-xSmall {
+    max-height: 24.75pt
+}
+.maxLines-three-xSmall {
+    max-height: 38.25pt
+}
+.maxLines-four-xSmall {
+    max-height: 65.25pt
+}
+.text-small, .text-listItem, .text-cardTitle, .text-listTitle, .text-filterItem, .text-zoomedOutTitle, .text-filterTitle, .text-filterDescription, .opportunityTitle, .dashboardHost .opportunitySubTitle, .music.snapped .nowPlayingPlaylistTitle, .companionSearchPanel input[type="search"], .text-immersiveHeroSubTitle, #htmlSnapped .text-immersiveHeroSubTitle, .snapped .text-immersiveHeroSubTitle, .dashboardHost .text-immersiveHeroSubTitle, .actionTile .win-label.label, .failedPanelDetails .win-label.label, .noContentPaneDetails .win-label.label, .snapped .bottomAppBar .appBarIconButton .win-commandimage.iconSpan, .control-metaCritic .part-metaCriticLogo, .games .noContentPaneDescription, .games .dashboardHubContent .failedPanelMessage, .games .emptyFriendsListContainer .failedPanelTitle, .games .emptyFriendsListContainer .failedPanelMessage, .games .achievements .secondaryUserProgressContainer .text-panelHeader, .games .homeSpotlight .dashboardHubContent .actionLinkLabel.label, .games .homeSpotlight .actionLinkContainer .icon, .win-groupheader .groupHeaderOfflineAchievement, .selectArtistButton button.iconButton .win-commandring.win-commandicon .win-commandimage
+{
+    font-size: 14pt;
+    letter-spacing: .03em
+}
+.maxLines-two-small {
+    max-height: 32.25pt
+}
+.maxLines-three-small {
+    max-height: 48.75pt
+}
+.maxLines-four-small {
+    max-height: 65.25pt
+}
+.text-medium, .text-panelHeader, .text-popoverTitle, .userEngagementMessageTitle, .dashboardHost .text-immersiveHeroTitle, .companionNowPlayingPanel .homeNowPlayingMetadataTitle, .extendedSplashScreenTitle, #htmlSnapped .text-immersiveHeroTitle, .snapped .text-immersiveHeroTitle
+{
+    font-size: 20pt;
+    letter-spacing: .03em
+}
+.maxLines-two-medium {
+    max-height: 56pt
+}
+.maxLines-three-medium {
+    max-height: 76pt
+}
+.maxLines-four-medium {
+    max-height: 106pt
+}
+.text-large, .text-hubTitle, .games .dashboardHubContent .failedPanelTitle
+{
+    font-size: 24pt;
+    letter-spacing: .02em
+}
+.text-xLarge, .text-immersiveHeroTitle, #htmlSnapped .text-appTitle, .snapped .text-appTitle, #htmlSnapped .opportunitySubTitle, .snapped .opportunitySubTitle
+{
+    font-size: 30pt;
+    letter-spacing: .01em
+}
+.text-xxLarge, .text-appTitle, .previewBrowseTitle, .opportunitySubTitle, .dashboardHost .opportunityTitle
+{
+    font-size: 42pt;
+    letter-spacing: .01em
+}
+.text-popOverEditTitleLabel, .control-textInputOverlay input[type="text"], .control-textInputOverlay .editBox .editError, .selectArtistEditBox input[type="text"]
+{
+    font-size: 26pt;
+    letter-spacing: .01em
+}
+html:-ms-lang(en) .text-popOverEditTitleLabel, html:-ms-lang(en) .control-textInputOverlay input[type="text"], html:-ms-lang(en) .control-textInputOverlay .editBox .editError, html:-ms-lang(en) .selectArtistEditBox input[type="text"]
+{
+    font-size: 40pt;
+    letter-spacing: .01em
+}
+.text-weightLight, .text-appTitle, .text-hubTitle, .text-immersiveHeroTitle, .opportunitySubTitle, .dashboardHost .opportunityTitle, .text-popOverEditTitleLabel, .previewBrowse .navArrow, .selectArtistEditBox input[type="text"]
+{
+    font-weight: 200
+}
+.text-weightNormal, .text-cardTitle, .text-filterItem, .dashboardHost .opportunitySubTitle, #htmlSnapped .opportunitySubTitle, .snapped .opportunitySubTitle, .games .achievements .secondaryUserProgressContainer .text-panelHeader, .inPlaceDetailsItemActions .iconButton .win-label.label, .cloudNotification button .textContainer .win-label.label, .cloudNotification .clearIcon button .win-commandimage.iconSpan, .cloudNotification .clearIcon button .win-commandimage.iconSpanPressed, .cloudNotification .clearIcon button.iconButton .win-commandimage.modifier, .previewBrowse .navArrow
+{
+    font-weight: 300
+}
+.text-weightBold, .text-panelHeader, .text-bodyContent, .text-popoverTitle, .text-notificationTitle, .webLinkContainer, .dashboardHost .text-immersiveHeroTitle, #htmlSnapped .opportunityTitle, .snapped .opportunityTitle, .actionTile .win-label.label, .avatarSelectionButton .win-label.label, .downloadDetailsVideo .text-metadata, .downloadDetailsVideo .inPlaceDetailsItemActions .win-label.label, .musicBrandActionLink button.link.acc-keyboardFocusTarget.internalActionLink div.actionLinkLabel.label.text-panelHeader
+{
+    font-weight: 400
+}
+.text-weightHeavy, .text-subTitle, .text-metadata, .text-listTitle, .text-filterTitle, .text-filterDescription, .text-preferencesGroupHeader, .text-filterItem.selected, .text-listItem.inlineDetailsPrimaryBold, .userEngagementMessageTitle, .actionListFlyout .text-panelHeader, .musicSubscriptionLink .text-panelHeader, .relatedActionContainer .text-panelHeader, .collectionFilterLink .text-panelHeader, .popOver .win-label.label, .actions .win-label.label, .actionCell .win-label.label, .noPlaylists .win-label.label, .adIconButton .win-label.label, .immersiveOneColumn .win-label.label, .immersiveViewMoreOneColumn .win-label.label, .immersiveHeroActions .win-label.label, .popOver .inPlaceDetailsItemActions .win-label.label, .avatarEditorGalleryPanelButtonsContainer .win-label.label, .findFriendFlyout .win-label.label, .failedPanelDetails .win-label.label.subtitle, .noContentPaneDetails .win-label.label.subtitle, .immersiveOneColumn .textContainer p, #htmlSnapped .metaDataContainer p, .snapped .metaDataContainer p, .cloudNotification button .textContainer .win-label.label.subtitle
+{
+    font-weight: 600
+}
+.control-metaCritic .part-metaCriticScore, .control-rottenTomatoesOverview .part-percentScore
+{
+    font-weight: 800
+}
+.maxLines-one
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+.maxLines-two, .maxLines-three, .maxLines-four
+{
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: normal
+}
+.text-breakWord
+{
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: keep-all;
+    overflow: hidden
+}
+.cardThumbnailButton .primaryText
+{
+    line-height: 16.265pt
+}
+.text-popoverTitle, #htmlSnapped .opportunitySubTitle, .snapped .opportunitySubTitle, .games .relatedHeroItem .text-medium
+{
+    line-height: 1.26
+}
+.music.snapped .nowPlayingPlaylistTitle
+{
+    line-height: 21pt
+}
+.progressTextPercentage
+{
+    line-height: 1
+}
+.icon, .icon-xxxSmall, .icon-xxSmall, .icon-xSmall, .icon-small, .icon-medium, .icon-large, .icon-xLarge, .icon-xxLarge, .win-commandimage, .inlineGlyph, .inlineGlyphSmall, .infoNotificationIcon .smartDJIcon, .xboxIcon, .smartGlassGem, .dashboardGridItemContent.thumbnailButtonGlyph .imageHolder, .win-backbutton.homeIcon:before, .musicBrandActionLink button .actionLinkLabel:after, .cloudGrovelInfoContent .cloudGrovelInfoLink:after
+{
+    font-family: 'Segoe Xbox Symbol','Segoe UI Symbol'
+}
+.icon-xxxSmall, .dashboardMyMusic .smartDJIcon, .music.snapped .immersivePlaylist .smartDJIcon, .immersiveViewMorePopOverContentLayout .nowPlayingPlaylistGalleryHeader .smartDJIcon, .collectionMusicGalleryView .verticalSmartDJThumbnail .smartDJIcon
+{
+    font-size: 7pt
+}
+.icon-xxSmall, .icon.inCollectionIcon, .musicPage .verticalListCell2nd .icon
+{
+    font-size: 9pt
+}
+.icon-xSmall, .smartDJIcon, .modifierDropDownArrow, .popOver .iconButton .win-commandimage, .immersiveHeroActions .win-commandimage, .immersiveOneColumn .win-commandimage, .immersiveViewMoreOneColumn .win-commandimage, .immersiveTwoColumn:not(.immersiveHeroFrameColumn) .smartDj .win-commandimage, .immersiveViewMoreTwoColumn:not(.immersiveHeroFrameColumn) .smartDj .win-commandimage, .actionCell .win-commandimage, .noPlaylists .win-commandimage, .avatarEditorGalleryPanelButtonsContainer .win-commandimage, #htmlSnapped .win-commandimage, .snapped .win-commandimage, .companionSearchPanel .win-commandimage, .inPlaceDetailsItemActions .win-commandimage, .avatarSelectionButton .win-commandimage
+{
+    font-size: 10.75pt
+}
+.icon-small, .videoAdOverlay .playPauseIconButton .win-commandimage, .videoAdOverlay .videoAdCloseButton .win-commandimage, .homeNowPlayingPlayButton .win-commandimage, .nowPlayingTransportControlsContainer .win-commandimage, .opportunityIconButton .win-commandimage, .hideNowPlayingButton .win-commandimage, .findFriendFlyout .win-commandimage
+{
+    font-size: 13.5pt
+}
+.icon-medium, .infoNotificationIcon, .selectArtistButton .win-commandimage, .volumeIcon .win-commandimage
+{
+    font-size: 20pt
+}
+.icon-large, .videoAdOverlay .win-commandimage, .actionTile .win-commandimage
+{
+    font-size: 24pt
+}
+.icon-xLarge, .videoAdOverlay .win-commandimage, .appBarUpsellAction .win-commandimage, .games .engagePanel .actionTile .win-commandimage
+{
+    font-size: 34pt
+}
+.icon-xxLarge, .companion .dashboardGridItemContent
+{
+    font-size: 37.5pt
+}
+.icon-xxxLarge, .games .nowPlayingTransportControlsContainer .win-commandimage, .video .nowPlayingTransportControlsContainer .win-commandimage, .companion .nowPlayingTransportControlsContainer .win-commandimage
+{
+    font-size: 50pt
+}
+.previewBrowse .navArrow
+{
+    font-size: 85pt
+}
+.marketplaceTracks .mediaStatusIconContainer
+{
+    line-height: 11px
+}
+.music.snapped .smartDJIcon
+{
+    line-height: 19px
+}
+.music.snapped .immersivePlaylist .smartDJIcon
+{
+    line-height: 25px
+}
+.homeNowPlayingPlayButton .win-commandimage, .popOver .iconButton .win-commandimage, .immersiveHeroActions .win-commandimage, .immersiveOneColumn .win-commandimage, .immersiveViewMoreOneColumn .win-commandimage, .immersiveTwoColumn:not(.immersiveHeroFrameColumn) .smartDj .win-commandimage, .immersiveViewMoreTwoColumn:not(.immersiveHeroFrameColumn) .smartDj .win-commandimage, .actionCell .win-commandimage, .noPlaylists .win-commandimage, .videoAdOverlay .videoAdCloseButton .win-commandimage, .avatarEditorGalleryPanelButtonsContainer .win-commandimage, .findFriendFlyout .win-commandimage, #htmlSnapped .win-commandimage, .snapped .win-commandimage, .games .nowPlayingTransportControlsContainer .win-commandimage, .video .nowPlayingTransportControlsContainer .win-commandimage, .companion .nowPlayingTransportControlsContainer .win-commandimage, .companionSearchPanel .win-commandimage, .inPlaceDetailsItemActions .win-commandimage, .findAlbumInfoBackButton .win-commandimage, .localGrovelInfoBackButton .win-commandimage, .cloudGrovelInfoBackButton .win-commandimage, .avatarSelectionButton .win-commandimage, .musicPage .verticalListItem .clearIcon .win-commandimage, .avatarEditorBodySizeButton .win-commandimage, .musicPage .verticalListItem .clearIcon .iconSpan
+{
+    line-height: 30px
+}
+.opportunityIconButton .win-commandimage, .videoAdOverlay .win-commandimage, .nowPlayingTransportControlsContainer .win-commandimage, .hideNowPlayingButton .win-commandimage, .volumeIcon .win-commandimage, #htmlSnapped .opportunityIconButton button.win-command.iconButton .win-commandimage, .snapped .opportunityIconButton button.win-command.iconButton .win-commandimage
+{
+    line-height: 40px
+}
+.activityOverlaySplashBranding .xboxIcon
+{
+    line-height: 55px
+}
+.video .homeNowPlayingTilePoster .nowPlayingTransportControlsPlayPauseButton .win-commandimage
+{
+    line-height: 60px
+}
+.actionTile .win-commandimage, .selectArtistButton .win-commandimage
+{
+    line-height: 66px
+}
+.inlineGlyph, .inlineGlyphSmall, .infoNotificationIcon
+{
+    display: inline-block
+}
+.glyph, .inlineGlyph
+{
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center
+}
+.inlineGlyphSmall
+{
+    font-size: 10pt;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: normal;
+    text-align: center
+}
+.achievementGameDetailsMetaDataText
+{
+    line-height: 16px
+}
+.achievementThumbnail .quaternaryText, .achievementThumbnail .quaternaryText .inlineGlyphSmall
+{
+    line-height: 1.3636
+}
+#htmlSnapped .nowPlayingTransportControlsContainer .win-commandimage, .snapped .nowPlayingTransportControlsContainer .win-commandimage
+{
+    font-size: 14pt;
+    line-height: 41px
+}
+.smartGlassGem
+{
+    font-size: 18pt;
+    font-weight: 300
+}
+.avatarSelectionRefreshButton .win-commandimage
+{
+    font-size: 30pt;
+    line-height: 110px
+}
+.homeHubNowPlayingTile .opportunityIconButton .iconButton .win-commandimage
+{
+    font-size: 50pt;
+    line-height: 140px
+}
+.games .failedPanelIcon
+{
+    font-size: 85pt
+}
+html:-ms-lang(en) .win-groupheader .groupHeaderOfflineAchievement
+{
+    font-size: 20pt;
+    letter-spacing: .03em
+}
+html:-ms-lang(ml,ta) h5, html:-ms-lang(ml,ta) body, html:-ms-lang(ml,ta) .win-type-small, html:-ms-lang(ml,ta) .panelTitle .actionLinkLabel, html:-ms-lang(ml,ta) button.iconButton.win-command .win-label, html:-ms-lang(ml,ta) .dashboardPanel .panelFailed .failedPanelTitle, html:-ms-lang(ml,ta) .actionTile button.iconButton.win-command .win-label, html:-ms-lang(ml,ta) .music .homeNowPlayingTile .homeNowPlayingMetadataTitle
+{
+    line-height: 1.3636
+}
+html:-ms-lang(ml,ta) .actionLinkLabel.specificLineCount
+{
+    line-height: 1.35
+}
+html:-ms-lang(ta) .musicPage .pageHeader, html:-ms-lang(ta) .inboxPage .pageHeader
+{
+    font-size: 20pt
+}
+html:-ms-lang(ta) .companion .dashboardGridItemContent .thumbnailButton .primaryText.label
+{
+    font-size: 13pt
+}
+html:-ms-lang(km) .companionHomeSearchBox .editInput, html:-ms-lang(ta) .immersiveViewMorePopoverContainer .modifierDescription.label, html:-ms-lang(ta) .immersiveViewMorePopoverContainer .modifierSelectedItem.label
+{
+    font-size: 12.5pt
+}
+html:-ms-lang(ja) .win-groupheader .tvHeaderLabel, html:-ms-lang(ja) .win-groupheader .videoHeaderLabel, html:-ms-lang(ja,pt) .win-groupheader .groupHeaderMonth
+{
+    font-size: 14pt
+}
+html:-ms-lang(ja) .inPlaceDetailsItemActions button .win-label.label, html:-ms-lang(ja) .popOver.playlist .invoked .inlineDetailsMusicTrack .iconButtonHost button .win-label.label
+{
+    font-weight: normal
+}
+@media screen and (max-height: 1079px)
+{
+    html:-ms-lang(ml,ta,pa) .emptyFriendsListContainer .emptyFriendsListTitle
+    {
+        font-size: 14pt
+    }
+}

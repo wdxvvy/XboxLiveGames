@@ -1,0 +1,82 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Achievement ThumbnailButton Control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+
+        
+        <script src="/Framework/corefx.js"></script>
+
+        
+        <script src="/Framework/imageLoader.js"></script>
+        <script src="/Controls/thumbnailButton.js"></script>
+        <script src="/Controls/Label.js"></script>
+        <script src="/Components/Social/achievementThumbnailButton.js"></script>
+
+        
+        <link rel="stylesheet" type="text/css" href="../../Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="../../styles/Social.css" />
+    </head>
+
+    <body>
+        <div data-ent-templateid='achievementThumbnailButtonTemplate' data-win-control="WinJS.Binding.Template">
+            <div class="achievementThumbnail cardThumbnailButton" data-ent-member="thumbnailButton" data-ent-event="click: clicked">
+
+                <div class="imageContainer" data-ent-member="imageContainer">
+                    
+                    <div class="imageHolder" data-ent-member="imageHolder"></div>
+                </div>
+
+                
+                <div class="primarySecondaryTextContainer"
+                     style="-ms-grid-column: 4; -ms-grid-row: 2;">
+                    <div class="secondaryText label" data-ent-member="secondaryTextLabel"
+                         data-win-bind="textContent: secondaryText">
+                    </div>
+
+                    <div class="primaryText label" data-ent-member="primaryTextLabel"
+                         data-win-bind="textContent: primaryText">
+                    </div>
+                </div>
+
+                <div class="textContainer"
+                     style="-ms-grid-column: 2; -ms-grid-column-span: 3; -ms-grid-row: 3;"
+                     data-ent-member="textContainer">
+
+                    <div class="quaternaryText" style="display: -ms-grid; -ms-grid-columns: auto 10px 1fr;">
+                        <div class="gamerScoreContainer" style="display: -ms-grid; -ms-grid-columns: auto 1fr; -ms-grid-column: 1;">
+                            <div class="hiddenNarratorText">
+                                <div class="label" data-win-bind="textContent: valueNarratorString"></div>
+                            </div>
+                            <div aria-hidden="true">
+                                <div class="icon inlineGlyphSmall label" 
+                                    style="-ms-grid-column: 2;" 
+                                    data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                    data-win-options="{text: MS.Entertainment.UI.Icon.inlineGamerScore, autoResizeFont: false}"></div>
+
+                                <div class="gamerScoreLabel label text-metadata" 
+                                    style="-ms-grid-column: 1; -ms-grid-row-align: center;" 
+                                    data-win-bind="textContent: gamerScore"></div>
+                            </div>
+                        </div>
+
+                        <div class="label text-metadata"
+                             data-ent-member="quaternaryTextLabel"
+                             style="-ms-grid-column: 3; -ms-grid-row-align: center;"
+                             data-win-bind="textContent: quaternaryText">
+                        </div>
+                    </div>
+
+                    <div class="label text-metadata tertiaryText" data-ent-member="tertiaryTextLabel"
+                        data-win-bind="textContent: tertiaryText">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

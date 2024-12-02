@@ -1,0 +1,141 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Games Immersive Overview</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/ViewModels/MediaItemModel.js"></script>
+    <script src="/Components/Shell/ContentNotificationList.js"></script>
+    <script src="/Components/Social/Beacon.js"></script>
+    <script src="/Components/Social/LeaderboardRank.js"></script>
+</head>
+<body>
+
+    <div class="overviewHost">
+        <div class="overview game" tabindex="0">
+            <div class="metaDataContainer immersiveColumnPadding">
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay" 
+                             data-win-control="MS.Entertainment.UI.Shell.ImageControl"
+                             data-win-bind="winControl.target: mediaItem" 
+                             data-win-options="{desiredImageSize: {width: 183, height: 250},
+                                                defaultImagePath: '',
+                                                show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                                hide: MS.Entertainment.Utilities.doNothing,
+                                                allowAnimations: false}" 
+                             width="183"
+                             height="250"/>
+                    </div>
+                    <div class="textContainer">
+                        <img data-win-control="MS.Entertainment.UI.Shell.ImageControl"
+                             data-win-bind="winControl.target: mediaItem.contentRatingImageUri;
+                                            removeFromDisplay: mediaItem.contentRatingImageUri MS.Entertainment.Utilities.toggleClassNameNegate;" 
+                             data-win-options="{desiredImageSize:{width: auto, height: 60},
+                                                defaultImagePath: '',
+                                                show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                                hide: MS.Entertainment.Utilities.doNothing,
+                                                allowAnimations: false}" 
+                             height="60"/>
+                        <div class="text-metadata"
+                             data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                             data-win-bind="winControl.dataSource: mediaItem.contentRatingDescriptions;"
+                             data-win-options="{itemTemplate: 'Components/Immersive/Games/GameOverview.html#contentRatingDescriptionTemplate'}">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="descriptionText label wrap removeFromDisplay text-bodyContent immersiveColumnPadding"
+                 data-win-bind="textContent: String.id.IDS_GAMES_ARCHITECTURE_UNAVAILABLE MS.Entertainment.Formatters.formatStringId
+                                removeFromDisplay: mediaItem.supportsCurrentArchitecture MS.Entertainment.Utilities.toggleClassName">
+            </div>
+
+            <div class="notificationContainer immersiveColumnPadding"
+                 data-win-bind="removeFromDisplay: isSignedIn MS.Entertainment.Utilities.toggleClassNameNegate">
+                <hr class="listDivider" data-win-bind="removeFromDisplay: mediaItem.isGame MS.Entertainment.Utilities.toggleClassNameNegate" />
+                <div class="beaconButtonContainer"
+                     data-win-control="MS.Entertainment.Social.BeaconControl"
+                     data-win-bind="winControl.titleId: mediaItem.titleId;
+                                    removeFromDisplay: mediaItem.isGame MS.Entertainment.Utilities.toggleClassNameNegate">
+                </div>
+
+                <div class="leaderboardRankContainer"
+                     data-win-control="MS.Entertainment.Social.LeaderboardRank"
+                     data-ent-member="leaderboardRank"
+                     data-win-bind="winControl.mediaItem: mediaItem;
+                                    removeFromDisplay: mediaItem.isGame MS.Entertainment.Utilities.toggleClassNameNegate;">
+                </div>
+
+                <div class="notificationButtonContainer" data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                     data-win-bind="winControl.dataSource: mediaItem.contentNotifications;
+                                    removeFromDisplay: mediaItem.contentNotifications MS.Entertainment.Utilities.toggleClassNameNegate;"
+                     data-win-options="{itemTemplate: 'Components/Shell/ContentNotificationList.html#contentNotificationListImagesItemTemplate'}"
+                     data-win-automationid="contentNotificationsList">
+                </div>
+
+            </div>
+                    
+            <hr class="listDivider immersiveColumnPadding" data-win-bind="removeFromDisplay: mediaItem.capabilities.onlineFeatures MS.Entertainment.Utilities.toggleClassNameNegate" />
+
+            <div class="subTitle label wrap text-subTitle immersiveColumnPadding"
+                 data-win-bind="textContent: mediaItem.capabilities.onlineFeaturesLabel;
+                                removeFromDisplay: mediaItem.capabilities.onlineFeatures MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+
+            <div class="gameFeaturesList text-bodyContent immersiveColumnPadding" 
+                 data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                 data-win-bind="winControl.dataSource: mediaItem.capabilities.onlineFeatures;
+                                removeFromDisplay: mediaItem.capabilities.onlineFeatures MS.Entertainment.Utilities.toggleClassNameNegate;"
+                 data-win-options="{itemTemplate: 'Components/Immersive/Games/GameOverview.html#gameFeaturesTemplate'}"
+                 data-win-automationid="gameOnlineFeaturesList">
+            </div>
+            
+            <div class="subTitle label wrap text-subTitle immersiveColumnPadding"
+                 data-win-bind ="textContent: mediaItem.capabilities.featuresLabel;
+                                 removeFromDisplay: mediaItem.capabilities.features MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+
+            <div class="gameFeaturesList text-bodyContent immersiveColumnPadding" 
+                 data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                 data-win-bind="winControl.dataSource: mediaItem.capabilities.features;
+                                removeFromDisplay: mediaItem.capabilities.features MS.Entertainment.Utilities.toggleClassNameNegate;"
+                 data-win-options="{itemTemplate: 'Components/Immersive/Games/GameOverview.html#gameFeaturesTemplate'}"
+                 data-win-automationid="gameFeaturesList">
+            </div>
+            
+            <div class="gamePublisherData immersiveColumnPadding">
+                <div class="subTitle label wrap text-subTitle"
+                     data-win-bind ="textContent: String.id.IDS_DETAILS_DEVELOPER_LABEL MS.Entertainment.Formatters.formatStringId;
+                                     removeFromDisplay: mediaItem.studioName MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+                <div class="label text-bodyContent"
+                     data-win-bind="textContent: mediaItem.studioName; 
+                                    removeFromDisplay: mediaItem.studioName MS.Entertainment.Utilities.toggleClassNameNegate">
+                </div>
+                <div class="subTitle label wrap text-subTitle"
+                     data-win-bind ="textContent: String.id.IDS_DETAILS_PUBLISHER_LABEL MS.Entertainment.Formatters.formatStringId;
+                                     removeFromDisplay: mediaItem.publisher MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+                <div class="label text-bodyContent"
+                     data-win-bind="textContent: mediaItem MS.Entertainment.Formatters.formatPublisherAndReleaseDate;
+                                    removeFromDisplay: mediaItem MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+                <div class="subTitle label wrap text-subTitle"
+                     data-win-bind ="textContent: String.id.IDS_DETAILS_GENRE_LABEL MS.Entertainment.Formatters.formatStringId;
+                                     removeFromDisplay: mediaItem.genres MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+                <div class="gameGenresList text-bodyContent" 
+                     data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                     data-win-bind="winControl.dataSource: mediaItem.genres;
+                                    removeFromDisplay: mediaItem.genres MS.Entertainment.Utilities.toggleClassNameNegate;"
+                     data-win-options="{itemTemplate: 'Components/Immersive/Games/GameOverview.html#gameGenresTemplate'}"
+                     data-win-automationid="gameGenresList">
+                </div>
+                <div class="subTitle label wrap text-subTitle"
+                     data-win-bind ="textContent: String.id.IDS_DETAILS_PLATFORM_LABEL MS.Entertainment.Formatters.formatStringId;
+                                     removeFromDisplay: mediaItem.defaultPlatformType MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+                <div class="label text-bodyContent"
+                     data-win-bind="textContent: mediaItem.defaultPlatformType MS.Entertainment.Formatters.formatGamePlatformString;
+                                    removeFromDisplay: mediaItem.defaultPlatformType MS.Entertainment.Utilities.toggleClassNameNegate">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

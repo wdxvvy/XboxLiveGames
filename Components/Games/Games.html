@@ -1,0 +1,69 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Games Hub Page</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Animations/animations.js"></script>
+    
+    <script src="/Framework/serviceLocator.js"></script>
+    
+    <script src="/Framework/actionIdentifiers.js"></script>
+    <script src="/Framework/action.js"></script>
+    <script src="/Framework/navigateAction.js"></script>
+    <script src="/Framework/externalNavigateAction.js"></script>
+    <script src="/Framework/disabled.js"></script>
+
+    <script src="/Framework/Data/XboxLive.js"></script>
+    <script src="/ViewModels/Command.js"></script>   
+    <script src="/ViewModels/Games/GamesHub.js"></script>
+    <script src="/ViewModels/Games/GamesCollectionViewModel.js"></script>
+    <script src="/ViewModels/Games/GamesHubWindowsPanel.js"></script>
+    <script src="/Controls/LibraryFeaturedContent.js"></script> 
+    <script src="/Controls/FeaturedContent.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/styles/HubLayouts.css" />
+</head>
+<body>
+    <div data-ent-templateid="gamesSpotlightHubPanelTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.UI.Controls.SpotlightFeaturedContent"
+                class="dashboardHubContent"
+                data-win-options="{
+                    enableClickEvents: true,
+                    templates: ['/Components/Games/GamesSpotlightView1.html', '/Components/Games/GamesSpotlightView2.html']
+                }"
+                data-win-bind="winControl.data: dataContext.viewModel.featuredObject"
+                data-win-automationid="spotlightContent">
+        </div>
+    </div>
+
+    <div data-ent-templateid="gamesHubCollectionPanelTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="libraryGamesContent"
+             data-win-control="MS.Entertainment.UI.Controls.LibraryGamesFeaturedContent"
+             data-win-bind="winControl.socialHelper: dataContext.socialHelper; 
+                            winControl.emptyLibraryModel: dataContext.emptyLibraryModel;"
+             data-win-automationid="gamesHubCollection">
+        </div>
+    </div>
+
+    <div data-ent-templateid="gamesHubWindowsPanelTemplate" data-win-control="WinJS.Binding.Template">
+         <div data-win-control="MS.Entertainment.UI.Controls.FeaturedContent"
+             class="pcGamesContent dashboardHubContent"
+             data-win-options="{
+                enableClickEvents: true,
+                templates: ['/Components/Games/FeaturedWindowsGamesView1.html', '/Components/Games/FeaturedWindowsGamesView2.html']
+             }"
+             data-win-bind="winControl.data: dataContext.viewModel.featuredObject"
+             data-win-automationid="gamesHubPCGames">
+        </div>
+    </div>
+
+</body>
+</html>

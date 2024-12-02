@@ -1,0 +1,129 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Immersive Leaderboards</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    
+    
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+
+    
+    <script src="/ViewModels/Social/leaderboardViewModel.js"></script>
+    <script src="/Components/Immersive/Games/Leaderboards.js"></script>
+    <script src="/Components/Social/MiniProfile.js"></script>
+
+</head>
+<body>
+    <div data-ent-templateid="ImmersiveLeaderboards" data-win-control="WinJS.Binding.Template">
+        <div class="leaderboards">
+            
+            <div class="primaryLeaderboardHeader acc-keyboardFocusTarget"
+                 data-ent-event="click: onItemClicked; keydown: onKeyDown;" tabindex="0">
+                <div class="listHeader label text-listTitle" style="-ms-grid-row: 1;"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: dataContext.viewModel.primaryLeaderboard.label;">
+                </div>
+
+                <div class="subTitle label text-bodyContent" style="-ms-grid-row: 2;"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: dataContext.viewModel.primaryLeaderboard.rating;">
+                </div>
+
+                <div class="hidden modifierIndex">0</div>
+            </div>
+
+            <div class="immersiveMoreGalleryView"
+                data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                data-ent-member="_gallery"
+                data-win-options="{ 
+                    itemTemplate: 'Components/Immersive/Games/Leaderboards.html#immersiveLeaderboardItemTemplate' }"
+                data-win-bind="winControl.dataSource: dataContext.viewModel.primaryLeaderboard.previewLeaders;"
+                data-win-automationid="primaryLeadersList">
+            </div>
+
+            
+            <div class="otherLeaderboards"
+                data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                data-win-bind="winControl.visibility : dataContext.viewModel.otherLeaderboards">
+
+                
+                <div class="listHeader label text-listTitle immersiveColumnPadding"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-options="{stringId: String.id.IDS_SOCIAL_OTHER_LEADERBOARDS}">
+                </div>
+
+                <div data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                    data-win-bind="winControl.dataSource: dataContext.viewModel.otherLeaderboards;"
+                    data-win-options="{itemTemplate: 'Components/Immersive/Games/Leaderboards.html#immersiveLeaderboardTemplate'}"
+                    data-win-automationid="otherLeaderboardsList"
+                    data-ent-event="click: onItemClicked; keydown: onKeyDown;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div data-ent-templateid="immersiveLeaderboardItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.UI.Controls.LeaderControl"
+            data-win-bind="winControl.leader: this;">
+        </div>
+    </div>
+        
+    <div data-ent-templateid="immersiveLeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="control-immersiveListViewItem acc-keyboardFocusTarget win-focusable"
+            data-ent-event="click: leaderClicked; keydown: leaderKeyDown"
+            tabindex="0">
+            <div class="part-imageContainer"
+                data-win-control="MS.Entertainment.Social.MiniProfileImage"
+                data-win-bind="winControl.uri: leader.gamerPictureUrl"
+                data-win-options="{height: '60px', width: '60px'}">
+            </div>
+
+            <div class="part-textContainer">
+                <div class="part-rankText label text-listItem"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: leader.rank MS.Entertainment.Formatters.formatTrackNumber">
+                </div>
+
+                <div class="part-title label text-listItem"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: leader.gamerTag">
+                </div>
+
+                <div class="icon part-iconGamerScore"
+                    data-win-options="{disableLayoutPass: true}"
+                    data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineGamerScore MS.Entertainment.Formatters.formatIcon;
+                                   removeFromDisplay: leader.showGamerscore MS.Entertainment.Utilities.toggleClassNameNegate;">
+                </div>
+
+                <div class="part-subTitle label text-metadata"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: leader.rating"
+                    data-win-options="{wrap: true}">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div data-ent-templateid="immersiveLeaderboardTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="control-immersiveListViewItem">
+            <div class="part-textContainer">
+                <div class="part-title label acc-keyboardFocusTarget text-listItem"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: label"
+                    tabindex="0">
+                </div>
+                <div class="hidden modifierIndex"
+                    data-win-bind="textContent: index">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

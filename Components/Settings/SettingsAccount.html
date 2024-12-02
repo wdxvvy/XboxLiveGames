@@ -1,0 +1,56 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/settings.css" />
+    <title>Settings Control Template</title>
+    <script src="/Framework/debug.js"></script>
+    
+    <script src="/Framework/corefx.js"></script>
+    
+    <script src="/Components/Settings/Settings.js"></script>
+</head>
+<body>
+    
+    
+    <div id="SettingsAccount" 
+         data-win-control="WinJS.UI.SettingsFlyout" 
+         data-win-options="{width:'wide', lightDismiss:'false'}"
+         >     
+        <div class="settingsWrapper" data-win-control="MS.Entertainment.Utilities.AccountSettingsWrapper">
+            
+            <div data-ent-member="accountPanelHeader"></div>
+            
+            <div class="accountsWebHostContainer">
+                <div>
+                    <div data-win-control="MS.Entertainment.UI.Controls.WebHost"
+                        id="accountWebHost" data-win-options="{ frameWidth: '646px', sourceUrl: '', authenticatedSourceUrl: '', webHostExperienceFactory: MS.Entertainment.Utilities.SettingsExperience.factory, taskId: 'ACCOUNT' }">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="offLineAccountPanel" class="offLineAccountPanel" style="visibility: collapse">
+                <div class="settingsPanelHeader win-ui-dark">
+                    <button class="win-backbutton"
+                        data-win-automationid="offLineAccountBackButton"
+                        data-ent-event="click: backToSettings" tabindex="0"
+                        data-ent-member="_backButton">
+                    </button>
+                    <div class="settingsPanelTitle label text-medium text-weightLight" data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{stringId:String.id.IDS_SETTINGS_ACCOUNT_TITLE}">
+                    </div>
+                </div>
+                <div class="settingsSignIn hideFromDisplay"
+                     data-win-automationid="accountSignInButton"
+                     data-win-control="MS.Entertainment.UI.Controls.SignInControl"
+                     data-win-options="{settings:true}">
+                </div>
+            </div>
+
+            
+            <div data-win-control="MS.Entertainment.Utilities.Settings.onAccountShow"></div>
+        </div>
+    </div>
+</body>
+</html>

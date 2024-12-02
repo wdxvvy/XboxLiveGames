@@ -1,0 +1,265 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Message</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/Link.js"></script>
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/galleryGrouper.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/thumbnailButton.js"></script>
+    <script src="/Controls/expander.js"></script>
+    <script src="/Controls/IconButton.js"></script>
+
+    
+    <script src="/Components/ImmersiveDetails/ShowImmersiveDetailsAction.js"></script>
+
+    
+    <script src="/ViewModels/MediaItemModel.js"></script>
+    <script src="/Components/InlineDetails/BaseInlineDetails.js"></script>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+
+    
+    <script src="/Framework/Data/Augmenters/commonAugmenters.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <script src="/ViewModels/social/shareFactory.js"></script>
+    <script src="/ViewModels/social/shareSender.js"></script>
+    <script src="/ViewModels/social/shareHost.js"></script>
+    <script src="/Components/social/shareTemplates.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/Animations/SocialAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Social.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Colors.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Images.css" />
+    <link rel="Stylesheet" type="text/css" href="/styles/InlineDetails.css" />
+    <link rel="stylesheet" type="text/css" href="/Controls/Controls.css" />
+
+</head>
+<body>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="textMessagePopoverTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="textMessage">
+            
+            <div class="popOver friend"
+                data-win-automationid="miniProfileHubPanel"
+                data-win-bind="winControl.model: model.sender">
+
+                <div class="leftColumn userMessageAvatar"
+                    style="-ms-grid-row: 1; -ms-grid-column: 1;"
+                    data-win-control="MS.Entertainment.Social.MiniProfileAvatar"
+                    data-ent-member="avatarControl"
+                    data-win-options="{ showChatBubble: false,
+                                        alwaysAnimate: true,
+                                        avatarRenderMode: MS.Entertainment.UI.Controls.avatarRenderMode.play,
+                                        avatarDisplay: MS.Entertainment.UI.Controls.avatarDisplay.any }"
+                    data-win-bind="winControl.model: model.sender">
+                </div>
+
+                <div class="rightColumn userMessageDetails"
+                    style="-ms-grid-row: 1; -ms-grid-column: 2;"
+                    data-win-control="MS.Entertainment.Social.TextMessageDetails"
+                    data-win-bind="winControl.model: model; winControl.inlineExtraData: inlineExtraData; winControl.overlay: overlay;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="gameInvitePopoverTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="gameInvite">
+            
+            <div class="popOver friend"
+                data-win-automationid="miniProfileHubPanel"
+                data-win-bind="winControl.model: model.sender">
+
+                <div class="leftColumn userMessageAvatar"
+                    style="-ms-grid-row: 1; -ms-grid-column: 1;"
+                    data-win-control="MS.Entertainment.Social.MiniProfileAvatar"
+                    data-ent-member="avatarControl"
+                    data-win-options="{ showChatBubble: false,
+                                        alwaysAnimate: true,
+                                        avatarRenderMode: MS.Entertainment.UI.Controls.avatarRenderMode.play,
+                                        avatarDisplay: MS.Entertainment.UI.Controls.avatarDisplay.any }"
+                    data-win-bind="winControl.model: model.sender">
+                </div>
+
+                <div class="rightColumn userMessageDetails"
+                    style="-ms-grid-row: 1; -ms-grid-column: 2;"
+                    data-win-control="MS.Entertainment.Social.GameInviteDetails"
+                    data-win-bind="winControl.model: model; winControl.inlineExtraData: inlineExtraData; winControl.overlay: overlay;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="gameInviteDetailsTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="titleContainer hideFromDisplay"
+            data-ent-member="loadingContainer"
+            data-ent-hideanimation="inlineDetailsFadeOut">
+
+            <div class="inlineDetailsPanelFragmentLoadingProgress"
+                data-ent-member="loadingLabel">
+            </div>
+        </div>
+
+        
+        <div class="titleContainer"
+            data-win-control="MS.Entertainment.Social.GamerInfoHeader"
+            data-ent-member="fragmentContainer"
+            data-win-bind="winControl.model: model.sender">
+        </div>
+
+        <div class="messageBubblePointer"></div>
+
+        
+        <div class="bodyContainer">
+            <hr class="listDivider" />
+            
+            <div class="gameThumbnail messageBubble gameInviteMessage"
+                data-ent-showanimation="galleryItemShow">
+                <div class="text-small"
+                     style="-ms-grid-row: 1;"
+                     data-win-bind="textContent: model.popOverMessageText;">
+                </div>
+                <div class="gameInviteDetailsContainer">
+                    <img class="imageHolder gameInviteImage"
+                                         data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                                         data-win-bind="winControl.target: model.game.imageUri"
+                                         data-win-options="{defaultImagePath: ''}"
+                                         height="80"
+                                         width="60" />
+                     <div class="gameDetailsInviteMeta">
+                        <div class="text-metadata"
+                            style="-ms-grid-row: 2;"
+                             data-win-bind="textContent: model.game.name;">
+                        </div>
+                        <div class="text-metadata"
+                             style="-ms-grid-row: 3;"
+                             data-win-bind="textContent: model.platformGenreText;">
+                        </div>
+                        <div class="text-metadata"
+                             style="-ms-grid-row: 4; -ms-grid-row-align: end;"
+                             data-win-bind="textContent: model.formattedSentDate;">
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+            
+            <div data-win-control="MS.Entertainment.Social.ProfileButtonList"
+                data-win-bind="winControl.closeOverlay: closeOverlay;"
+                data-ent-member="buttons">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="textMessageDetailsTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="titleContainer hideFromDisplay"
+            data-ent-member="loadingContainer"
+            data-ent-hideanimation="inlineDetailsFadeOut">
+
+            <div class="inlineDetailsPanelFragmentLoadingProgress"
+                data-ent-member="loadingLabel">
+            </div>
+        </div>
+
+        
+        <div class="titleContainer"
+            data-win-control="MS.Entertainment.Social.GamerInfoHeader"
+            data-ent-member="fragmentContainer"
+            data-win-bind="winControl.model: model.sender">
+        </div>
+
+
+        <div class="messageBubblePointer"></div>
+
+        
+        <div class="bodyContainer">
+
+            <hr class="listDivider" />
+
+            
+            <div class="messageBubble">
+                <div class="label wrap text-cardTitle" 
+                    data-win-bind="
+                        textContent: messageText;
+                        removeFromDisplay: model.message.hasText MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                <div class="label wrap text-metadata"
+                    data-win-bind="
+                        textContent: String.id.IDS_SOCIAL_MESSAGE_ATTACHMENTS MS.Entertainment.Formatters.formatStringId;
+                        removeFromDisplay: hasNonText MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                <div class="label wrap text-metadata" data-win-bind="textContent: model.formattedSentDate;"></div>
+                <div class="label wrap text-metadata" data-win-bind="textContent: model.formattedExpirationDate;"></div>
+            </div>
+
+            
+            <div data-win-control="MS.Entertainment.Social.ProfileButtonList"
+                data-win-bind="winControl.closeOverlay: closeOverlay;"
+                data-ent-member="buttons">
+            </div>
+
+            
+            <div class="sendMessageErrorContainer hidden"
+                style="-ms-grid-column: 3; -ms-grid-row: 2;"
+                data-win-bind="hidden: errorText MS.Entertainment.Utilities.toggleClassNameNegate;">
+                
+                <div class="icon inlineGlyph label"
+                    data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineError MS.Entertainment.Formatters.formatIcon;">
+                </div>
+                
+                <div class="label"
+                    style="-ms-grid-column: 3; -ms-grid-row-align: center;"
+                    data-win-bind="textContent: errorText;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

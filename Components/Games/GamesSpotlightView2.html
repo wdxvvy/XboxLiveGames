@@ -1,0 +1,139 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="baseGrid2Column">
+
+        
+        <div class="grid_3RowHeroTopWidescreen heroPrimaryContentContainer"
+            style="-ms-grid-column: 1; -ms-grid-row: 1"
+            data-win-bind="fadeIn: signedIn MS.Entertainment.Utilities.toggleClassName;">
+
+            
+            <div class="heroItemContainer" style="-ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-row-span: 3;">
+
+                
+                <button class="playGameAction win-focusable acc-keyboardFocusTarget"
+                     data-win-bind="removeFromDisplay: engagedGame MS.Entertainment.Utilities.toggleClassName;
+                                    clickDataContext: playGame.clickDataContext;"
+                     type="button">
+                    <div class="label wrap text-panelHeader"
+                        data-win-bind="textContent: playGame.title;"></div>
+                    <img class="imageHolder hideFromDisplay"
+                         data-win-control="MS.Entertainment.UI.Shell.ImageControl"
+                         data-win-bind="winControl.target: playGame.imageUri;"
+                         data-win-options="{
+                             loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                             show: MS.Entertainment.Utilities.showElementNoAnimation,
+                             hide: MS.Entertainment.Utilities.doNothing,
+                             allowAnimations: false,
+                             imageIdType: MS.Entertainment.ImageIdType.image,
+                             preventHideDuringInitialize: true,
+                             errorImage: MS.Entertainment.ViewModels.PlayGameAction.defaultImage }"/>
+                </button>
+
+                
+                <div class="dashboardGridItemContent large engaged removeFromDisplay"
+                    data-win-bind="
+                        clickDataContext: engagedGame;
+                        removeFromDisplay: engagedGame MS.Entertainment.Utilities.toggleClassNameNegate;
+                        fadeIn: engagedGame MS.Entertainment.Utilities.toggleClassName;"
+                    data-ent-enteranimation="fadeIn">
+                    <div class="thumbnailButton win-focusable" 
+                        role="button"
+                        aria-atomic="true">
+                        <div class="imageContainer" 
+                            aria-hidden="true">
+                            
+                            <img class="imageHolder"
+                                    data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                                    data-win-bind="winControl.target: engagedGame.backgroundImageUri"
+                                    data-win-options="{
+                                            loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                            show: MS.Entertainment.UI.Animation.fadeIn,
+                                            hide: MS.Entertainment.Utilities.doNothing,
+                                            allowAnimations: true,
+                                            imageIdType: MS.Entertainment.ImageIdType.image,
+                                            desiredImageSize: {width: 675, height: 505},
+                                            preventHideDuringInitialize: false}"
+                              />
+                        </div>
+                        
+                        <div class="content">
+                            <div class="textContainer">
+                                
+                                <div class="gameProgress"
+                                     style="-ms-grid-row: 1; -ms-grid-column: 2;">
+                                    <div class="arcContainer">
+                                        <div id="arcProgressControl"
+                                            data-win-control="MS.Entertainment.UI.Controls.ArcProgress"
+                                            data-win-options="{ strokeThickness: 8, foregroundColor: '#FFFFFF', backgroundColor: 'rgba(255, 255, 255, 0.15)'}"
+                                            data-win-bind="winControl.progress: percentageProgressNumber">
+                                        </div>
+                                    </div>
+                                    <div class="progressContainer">
+                                        <div class="progressTextPercentage text-medium text-weightLight"
+                                            data-win-bind="textContent: percentageProgress"></div>
+                                    </div>
+                                </div>
+                                
+                                <div style="-ms-grid-row: 2; -ms-grid-column: 2;"
+                                     class="label removeFromDisplay text-large text-weightLight"
+                                     data-win-bind="textContent: engagedGame.name;
+                                                    removeFromDisplay: engagedGame.name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                                <div style="-ms-grid-row: 3; -ms-grid-column: 2;"
+                                     class="label removeFromDisplay text-subTitle engagedLastPlayed"
+                                     data-win-bind="textContent: heroCelebration.text;
+                                                    removeFromDisplay: heroCelebration MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div style="-ms-grid-column: 1; -ms-grid-row: 5; -ms-grid-column-span: 5;">
+                <div class="win-ui-dark horizontalBox engagePanel"
+                     data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                     data-win-bind="winControl.dataSource: actionButtons"
+                     data-win-options="{
+                          containerStyle: MS.Entertainment.UI.Controls.ItemsControl.ContainerStyles.horizontalFlow,
+                          itemTemplate: 'Components/Games/GamesSharedTemplates.html#dashboardEngagePanelButton'}">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="grid_1RowHeroWidescreenTall"
+             style="-ms-grid-column: 1; -ms-grid-row: 1"
+             data-win-bind="removeFromDisplay: signedIn MS.Entertainment.Utilities.toggleClassName;">
+
+            
+            <div class="signedOutPanel"
+                    style="-ms-grid-column: 1; -ms-grid-row: 1;"
+                    data-win-control="MS.Entertainment.UI.Controls.FailedPanelWithLink"
+                    data-win-bind="winControl.model: signedOutPanelModel">
+            </div>
+        </div>
+
+        
+        <div style="-ms-grid-column: 3;"
+             data-win-control ="MS.Entertainment.UI.Controls.FlexibleItemsControl"
+             data-win-options="{propertyName: 'contentType',
+                                raisePanelReady: true,
+                                containerStyle: '',
+                                itemSize: MS.Entertainment.Utilities.cardItemSizeWithMargin,
+                                reflowOnWindowSizeChanged: false,
+                                enableClickEvents: true,
+                                itemTemplates: [{ value: MS.Entertainment.ViewModels.GamesEngageViewModel.ContentType.GameExtra.id, template:  MS.Entertainment.ViewModels.GamesEngageViewModel.ContentType.GameExtra.template },
+                                                { value: MS.Entertainment.ViewModels.GamesEngageViewModel.ContentType.FullBleedProgram.id, template: MS.Entertainment.ViewModels.GamesEngageViewModel.ContentType.FullBleedProgram.template },
+                                                { value: MS.Entertainment.ViewModels.GamesEngageViewModel.ContentType.BoxArtProgram.id, template: MS.Entertainment.ViewModels.GamesEngageViewModel.ContentType.BoxArtProgram.template }]}"
+             data-win-bind="winControl.dataSource: items;">
+        </div>
+
+        
+        <div class="part-outOfBandMessagingContainer removeFromDisplay"
+             style="-ms-grid-column: 1; -ms-grid-row: 1;"
+             data-ent-member="_upgradeContainer"></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Friends Gallery</title>
+
+    
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Controls/Editbox.js"></script>
+    <script src="/Controls/LoadingControl.js"></script>
+
+    
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+
+    
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/queries/modelQueries.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+    <script src="/Components/Social/friendsGallery.js"></script>
+    <script src="/Components/Social/findFriends.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/Styles/Social.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/Images.css" />
+</head>
+
+<body>
+    <div data-ent-templateid="findFriendsButtonTemplate" 
+         data-win-control="WinJS.Binding.Template">
+        
+        <div class="findFriendsControl"
+            data-win-control="MS.Entertainment.Social.FindFriendsButton">
+        </div>
+    </div>
+
+    <div data-ent-templateid="friendsGalleryTemplate" 
+         data-win-control="WinJS.Binding.Template">
+        <div class="friendsGallery"
+             data-ent-member="itemList"
+             data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+             data-win-bind="winControl.dataSource: friendsDataSource; removeFromDisplay: showGallery MS.Entertainment.Utilities.toggleClassNameNegate;"
+             data-win-options="{
+                                 itemTemplate: 'Components/Social/SocialTemplates.html#friendsItemTemplate',
+                                 applyItemTemplate: MS.Entertainment.Social.FriendsGallery.itemContainerCreated
+                               }">
+        </div>
+
+        <div class="friendsPanelFriendsSignedOut imageSignOutSocialHubFriends acc-preserveBackground"
+             data-ent-member="loadingContainer"
+             data-win-bind="removeFromDisplay: showLoading MS.Entertainment.Utilities.toggleClassNameNegate;">
+        </div>
+
+        <div class="emptyFriendsListContainer"
+             data-win-bind="removeFromDisplay: showEmpty MS.Entertainment.Utilities.toggleClassNameNegate;">
+
+            <div class="miniProfilePanelControlsSignedOut acc-backgroundTransparent">
+                <div data-win-control="MS.Entertainment.UI.Controls.FailedPanel"
+                     data-ent-member="failedPanel"
+                     data-win-options="{
+                         defaultPrimaryStringId: String.id.IDS_SOCIAL_MY_EMPTY_FRIENDS_LABEL1,
+                         defaultSecondaryStringId: String.id.IDS_SOCIAL_MY_EMPTY_FRIENDS_LABEL2 }">
+                </div>
+                <div class="emptyFriendsListTitle text-panelHeader text-breakWord label wrap"
+                     data-win-bind="textContent:String.id.IDS_SOCIAL_MY_EMPTY_FRIENDS_TITLE MS.Entertainment.Formatters.formatStringId;">
+                </div>
+                <div class="imageSignOutSocialHubFriendsWithShadow"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

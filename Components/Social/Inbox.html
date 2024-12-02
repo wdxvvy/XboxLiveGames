@@ -1,0 +1,156 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Music Panels</title>
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    <script src="/Framework/formatters.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/queries/modelQueries.js"></script>
+
+    
+    <script src="/Controls/galleryGrouper.js"></script>
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+    <script src="/Controls/Label.js"></script>
+    
+    
+    <link rel="Stylesheet" type="text/css" href="../../styles/Galleries.css" />
+    <link rel="Stylesheet" type="text/css" href="../../styles/Inbox.css" />
+
+    
+    <script src="/Components/Social/MessageGallery.js"></script>
+</head>
+
+<body>
+
+    <div data-ent-templateid="inboxAllHubTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="collectionPage inboxPage collectionMessageGallery"
+            data-win-control="MS.Entertainment.Social.MessageGallery"
+            data-win-bind="winControl.viewModel: dataContext.viewModel"
+            data-win-options="{ view: 'all' }">
+        </div>
+    </div>
+
+    <div data-ent-templateid="inboxMessagesHubTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="collectionPage inboxPage collectionMessageGallery"
+            data-win-control="MS.Entertainment.Social.MessageGallery"
+            data-win-bind="winControl.viewModel: dataContext.viewModel"
+            data-win-options="{ view: 'messages' }">
+        </div>
+    </div>
+
+    <div data-ent-templateid="inboxGameInvitesHubTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="collectionPage inboxPage collectionMessageGallery"
+            data-win-control="MS.Entertainment.Social.MessageGallery"
+            data-win-bind="winControl.viewModel: dataContext.viewModel"
+            data-win-options="{ view: 'gameInvites' }">
+        </div>
+    </div>
+
+    <div data-ent-templateid="messageTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="inboxMessageContainer"
+            data-win-bind="read: read MS.Entertainment.Utilities.toggleClassName;">
+
+            
+            <div class="senderGamerpic">
+                <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                        data-win-bind="winControl.target: sender.gamerPictureUrl"
+                        data-ent-showanimation="fadeIn"
+                        data-win-options="{desiredImageSize: {width: 60, height: 60}, 
+                            enableDelayInitialization: true}"/>
+            </div>
+
+            
+            <div class="innerMessageContainer">
+                <div class="messageTextContainer">
+                    <div class="messageText text-small"
+                        data-win-bind="textContent: inboxMessageText;
+                                       hidden: inboxMessageText MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                </div>
+                <div class="messageSender text-metadata"
+                    data-win-bind="textContent: sender.gamertag;
+                                   hidden: sender.gamertag MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+            </div>
+
+            
+            <div class="dateContainer">
+                <div class="messageDate text-metadata"
+                    data-win-bind="textContent: formattedSentDate;
+                                   hidden: formattedSentDate MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                <div class="messageIcon icon"
+                    data-win-bind="textContent: WinJS.UI.AppBarIcon.mail MS.Entertainment.Formatters.formatIcon;
+                                   hidden: read MS.Entertainment.Utilities.toggleClassName;"></div>
+                <div class="messageIcon icon"
+                    data-win-bind="textContent: WinJS.UI.AppBarIcon.read MS.Entertainment.Formatters.formatIcon;
+                                   hidden: read MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div data-ent-templateid="gameInviteTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="inboxMessageContainer"
+            data-win-bind="read: read MS.Entertainment.Utilities.toggleClassName;">
+
+            
+            <div class="senderGamerpic">
+                <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                        data-win-bind="winControl.target: sender.gamerPictureUrl"
+                        data-ent-showanimation="fadeIn"
+                        data-win-options="{desiredImageSize: {width: 60, height: 60}, 
+                            enableDelayInitialization: true}"/>
+            </div>
+
+            
+            <div class="innerMessageContainer">
+                <div class="messageTextContainer">
+                    <div class="messageText text-small"
+                        data-win-bind="textContent: inboxMessageText;
+                                       hidden: inboxMessageText MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                </div>
+                <div class="messageSender text-metadata"
+                    data-win-bind="textContent: sender.gamertag;
+                                   hidden: sender.gamertag MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+            </div>
+
+            
+            <div class="dateContainer">
+                <div class="messageDate text-metadata"
+                    data-win-bind="textContent: formattedSentDate;
+                                   hidden: formattedSentDate MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                <div class="messageIcon icon"
+                    data-win-bind="textContent: MS.Entertainment.UI.Icon.game MS.Entertainment.Formatters.formatIcon;"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

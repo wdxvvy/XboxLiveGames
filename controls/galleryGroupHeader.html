@@ -1,0 +1,40 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Achievement ThumbnailButton Control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="../../Controls/controls.css" />
+    </head>
+
+    <body>
+
+        <div data-ent-templateid="simpleHorizontalGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="horizontalHeader">
+                <div class="simpleHeader placeholderItem text-metadata"
+                    data-ent-placeholderdatapath="title"
+                    data-win-bind="textContent: title WinJS.Binding.oneTime;"
+                    data-win-automationid="simpleHeader"></div>
+            </div>
+        </div>
+        
+        <div data-ent-templateid="dateAbbreviationGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="dateAbbreviationGroupHeader">
+                <div class="groupHeaderMonth" data-win-bind="textContent: model MS.Entertainment.Utilities.DateFormatters.formatMonthAbbreviation"></div>
+                <div class="groupHeaderMonthDate" data-win-bind="textContent: model MS.Entertainment.Utilities.DateFormatters.formatDay"></div>
+            </div>
+        </div>
+
+        <div data-ent-templateid="achievementDateAbbreviationGroupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="dateAbbreviationGroupHeader">
+                <div class="groupHeaderMonth" data-win-bind="textContent: date MS.Entertainment.Utilities.DateFormatters.formatMonthAbbreviationYear"></div>
+                <div class="groupHeaderOfflineAchievement" data-win-bind="textContent: text"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Immersive Details Templates</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Animations/animations.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+    <script src="/Framework/formatters.js"></script>
+    <script src="/Controls/PriceLabel.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateEngine.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyButtons.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateHandlers.js"></script>
+    <script src="/Components/InlineDetails/BaseInlineDetails.js"></script>
+    <script src="/Components/Games/PurchaseGame.js"></script>
+    <script src="/Components/Marketplace.js"></script>
+    <script src="/Components/Shell/PurchaseHelpers.js"></script>
+    <script src="/Components/ImmersiveDetails/GameDetails.js"></script>
+    
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/queries/modelQueries.js"></script>
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/Social/profileHydrator.js"></script>
+    <script src="/ViewModels/Social/profileComparer.js"></script>
+    
+    <script src="/ViewModels/Social/social.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Controls/Controls.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/ImmersiveDetails.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Fonts.css" />
+</head>
+<body>
+    
+    
+    
+    <div data-ent-templateid="gameOverviewTemplate" 
+         data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.Pages.SnappedGameDetailsOverview"
+             data-win-bind="winControl.mediaItem: dataContext.modelItem;" 
+             data-win-automationid="gameDetailOverview">
+        </div>
+    </div>
+
+    <div data-ent-templateid="gameDetailsOverviewTemplate" data-win-control="WinJS.Binding.Template">
+    
+    <div class="snappedDetailsOverview">
+        <div class="snappedDetailsOverviewDetailsBlock">
+            
+            <div class="snappedDetailsOverviewGeneral">
+                <div style="-ms-grid-column: 1; -ms-grid-row: 1;">
+                    <div class="imageContainer">
+                        <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                                data-win-bind="winControl.target: mediaItem.instance"
+                                data-win-options="{desiredImageSize: {width: 90, height: 120}}"
+                                data-ent-showanimation="fadeIn"
+                                class="imageHolder" 
+                                width="90" height="120" />
+                    </div>
+                </div>
+                <div class="snappedDetailsOverviewTextblock" style="-ms-grid-column: 3; -ms-grid-row: 1;">
+                    <div class="snappedDetailsRow">
+                        <div style="-ms-grid-column: 1;"
+                                class="snappedDetailsOverviewMetadata label text-metadata"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{wrap: false}" 
+                                data-win-bind="winControl.text: mediaItem.studioName;">
+                        </div>
+                    </div>
+                    <div class="snappedDetailsRow">
+                        <div style="-ms-grid-column: 1;"
+                                class="snappedDetailsOverviewMetadata label text-metadata"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{wrap: false}" 
+                                data-win-bind="winControl.text: mediaItem.publisher;">
+                        </div>
+                    </div>
+                    <div class="snappedDetailsRow">
+                        <div style="-ms-grid-column: 1;"
+                                class="snappedDetailsOverviewMetadata label text-metadata"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{wrap: false}" 
+                                data-win-bind="winControl.text: mediaItem.primaryGenre;">
+                        </div>
+                    </div>
+                    <div class="snappedDetailsRow">
+                        <div style="-ms-grid-column: 1;"
+                                class="snappedDetailsOverviewMetadata label text-metadata"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{wrap: false}" 
+                                data-win-bind="winControl.text: mediaItem.releaseDate MS.Entertainment.Formatters.formatYearFromDate;">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            
+            <div class="snappedDetailsOverviewDescription text-bodyContent" 
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-options="{wrap: true}" 
+                    data-win-bind="winControl.text: mediaItem.description;
+                                removeFromDisplay: mediaItem.description MS.Entertainment.Utilities.toggleClassNameNegate">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

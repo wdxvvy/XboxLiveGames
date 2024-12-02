@@ -1,0 +1,77 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/Animations/Animations.css" />
+        <title>Games Engage Icon Button Control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/Label.js"></script>
+        <script src="/Controls/IconButton.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="gamesEngageIconButtonTemplate" data-win-control="WinJS.Binding.Template">
+            <button type="button"
+                    data-ent-member="_button"
+                    data-ent-event="click: onClick"
+                    class="win-command win-global iconButton win-focusable">
+
+                <span class="gamesEngageIconContainer"
+                    data-ent-member="gamesEngageIconContainer">
+                    <span class="gamesEngageIconSpan"
+                          data-ent-member="ringSpan">
+                        <span data-ent-member="countSpan"
+                              class="win-commandimage iconSpan"
+                              style="-ms-grid-column: 2; -ms-grid-row: 2;"></span>
+                        <span class="win-commandicon win-commandring"
+                              style="-ms-grid-column: 3; -ms-grid-row: 2;">
+                            <span class="win-commandimage modifier" data-ent-member="modifier"></span>
+                            <span data-ent-member="iconSpanPressed" class="win-commandimage iconSpanPressed"></span>
+                            <span data-ent-member="iconSpan" class="win-commandimage iconSpan"></span>
+                        </span>
+                    </span>
+
+                    <span class="textContainer link"
+                        style="-ms-grid-row-align: end; -ms-grid-rows: 1fr auto auto; height: 100%;">
+                        <span data-ent-member="linkLabel"
+                              style="-ms-grid-row: 3; -ms-grid-row-align: end;"
+                              class="win-label label title">
+                        </span>
+                        <span class="gamesEngageGamerScore"
+                              style="-ms-grid-row: 2; display: -ms-grid; -ms-grid-column-align: center; -ms-grid-columns: auto 5px auto;">
+                            <span data-ent-member="linkSubIcon"
+                                      style="-ms-grid-column: 1;"
+                                  class="win-label label subtitle wrap icon"
+                                  data-win-bind="hideFromDisplay: subTextVisibility MS.Entertainment.Utilities.toggleClassNameNegate;">
+                            </span>
+                            <span data-ent-member="linkSubLabel"
+                                      style="-ms-grid-column: 3;"
+                                  class="win-label label subtitle wrap"
+                                  data-win-bind="hideFromDisplay: subTextVisibility MS.Entertainment.Utilities.toggleClassNameNegate;">
+                            </span>
+                        </span>
+                    </span>
+                </span>
+
+                <span class="textContainer celebration"
+                    data-ent-member="celebrationTextContainer">
+                    <span class="win-label title text-cardTitle wrap text-breakWord"
+                          style="-ms-grid-row: 2;"
+                          data-ent-member="celebrationLabel">
+
+                    </span>
+
+                    <span class="win-label subTitle text-metadata wrap text-breakWord"
+                          style="-ms-grid-row: 3;"
+                          data-ent-member="celebrationSubLabel">
+                    </span>
+                </span>
+            </button>
+        </div>
+    </body>
+</html>

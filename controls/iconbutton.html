@@ -1,0 +1,85 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <title>Icon Button Control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/Label.js"></script>
+        <script src="/Controls/IconButton.js"></script>
+        <script src="/Controls/FlyOut.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="iconButtonTemplate" data-win-control="WinJS.Binding.Template">
+            <button type="button"
+                    data-ent-member="_button"
+                    data-ent-event="click: onClickPreProcess"
+                    class="win-command win-global iconButton win-focusable">
+
+                <span class="win-commandicon win-commandring" data-ent-member="ringSpan">
+                    <span class="win-commandimage modifier" data-ent-member="modifier"></span>
+                    <span data-ent-member="iconSpanPressed" class="win-commandimage iconSpanPressed"></span>
+                    <span data-ent-member="iconSpan" class="win-commandimage iconSpan"></span>
+                </span>
+
+                <span data-ent-member="linkLabel"
+                    class="win-label label wrap">
+                </span>
+            </button>
+
+            <div data-ent-member="_flyoutElement"></div>
+        </div>
+
+        <div data-ent-templateid="iconButtonTwoLineTemplate" data-win-control="WinJS.Binding.Template">
+            <button type="button"
+                    data-ent-member="_button"
+                    data-ent-event="click: onClick"
+                    class="win-command win-global iconButton win-focusable">
+
+                <span class="win-commandicon win-commandring" data-ent-member="ringSpan">
+                    <span class="win-commandimage modifier" data-ent-member="modifier"></span>
+                    <span data-ent-member="iconSpanPressed" class="win-commandimage iconSpanPressed"></span>
+                    <span data-ent-member="iconSpan" class="win-commandimage iconSpan"></span>
+                </span>
+
+                <span class="textContainer">
+                    <span data-ent-member="linkLabel"
+                          class="win-label label wrap"
+                          data-win-bind="shiftForSubText: subTextString MS.Entertainment.Utilities.toggleClassName;">
+                    </span>
+                    <span data-ent-member="linkSubLabel"
+                          class="win-label label subtitle wrap"
+                          data-win-bind="removeFromDisplay: subTextVisibility MS.Entertainment.Utilities.toggleClassNameNegate;">
+                    </span>
+                </span>
+            </button>
+
+            <div data-ent-member="_flyoutElement"></div>
+        </div>
+
+        <div data-ent-templateid="iconButtonVerticalTemplate" data-win-control="WinJS.Binding.Template">
+            <button type="button"
+                    data-ent-member="_button"
+                    data-ent-event="click: onClick"
+                    class="win-command win-global iconButtonVertical acc-keyboardFocusTarget win-focusable">
+
+                <span class="win-commandicon win-commandring" data-ent-member="ringSpan">
+                    <span class="win-commandimage modifier" data-ent-member="modifier"></span>
+                    <span data-ent-member="iconSpanPressed" class="win-commandimage iconSpanPressed"></span>
+                    <span data-ent-member="iconSpan" class="win-commandimage iconSpan"></span>
+                </span>
+
+                <span data-ent-member="linkLabel"
+                      class="win-label label wrap">
+                </span>
+            </button>
+
+            <div data-ent-member="_flyoutElement"></div>
+        </div>
+    </body>
+</html>

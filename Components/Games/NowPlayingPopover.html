@@ -1,0 +1,65 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Now Playing Popover</title>
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <link rel="Stylesheet" type="text/css" href="../../styles/Games.css" />
+</head>
+
+<body>
+    
+    <div data-ent-templateid="nowPlayingPopoverTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="nowPlayingPopover" style="border: 20px solid currentColor; width: 100%; height: 100%; position: absolute;">
+            
+            <div data-ent-member="nowPlayingControlContainer"
+                 class="nowPlayingContainer fullScreen hideFromDisplay acc-preserveBackground"
+                 data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                 data-ent-showanimation="nowPlayingControlsFadeIn"
+                 data-ent-hideanimation="nowPlayingControlsFadeOut"
+                 data-win-options="{ ignoreChildrenInitialization: true }"></div>
+
+            
+            <div style="z-index:1; -ms-grid-column: 1; -ms-grid-column-span: 3;"
+                 data-win-bind="removeFromDisplay: showStartingAnimation MS.Entertainment.Utilities.toggleClassNameNegate;"
+                 data-ent-member="immersiveStartingControl">
+                <div style="display: -ms-grid; -ms-grid-columns: 1fr; -ms-grid-rows: 55% 1fr; width:100%; height:100%;">
+                    <div style="-ms-grid-row: 2; -ms-grid-row-align: start; -ms-grid-column-align: center" 
+                         class="immersiveStarting">
+                        <progress class="win-ring win-medium immersiveStartingProgress"></progress>
+
+                        <div class="immersiveStartingFont text-metadata"
+                             data-win-control="MS.Entertainment.UI.Controls.Label"
+                             data-win-options="{stringId:String.id.IDS_VIDEO_STARTING_SMOOTH}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

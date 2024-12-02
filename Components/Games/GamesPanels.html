@@ -1,0 +1,88 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Games Panels</title>
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/queries/modelQueries.js"></script>
+
+    
+    <script src="/Controls/galleryGrouper.js"></script>
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+    <script src="/Controls/Label.js"></script>
+
+    
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/Social/profileHydrator.js"></script>
+    <script src="/ViewModels/Games/GamesMarketPlaceViewModel.js"></script>
+
+    
+    <link rel="Stylesheet" type="text/css" href="../../styles/Galleries.css" />
+
+    <script src="/Components/Games/GamesCollection.js"></script>
+    <script src="/Components/Games/GamesMarketplace.js"></script>
+</head>
+
+<body>
+
+    
+    <div data-ent-templateid="gamesCollectionAllTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="collectionPage"
+             data-win-control="MS.Entertainment.Pages.GamesCollection"
+             data-win-bind="winControl.dataContext: dataContext">
+        </div>
+    </div>
+
+    
+    <div data-ent-templateid="gamesWindowsMarketplaceTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="marketplacePage marketplaceGamesPage windowsMarketplace"
+             data-win-control="MS.Entertainment.Pages.GamesMarketplace"
+             data-win-bind="winControl.groupModifier: dataContext.primaryModifier; winControl.sortModifier: dataContext.secondaryModifier; winControl.viewModel: dataContext.viewModel;">
+        </div>
+    </div>
+
+    
+    <div data-ent-templateid="gamesSearchTemplate" data-win-control="WinJS.Binding.Template">  
+        <div class="marketplacePage marketplaceGamesSearchPage"
+            data-win-control="MS.Entertainment.Pages.NewGamesSearch"
+            data-win-bind="winControl._viewModel: dataContext.viewModel">
+        </div>
+    </div>
+
+    
+    <div data-ent-templateid="flexHubMarketplaceTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="marketplacePage marketplaceGamesPage"
+             data-win-control="MS.Entertainment.Pages.GamesMarketplace"
+             data-win-bind="winControl.groupModifier: dataContext.primaryModifier; winControl.sortModifier: dataContext.secondaryModifier; winControl.viewModel: dataContext.viewModel; winControl.templateSelectorConstructor: dataContext.viewModel.templateSelectorConstructor">
+        </div>
+    </div>
+</body>
+
+</html>

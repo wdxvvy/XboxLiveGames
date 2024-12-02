@@ -1,0 +1,79 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Marketplace Page Template</title>
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/utilities.js"></script>
+        
+        <script src="/Framework/shell.js"></script>
+        <script src="/Framework/corefx.js"></script>
+        
+        <script src="/Framework/serviceLocator.js"></script>
+
+        
+        <script src="/Framework/navigation.js"></script>
+        <script src="/Controls/ListControls.js"></script>
+        <script src="/Controls/HubStrip.js"></script>
+        
+
+        
+        <script src="/Controls/Label.js"></script>
+
+        
+        <script src="/Controls/AppBar/BottomAppBar.js"></script>
+        
+        <script src="/Components/Playback/Controls/PlaybackControl.js"></script>
+
+        
+        <script src="/Components/Shell/PrimaryNavigationButton.js"></script>
+        
+        <script src="/Framework/Data/xhr.js"></script>
+        <script src="/Framework/Data/factory.js"></script>
+        <script src="/Framework/Data/query.js"></script>
+        <script src="/Framework/Data/list.js"></script>
+
+        <script src="/Framework/Data/Augmenters/commonAugmenters.js"></script>
+        <script src="/Framework/Data/queries/libraryQueries.js"></script>
+        <script src="/Framework/Data/queries/marketplaceQueries.js"></script>
+        <script src="/Framework/queryWatcher.js"></script>
+        <script src="/Framework/endpoints.js"></script>
+        <script src="/Framework/formatters.js"></script>
+        <script src="/Animations/GalleryAnimations.js"></script>
+        <script src="/Controls/GalleryControl.js"></script>
+        <script src="/Controls/Overlay.js"></script>
+
+        
+        <script src="/Components/Marketplace.js"></script>
+        
+        
+        <script src="/Components/Shell/PurchaseHelpers.js"></script>
+
+        <link rel="Stylesheet" type="text/css" href="../../styles/Galleries.css" />
+    </head>
+    <body>
+        
+        <div data-ent-templateid="marketplaceTemplate" data-win-control="WinJS.Binding.Template">
+            
+            <img class="marketplaceGalleryStudioLogo" src="" alt=""
+                data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                data-win-bind="src: _hubImage; 
+                               removed: _hubImage MS.Entertainment.Utilities.toggleClassNameNegate" />
+
+            
+            <div class="marketplace marketplaceGalleryView marketplaceGallery"
+                data-win-control="MS.Entertainment.UI.Controls.GalleryControl"
+                data-win-bind="winControl.templateSelectorConstructor: templateSelectorConstructor"
+                data-win-options="{
+                    tap: MS.Entertainment.UI.Controls.GalleryControl.Tap.invokeOnly,
+                    selectionMode: MS.Entertainment.UI.Controls.GalleryControl.SelectionMode.none,
+                    slotSize: { width: 150, height: 250 },
+                    itemSize: { width: 150, height: 250 },
+                    focusFirstItemOnPageLoad: true }"
+                 data-ent-member="_galleryView">
+            </div>
+        </div>
+    </body>
+</html>

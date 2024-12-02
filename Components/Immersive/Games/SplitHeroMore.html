@@ -1,0 +1,39 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Games Immersive Hero</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/ViewModels/MediaItemModel.js"></script>
+    <script src="/Components/Shell/ContentNotificationList.js"></script>
+    <script src="/Components/Social/Beacon.js"></script>
+</head>
+<body>
+
+    <div class="overviewHost">
+        <div class="overview game" tabindex="0">
+            <div class="metaDataContainer immersiveColumnPadding">
+                <div class="immersiveSplitHeroText">
+
+                    
+                    <div class="immersiveHeroPrimaryText text-immersiveHeroTitle" 
+                         data-win-bind="textContent: mediaItem.name"></div>
+
+                    
+                    <div class="immersiveHeroSecondaryText text-metadata"
+                         data-win-bind="textContent: mediaItem.primaryGenre; hideFromDisplay: mediaItem.primaryGenre MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+
+                    
+                    <div class="descriptionText label wrap text-bodyContent"
+                         data-win-bind="textContent: mediaItem.description;
+                                        removeFromDisplay: mediaItem.description MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/Styles/Inbox.css" />
+        
+        <title>Inbox Pages Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/PivotControls.js"></script>
+
+        
+        <script src="/ViewModels/Social/InboxViewModel.js"></script>
+        <script src="/Components/Social/InboxPage.js"></script>
+        <script src="/Components/Social/UserMessage.js"></script>
+    </head>
+
+    <body>
+        
+        
+        
+        <div data-ent-templateid="inboxPageTemplate"
+            data-win-control="WinJS.Binding.Template">
+
+            <div class="pageContainer"
+                data-ent-event="
+                    PanelReady: handlePanelReady;
+                    PanelReset: handlePanelReset">
+
+                
+                <div class="pageHeader enterPageOffset2 label text-hubTitle"
+                    style="-ms-grid-column: 2; -ms-grid-row: 2"
+                    data-ent-member="_titleContainer"
+                    data-ent-showanimation="enterPage"
+                    data-ent-enteranimation="enterPage"
+                    data-ent-hideanimation="exitPage"
+                    data-ent-exitanimation="exitPage"></div>
+                
+                
+                <div class="bodyContainer hideFromDisplay enterPageOffset3" 
+                     style="-ms-grid-column: 2; -ms-grid-row: 3; -ms-grid-row-span: 2;"
+                     data-ent-member="_bodyContainer"
+                     data-ent-showanimation="enterPage"
+                     data-ent-enteranimation="enterPage"
+                     data-ent-hideanimation="exitPage"
+                     data-ent-exitanimation="exitPage"
+                     data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                     data-win-options="{controlName: 'inboxPageBodyContainer'}">
+                
+                    
+                    <div
+                        class="primaryPanelModifier collectionMusicModifier"
+                        style="-ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-column-span: 3; -ms-grid-column-align: start"                        
+                        tabindex="-1"
+                        data-win-control="MS.Entertainment.UI.Controls.Modifier"
+                        data-ent-member="_modifierControl"
+                        data-win-options="{
+                            tabIndex: 0,
+                            popupStyle: ['primaryPanelModifierPopup'],
+                            identifier: 'primary'}"
+                        data-win-automationid="primaryPanelModifier">
+                    </div>
+
+                    <hr style="-ms-grid-row: 2;"/>
+
+                    
+                    <div class="pageNavigation"
+                        style="-ms-grid-column: 1; -ms-grid-row: 2"
+                        role="tablist"
+                        data-ent-member="_pivotControl"
+                        data-win-control="MS.Entertainment.Controls.VerticalPivotControl">
+                    </div>
+                    <div class="pageNavigationOutline"
+                         style="-ms-grid-column: 1; -ms-grid-row: 2">
+                    </div>
+                </div>
+                
+                
+                <div class="loadingErrorContainer"
+                     style="-ms-grid-column: 4; -ms-grid-row: 2">
+
+                    <div class="panelFragmentProgress hideFromDisplay"                        
+                        data-ent-showanimation="enterPage"
+                        data-ent-member="loadingControl">
+                        <progress class="win-medium galleryProgress"
+                            data-ent-member="loadingControlRing"></progress>
+                    </div>
+
+                    <div class="panelFragmentFailed panelFragmentContainer hideFromDisplay"
+                        data-ent-member="failedControl">
+                    </div>
+                </div>
+                
+                
+                <div class="pageHub"
+                    style="-ms-grid-column: 4; -ms-grid-row: 1;"
+                    role="tabpanel"
+                    data-ent-showanimation="enterPage"
+                    data-ent-enteranimation="enterPage"
+                    data-ent-hideanimation="exitPage"
+                    data-ent-exitanimation="exitPage"
+                    data-ent-member="hubContainer">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

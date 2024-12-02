@@ -1,0 +1,343 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+.inboxPage
+{
+    height: 100%
+}
+.inboxPage .pageContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: 120px 320px 1px 1fr;
+    -ms-grid-rows: 60px auto 50px 1fr
+}
+@media screen and (min-height: 1080px)
+{
+    .inboxPage .pageContainer
+    {
+        -ms-grid-rows: 70px auto 50px 1fr
+    }
+}
+@media screen and (min-height: 1200px)
+{
+    .inboxPage .pageContainer
+    {
+        -ms-grid-rows: 90px auto 50px 1fr
+    }
+}
+@media screen and (min-height: 1440px)
+{
+    .inboxPage .pageContainer
+    {
+        -ms-grid-rows: 150px auto 50px 1fr
+    }
+}
+.inboxPage .pageNavigation
+{
+    width: 290px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+    margin-left: -15px;
+    padding-top: 3px;
+    outline: none
+}
+html[dir=rtl] .inboxPage .pageNavigation
+{
+    margin-left: 0;
+    margin-right: -15px
+}
+.inboxPage .bodyContainer>hr
+{
+    width: 260px;
+    margin: 10px 0;
+    height: 1px;
+    border: none
+}
+.inboxPage .bodyContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto 1fr
+}
+.inboxPage .collectionListPageModifier
+{
+    -ms-grid-row-align: end
+}
+.inboxPage .pageHeader
+{
+    margin-top: -5px;
+    white-space: normal
+}
+.inboxPage .pageHub
+{
+    -ms-grid-row-span: 4;
+    margin-top: 0
+}
+.inboxPage .verticalPivotItem
+{
+    -ms-grid-columns: 1fr 5px 30px 15px
+}
+.inboxPage .verticalPivotButton
+{
+    -ms-grid-column-span: 4;
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 10px;
+    padding-top: 0;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-left: 15px
+}
+.inboxPage .verticalPivotButtonOutline
+{
+    margin: 0 2px;
+    -ms-grid-column-span: 4
+}
+.inboxPage .modifierControl
+{
+    -ms-grid-columns: 1fr auto;
+    -ms-grid-rows: auto auto;
+    margin-top: 16px
+}
+.inboxPage .modifierControl
+{
+    -ms-grid-columns: 1fr auto;
+    -ms-grid-rows: 30px auto;
+    overflow: hidden;
+    margin-top: 8px
+}
+.inboxPage .marketplace
+{
+    margin-top: 0;
+    display: block
+}
+.inboxPage .collectionGallery>.win-template, .inboxPage .marketplaceGallery>.win-template
+{
+    height: 100%
+}
+.inboxPage .collectionGallery>.win-listview.win-groups>.win-viewport:not(.win-vertical)>.win-surface, .inboxPage .marketplaceGallery>.win-listview.win-groups>.win-viewport:not(.win-vertical)>.win-surface
+{
+    margin-left: -122px
+}
+.inboxPage .loadingErrorContainer
+{
+    -ms-grid-row-span: 3;
+    position: relative;
+    width: calc(100% - 50px)
+}
+html[dir=rtl] .inboxPage .emptyGalleryPanel, .inboxPage .emptyGalleryPanel
+{
+    position: relative;
+    width: calc(100% - 50px);
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0
+}
+.inboxPage .collectionGallery, .inboxPage .marketplaceGallery
+{
+    width: 100%
+}
+.inboxPage .win-listview
+{
+    height: 100%;
+    width: 100%
+}
+.inboxPage .win-vertical .win-selectionbordercontainer, .inboxPage .win-vertical .win-selectionbackground, .inboxPage .win-vertical .win-surface
+{
+    width: calc(100% - 100px);
+    max-width: 900px
+}
+.inlineDetailsTrackList .win-selectionstylefilled .win-vertical .win-selected .win-selectioncheckmark, .inboxPage .win-selectionstylefilled .win-vertical .win-selected .win-selectioncheckmark
+{
+    right: 15px
+}
+html[dir=rtl] .inlineDetailsTrackList .win-selectionstylefilled .win-vertical .win-selected .win-selectioncheckmark, html[dir=rtl] .inboxPage .win-selectionstylefilled .win-vertical .win-selected .win-selectioncheckmark
+{
+    left: 15px;
+    right: auto
+}
+.inboxPage>div:not(.root) .failedPanelContainer
+{
+    margin-top: 60px
+}
+.inboxPage>div:not(.root) .failedPanelTextContainer {
+    bottom: auto
+}
+.inboxPage .win-vertical .win-item
+{
+    height: 80px
+}
+.inboxPage .win-vertical .win-item>div
+{
+    height: 60px;
+    margin: 3px 3px 3px 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    padding-right: 20px
+}
+.inboxPage .win-vertical .win-focusedoutline
+{
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    top: 3px;
+    left: 3px
+}
+html[dir=rtl] .inboxPage .win-vertical .win-focusedoutline
+{
+    left: 0;
+    right: 3px
+}
+.inboxPage .win-vertical .win-container:hover {
+    outline-width: 0;
+    outline-style: none
+}
+.inboxPage .win-vertical .win-item:hover {
+    outline-width: 0;
+    outline-style: none
+}
+.inboxPage .win-viewport.win-vertical .win-container:hover .win-item>div, .inboxPage .win-viewport.win-vertical .win-container:hover .win-focusedoutline
+{
+    outline-width: 3px;
+    outline-style: solid
+}
+.inboxPage .win-vertical .win-container, .inboxPage .win-rtl>.win-vertical .win-container
+{
+    max-width: calc(100% - 8px);
+    margin: 0 4px 0 4px;
+    padding: 0
+}
+.inboxPage .win-backdrop
+{
+    max-width: calc(100% - 4px);
+    margin: 0
+}
+.inboxPage .win-vertical .win-surface
+{
+    margin-top: 66px
+}
+.inboxPage .panelFragmentProgress
+{
+    height: 100%;
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr
+}
+.inboxPage .galleryProgress
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row-align: center
+}
+.inboxMessageContainer
+{
+    display: -ms-grid;
+    -ms-grid-columns: auto 1fr auto auto
+}
+.innerMessageContainer
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    -ms-grid-column: 2
+}
+.messageDate, .messageText
+{
+    display: -ms-grid
+}
+.messageText
+{
+    -ms-grid-column: 1
+}
+.platformContainer
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-column: 3
+}
+.platformContainer .messageText
+{
+    -ms-grid-row-align: start;
+    margin-top: 12px
+}
+.messageDate
+{
+    -ms-grid-row-align: center
+}
+.dateContainer
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr auto 3px auto 1fr;
+    -ms-grid-columns: 1fr auto;
+    -ms-grid-column: 4
+}
+.messageDate
+{
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-align: end
+}
+.messageIcon
+{
+    -ms-grid-column: 2;
+    -ms-grid-row: 4;
+    -ms-grid-column-align: end;
+    -ms-grid-row-align: start
+}
+.senderGamerpic
+{
+    -ms-grid-column: 1
+}
+.senderGamerpic>img
+{
+    height: 60px;
+    width: 60px
+}
+@media screen and (max-height: 1024px)
+{
+    .innerMessageContainer
+    {
+        width: 100%
+    }
+    .messageTextContainer
+    {
+        width: 100%
+    }
+    .messageTextContainer .messageText
+    {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+        overflow: hidden;
+        display: block
+    }
+}
+@media screen and (-ms-high-contrast)
+{
+    .inboxPage .verticalPivotButton
+    {
+        border-top-style: none;
+        border-bottom-style: none
+    }
+    .inboxPage .verticalPivotButtonOutline
+    {
+        margin: 2px
+    }
+    .games .marketplace .win-surface
+    {
+        padding-bottom: 2px
+    }
+    .inboxPage .verticalSubPivotItem .verticalPivotButton
+    {
+        padding-left: 25px
+    }
+    html[dir=rtl] .inboxPage .verticalSubPivotItem .verticalPivotButton
+    {
+        padding-right: 25px
+    }
+}

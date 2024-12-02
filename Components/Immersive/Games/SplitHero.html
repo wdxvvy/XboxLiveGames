@@ -1,0 +1,116 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Immersive Hero</title>
+        <link rel="stylesheet" type="text/css" href="/styles/ImmersiveDetails.css" />
+        <link rel="stylesheet" type="text/css" href="/Styles/Immersive.css" />
+        
+        
+        <script src="/Framework/debug.js"></script>
+        <script src="/Framework/utilities.js"></script>
+        <script src="/Framework/serviceLocator.js"></script>
+        <script src="/Framework/actionIdentifiers.js"></script>
+        <script src="/Framework/action.js"></script>
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/NowPlaying/NowPlaying.js"></script>
+        <script src="/ViewModels/MediaItemModel.js"></script>
+        <script src="/Components/Games/Screenshots.js"></script>
+        <script src="/Components/Games/NowPlayingPopover.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="ImmersiveHero" data-win-control="WinJS.Binding.Template">
+            <div class="immersiveFrame splitHero immersiveHeroBackgroundImageContainer hideFromDisplay"
+                 data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                 data-ent-showanimation="immersiveHeroImageEnter"
+                 data-ent-hideanimation="immersiveHeroImageExit"
+                 data-ent-member="_heroBackground"
+                 data-win-bind="winControl.visibility: backgroundVisible;
+                                mediaType: mediaTypeClassName MS.Entertainment.Utilities.appendClassName;
+                                showGenericIcon: showGenericIcon MS.Entertainment.Utilities.toggleClassName;">
+                <img src="#"
+                     data-win-bind="src: backgroundImageUri MS.Entertainment.UI.Controls.SplitHero.loadBackgroundImage;" />
+                <div style="-ms-grid-column: 1; -ms-grid-row: 1;"
+                     data-win-bind="style.backgroundImage: backgroundFallbackImageUri;"></div>
+                <div class="immersiveHeroBackgroundImageOverlay acc-preserveBackground"
+                     style="-ms-grid-column: 1; -ms-grid-row: 1;"
+                     data-win-bind="fullBleed: backgroundFallbackImageUri MS.Entertainment.Utilities.toggleClassNameNegate;
+                                    hideFromDisplay: showGenericIcon MS.Entertainment.Utilities.toggleClassName;"></div>
+            
+                <div class="splitHeroRotator hideFromDisplay"
+                     data-ent-showanimation="enterPage"
+                     data-ent-hideanimation="exitPage"
+                     data-ent-event="click: onImageClick"
+                     data-ent-member="_imageRotator">
+                    <img class="splitHeroRotatorImage" data-ent-member="_rotatorImage1" src="#" />
+                    <img class="splitHeroRotatorImage" data-ent-member="_rotatorImage2" src="#" />
+                    <div class="splitHeroRotatorViewAll" style="z-index: 2;">
+                        <button class="splitHeroRotatorViewAllLink inlineCaretButton acc-keyboardFocusTarget"
+                             data-win-control="MS.Entertainment.UI.Framework.UserControl" 
+                             data-win-bind="winControl.className: frame.moniker MS.Entertainment.Utilities.appendClassName;"
+                             data-ent-event="click: onImageClick"
+                             role="button"
+                             tabindex="0">
+                            <div class="inlineCaretButtonText text-xSmall text-weightBold"
+                                 style="-ms-grid-column: 1;"
+                                 data-win-bind="textContent: String.id.IDS_DETAILS_GAME_SCREENSHOTS_MORE MS.Entertainment.Formatters.formatStringId;"></div>
+                            <div class="inlineCaretButtonIcon text-xxSmall text-weightNormal"
+                                 style="-ms-grid-column: 2;"
+                                 data-win-bind="textContent: MS.Entertainment.UI.Icon.nowPlayingNext MS.Entertainment.Formatters.formatIcon;"></div>
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="immersiveSplitHeroContent acc-preserveBackground"
+                     data-ent-showanimation="enterPage"
+                     data-ent-hideanimation="exitPage"
+                     data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                     data-ent-member="_heroContent">
+                    <div class="immersiveHeroActions immersiveSplitHeroActions horizontalBox"
+                         data-win-control="MS.Entertainment.Pages.ActionButtonsListControl"
+                         data-win-bind="winControl.dataSource: dataContext.buttons"
+                         data-win-options="{
+                            containerStyle: 'horizontalFlow',
+                            defaultButtonClass: 'immersiveDetailsOverviewActionButton'}">
+                    </div>
+
+                    <div class="immersiveSplitHeroText">
+
+                        
+                        <div class="immersiveHeroPrimaryText text-immersiveHeroTitle" 
+                             data-win-bind="textContent: dataContext.mediaItem.name"></div>
+
+                        
+                        <div class="immersiveHeroSecondaryText text-metadata"
+                             data-win-bind="textContent: secondaryText; 
+                                            hideFromDisplay: secondaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+
+                        
+                        <div class="descriptionText label wrap text-bodyContent"
+                             data-win-bind="textContent: dataContext.mediaItem.description;
+                                            removeFromDisplay: dataContext.mediaItem.description MS.Entertainment.Utilities.toggleClassNameNegate"></div>
+
+                    </div>
+
+                </div>
+
+                <button class="viewMoreRow splitHeroViewMore inlineCaretButton acc-keyboardFocusTarget"
+                        data-win-control="MS.Entertainment.UI.Framework.UserControl" 
+                        data-win-bind="winControl.className: frame.moniker MS.Entertainment.Utilities.appendClassName;
+                                       removeFromDisplay: viewMoreButtonVisible MS.Entertainment.Utilities.toggleClassNameNegate"
+                        data-ent-event="click: _viewMoreClicked"
+                        data-ent-member="_viewMoreButton"
+                        role="button"
+                        tabindex="0">
+                    <div class="inlineCaretButtonText text-xSmall text-weightBold"
+                         style="-ms-grid-column: 1;"
+                         data-win-bind="textContent: frame.viewMoreInfo.title;"></div>
+                    <div class="inlineCaretButtonIcon text-xxSmall text-weightNormal"
+                         style="-ms-grid-column: 2;"
+                         data-win-bind="textContent: MS.Entertainment.UI.Icon.nowPlayingNext MS.Entertainment.Formatters.formatIcon;"></div>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

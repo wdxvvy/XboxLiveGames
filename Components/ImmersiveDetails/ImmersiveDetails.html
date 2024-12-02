@@ -1,0 +1,57 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Immersive Details Page</title>
+    <link rel="stylesheet" type="text/css" href="/styles/NowPlaying.css" />
+    <link rel="stylesheet" type="text/css" href="/Animations/ImmersiveDetailsAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/ImmersiveDetails.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Galleries.css" />
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/formatters.js"></script>
+    <script src="/Framework/disabled.js"></script>
+
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Animations/animations.js"></script>
+    <script src="/Animations/GalleryAnimations.js"></script>
+
+    
+    <script src="/Controls/NowPlaying/NowPlaying.js"></script>
+    <script src="/Controls/ListControls.js"></script>
+    <script src="/Controls/HubStrip.js"></script>
+
+    
+    <script src="/ViewModels/MediaItemModel.js"></script>
+
+    
+    <script src="/Controls/PriceLabel.js"></script>
+    <script src="/Controls/WebHostExperience.js"></script>
+    <script src="/Controls/MediaItemThumbnail.js"></script>
+    <script src="/Controls/GalleryThumbnail.js"></script>
+    <script src="/ViewModels/MediaItemModel.js"></script>
+    <script src="/Components/Marketplace.js"></script>
+    <script src="/Components/Shell/PurchaseHelpers.js"></script>
+    <script src="/Components/ImmersiveDetails/GameDetails.js"></script>
+</head>
+<body>
+    <div data-ent-templateid="immersiveDetailsTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="immersiveDetailsContainer">
+            
+            <div data-ent-member="_hubStrip" class="immersiveDetailsHub"
+                 data-win-control="MS.Entertainment.UI.Controls.HubStrip"
+                 data-win-options="{ id: 'ImmersiveDetailsHubStrip', leftEdgeOffset: 50, rightEdgeOffset: 50, animationEnabled: true}">
+            </div>            
+            <button class="toggleMenuButton imageButton tranFadeShort" type="button" 
+                    data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                    data-win-bind="winControl.visibility : toggleVisible"
+                    data-ent-event="click: toggleMenuClick">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

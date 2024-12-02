@@ -1,0 +1,172 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Achievement Gallery Page</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/queries/modelQueries.js"></script>
+
+    
+    <script src="/Controls/galleryGrouper.js"></script>
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/Link.js"></script>
+    
+    
+    <script src="/Components/ImmersiveDetails/ImmersiveDetails.js"></script>
+    <script src="/Components/ImmersiveDetails/ShowImmersiveDetailsAction.js"></script>
+
+    
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/achievementGallery.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+    <link rel="Stylesheet" type="text/css" href="../../styles/Galleries.css" />
+</head>
+<body>
+    
+    <div data-ent-templateid="achievementGalleryTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="achievementsGallery"
+            data-win-control="MS.Entertainment.UI.Controls.ListViewModelGalleryControl"
+            data-win-automationid="achievementGallery"
+            data-ent-member="galleryView"
+            data-win-options="{
+                grouped: true,
+                headerPosition: 'left',
+                raisePanelReadyEvents: false,
+                tap: MS.Entertainment.UI.Controls.GalleryControl.Tap.toggleSelect,
+                selectionMode: MS.Entertainment.UI.Controls.GalleryControl.SelectionMode.single,
+                invokeBehavior: MS.Entertainment.UI.Controls.GalleryControl.InvokeBehavior.none,
+                emptyGalleryTemplate: 'Controls/GalleryControl.html#defaultEmptyGalleryTemplate',
+                focusFirstItemOnPageLoad: true  }"
+            data-win-bind="
+                winControl.grouperType: grouperType;
+                winControl.itemTemplate: itemTemplate;
+                winControl.headerTemplate: groupTemplate;
+                winControl.dataSource: achievementsDataSource;
+                winControl.emptyGalleryModel: emptyGalleryModel;
+                winControl.listViewModel: listViewModel">
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="achievementGameDetailsTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-ent-member="container"
+             role="button"
+             class="headerContainer"
+             data-ent-event="click: onDetailClick">
+
+            
+            <div class="achievementGameDetailsThumbnail"
+                 style="-ms-grid-column: 2; -ms-grid-row: 2;"
+                 data-win-automationid="gameThumbnailGroupHeader">
+
+                <div class="imageContainer">
+                    <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                        data-win-bind="winControl.target: activity.media"
+                        data-win-options="{desiredImageSize: {width: 172, height: 256},
+                            defaultImagePath: 'String.empty'}"
+                        data-ent-showanimation="fadeIn"
+                        class="imageHolder" 
+                        width="200"/>
+                </div>
+
+                
+                <div class="content">
+                    <div class="textContainer">
+                        <div class="primaryText text-small text-weightBold"
+                                data-win-bind="textContent: activity.media.name;
+                                               removeFromDisplay: activity.media.name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="headerMetaDataContainer"
+                 style="-ms-grid-column: 2; -ms-grid-row: 3;">
+
+                <div class="hiddenNarratorText">
+                    <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                         data-win-bind="winControl.text: activity.narratorGameProgress"></div>
+                </div>
+
+                <div aria-hidden="true">
+                    
+                    <div class="achievementGameDetailsProgressContainer"
+                         style="-ms-grid-row: 1;">
+
+                        <div class="achievementGameDetailsProgressLabel label text-small text-weightHeavy"
+                             data-win-bind="textContent: activity.percentageProgress"></div>
+
+                    </div>
+
+                    <div class="gamerScoreAchievementMetaDataContainer"
+                         style="-ms-grid-row: 3;">
+
+                        
+                        <div class="achievementGameDetailsMetaDataContainer"
+                             style="-ms-grid-column: 1;">
+
+                            <div class="icon inlineGlyphSmall label" 
+                                 data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                 data-win-options="{text: MS.Entertainment.UI.Icon.inlineGamerScore, autoResizeFont: false, disableLayoutPass: true}">
+                            </div>
+
+                            <div class="achievementGameDetailsMetaDataText fractionProgressText label text-xSmall text-weightHeavy"
+                                 data-win-bind="textContent: activity.gamerScoreProgress"></div>
+
+                        </div>
+
+                        
+                        <div class="achievementGameDetailsMetaDataContainer"
+                             style="-ms-grid-column: 3;">
+
+                            <div class="icon inlineGlyphSmall inlineAchievementsIcon"></div>
+                            <div class="achievementGameDetailsMetaDataText fractionProgressText label text-xSmall text-weightHeavy"
+                                 data-win-bind="textContent: activity.achievementProgress"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

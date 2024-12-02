@@ -1,0 +1,83 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Avatar Editor Page</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/Data/Augmenters/avatarEditorAugmenters.js"></script>
+    <script src="/Framework/Data/queries/avatarEditorQueries.js"></script>
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/Social/avatarEditor.js"></script>
+    <script src="/ViewModels/Social/profileHydrator.js"></script>
+
+    
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/HubStrip.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/ThumbnailButton.js"></script>
+    <script src="/Components/Social/avatarEditorGallery.js"></script>
+    <script src="/Components/Social/avatarEditorPage.js"></script>
+    <script src="/Controls/LoadingControl.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="../../Animations/GalleryAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Colors.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Images.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+
+</head>
+
+<body>
+
+    
+    <div data-win-control="MS.Entertainment.Pages.AvatarEditorPage"></div>
+
+    
+    <div data-ent-templateid="avatarEditorPageTemplate" data-win-control="WinJS.Binding.Template" >
+        <div class="avatarEditorAvatarContainer"
+            data-win-control="MS.Entertainment.UI.Controls.AvatarControl"
+            data-ent-member="_avatarControl"
+            data-win-options="{
+                avatarDisplay: MS.Entertainment.UI.Controls.avatarDisplay.image,
+                height: '950px',
+                width:  '900px',
+                alwaysAnimate: true,
+                shutdownOnFreeze: false
+                }">
+        </div>
+        <div class="avatarHubStrip avatarEditorGalleryContainer"
+            data-win-control="MS.Entertainment.UI.Controls.HubStrip"
+            data-win-options="{_showPageTitle: true, _showPivots: true, getPageTitleFromNavigationService: true}"
+            data-ent-member="_hubStrip" >
+        </div>
+    </div>
+
+    
+    <div data-ent-templateid="avatarEditorStylesGalleryTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.Social.AvatarEditorGallery"
+             data-win-bind="winControl.dataContext: dataContext">
+        </div>
+    </div>
+
+    <div data-ent-templateid="avatarEditorFeaturesGalleryTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.Social.AvatarEditorGallery"
+             data-win-bind="winControl.dataContext: dataContext">
+        </div>
+    </div>
+
+</body>
+
+</html>

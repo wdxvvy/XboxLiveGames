@@ -1,0 +1,93 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/Controls/GalleryPage.js"></script>
+    <script src="/Controls/Modifier.js"></script>
+</head>
+<body>
+    <div class="navigationHost fillParent galleryPageHost"
+        data-win-control="MS.Entertainment.UI.Controls.GalleryPage">
+        <div data-win-control="MS.Entertainment.UI.Framework.BindingBlock"
+            class="fillParent">
+            <div data-ent-member="_container"
+                data-ent-event="PanelReady: handlePanelReady; PanelReset: handlePanelReset;"
+                class="mainHubStrip galleryHubStrip">
+                <div class="hubNavigationClippingContainer">
+                    <div class="hubNavigationContainer enterPageOffset2"
+                        data-ent-enteranimation="enterPage"
+                        data-ent-exitanimation="exitPage"
+                        data-win-control="MS.Entertainment.Controls.PivotsControl"
+                        data-win-options="{itemTemplate: 'Controls/HubStrip.html#pivotButtonTemplate', manageDownNavigation: true }"
+                        data-win-automationid="hubNavigationContainer"
+                        data-ent-member="_pivots"
+                        data-win-bind="winControl.selectedIndex: selectedHub"
+                        role="tablist">
+                    </div>
+                    <div class="hubNavigationTitle label text-hubTitle"
+                        data-ent-member="_pageTitle"
+                        data-ent-enteranimation="enterPage"
+                        data-ent-exitanimation="exitPage"
+                        data-win-bind="textContent: pageTitle">
+                    </div>
+                </div>
+                <div class="hubStripScroller enterPageOffset2"
+                    role="tabpanel"
+                    data-win-automationid="hubStripScroller"
+                    data-ent-enteranimation="enterPage"
+                    data-ent-exitanimation="exitPage">
+                    <div class="panelContentContainer">
+                        <div class="panelModifierContainer">
+                            <div class="primaryPanelModifier removeFromDisplay"
+                                style="-ms-grid-column: 1; -ms-grid-row: 1; -ms-grid-column-align: start;"
+                                data-win-control="MS.Entertainment.UI.Controls.Modifier"
+                                data-ent-member="primaryModifierControl"
+                                data-win-bind="winControl.items: dataContext.primaryModifier.items;
+                                               winControl.selectedItem: dataContext.primaryModifier.selectedItem;
+                                               winControl.settingsKey: dataContext.primaryModifier.settingsKey;"
+                                data-win-options="{popupStyle: 'primaryPanelModifierPopup', identifier: 'primary'}"
+                                data-win-automationid="primaryPanelModifier">
+                            </div>
+                            <div class="panelModifierSubContainer" style="-ms-grid-column: 3; -ms-grid-row: 1">
+                                <div class="primaryPanelModifier removeFromDisplay"
+                                    data-win-control="MS.Entertainment.UI.Controls.Modifier"
+                                    data-win-bind="winControl.items: dataContext.secondaryModifier.items;
+                                                   winControl.selectedItem: dataContext.secondaryModifier.selectedItem;
+                                                   winControl.settingsKey: dataContext.secondaryModifier.settingsKey;"
+                                    data-win-options="{identifier: 'secondary', descriptionLabel: String.id.IDS_MODIFIER_PREFIX_SORTBY}"
+                                    data-ent-member="secondaryModifierControl"
+                                    data-win-automationid="secondaryPanelModifier">
+                                </div>
+                                <div class="tertiaryPanelModifier removeFromDisplay" style="-ms-grid-column: 5; -ms-grid-row: 1"
+                                    data-win-control="MS.Entertainment.UI.Controls.ToggleModifier"
+                                    data-win-bind="winControl.items: dataContext.tertiaryModifier.items;
+                                                   winControl.selectedItem: dataContext.tertiaryModifier.selectedItem;
+                                                   winControl.settingsKey: dataContext.tertiaryModifier.settingsKey;"
+                                    data-win-options="{identifier: 'tertiary', descriptionLabel: String.id.IDS_MODIFIER_PREFIX_VIEW}"
+                                    data-ent-member="tertiaryModifierControl"
+                                    data-win-automationid="tertiaryPanelModifier">
+                                </div>
+                            </div>
+                        </div>
+                        <div data-ent-member="_scroller" class="panelFragmentWrapper" style="-ms-grid-column: 1; -ms-grid-row: 3;">
+                            <div class="panelFragmentContainer"
+                                data-ent-member="_panelContainer">
+                            </div>
+                            <div data-ent-member="_loadingPanel" style="-ms-grid-column: 1; -ms-grid-row: 3"
+                                class="panelFragmentLoading panelFragmentContainer hideFromDisplay">
+                                <div class="panelFragmentLoadingProgress"
+                                    data-ent-member="_loadingProgress">
+                                </div>
+                            </div>
+                            <div class="panelFragmentFailed panelFragmentContainer hideFromDisplay" style="-ms-grid-column: 1; -ms-grid-row: 3"
+                                data-ent-member="_failedPanel">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

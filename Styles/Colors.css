@@ -1,0 +1,1156 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+.games .win-settingsflyout option:checked, .games .win-settingsflyout select:focus::-ms-value, .games input[type=text]::selection, .games textarea::selection, .companion input[type=text]::selection, .companion input[type=url]::selection, .companion input[type=search]::selection, .companion textarea::selection, .companion .win-settingsflyout option:checked, .companion .win-settingsflyout select:focus::-ms-value, .dashboardGridItemContent.gamesThumb .thumbnailButton, .games .dialogButton.defaultButton:hover, .games .win-ui-light .dialogButton.defaultButton, .companion .win-ui-light .dialogButton.defaultButton, .companion input[type=range]::-ms-fill-lower, .companion .settingsPanelHeaderBackground, .games .settingsPanelHeaderBackground, .companionFullBleedNowPlayingTile .bottomProgress::-ms-fill, .homeNowPlayingTilePoster.companion .bottomProgress::-ms-fill, .userEngagementMessageBottom, .games .dashboardPanel .signedOutPanel .failedPanelContainer, .games .emptyFriendsListContainer .failedPanelContainer
+{
+    background-color: #008a00
+}
+.games .win-settingsflyout option:checked:hover, .games .win-settingsflyout select:focus option:checked:hover, .companion .win-settingsflyout option:checked:hover, .companion .win-settingsflyout select:focus option:checked:hover, .companion .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:hover, .games input[type=range]:hover::-ms-fill-lower, .companion input[type=range]:hover::-ms-fill-lower
+{
+    background-color: #007000
+}
+.games input[type=range]:active::-ms-fill-lower, .companion input[type=range]:active::-ms-fill-lower
+{
+    background-color: #005700
+}
+.companion .win-ui-light .dialogButton.defaultButton:active, .companion .win-ui-light .dialogButton.defaultButton:active:hover, .companion .dialogButton.defaultButton:hover, .games .dialogButton.defaultButton, .games .dialogButton.defaultButton:active, .games .win-ui-light .dialogButton.defaultButton:hover
+{
+    background-color: rgba(0,138,0,.87)
+}
+.companion .win-settingsflyout, .games .win-settingsflyout
+{
+    border-color: #006e00
+}
+.beaconControlContainer .beaconLink, .beaconControlContainer .editBeacon, .games a, .companion a, .games .errorFeedbackLink, .companion .errorFeedbackLink, .companion .fcBulletContent, .userEngagementMessageTitle, .fullScreenNowPlayingGlobalCommands .nowPlayingPlaylistAction.enabled button.win-command .win-commandimage, .games .dashboardPanel .libraryGamesContent .noContentPane .noContentPaneTitle, .emptyFriendsListContainer .miniProfilePanelControlsSignedOut .emptyFriendsListTitle, .newUserProfileText, .games .emptyFriendsListContainer .failedPanelDetails button.iconButton:active .win-commandimage
+{
+    color: #008a00
+}
+.immersiveDetails .beaconControlContainer .beaconLink, .immersiveDetails .beaconControlContainer .editBeacon, .immersiveViewMorePopOverLayout .beaconControlContainer .beaconLink
+{
+    color: #8cd600
+}
+.beaconControlContainer .beaconLink:hover, .beaconControlContainer .editBeacon:hover, .games a:hover, .companion a:hover, .games .errorFeedbackLink:hover, .companion .errorFeedbackLink:hover
+{
+    color: #007000
+}
+.beaconControlContainer .beaconLink:active, .beaconControlContainer .beaconLink:active:hover, .beaconControlContainer .beaconLink:-ms-keyboard-active, .beaconControlContainer .editBeacon:active, .beaconControlContainer .editBeacon:active:hover, .beaconControlContainer .editBeacon:-ms-keyboard-active, .games a:active, .games a:active:hover, .companion a:active, .companion a:active:hover, .companion .dialogButton.defaultButton:active, .companion .dialogButton.defaultButton:active:hover, .games .dialogButton.defaultButton:active, .games .dialogButton.defaultButton:active:hover, .games .errorFeedbackLink:active, .games .errorFeedbackLink:active:hover, .companion .errorFeedbackLink:active, .companion .errorFeedbackLink:active:hover
+{
+    color: #005700
+}
+.games .engagePanel .actionTile button.win-command.iconButton, .games .engagePanel .actionTile button.win-command.iconButton:hover, .games .engagePanel .actionTile button.win-command.iconButton:active, .games .engagePanel .actionTile button.win-command.iconButton:hover:active
+{
+    background-image: linear-gradient(180deg,#00b200 0%,#008a00 100%);
+    opacity: 1
+}
+.music .win-settingsflyout option:checked, .music .win-settingsflyout select:focus::-ms-value, .dashboardGridItemContent.musicThumb .thumbnailButton, .music input[type=text]::selection, .music textarea::selection, .music .dialogButton.defaultButton:hover, .music .win-ui-light .dialogButton.defaultButton, .music input[type=range]::-ms-fill-lower, .music .settingsPanelHeaderBackground, .musicOverlay .bottomProgress::-ms-fill
+{
+    background-color: #d24726
+}
+.music input[type=range]:hover::-ms-fill-lower, .music .win-settingsflyout option:checked:hover, .music .win-settingsflyout select:focus option:checked:hover
+{
+    background-color: #aa2d0d
+}
+.music input[type=range]:active::-ms-fill-lower
+{
+    background-color: #971f02
+}
+.music .dialogButton.defaultButton, .music .dialogButton.defaultButton:active, .music .win-ui-light .dialogButton.defaultButton:hover
+{
+    background-color: rgba(210,71,38,.87)
+}
+.music .win-settingsflyout
+{
+    border-color: #a8391e
+}
+.music .playPlaylistOverlay .inlineCaretButton, .music .relatedActionLink button .actionLinkLabel, .musicSubscriptionLink button .actionLinkLabel, .collectionFilterLink button .actionLinkLabel, .music a, .music .errorFeedbackLink, .music .findAlbumInfoSearchText
+{
+    color: #d24726
+}
+.music .playPlaylistOverlay .inlineCaretButton:hover, .music .relatedActionLink button:hover .actionLinkLabel, .musicSubscriptionLink button:hover .actionLinkLabel, .collectionFilterLink button:hover .actionLinkLabel, .music a:hover, .music .errorFeedbackLink:hover, .music .findAlbumInfoSearchText:hover
+{
+    color: #aa2d0d
+}
+.music .playPlaylistOverlay .inlineCaretButton:active, .music .relatedActionLink button:active .actionLinkLabel, .music .relatedActionLink button:active:hover .actionLinkLabel, .musicSubscriptionLink button:active .actionLinkLabel, .musicSubscriptionLink button:active:hover .actionLinkLabel, .collectionFilterLink button:active .actionLinkLabel, .collectionFilterLink button:active:hover .actionLinkLabel, .music a:active, .music a:active:hover, .music .errorFeedbackLink:active, .music .errorFeedbackLink .music .findAlbumInfoSearchText:active, .music .findAlbumInfoSearchText:active:hover
+{
+    color: #971f02
+}
+.video input[type=text]::selection, .video textarea::selection, .video .win-settingsflyout option:checked, .video .win-settingsflyout select:focus::-ms-value, .dashboardGridItemContent.videoThumb .thumbnailButton, .video .dialogButton.defaultButton:hover, .video input[type=range]::-ms-fill-lower, .video .win-ui-light .dialogButton.defaultButton, .video .settingsPanelHeaderBackground
+{
+    background-color: #ac193d
+}
+.video .win-settingsflyout option:checked:hover, .video .win-settingsflyout select:focus option:checked:hover, .video input[type=range]:hover::-ms-fill-lower
+{
+    background-color: #911635
+}
+.video input[type=range]:active::-ms-fill-lower
+{
+    background-color: #78122b
+}
+.video .dialogButton.defaultButton, .video .dialogButton.defaultButton:active, .video .win-ui-light .dialogButton.defaultButton:hover
+{
+    background-color: rgba(172,25,61,.87)
+}
+.video .win-settingsflyout
+{
+    border-color: #8a1431
+}
+.video a, .video .errorFeedbackLink, .video .showMoreLink
+{
+    color: #ac193d
+}
+.video a:hover, .video .errorFeedbackLink:hover, .video .showMoreLink:hover
+{
+    color: #911635
+}
+.video a:active, .video a:active:hover, .video .errorFeedbackLink:active, .video .errorFeedbackLink:active:hover, .video .showMoreLink:active, .video .showMoreLink:hover
+{
+    color: #78122b
+}
+.win-ui-light .dialogButton
+{
+    background-color: #ccc
+}
+.win-ui-light .dialogButton:disabled, .win-ui-light .dialogButton:disabled:hover, .win-ui-light .dialogButton:disabled:active, .win-ui-light .dialogButton:disabled:hover:active, .win-ui-light .dialogButton.defaultButton:disabled, .win-ui-light .dialogButton.defaultButton:disabled:hover, .win-ui-light .dialogButton.defaultButton:disabled:active, .win-ui-light .dialogButton.defaultButton:disabled:hover:active, .control-sendMessage .editBox textArea, .selectArtistOverlayAnchor .overlayContainer
+{
+    background-color: #eaeaea
+}
+.win-ui-light .dialogButton:hover
+{
+    background-color: rgba(204,204,204,.74)
+}
+.win-ui-light .dialogButton
+{
+    background-color: rgba(204,204,204,.87)
+}
+.playbackOptionComboTitle, .playbackOptionComboTitle:hover, .playbackOptionFlyoutButton:hover, .actionButtonFlyoutButton:hover, .win-menu button.actionButtonFlyoutButton:focus:hover
+{
+    background-color: #dedede
+}
+.appSignIn .signInRetry, .settingsSignIn .signInRetry, .pageTitle, .messageButton, .HCRMediaTypeName, .socialSummaryLabel, .miniProfileHeader, .immersiveDetailsOverviewReviewButton, .homeNowPlayingMetadataXboxJoin, .appBarTransportControlsMessageSubTitle, .mediaItemThumbnailButtonTertiaryText, .editProfileEditBox+.loadingProgress.ringLoadingControl
+{
+    color: #3b7812
+}
+.settingsSignIn .signInRetry:hover
+{
+    color: #55c105
+}
+.PlayButton, .DetailButton, .BuyButton, .WatchOnXboxButton, .internalActionLink, .externalActionLink, .hubDestination, .summaryCollectionTile, .allButton, .dateAbbreviationGroupHeader, .detailsTVGallery .win-item.win-selected, .friendsActionLink, .immersiveDetailsOverviewActionButton, .inlineDetailsOverviewActionButtonAlbum, .inlineDetailsOverviewActionButtonArtist, .inlineDetailsOverviewActionButtonEpisode, .inlineDetailsOverviewActionButtonGame, .inlineDetailsOverviewActionButtonTrack, .inlineDetailsOverviewActionButtonTv, .inlineDetailsOverviewActionButtonVideo, .inlineDetailsOverviewActionButtonMusicVideo, .inPlaceDetailsItemActionButton, .inlineDetailsOverviewWideActionButton, .inlineDetailsContentRating, .inlineDetailsLeaderBoardEntry, .miniSocialGalleryContainer, .miniSocialGalleryContainer:active, .miniProfileControl, .miniProfileControl:active, .playlistImageCollage .thumbnailButtonImage, .collectionPlaylistGroupHeader, .immersiveDetailsExtrasOverviewBackground, .avatarSelectionRefreshButton .win-commandicon.win-commandring, .downloadVideoActionButton
+{
+    background-color: #3b7812
+}
+.messageButton, .messageEditBox .editMultiline, .recipientEditBox .editInput
+{
+    border-color: #3b7812
+}
+.appSignIn .signInRetry:hover, .messageButton:hover, .settingsWebLinkText:hover
+{
+    color: #295c03
+}
+.internalActionLink:hover, .internalActionLink:active:hover, .externalActionLink:hover, .externalActionLink:active:hover, .miniSocialGalleryContainer:hover, .miniSocialGalleryContainer:active:hover, .miniProfileControl:hover, .miniProfileControl:active:hover, .immersiveDetailsOverviewActionButton:hover, .immersiveDetailsOverviewActionButton:active:hover, .inlineDetailsLeaderBoardEntry:hover, .inlineDetailsLeaderBoardEntry:active:hover, .inlineDetailsOverviewActionButtonAlbum:hover, .inlineDetailsOverviewActionButtonAlbum:active:hover, .inlineDetailsOverviewActionButtonArtist:hover, .inlineDetailsOverviewActionButtonArtist:active:hover, .inlineDetailsOverviewActionButtonEpisode:hover, .inlineDetailsOverviewActionButtonEpisode:active:hover, .inlineDetailsOverviewActionButtonGame:hover, .inlineDetailsOverviewActionButtonGame:active:hover, .inlineDetailsOverviewActionButtonTrack:hover, .inlineDetailsOverviewActionButtonTrack:active:hover, .inlineDetailsOverviewActionButtonTv:hover, .inlineDetailsOverviewActionButtonTv:active:hover, .inlineDetailsOverviewActionButtonVideo:hover, .inlineDetailsOverviewActionButtonVideo:active:hover, .inlineDetailsOverviewActionButtonMusicVideo:hover, .inlineDetailsOverviewActionButtonMusicVideo:active:hover, .inPlaceDetailsItemActionButton:hover, .inPlaceDetailsItemActionButton:active:hover, .inlineDetailsOverviewWideActionButton:hover, .inlineDetailsOverviewWideActionButton:active:hover, .avatarSelectionRefreshButton button.iconButton:hover .win-commandring, .avatarSelectionRefreshButton button.iconButton:active .win-commandring, .downloadVideoActionButton:hover, .downloadVideoActionButton:active:hover
+{
+    background-color: #295c03
+}
+.messageButton:hover
+{
+    border-color: #295c03
+}
+.externalLinkBackground
+{
+    background-color: #006bc9
+}
+.externalLinkBackground:hover
+{
+    background-color: #224061
+}
+.errorButtonBackgroundColor
+{
+    background-color: #7030a0
+}
+.PrimaryNavigationButton, .CreateAccountButton, .artistOverviewGeneric .metadataTitle, .immersiveDetailsFeaturedPrimaryText, .immersiveDetailsOverviewBoldMetadata, .snappedDetailsOverviewMetadata, .immersiveDetailsTableOfContentsSecondaryText, .immersiveFrame .subTitle, .immersiveFrame .tertiaryText, .control-immersiveListViewItem .part-subTitle, .leaderboardRankContainer .text-subTitle, .control-immersiveListViewItem .part-textContainer .part-secondaryText, .immersiveMoreGallery .listHeader, .overview .subTitle, .overview .metaDataContainer .textContainer .label, .overview .metaDataContainer .textContainer p, .snappedDetailsOverview .metaDataContainer .textContainer .label, .snappedDetailsOverview .metaDataContainer .textContainer p, .achievements .progressTextCount, .achievements .gamerscoreProgressText, .nowPlayingPlaylistTitle, .immersiveNowPlayingColumn .nowPlayingPlaylistTitle, .secondaryPanelModifier, .tertiaryPanelModifier, .pickProvidersPrimary, .pickProvidersSecondary, .appBarNowPlayingProgressDuration, .nowPlayingPlaylistEntrySubTitlesSnapped, .primaryPanelComponent .thumbnailButtonSecondaryText, .secondaryPanelComponent .thumbnailButtonSecondaryText, .infoNotificationSubTitle, .criticalNotificationSubTitle, .notificationContent .inlineCaretButtonIcon, .seekBarDurationText, .hubStripTitle, .win-ui-dark .win-selectioncheckmark, .win-ui-dark .win-selectionhint, .win-container.win-selected .win-selectioncheckmark, .videoAdOverlay .label, .comboUnavailableLabel, .castCrewTitle, .modernGameExtrasMoreItem .subTitle, .control-rottenTomatoesOverview .part-rottenTomatoesSubtitle, .control-rottenTomatoesReviewItem .part-rottenTomatoesSubtitle, .games>div:not(.root) .inboxPage .panelFragmentFailed .failedPanelMessage, .findAlbumInfo .win-container.win-selected .albumListItem .secondaryText
+{
+    color: #a7a7a7
+}
+.immersiveDetailsOverviewActionButton:disabled, .inlineDetailsOverviewActionButtonAlbum:disabled, .inlineDetailsOverviewActionButtonGame:disabled, .inlineDetailsOverviewActionButtonVideo:disabled, .inlineDetailsOverviewActionButtonArtist:disabled, .inlineDetailsOverviewActionButtonTv:disabled, .inlineDetailsOverviewActionButtonTrack:disabled, .inlineDetailsOverviewActionButtonEpisode:disabled, .inlineDetailsOverviewActionButtonMusicVideo:disabled, .inlineDetailsLeaderBoardEntry:disabled, .inPlaceDetailsItemActionButton:disabled, .nowPlayingMetadataArt, .internalActionLink:disabled, .findAlbumInfo .verticalListImage:not([imageLoaded])+.imagePlaceholder, .downloadDetailsVideo .progressBar
+{
+    background-color: #a7a7a7
+}
+.companionSearchTermContainer, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectionbordercontainer .win-selectionborder, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectionbordercontainer .win-selectionborder, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-rtl.win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-rtl.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground
+{
+    border-color: #a7a7a7
+}
+[data-win-control="MS.Entertainment.UI.Controls.ItemControl"]>.selectionContainer .selectionLayout .checkBackground, [data-win-control="MS.Entertainment.UI.Controls.ItemControl"]>.selectionContainer .selectionLayout, .inPlaceDetailsHorizontalRule
+{
+    border-color: #b2b2b2
+}
+.appBarNowPlayingProgressPosition, .collectionVideoGallery .thumbnailButtonSecondaryText, .movieThumbnail .thumbnailButtonSecondaryText, .gamesThumbnail .thumbnailButtonSecondaryText, .tvSeriesThumbnail .thumbnailButtonSecondaryText, .albumThumbnail .thumbnailButtonSecondaryText .companionEventItemTime, .failedPanelMessage, .verticalListItem .secondaryText, .verticalListItem .icon, .inlineDetailsMusicTrack .popOverCloudStateIcon, .inlineDetailsMusicTrack .inCollectionIcon, .read .messageSender, .read .messageDate, .read .messageText, .read .messageIcon, .cloudCollectionStateContainer .inCollectionIcon, .verticalListItem .win-semanticzoom-button
+{
+    color: #b2b2b2
+}
+.PrimaryNavigationButton:active:hover, .editInput:-ms-input-placeholder, .compareAchievementSecondaryText, .textMessage .messageBubble .text-metadata
+{
+    color: #828282
+}
+.modifierPopupEntryLabel, .collectionMusicSongsGallery .win-groupheader, .popOverProgressContainer .progressTextCount, .adControl .label
+{
+    color: #666
+}
+.gameDetailsInviteMeta .text-metadata, .control-sendMessage .editBoxRemainingCharsText, .messageButton.disabled, .detailsGamesGallery .win-item, .detailsAlbumsGallery .win-item, .detailsTVGallery .win-item, .inlineDetailsTrackFullContainer .inlineDetailsDescription, .inlineDetailsAlbumImmersive .inlineDetailsInline, .inlineDetailsAlbumImmersive .inlineDetailsPrimaryBold.inlineDetailsInline, .inlineDetailsMusicVideoContainer .inlineDetailsFullDescription, .inlineDetailsTvContainer .inlineEpisodeName, .inlineDetailsTvContainer .inlineEpisodeNumber, .inlineDetailsTvContainer .inlineEpisodeDuration, .inlineDetailsTvContainer .inlineDetailsFullDescription, .inlineDetailsTvContainer .inlineDetailsDescription, .inlineDetailsTvImmersive .inlineDetailsInline, .inlineDetailsTvImmersive .inlineDetailsPrimaryBold.inlineDetailsInline, .inlineDetailsVideoContainer .inlineDetailsFullDescription, .musicPage .inPlaceDetailsItemDuration, .inboxPage .inPlaceDetailsItemDuration, .win-ui-dark .verticalListHost .inPlaceDetailsItemDuration, .musicPage .inPlaceDetailsItemInfo, .inboxPage .inPlaceDetailsItemInfo, .win-ui-dark .verticalListHost .inPlaceDetailsItemInfo, .collectionMusic .inPlaceDetailsItemDuration, .collectionMusic .inPlaceDetailsItemInfo, .collectionVideo .inPlaceDetailsItemDuration, .collectionVideo .inPlaceDetailsItemInfo, .panelFragmentLoadingProgress, .dashboardPanel>.panelLoading>.loadingLabel, .inlineDetailsPanelFragmentLoadingProgress, .companionEventItemData, .dashboardGridCaption, .searchSongListItem .label, .primaryPanelModifier.disabled, .achievementThumbnail .thumbnailButtonSecondaryText, .achievementThumbnail .thumbnailButtonTertiaryText, .achievementThumbnail .thumbnailButtonQuaternaryText, .findAlbumInfo .unmatchedTrack, .findAlbumInfo .noMatchedTracksLabel, .findAlbumInfo .noAlbumsLabel, .findAlbumInfo .loadingControl .loadingLabel, .findAlbumInfo .win-container:not(.win-selected) .albumListItem .secondaryText, .playPlaylistOverlay .playlistItem .secondaryText, .selectArtistAutoCompleteLabel
+{
+    color: #666
+}
+.achievements .userProgressContainers, .messageButton.disabled, .immersiveFrame>.headingRow, .snappedNowPlayingMetadata, .videoScrubOverlay
+{
+    border-color: #666
+}
+.musicPage .win-vertical .win-item .verticalListItem.cloudNotification
+{
+    border-bottom-color: #46474c
+}
+.overview.game .listDivider, .immersiveDetails .listDivider, .initialSelectedModifierPopupEntry, .selectedModifierPopupEntry, .snappedNowPlayingProgress, .achievementGameDetailsButton .link, .verticalSubPivotItem, .adPlaceholder, .verticalSmartDJThumbnail
+{
+    background-color: #666
+}
+.win-flyout hr
+{
+    background-color: rgba(112,112,112,.5)
+}
+.dashboardGridItemContent .dashboardTileIcon, .companionSearchTermsTitle, .adThumbnail .textContainer, .playlistItemTemplate .nowPlayingPlaylistEntrySubTitle1, .playlistItemTemplate .nowPlayingPlaylistEntryDuration, .errorFeedbackLink, .video .immersiveStarting .immersiveStartingProgress
+{
+    color: #747474
+}
+.message, .messageButton.disabled:hover, .hubRecommendedRow .thumbnailButtonSecondaryText, .hubFriendText1, .hubFriendText2, .hubFriendText3, .hubContainer h1, .editBox .watermark, .achievementsHeaderGameName, .achievementThumbnail .thumbnailButtonPrimaryText, .miniProfileGamerScore, .friendInlineSecondaryText, .compareGalleryDefaultText, .failedPanelDetails .actionLinkLabel, .noContentPaneDetails .actionLinkLabel, .musicCollectionSongTile, .searchSongListItem, .inPlaceDetailsItem, .inlineDetailsAlbumContainer, .inlineDetailsAlbumContainer .inlineDetailsPrimaryBold, .inlineDetailsAlbumContainer .inlineDetailsTitle, .inlineDetailsTrackFullContainer, .inlineDetailsTrackFullContainer .inlineDetailsPrimaryBold, .inlineDetailsTrackFullContainer .inlineDetailsTitle, .inlineDetailsGameContainer, .inlineDetailsMusicVideoContainer, .inlineDetailsMusicVideoContainer .inlineDetailsPrimaryBold, .inlineDetailsMusicVideoContainer .inlineDetailsTitle, .inlineDetailsTvContainer, .inlineDetailsTvContainer .inlineDetailsPrimaryBold, .inlineDetailsTvContainer .inlineDetailsTitle, .inlineDetailsVideoContainer, .inlineDetailsVideoContainer .inlineDetailsPrimaryBold, .inlineDetailsVideoContainer .inlineDetailsTitle, .friendInlineDetailsLoadingContainer, .searchSongListItem .inlineTrackListName, .friendInlineDetailsContainer .gamerScoreContainer, .friendInlineDetailsGamerTag, .friendInlineDisplayNameText, .appSignIn .signInError, .appSignIn .signInProgress, .appSignIn .signInComplete, .popOver
+{
+    color: #1f1f1f
+}
+.friendsList, .temporaryXboxPromoImage, .temporaryGameLargeImage, .temporaryGameSmallImage, .mediumGreyBackgroundColor, .immersiveDetailsGalleryLine, .immersiveDetailsTableOfContents:hover, .snappedAppBar, .collectionTVSeasonPage .win-groupheader, .collectionVideoGallery .win-groupheader, .marketplaceGallery .win-groupheader, .tvSeriesHeaderButtonFrame, .tvSeriesHeaderDetailsButton, .tvSeriesHeaderControl, .searchGroupHeader, .searchGroupHeaderInPlace, .collectionAlbumGroupHeader, .xboxTouchPadSurface, .previewBrowseBar getDetailsButton:active:hover
+{
+    background-color: #333
+}
+.immersiveNowPlayingColumn .immersiveFrame
+{
+    background-color: #1f1f1f
+}
+.games .dashboardPanel .signedOutPanel .internalActionLink, .games .engagePanel .actionTile button .win-commandicon, .games .engagePanel .actionTile button:hover .win-commandicon, .games .engagePanel .actionTile button:active:hover .win-commandicon, .games .engagePanel .actionTile button:active:hover .actionTile, button.iconButton.hideAdorner:active:hover .win-commandring, .win-ui-dark button.iconButton.hideAdorner:active:hover .win-commandring, .games .compareAchievements button:not([disabled]).link.panelHeaderLink.internalActionLink:hover, .games .compareAchievements button:not([disabled]).link.panelHeaderLink.internalActionLink:active, .games .compareAchievements button:not([disabled]).link.panelHeaderLink.internalActionLink:active:hover, .selectArtistFlyoutGrid .win-listview .win-container
+{
+    background-color: transparent
+}
+.music>div:not(.root) .failedPanelContainer, .musicPage .win-vertical .win-container:hover, .win-ui-dark .verticalListHost .win-container:hover, .inboxPage .win-vertical .win-container:hover, .games>div:not(.root) .inboxPage .failedPanelContainer, .collectionTVEpisodePage .win-item, .collectionTVEpisodePage .win-container:hover, .collectionTVEpisodeSeriesPage .win-item, .collectionTVEpisodeSeriesPage .win-container:hover, .emptyGalleryContainerPrimaryColor, .miniSocialGalleryOverlay
+{
+    background-color: rgba(51,51,51,.08)
+}
+.overlayBackground
+{
+    background-color: rgba(255,255,255,0)
+}
+.control-textInputOverlay .overlayBackground, .wecDialog .overlayBackground, .previewBrowseItemDataContainer
+{
+    background-color: rgba(0,0,0,.5)
+}
+.modifierPopupContainer .overlayBackground
+{
+    background-color: rgba(51,51,51,0)
+}
+.achievementsGallery .achievementThumbnail
+{
+    border-color: rgba(51,51,51,.08)
+}
+.inlineDetailsLeaderBoardContainer, .gameLeaderBoardGalleryItemRoot, .messageButton.disabled:hover, .immersiveDetailsTableOfContents
+{
+    border-color: #333
+}
+.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground
+{
+    border-top-color: #333;
+    border-right-color: #333;
+    border-left-color: transparent;
+    border-bottom-color: transparent
+}
+.win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground
+{
+    border-top-color: #333;
+    border-right-color: transparent;
+    border-left-color: #333;
+    border-bottom-color: transparent
+}
+.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected .win-selectionborder, .win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectionborder, .win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground, .win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground
+{
+    border-color: #1b1b1b
+}
+.win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-rtl.win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-rtl.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground
+{
+    border-right-color: transparent
+}
+.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground
+{
+    border-left-color: transparent
+}
+.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground, .win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-selectioncheckmarkbackground, .win-rtl.win-listview:not(.win-selectionstylefilled) .win-horizontal .win-container.win-selected:hover .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-rtl.win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectioncheckmarkbackground, .immersiveViewMorePopOverLayout .win-rtl.win-listview:not(.win-selectionstylefilled) .win-container.win-selected:hover .win-selectioncheckmarkbackground
+{
+    border-bottom-color: transparent
+}
+.win-selectionhint, .immersiveViewMorePopOverLayout .win-listview:not(.win-selectionstylefilled) .win-container.win-selected .win-selectioncheckmark
+{
+    color: #1b1b1b
+}
+.win-ui-light .win-vertical .win-selectioncheckmark, .downloadDetailsVideo .progressBar, progress:indeterminate
+{
+    color: #333
+}
+.nowPlayingContainer:not(.musicTrack) .nowPlayingTransportControlsSkipButton button .win-commandicon, .nowPlayingContainer:not(.musicTrack) .nowPlayingTransportControlsSkipButton button:active .win-commandicon, .nowPlayingContainer:not(.musicTrack) .nowPlayingTransportControlsSkipButton button:hover .win-commandicon, .nowPlayingContainer:not(.musicTrack) .nowPlayingTransportControlsSkipButton button:active:hover .win-commandicon, .nowPlayingContainer:not(.musicTrack) .nowPlayingTransportControlsSkipButton button:disabled .win-commandicon, progress:indeterminate, progress, .collectionGallery .cardThumbnailButton, .collectionVideoGallery .cardThumbnailButton, .companionSearchTermsList .win-listview .win-vertical .win-container, .nowPlayingPlaylistGalleryViewSnapped .win-listview .win-vertical .win-container, .selectArtistEditBox .editInput
+{
+    background-color: transparent
+}
+.bottomAppBar, .appBarTransportControlsMessage, .eventContainer, .companionEventItemContainer, .musicPage .verticalListImage:not([imageLoaded])+.imagePlaceholder, .inboxPage .verticalListImage:not([imageLoaded])+.imagePlaceholder, .win-ui-dark .verticalListHost .verticalListImage:not([imageLoaded])+.imagePlaceholder, .musicPage .verticalListArtistImage:not([imageLoaded])+.imagePlaceholder, .inboxPage .verticalListArtistImage:not([imageLoaded])+.imagePlaceholder, .win-ui-dark .verticalListHost .verticalListArtistImage:not([imageLoaded])+.imagePlaceholder, .musicCollection .failedPanelNotifications, .collectionVideoGallery .folderVideoThumbnail .folderThumbnailButton
+{
+    background-color: #232222
+}
+.companion .popOver.activity .bodyContainer .subTitle, .playbackOptionFlyoutButton .actionLinkLabel, .playbackOptionComboTitle .actionLinkLabel, .playbackOptionComboTitle:hover .label, .pickProvidersMetadata .pickProvidersMetadataText.pickProvidersTitle, .switcherButtonControllerSelected .xBoxControls_switcherIcon, .switcherButtonControllerSelected .xBoxControls_switcherText, .switcherButtonBrowserSelected .xBoxControls_switcherIcon, .switcherButtonBrowserSelected .xBoxControls_switcherText, .familyPasscode_Button:active:hover, .familyPasscode_Button:active, .editBox.validationFailed .editError, .inlineTrackListStatusIcon.icon.inlineGlyph, .beaconControlContainer button.beaconComment:active span, .failedPanelContainer .failedPanelTitle, .failedPanelContainer .failedPanelMessage, .overlayContainer .failedPanelContainer .failedPanelTitle, .overlayContainer .failedPanelContainer .failedPanelMessage, .noContentPane .noContentPaneTitle, .noContentPane .noContentPaneDescription, .actionButtonFlyoutButton .actionLinkLabel, .dialogButton:active:hover, .dialogButton.defaultButton:active:hover, .editProfileEditBoxLabel, .popOver .inPlaceDetailsItemActions button.iconButton.win-command .win-label, .avatarEditorAssetThumbnailItemTileContainer .inlineGlyph, .marketplaceGallery .win-groupheader, .musicPage .win-groupheader, .inboxPage .win-groupheader, .win-ui-dark .verticalListHost .win-groupheader, .cardThumbnailButton .primaryText, .hcrHubPanel .primaryText, .popOver .win-selectioncheckmark, .popOver .win-item, .popOver, .popOver .primaryText, .videoDownloadManagerContent .win-selectioncheckmark, .videoDownloadManagerContent .win-item, .videoDownloadManagerContent, button.iconButton .win-commandimage.iconSpan, button.iconButton.hideAdorner .win-commandimage.iconSpanPressed, button.iconButton .win-commandimage.modifier, .win-ui-dark button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.iconSpan, .win-ui-dark button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.iconSpanPressed, .win-ui-dark button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.modifierSpan, .win-ui-dark button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.modifierSpanPressed, .win-ui-dark .enablePressedState button.iconButton.hideAdorner:active:hover .win-commandimage.iconSpanPressed, .enablePressedState button.iconButton.hideAdorner:active:hover .win-commandimage.modifier, button.iconButton.toggleButton.checked .win-commandimage.iconSpan, button.iconButton.toggleButton.checked .win-commandimage.iconSpanPressed, button.appBarIconButton.toggleButton.checked .win-commandimage.iconSpan, button.appBarIconButton.toggleButton.checked .win-commandimage.iconSpanPressed, .homeNowPlayingTile.large .homeNowPlayingMetadataTitle, .companionSearchTermContainer, .popOver.playlist .immersiveInlineTrackListName, .compareGameThumbnail, .chatBubble, .avatarSelectionButton button.iconButton .win-label, .avatarEditorBodySizeButton[disabled] button:hover:active .win-commandimage.iconSpanPressed, .dashboardPanel .panelFailed .failedPanelTitle, .popOverContainer .panelFragmentLoading .failedPanelTitle, .miniProfilePanelControlsSignedOut .failedPanelTitle, .popOver.playlist .immersiveInlineTrackListName, .pickProviderProviders .primaryText, .appCriticalNotification .win-flipview .win-navbutton:hover, .appCriticalNotification .win-flipview .win-navbutton:hover:active, .appInfoNotification .win-flipview .win-navbutton:hover, .appInfoNotification .win-flipview .win-navbutton:hover:active, .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:active, .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:active:hover, .findAlbumInfo .win-container:not(.win-selected) .albumListItem .primaryText, .playPlaylistOverlay .playlistItem .primaryText, .webHostDialogContent .loadingProgress.ringLoadingControl, .selectArtistFeaturedName, .selectArtistSuggestedPrefix, .selectArtistSuggestedSuffix, .selectArtistSuggestedRtlPrefix, .selectArtistGalleryHeader, .homeHubNowPlayingTile .homeNowPlayingPlayButton button:hover:active .win-commandimage
+{
+    color: #000
+}
+.popOver .inPlaceDetailsItemActions button.iconButton:disabled .win-commandimage.iconSpanPressed, .popOver .inPlaceDetailsItemActions button.iconButton:disabled:active:hover .win-commandimage.iconSpanPressed, .popOver .inPlaceDetailsItemActions button.iconButton.win-command:disabled .win-label, button.iconButton:disabled .win-label, button.iconButton:disabled:active .win-label, button.iconButton:disabled .win-commandimage.iconSpan, button.iconButton:disabled .win-commandimage.iconSpanPressed, button.iconButton:disabled .win-commandimage.modifier button.iconButton:disabled:active:hover .win-commandimage.iconSpanPressed, button.iconButton:disabled .win-commandimage.modifier, button.iconButton:disabled .win-commandimage.modifierPressed
+{
+    color: rgba(0,0,0,.25)
+}
+button:disabled .win-commandring, button:disabled:active .win-commandring {
+    border-bottom-color: rgba(0,0,0,.25);
+    border-left-color: rgba(0,0,0,.25);
+    border-right-color: rgba(0,0,0,.25);
+    border-top-color: rgba(0,0,0,.25)
+}
+.win-ui-light .dialogButton:disabled, .win-ui-light .dialogButton:disabled:hover, .win-ui-light .dialogButton:disabled:active, .win-ui-light .dialogButton:disabled:hover:active, .win-ui-light .dialogButton:disabled.defaultButton, .win-ui-light .dialogButton.defaultButton:disabled:hover, .win-ui-light .dialogButton.defaultButton:disabled:active, .win-ui-light .dialogButton.defaultButton:disabled:hover:active
+{
+    color: rgba(0,0,0,.49)
+}
+.win-ui-light .dialogButton, .win-ui-light .dialogButton:hover
+{
+    color: #212121
+}
+.win-container.win-selected .verticalListItem .icon, .dashboardPanel>.panelLoading>.win-ring, .playbackOptionComboTitle:-ms-keyboard-active .actionLinkLabel, .playbackOptionComboTitle:active:hover .actionLinkLabel, .playbackOptionFlyoutButton:-ms-keyboard-active .actionLinkLabel, .playbackOptionFlyoutButton:active:hover .actionLinkLabel, .dashboardGridItemContent .dashboardTileIcon.gameIcon, .musicPage .smartDJOverlay::before, .textInputKeyboardText, .browser_instructionText, .xboxControls_switcherButton, .xboxTouchPadButton, .companionNowPlayingRelatedContent .cardThumbnailButton .primaryText, .dialogButton:active, .dialogButton:active:hover, .musicPage .verticalListStatusIcon.iconButton, .inboxPage .verticalListStatusIcon.iconButton, .win-ui-dark .verticalListHost .verticalListStatusIcon.iconButton, .music>div:not(.root) .panelFragmentFailed .failedPanelTitle, .games>div:not(.root) .inboxPage .panelFragmentFailed .failedPanelTitle, button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.iconSpan, button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.iconSpanPressed, button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.modifierSpan, button.iconButton:-ms-keyboard-active:not(:disabled) .win-commandimage.modifierSpanPressed, .enablePressedState button.iconButton.hideAdorner:active:hover .win-commandimage.iconSpanPressed, .notificationContainer .beaconControlContainer .label:active span, .notificationContainer .beaconControlContainer .label:active:hover span, .showKeyboardFocus .notificationContainer .beaconControlContainer .label:hover:focus span, .showKeyboardFocus .notificationContainer .beaconControlContainer .label:active:hover:focus span, .showKeyboardFocus .notificationContainer .beaconControlContainer .label:-ms-keyboard-active span, .companionSearchButton button:-ms-keyboard-active .win-commandimage, .nowPlayingContainer:not(.musicTrack) .nowPlayingTransportControlsSkipButton button.win-command:hover:active .win-commandimage.iconSpan, .nowPlayingContainer:not(.musicTrack) .nowPlayingTransportControlsSkipButton button.win-command:hover:active .win-commandimage.iconSpanPressed, .collectionMusicGalleryView .failedPanelContainer .failedPanelTitle, .collectionMessageGallery .failedPanelContainer .failedPanelTitle, .music .marketplaceGalleryView .failedPanelContainer .failedPanelTitle, .collectionMusicGalleryView .failedPanelContainer .failedPanelMessage, .music .marketplaceGalleryView .failedPanelContainer .failedPanelMessage, .music .marketplaceGalleryView .failedPanelContainer .failedPanelMessage, .actionButtonFlyoutButton:-ms-keyboard-active .actionLinkLabel, .actionButtonFlyoutButton:active:hover .actionLinkLabel, .win-ui-light .dialogButton:active:hover, .win-ui-light .dialogButton.defaultButton, .win-ui-light .dialogButton.defaultButton:hover, .win-ui-light .dialogButton.defaultButton:active, .win-ui-light .dialogButton.defaultButton:active:hover, .achievementGameDetailsControl .inlineGlyphSmall, .activityGallery .win-item, .albumThumbnail, .win-item, .collectionGamesGallery .win-item, .musicPage .win-item, .inboxPage .win-item, .win-ui-dark .verticalListHost .win-item, .collectionPlaylistGallery .win-item, .collectionVideoGallery .win-item, .companionConnectionDialog .dialogCaption, .companionConnectionDialog .dialogContent, .activityOverlaySplashMetadataTextContainer, .friendsSummaryGallery .win-item, .failedPanelTitle, .marketplaceGamesPage .marketplaceGallery .win-item, .marketplaceMoviePage .marketplaceGallery .win-item, .marketplaceMusicPage .marketplaceGallery .win-item, .marketplaceTvPage .marketplaceGallery .win-item, .marketplaceVideoSearchPage .marketplaceGallery .win-item, .marketplaceGamesSearchPage .marketplaceGallery .win-item, .socialSummaryGallery .win-item, .inlineDetailsExtrasList .win-item, .snappedDetailsHubStrip .PrimaryNavigationButton.selected, .snappedNowPlayingMetadata, .seekBarPositionText, .PlayButton, .WatchOnXboxButton, .BuyButton, .DetailButton, .searchGroupHeaderText, .dialogLink, .hubDestination, .summaryCollectionTile, .allButton, .dateAbbreviationGroupHeader, .appBarNowPlayingMetadataTitle, .appBarNowPlayingMetadataSubTitle, .appBarTransportControlsMessageTitle, .homeNowPlayingMetadataClock, .homeNowPlayingMetadataTitle, .homeNowPlayingMetadataSubTitle, .miniSocialControlLabel, .whiteFontColor, .snappedIconContainer .snappedIconAppTitle, .immersiveDetailsTitle, .immersiveDetailsHub, .immersiveDetailsExtrasOverviewGeneral, .immersiveViewMorePopOverContentLayout>.headingRow>.immersiveViewMorePopOverHeading.label, .immersiveViewMorePopOverContentLayout .closeButton .label, .snappedDetailsTitle, .snappedDetailsHubStrip, .immersiveDetailsFeaturedSecondaryText, .immersiveHeroSecondaryText, .inlineDetailsOverviewActionButtonAlbum, .inlineDetailsOverviewActionButtonArtist, .inlineDetailsOverviewActionButtonEpisode, .inlineDetailsOverviewActionButtonGame, .inlineDetailsOverviewActionButtonTrack, .inlineDetailsOverviewActionButtonTv, .inlineDetailsOverviewActionButtonVideo, .inlineDetailsOverviewActionButtonMusicVideo, .inlineDetailsLeaderBoardEntry, .inPlaceDetailsItemActionButton, .downloadVideoActionButton, .nowPlayingPlaylistEntryMainTitle, .nowPlayingPlaylistEntryMainTitleSnapped, .nowPlayingPlaylistEntrySubTitles, .nowPlayingMetadataSubTitle, .nowPlayingMetadataMainTitle, .nowPlayingMetadataTime, .nowPlayingPlaylistTitle, .actionLinkLabel, .actionLinkContainer .icon, .settingsPanelTitle, .actionButtonLabel, .collectionTVEpisodeSeriesPage .win-groupheader, .collectionTVEpisodePage .win-groupheader, .collectionTVSeasonPage .win-groupheader, .collectionTVSeasonSeriesPage .win-groupheader, .tvSeriesHeaderDetailsButton, .selectedModifierPopupEntry, .musicPage .win-groupheader, .inboxPage .win-groupheader, .win-ui-dark .verticalListHost .win-groupheader, .musicPage .win-commandimage, .inboxPage .win-commandimage, .win-ui-dark .verticalListHost .win-commandimage, .musicPage .win-label, .inboxPage .win-label, .win-ui-dark .verticalListHost .win-label, .achievementGameDetailsThumbnail, .collectionVideoGallery .win-groupheader, .marketplaceGallery .win-groupheader, .immersiveDetailsContainer .PrimaryNavigationButton.selected, .dashboardGridItemContent, .immersiveDetailsOverviewActionButton, .immersiveDetailsTableOfContentsPrimaryText, .inlineDetailsAlbumImmersive, .inlineDetailsAlbumImmersive .immersiveInlineTrackListNumber, .inlineDetailsAlbumImmersive .immersiveInlineTrackListName, .inlineDetailsAlbumImmersive .immersiveInlineTrackListDuration, .inlineDetailsAlbumImmersive .inlineDetailsInline.label, .inlineDetailsAlbumImmersive .inlineDetailsTitle, .inlineDetailsAlbumImmersive .inlineDetailsPrimaryBold, .inlineDetailsAlbumImmersive .inlineDetailsPrimaryBold.inlineDetailsInline.inlineDetailsContentRating, .inlineDetailsAlbumImmersive .inlineDetailsSubHeader, .inlineDetailsTvImmersive, .inlineDetailsTvImmersive .inlineDetailsInline.label, .inlineDetailsTvImmersive .inlineDetailsTitle, .inlineDetailsTvImmersive .inlineDetailsPrimaryBold.inlineDetailsInline.inlineDetailsContentRating, .inlineDetailsTvImmersive .inlineDetailsPrimaryBold, .inlineDetailsTvImmersive .inlineDetailsFullDescription, .inlineDetailsTvImmersive .inlineDetailsTvEpisodeNumber, .inlineDetailsTvImmersive .inlineDetailsTvEpisodeTitle, .inlineDetailsTvImmersive .inlineDetailsTvEpisodeDate, .emptyGalleryContainerImmersiveDetailsColor .failedPanelTitle, .emptyGalleryContainerImmersiveDetailsColor .failedPanelMessage, .companionEventItemData, .eventContainer, .detailsAlbumsGallery .thumbnailButtonPrimaryText, .detailsGamesGallery .thumbnailButtonPrimaryText, .detailsTVGallery .thumbnailButtonPrimaryText, .failedPanelDetailsMessage, .primaryPanelModifier, .PrimaryNavigationButton.selected, .hubStripTitle, .dashboardTite, .hubStripPreviewTitle, .snappedDetailsContentContainer, .panelTitle, .pageHeader, .horizontalPivotButton.selected, .verticalPivotButton.selected, button:hover:active.horizontalPivotButton.selected, button:hover:active.verticalPivotButton.selected, .achievementGameDetailsProgressLabel, .achievementGameDetailsMetaDataText, .infoNotificationTitle, .criticalNotificationItem, .notificationContent, .criticalNotificationSecAction, .criticalNotificationIcon .win-commandimage, .infoNotificationIcon, .hubNavigationTitle, button.iconButton.toggleButton:active:hover .win-commandimage.iconSpanPressed, .win-ui-dark button.iconButton .win-commandimage.iconSpan, .win-ui-dark button.iconButton.hideAdorner .win-commandimage.iconSpanPressed, .win-ui-dark button.iconButton .win-commandimage.modifier, .win-ui-light button.iconButton.toggleButton.checked .win-commandimage.iconSpan, .win-ui-light button.iconButton.toggleButton.checked .win-commandimage.iconSpanPressed, .initialSelectedModifierPopupEntry .modifierPopupEntryDescriptionLabel, .initialSelectedModifierPopupEntry .modifierPopupEntryLabel, .modifierPopupEntry:active .modifierPopupEntryLabel, .modifierPopupEntry:focus .modifierPopupEntryLabel, .homeNowPlayingTilePoster .homeNowPlayingMetadataTextContainer, .homeNowPlayingTilePoster.companion .homeNowPlayingMetadataSubTitle, .homeNowPlayingTilePoster.companion.musicVisualizationVisible .homeNowPlayingMetadataClock, .homeNowPlayingTilePoster.companion.musicVisualizationVisible .homeNowPlayingMetadataDuration, .homeNowPlayingTilePoster.companion.musicVisualizationVisible .homeNowPlayingMetadataClockAndDuration, .homeHubNowPlayingTile.win-ui-dark:hover .homeNowPlayingPlayButton .win-commandimage, .homeHubNowPlayingTile.win-ui-dark:hover .opportunityIconButton .win-commandimage, .homeHubNowPlayingTile:hover .homeNowPlayingErrorButton .win-commandimage, .homeHubNowPlayingTile .homeNowPlayingPlayButton .win-commandicon.win-commandring .win-commandimage, .homeHubNowPlayingTile .opportunityIconButton .win-commandicon.win-commandring .win-commandimage, .homeHubNowPlayingTile.acc-keyboardFocusTarget .homeNowPlayingPlayButton .win-commandimage, .homeHubNowPlayingTile.acc-keyboardFocusTarget .opportunityIconButton .win-commandimage, .homeHubNowPlayingTile.acc-keyboardFocusTarget .homeNowPlayingErrorButton .win-commandimage, .homeHubNowPlayingTile.acc-keyboardFocusTarget .win-commandimage, .musicSnappedNowPlaying .win-commandicon.win-commandring .win-commandimage, .heroActivityTile .primaryText, .compareHeaderText, .avatarSelectionRefreshButton button.iconButton .win-commandimage, .avatarSelectionRefreshButton button.iconButton:active .win-commandring, .appBarNowPlayingMetadata, .bottomAppBarContainer .actionButtonLabel, button.horizontalPivotButton.expanded, button.verticalPivotButton.expanded, .extendedSplashScreenTitle, .extendedSplashScreenMessage, .extendedSplashScreenProgress.win-ring, .immersiveStartingProgress.win-ring, .win-ui-dark .galleryProgress.win-ring, .immersiveStarting, .dialogXenonTitle, .dashboardTitle, .nowPlayingBranding, .nowPlayingBrandingLabel, .appCriticalNotification .win-flipview .win-navbutton, .appInfoNotification .win-flipview .win-navbutton, .adCompanionCloseButton, .adCompanionLabel, .xboxTouchPadLabel.xboxTouchpadGiantLabel, .musicFlexHubBigItem .cardThumbnailButton .textContainer .primaryText, .smartDJPanel::before, .opportunityContainer, button.inlineCaretButton, button.inlineCaretButton:hover, button.inlineCaretButton:hover:active, .videoAd, .adIconButton button.win-command .label, .companionFullBleedNowPlayingTile .textContainer, .companionFullBleedNowPlayingTile .homeNowPlayingMetadataClockAndDuration, .xboxXenonBackground .textContainer, .video .homeNowPlayingTilePoster .homeNowPlayingMetadataSubTitle, .control-textInputOverlay .editBox .editError, .games .dashboardPanel .playGameAction .label, .games .dashboardPanel.homeSpotlight .cardThumbnailButton .primaryText, .seasons .template-fullBleedThumbnail .part-primaryText, .previewBrowseFlipView .win-navbutton, .music .failedPanelTitle, .music .failedPanelMessage, .music .failedPanelDetails .iconButtonTwoLine button.iconButton.win-command .win-label.subtitle, [data-win-control="MS.Entertainment.UI.Controls.ItemControl"]>.selectionContainer .selectionLayout .checkMark, .music .musicBrandActionLink button .actionLinkLabel, .control-upgradeTileContainer, .userEngagementMessageSubText, .music a.userEngagementMessageExternalLink, .music a.userEngagementMessageExternalLink:hover, .music a.userEngagementMessageExternalLink:active, .music a.userEngagementMessageExternalLink:active:hover, .cloudNotification button .textContainer .win-label.label.subtitle, .cloudNotification .clearIcon button .win-commandimage.iconSpan, .cloudNotification .clearIcon button .win-commandimage.iconSpanPressed, .cloudNotification .clearIcon button.iconButton .win-commandimage.modifier, .games .dashboardHubContent .signedOutPanel .failedPanelTitle, .games .dashboardHubContent .signedOutPanel .failedPanelMessage, .games .dashboardHubContent .signedOutPanel .failedPanelDetails .label, .games .dashboardHubContent .signedOutPanel .failedPanelDetails .win-commandimage, .games .emptyFriendsListContainer .failedPanelTitle, .games .emptyFriendsListContainer .failedPanelMessage, .games .emptyFriendsListContainer .failedPanelDetails .label, .games .emptyFriendsListContainer .failedPanelDetails .win-commandimage, .games .failedPanelIcon, .games .nowPlayingPopover, .games .nowPlayingPopover .nowPlayingTransportControlsPause .win-commandimage, .games .nowPlayingPopover .nowPlayingTransportControlsPlay .win-commandimage, .selectArtistButton button.iconButton .win-commandring.win-commandicon .win-commandimage, .music .immersiveHeroSecondaryText
+{
+    color: #fff
+}
+.appBarTransportControlsXboxContainer .appBarIconButton:disabled.checked .win-commandimage, .appBarTransportControlsXboxContainer .appBarIconButton:disabled:active.checked .win-commandimage, .dialogButton:disabled, .dialogButton:disabled:active, .dialogButton:disabled:hover, .dialogButton:disabled:active:hover, .dialogButton.defaultButton:disabled, .dialogButton.defaultButton:disabled:active, .dialogButton.defaultButton:disabled:hover, .dialogButton.defaultButton:disabled:active:hover, .nowPlayingTransportControlsButton, .previewBrowse .navArrow:active, .previewBrowse .navArrow:hover, .previewBrowse .navArrow:active:hover, .music .musicBrandActionLink button:active .actionLinkLabel, .music .musicBrandActionLink button:active:hover .actionLinkLabel, .win-ui-dark button.iconButton:disabled .win-label, .win-ui-dark button.iconButton:disabled .win-commandimage.iconSpan, .win-ui-dark button.iconButton:disabled .win-commandimage.iconSpanPressed, .win-ui-dark button.iconButton:disabled:active:hover .win-commandimage.iconSpanPressed, .win-ui-dark button.iconButton:disabled .win-commandimage.modifier, .win-ui-dark button.iconButton:disabled .win-commandimage.modifierPressed
+{
+    color: rgba(255,255,255,.4)
+}
+.adPlaceholderText
+{
+    color: rgba(255,255,255,.1)
+}
+.nowPlayingPlaylistGalleryViewSnapped .nowPlayingPlaylistEntrySubTitle1
+{
+    color: #b3b5bd
+}
+.switcherButtonControllerSelected, .switcherButtonControllerSelected:hover, .switcherButtonControllerSelected:active, .switcherButtonControllerSelected:active:hover, .switcherButtonBrowserSelected, .switcherButtonBrowserSelected:hover, .switcherButtonBrowserSelected:active, .switcherButtonBrowserSelected:active:hover, .familyPasscode_Button:hover, .familyPasscode_Button:active:hover, .familyPasscode_Button:active, .actionListFlyout, .actionListFlyoutColors, .nowPlayingTransportControlsButton, .SearchEditBox, .overlayContainer, .inlineAlbum, .appBarNowPlayingProgressFill, .snappedNowPlayingProgress::-ms-fill, .companionHomeSearchBox, .seekbarEventTick, .seekBarFill, .bottomProgress::-ms-fill, .modifierPopupScroller, .createPlaylistFlyout.win-flyout, .findFriendFlyout.win-flyout, .appBarIconButton.toggleButton.checked .win-commandring, .win-ui-dark .enablePressedState button.iconButton.hideAdorner:active:hover .win-commandring, .avatarEditorBodySizeButton, .avatarEditorBodySizeButton[disabled]:hover, .avatarEditorBodySizeButton[disabled] .win-commandring, .avatarEditorBodySizeButton[disabled] button:active .win-commandring, .avatarEditorAssetThumbnailItem, .flexHubPage .win-item .videoFlexHubBigItem .cardThumbnailButton, html[dir=rtl] .flexHubPage .win-item .videoFlexHubBigItem .cardThumbnailButton, html[dir=rtl] .marketplaceVideoSearchPage .win-item .searchHCR .cardThumbnailButton, html[dir=rtl] .marketplaceGamesSearchPage .win-item .searchHCR .cardThumbnailButton, .companion .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:active, .companion .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:active:hover, .musicOverlay .seekBarThumb, .homeHubNowPlayingTile .homeNowPlayingPlayButton button:hover:active .win-commandicon.win-commandring, .userEngagementMessageTop, .games .emptyFriendsListContainer .failedPanelDetails button.iconButton:active .win-commandring, .games .popOver.friend .rightColumn, .selectArtistButton, .win-menu button.actionButtonFlyoutButton:focus, .win-menu button.actionButtonFlyoutButton:active
+{
+    background-color: #fff
+}
+.emptyGalleryContainerImmersiveDetailsColor, .immersiveDetailsGallery .thumbnailButton, .immersiveDetailsGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .collectionGamesGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .musicPage .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .inboxPage .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .win-ui-dark .verticalListHost .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .collectionVideoGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .marketplaceGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .searchGalleryView .win-listview:not(.win-selectionstylefilled) .win-selectionborder
+{
+    background-color: rgba(255,255,255,.1)
+}
+.musicPage .bodyContainer>hr, .inboxPage .bodyContainer>hr, .win-ui-dark .verticalListHost .bodyContainer>hr
+{
+    background-color: rgba(255,255,255,.2)
+}
+.musicPage .simpleHeader, .inboxPage .simpleHeader, .collectionVideo .simpleVideoGroupHeader .simpleHeader, .win-ui-dark .verticalListHost .simpleHeader, .musicPage .collectionHeader, .inboxPage .collectionHeader, .win-ui-dark .verticalListHost .collectionHeader, .verticalListItem .win-semanticzoom-button
+{
+    border-color: rgba(255,255,255,.2)
+}
+.immersiveDetailsExtrasType, .inlineDetailsGameExtra, .compareAchievementsItemContainer
+{
+    border-color: rgba(255,255,255,.25)
+}
+.dialogButton:disabled, .dialogButton:disabled:active, .dialogButton:disabled:hover, .dialogButton:disabled:active:hover, .dialogButton.defaultButton:disabled, .dialogButton.defaultButton:disabled:active, .dialogButton.defaultButton:disabled:hover, .dialogButton.defaultButton:disabled:active:hover, .appBarTransportControlsXboxContainer .appBarIconButton:disabled:not(.hideAdorner) .win-commandring, .win-ui-dark button:disabled:hover.iconButton .win-commandring
+{
+    border-color: rgba(255,255,255,.4)
+}
+.showKeyboardFocus .notificationButtonContainer .imageActionLink:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button:hover:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button:active:hover:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button:-ms-keyboard-active, .showKeyboardFocus .notificationContainer .beaconControlContainer button.bodyContent.beaconComment.label:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button.bodyContent.beaconComment.label:hover:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button.bodyContent.beaconComment.label:active:hover:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button.bodyContent.beaconComment.label:-ms-keyboard-active, .showKeyboardFocus .notificationContainer .beaconControlContainer button.win-command.iconButton:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button.win-command.iconButton:hover:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button.win-command.iconButton:active:hover:focus, .showKeyboardFocus .notificationContainer .beaconControlContainer button.win-command.iconButton:-ms-keyboard-active, .showKeyboardFocus .engagePanel .actionTile button:focus, .nowPlayingMetadataArt, .musicPage .win-commandring, .inboxPage .win-commandring, .win-ui-dark .verticalListHost .win-commandring, .musicPage button:hover .win-commandring, .inboxPage button:hover .win-commandring, .win-ui-dark .verticalListHost button:hover .win-commandring, .musicPage button:active .win-commandring, .inboxPage button:active .win-commandring, .win-ui-dark .verticalListHost button:active .win-commandring, .homeNowPlayingMetadata:hover .win-commandring, .homeHubNowPlayingTile .homeNowPlayingPlayButton .win-commandring, .homeHubNowPlayingTile .opportunityIconButton .win-commandring, .musicSnappedNowPlaying .win-commandring, .musicSnappedNowPlaying .prevNextIconButton .win-commandring, .settingsPanelBackButton:focus, .companionConnectionDialog.win-ui-light .dialogButton.defaultButton, .companionConnectionDialog.win-ui-light .dialogButton:active:hover, .companionConnectionDialog.win-ui-light .dialogButton.defaultButton, .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:hover, .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:active, .companionConnectionDialog.win-ui-light .dialogButton.defaultButton:active:hover, .dialogButton:active:hover, .dialogButton.defaultButton, .dialogButton.defaultButton:hover, .dialogButton.defaultButton:active, .dialogButton.defaultButton:active:hover, .homeHubNowPlayingTile .homeNowPlayingPlayButton button:hover:active .win-commandicon.win-commandring, .games .dashboardHubContent .failedPanelDetails .win-commandring, .games .emptyFriendsListContainer .win-commandring, .games .nowPlayingPopover .win-commandring, .games .nowPlayingPopover .win-command, .games .emptyFriendsListContainer .failedPanelDetails button.iconButton:active .win-commandring, .selectArtistButton button .win-commandring.win-commandicon, .tvSeriesHeaderControl
+{
+    border-color: #fff
+}
+.musicPage .win-viewport.win-vertical .win-container:hover .win-item>div:first-child, .inboxPage .win-viewport.win-vertical .win-container:hover .win-item>div:first-child, .win-ui-dark .verticalListHost .win-viewport.win-vertical .win-container:hover .win-item>div:first-child, .musicPage .win-viewport.win-vertical .win-container:hover .win-focusedoutline, .inboxPage .win-viewport.win-vertical .win-container:hover .win-focusedoutline, .win-ui-dark .verticalListHost.win-viewport.win-vertical .win-container:hover .win-focusedoutline
+{
+    outline-color: rgba(255,255,255,.25)
+}
+.playbackOptionComboTitle:-ms-keyboard-active, .playbackOptionComboTitle:active:hover, html, body, .textInputControl_editBox .editBox, .iconButton .win-commandicon:active, .snappedContainer, .immersiveDetailsOverview, .immersiveDetailsTableOfContents, .immersiveDetailsOverview, .immersiveDetailsOverviewContainer, .immersiveDetailsHub, .immersiveHeroBackgroundImageContainer, .immersiveNowPlayingColumn .headingRow, .inlineDetailsExtrasList, .nowPlayingTileBackground, .adThumbnail .primaryText.label, .nowPlayingBackground, .dialogButton:active, .dialogButton:active:hover, .companion .artistDetailsOverviewPanel .nowPlayingContainer, .enablePressedState button.iconButton.hideAdorner:active:hover .win-commandring, button.iconButton:disabled:active .win-commandring, .seasons .template-fullBleedThumbnail .content, .modifierPopupEntry:hover:focus:not(.initialSelectedModifierPopupEntry), .modifierPopupEntry:focus:not(.initialSelectedModifierPopupEntry), .achievementGameDetailsButton .link:active, .videoAd, .adCompanion, .music .homeHubNowPlayingTile, .nowPlayingLargeArtBlackOverlay, .companionActivityContainer, .activityOverlaySplash, .nowPlayingLargeArtTransitionOverlay, .immersiveNowPlayingColumn .nowPlayingPlaylistGalleryHeader, .previewBrowse, .previewBrowseBar .getDetailsButton, .screenshotLocatorSelected
+{
+    background-color: #000
+}
+.imageActionLink:focus, .showKeyboardFocus .beaconControlContainer button:focus, .showKeyboardFocus .beaconControlContainer button:hover:focus, .showKeyboardFocus .beaconControlContainer button:active:hover:focus, .showKeyboardFocus .beaconControlContainer button:-ms-keyboard-active, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:hover:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:active:hover:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:-ms-keyboard-active, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:focus, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:hover:focus, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:active:hover:focus, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:-ms-keyboard-active, .webHostIFrame, .avatarEditorAssetThumbnailItemSelected
+{
+    border-color: #000
+}
+.musicPage .verticalPivotButton.expanded, .win-ui-dark .verticalListHost .verticalPivotButton.expanded, .musicPage .horizontalPivotButton.expanded, .inboxPage .verticalPivotButton.expanded
+{
+    border-bottom-color: rgba(0,0,0,.12)
+}
+.selectArtistGalleryHeader, .popOverList.verticalListHost .simpleHeader, .popOver .divider
+{
+    border-bottom-color: rgba(0,0,0,.2)
+}
+.collectionGamesGallery .win-selectionborder, .musicPage .win-selectionborder, .inboxPage .win-selectionborder, .win-ui-dark .verticalListHost .win-selectionborder, .collectionVideoGallery .win-selectionborder, .marketplaceGallery .win-selectionborder, .searchGalleryView .win-selectionborder
+{
+    outline-color: rgba(0,0,0,.1)
+}
+.listDivider, .musicPage button.verticalPivotButton.expanded, .musicPage button.horizontalPivotButton.expanded, .win-ui-dark .verticalListHost button.verticalPivotButton.expanded, .inboxPage button.verticalPivotButton.expanded, .musicPage button:hover.verticalPivotButton.expanded, .musicPage button:hover.horizontalPivotButton.expanded, .win-ui-dark .verticalListHost button:hover.verticalPivotButton.expanded, .inboxPage button:hover.verticalPivotButton.expanded, .musicPage button:active.horizontalPivotButton.expanded, .musicPage button:active.verticalPivotButton.expanded, .win-ui-dark .verticalListHost button:active.horizontalPivotButton.expanded, .inboxPage button:active.verticalPivotButton.expanded, .musicPage button:hover:active.horizontalPivotButton.expanded, .musicPage button:hover:active.verticalPivotButton.expanded, .win-ui-dark .verticalListHost button:hover:active.horizontalPivotButton.expanded, .inboxPage button:hover:active.verticalPivotButton.expanded, .collectionMusicSongsGallery.win-ui-dark .win-container:not(.invoked):not(.win-footprint):hover
+{
+    background-color: rgba(0,0,0,.2)
+}
+.collectionMusicSongsGallery.win-ui-dark .win-container:active, .control-immersiveListViewItem .activitiesOverlay
+{
+    background-color: rgba(0,0,0,.5)
+}
+.collectionMusicGalleryView .failedPanelContainer, .music .marketplaceGalleryView .failedPanelContainer, .collectionMessageGallery .failedPanelContainer, .verticalSubPivotItem, .modifierPopupEntry:hover:not(.initialSelectedModifierPopupEntry), .musicPage.win-ui-dark .win-listview .win-vertical .win-container:not(.invoked):not(.win-selected):not(.win-pressed), .inboxPage.win-ui-dark .win-listview .win-vertical .win-container:not(.invoked):not(.win-selected):not(.win-pressed), .sidebarHost .adPlaceholder
+{
+    background-color: rgba(0,0,0,.12)
+}
+.popOver.game .contentNotificationListItems .contentNotificationImage button:active:hover.link.imageActionLink.internalActionLink, .showKeyboardFocus .beaconControlContainer button:-ms-keyboard-active, button.beaconLink:hover, button.beaconLink:focus, button.beaconLink:active, button.beaconLink:active:hover, button.iconButton:disabled .win-commandring, button.iconButton:disabled:active .win-commandring, button.iconButton:disabled:hover .win-commandring, button.iconButton:disabled:active:hover .win-commandring, .dialogButton:disabled, .dialogButton:disabled:active, .dialogButton:disabled:hover, .dialogButton:disabled:active:hover, .dialogButton.defaultButton:disabled, .dialogButton.defaultButton:disabled:active, .dialogButton.defaultButton:disabled:hover, .dialogButton.defaultButton:disabled:active:hover, .nowPlayingTransportControlsButton, .imageButton, .SearchButton, .CreateAccountButton, .backButton, .PrimaryNavigationButton, .horizontalPivotButton, .verticalPivotButton, .messageButton, .HCRDescription, .Metadata2, .Metadata1, .HCRThirdTitle, .HCRSubTitle, .HCRTitle, .HCRMediaTypeName, .searchGalleryViewAlbum, .searchGalleryViewArtist, .searchGalleryViewTVSeries, .searchGalleryViewMovie, .searchGalleryView, .seekBarTrack, .galleryViewHubPanel, .webHostIFrame, .thumbnailButtonImage, .albumThumbnail, .modifierPopupContainer .overlayContainer, .actionButtonFlyoutButton, .playbackOptionFlyoutButton, .playbackOptionComboTitle, .relatedActionLink .internalActionLink, .relatedActionLink .internalActionLink:hover, .relatedActionLink .internalActionLink:active:hover, .musicBrandActionLink .internalActionLink, .musicBrandActionLink .internalActionLink:hover, .musicBrandActionLink .internalActionLink:active:hover, .win-listview .win-item:hover, .win-listview .win-pressed.win-item, .companionHomeSearchBox .editInput, .errorFeedbackLink, .companion .nowPlayingContainer, .panelTitle .internalActionLink, .panelTitle .internalActionLink:hover, .panelTitle .internalActionLink:active:hover, .musicSubscriptionLink .internalActionLink, .musicSubscriptionLink .internalActionLink:hover, .musicSubscriptionLink .internalActionLink:active:hover, .collectionFilterLink .internalActionLink, .collectionFilterLink .internalActionLink:hover, .collectionFilterLink .internalActionLink:active:hover, .noContentPaneDetails .internalActionLink, .noContentPaneDetails .internalActionLink:hover, .noContentPaneDetails .internalActionLink:active:hover, .failedPanelDetailsLink .internalActionLink, .failedPanelDetailsLink .internalActionLink:hover, .failedPanelDetailsLink .internalActionLink:active:hover, .immersiveDetailsOverviewActionBlock, .inPlaceDetailsItemActions.win-ui-dark, .snappedUnsnapIcon.win-ui-dark, .songsGallery.win-ui-dark, .musicPage.win-ui-dark, .inboxPage.win-ui-dark, .dashboardGridItemContent.action .primaryText, button:hover.horizontalPivotButton, button:hover.verticalPivotButton, button:active.horizontalPivotButton, button:active.verticalPivotButton, button:hover:active.horizontalPivotButton, button:hover:active.verticalPivotButton, .companion .dashboardGridItemContent.action .thumbnailButton .imageContainer, .popOver.tv .rightColumn, .companion .gamesCollection .cardThumbnailButton .imageHolder, .companionNowPlaying .cardThumbnailButton .imageHolder, .notificationContent, .headingLink .internalActionLink:focus:not(:disabled), .headingLink .internalActionLink:hover:not(:disabled), .musicPage .win-listview .win-container:not(.win-footprint), .inboxPage .win-listview .win-container:not(.win-footprint), .win-ui-dark .verticalListHost .win-listview .win-container:not(.win-footprint), .collectionArtistGallery .win-listview .win-container:not(.win-footprint), .collectionVideoGallery .win-listview .win-container:not(.win-footprint), .marketplaceMoviePage .win-listview .win-container:not(.win-footprint), .marketplaceTvPage .win-listview .win-container:not(.win-footprint), .marketplaceVideoSearchPage .win-listview .win-container:not(.win-footprint), .marketplaceGamesSearchPage .win-listview .win-container:not(.win-footprint), .collectionGamesGallery .win-listview .win-container:not(.win-footprint), .achievementsGallery .win-listview .win-container:not(.win-footprint), button.inlineCaretButton:hover, button.inlineCaretButton:hover:active, .videoAdCloseButton button.win-command:hover .win-commandicon.win-commandring, .videoAdCloseButton button.win-command:active .win-commandicon.win-commandring, .videoAdCloseButton button.win-command:hover:active .win-commandicon.win-commandring, .windowsMarketplace .win-surface .win-container, .immersiveHeroContent, .previewBrowseFlipView .win-navbutton, .companion .collectionGamesGallery .gameThumbnail .cardThumbnailButton
+{
+    background-color: transparent
+}
+.popOverContentContainer
+{
+    background-color: #f5f5f5
+}
+.selectArtistButton.win-template button.iconButton
+{
+    background-color: #2a2a2a
+}
+.selectArtistButton.win-template button.iconButton:hover
+{
+    background-color: rgba(42,42,42,.8)
+}
+.selectArtistButton.win-template button.iconButton:active, .selectArtistButton.win-template button.iconButton:active:hover
+{
+    background-color: rgba(42,42,42,.4)
+}
+.immersiveViewMoreBackground.overlayBackground, .actionListFlyoutColors button, .actionListFlyoutColors input[type="button"]
+{
+    background-color: rgba(255,255,255,.001)
+}
+.appBarUpsellContainer .appBarUpsellAction:not(.appBarUpsellPlayPauseAction) button.win-command:active:hover .win-commandring, .appBarUpsellContainer .appBarUpsellAction:not(.appBarUpsellPlayPauseAction) button.win-command:-ms-keyboard-active .win-commandring, .adIconButton:not(.playPauseIconButton) button.win-command .win-commandring, .adIconButton:not(.playPauseIconButton) button.win-command:active:hover .win-commandring, .adIconButton:not(.playPauseIconButton) button.win-command:-ms-keyboard-active .win-commandring, .actionListFlyout, .playbackOptionListFlyoutColors, button.win-command.iconButtonVertical, button.win-command.iconButtonVertical:hover, button.win-command.iconButtonVertical:active:hover, button.win-command.iconButtonVertical:active:not(:-ms-keyboard-active), .appBarTransportControlsXboxContainer .appBarIconButton:disabled:active .win-commandring, .appBarTransportControlsXboxContainer .appBarIconButton:disabled:active:hover .win-commandring, .musicPage button.horizontalPivotButton, .musicPage button.verticalPivotButton, .win-ui-dark .verticalListHost button.verticalPivotButton, .inboxPage button.verticalPivotButton, button.iconButton.win-command:focus, button.iconButton.win-command:active, button.iconButton.hideAdorner .win-commandring, button.iconButton.hideAdorner:disabled:hover .win-commandring, button.appBarIconButton.hideAdorner .win-commandring, button.appBarIconButton.hideAdorner:disabled:hover .win-commandring, .immersiveDetailsGalleryLine, .immersiveNowPlayingColumn .headingRow, .avatarSelectionRefreshButton .win-commandicon.win-commandring, .avatarSelectionRefreshButton button.iconButton:active .win-commandring, .win-listview:not(.win-selectionstylefilled) .win-vertical .win-selected.win-container .win-selectionborder, .win-listview:not(.win-selectionstylefilled) .win-vertical .win-selected.win-container:hover .win-selectionborder, .win-ui-light .dialogButton:active:hover, .win-ui-light .dialogButton.defaultButton, .win-ui-light .dialogButton.defaultButton:hover, .win-ui-light .dialogButton.defaultButton:active, .win-ui-light .dialogButton.defaultButton:active:hover, .games .engagePanel .actionTile button:active .win-commandicon, .games .engagePanel .actionTile button.win-command.iconButton, .games .engagePanel .actionTile button.win-command.iconButton:hover:focus, .games .engagePanel .actionTile button.win-command.iconButton:active, .games .engagePanel .actionTile button.win-command.iconButton:focus, .selectArtistButton button.hideAdorner .win-commandring.win-commandicon
+{
+    border-color: transparent
+}
+.musicPage button.verticalPivotButton.expanded, .musicPage button.horizontalPivotButton.expanded, .inboxPage button.verticalPivotButton.expanded, .win-ui-dark .verticalListHost button.horizontalPivotButton.expanded
+{
+    border-top-color: transparent
+}
+.musicPage .win-listview .win-viewport.win-vertical .win-pressed, .inboxPage .win-listview .win-viewport.win-vertical .win-pressed, .win-ui-dark .verticalListHost .win-listview .win-viewport.win-vertical .win-pressed, .musicPage .win-listview .win-viewport.win-vertical .invoked, .inboxPage .win-listview .win-viewport.win-vertical .invoked, .win-ui-dark .verticalListHost .win-listview .win-viewport.win-vertical .invoked, .musicPage .win-listview .win-viewport.win-vertical .invoked:hover, .inboxPage .win-listview .win-viewport.win-vertical .invoked:hover, .win-ui-dark .verticalListHost .win-listview .win-viewport.win-vertical .invoked:hover, .musicPage .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container, .inboxPage .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container, .win-ui-dark .verticalListHost .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container, .musicPage .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container .win-selectionbackground, .inboxPage .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container .win-selectionbackground, .win-ui-dark .verticalListHost .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container .win-selectionbackground, .musicPage .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover, .win-ui-dark .verticalListHost .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover, .musicPage .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover .win-selectionbackground, .win-ui-dark .verticalListHost .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover .win-selectionbackground, .inboxPage .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover .win-selectionbackground, .webHostDarkBackground
+{
+    background-color: #232323
+}
+.musicPage .win-viewport.win-vertical .win-container.invoked, .inboxPage .win-viewport.win-vertical .win-container.invoked, .win-ui-dark .verticalListHost .win-viewport.win-vertical .win-container.invoked
+{
+    outline-color: #232323
+}
+.settingsWebLinkText
+{
+    color: #4ca805
+}
+.feedbackConnectionError
+{
+    color: red
+}
+.nowPlayingOverlay
+{
+    background-color: rgba(20,20,20,.2)
+}
+.musicOverlay .nowPlayingOverlay
+{
+    background-color: transparent
+}
+.nowPlayingPlaylistEntryMetadata
+{
+    border-color: rgba(200,200,200,.2)
+}
+.appBarNowPlaying
+{
+    border-color: rgba(255,255,255,.7)
+}
+.appBarNowPlayingOverlay
+{
+    background-color: rgba(20,20,20,.2)
+}
+.bottomProgressContainer
+{
+    background-color: rgba(200,200,200,.2)
+}
+.win-ui-dark .win-rating .win-star.win-user.win-full, .win-ui-dark .win-rating .win-star.win-user.win-full.win-disabled
+{
+    color: #5b2ec5
+}
+.win-ui-dark .win-rating .win-star.win-tentative.win-full
+{
+    color: #8152ef
+}
+.win-ui-dark .win-rating .win-star.win-average.win-full, .win-ui-dark .win-rating .win-star.win-average.win-full.win-disabled
+{
+    color: #2dab11
+}
+.win-ui-dark .win-rating .win-star.win-empty
+{
+    color: rgba(255,255,255,1)
+}
+.win-ui-dark .win-rating .win-star.win-user.win-full, .win-ui-dark .win-rating .win-star.win-user.win-full.win-disabled
+{
+    color: #ac193d
+}
+.immersiveDetails .control-starRating .part-userRatedIndicator, .immersiveDetails .control-starRating .part-totalRatings, .win-ui-dark .win-rating .win-star.win-tentative.win-full
+{
+    color: #a7a7a7
+}
+.win-ui-dark .win-rating .win-star.win-average.win-full, .win-ui-dark .win-rating .win-star.win-average.win-full.win-disabled
+{
+    color: #fff
+}
+.win-ui-dark .win-rating .win-star.win-empty
+{
+    color: rgba(255,255,255,.2)
+}
+.control-rottenTomatoesOverview progress.rotten
+{
+    color: #93b13c
+}
+.control-rottenTomatoesOverview progress.fresh
+{
+    color: red
+}
+.win-rating .win-star.win-user.win-full, .win-rating .win-star.win-user.win-full.win-disabled
+{
+    color: #ac193d
+}
+.win-rating .win-star.win-tentative.win-full
+{
+    color: #2b2b2b
+}
+.popOver .control-starRating .part-userRatedIndicator, .popOver .control-starRating .part-totalRatings, .win-rating .win-star.win-average.win-full, .win-rating .win-star.win-average.win-full.win-disabled
+{
+    color: #6b6b6b
+}
+.win-rating .win-star.win-empty
+{
+    color: rgba(107,107,107,.2)
+}
+.xboxTouchPadLabel, .browser_instructionText
+{
+    color: #858589
+}
+.HCRCoverArt
+{
+    border-color: rgba(255,255,255,.1)
+}
+.inlineDetailsTvEpisode, .inlineDetailsMusicTrack, .popOverList.verticalListHost .verticalListItem
+{
+    border-color: rgba(0,0,0,.15)
+}
+.inlineDetailsTvImmersive .inlineDetailsTvEpisode, .inlineDetailsAlbumImmersive .inlineDetailsMusicTrack
+{
+    border-color: rgba(255,255,255,.15)
+}
+.seekBarTrackBackground
+{
+    background-color: rgba(255,255,255,.4)
+}
+#htmlUnsnapped
+{
+    background-color: #fff;
+    background-image: linear-gradient(180deg,#535358 0%,#ceced2 100%)
+}
+#htmlUnsnapped.musicNewReleases, #htmlUnsnapped.musicTopMusic, #htmlUnsnapped.musicMarketplace, #htmlUnsnapped.musicCollection, .music #htmlUnsnapped.searchPage, .games #htmlUnsnapped.socialInboxPage, .music #htmlUnsnapped.flexHubPage
+{
+    background-color: #333;
+    background-image: linear-gradient(180deg,#4a4b50 0%,#333337 100%)
+}
+.nowPlayingPlaylistControl, #htmlUnsnapped.immersiveDetails
+{
+    background-image: url('/images/immersive_details_background_gradient.png');
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: 100% 100%
+}
+.thumbnailButtonTextContainer.thumbnailButtonTextContainerNoGradient
+{
+    background-image: none
+}
+.noSpotlightContentPane, .panelFragmentFailed, .games .dashboard .socialFriendsPanel .panelFragmentFailed, .dashboardPanel>.panelFailed, .modifierPopupEntrySeparator
+{
+    background-color: rgba(0,0,0,.1)
+}
+.related.relatedArtists .content, .dashboard .panelFragmentFailed
+{
+    background-color: rgba(0,0,0,.8)
+}
+.modifierPopupBackground
+{
+    background-color: #fff
+}
+.games .dashboardPanel .playGameAction
+{
+    background-image: -ms-linear-gradient(top,rgba(60,60,60,1) 0%,rgba(60,60,60,1) 40%,rgba(130,130,130,1) 100%)
+}
+.inlineDetailsTrackFullContainer, .inlineDetailsGameContainer, .inlineDetailsMusicVideoContainer, .inlineDetailsVideoContainer, .inlineDetailsTvContainer, .friendInlineDetailsLoadingContainer, .gameInlineDetailsPanelFragmentContainer.panelFragmentContainer, .movieInlineDetailsPanelFragmentContainer.panelFragmentContainer, .musicInlineDetailsPanelFragmentContainer.panelFragmentContainer, .tvInlineDetailsPanelFragmentContainer.panelFragmentContainer, .searchListView, .nowPlayingControlBackground
+{
+    background-color: rgba(0,0,0,.04)
+}
+.musicPage .win-vertical .inPlaceDetailsHorizontalRule, .inboxPage .win-vertical .inPlaceDetailsHorizontalRule, .collectionVideoGallery .inPlaceDetailsHorizontalRule
+{
+    border-color: rgba(51,51,51,.1)
+}
+.inlineDetailsItemSelected
+{
+    color: #c8c8c8
+}
+.friendInlineMembershipType
+{
+    color: #ff7200
+}
+body
+{
+    scrollbar-face-color: #a7a7a7;
+    scrollbar-arrow-color: #a7a7a7;
+    scrollbar-track-color: #fff
+}
+.immersiveDetailsContainer
+{
+    scrollbar-track-color: #2b2b2b
+}
+.dialogContent
+{
+    scrollbar-face-color: #666;
+    scrollbar-base-color: #666;
+    scrollbar-arrow-color: #666;
+    scrollbar-track-color: #333
+}
+.achievementThumbnail
+{
+    background-color: transparent
+}
+.appBarNowPlayingProgressContainer, .immersiveHeroContent>hr, .bottomProgress
+{
+    background-color: rgba(255,255,255,.2)
+}
+.music .homeHubNowPlayingTile:focus, .achievementsGallery .win-surface .win-container.win-footprint:hover, button.iconButton.win-command:focus, button.iconButton.win-command:active, button.appBarIconButton.win-command:focus, button.appBarIconButton.win-command:active, .label.acc-keyboardFocusTarget, .control-immersiveListViewItem:focus, .miniProfileAvatar.friendsItem:focus, .miniProfileAvatar.friendsItem:active, .relatedHeroItem:focus
+{
+    outline-style: none
+}
+button.iconButton.win-command, .musicCollection .failedPanelDetails .win-command.iconButton:focus
+{
+    outline-color: #fff
+}
+.findFriendFlyout button.win-command.iconButton
+{
+    outline-color: #000
+}
+.showKeyboardFocus button.iconButton.win-command:focus, .showKeyboardFocus button.iconButton.win-command:active, .showKeyboardFocus button.appBarIconButton.win-command:focus, .showKeyboardFocus button.appBarIconButton.win-command:active, .showKeyboardFocus .label.acc-keyboardFocusTarget:focus, .showKeyboardFocus .label.acc-keyboardFocusTarget:active
+{
+    outline-style: solid
+}
+button.link:focus, button.link:active
+{
+    outline-style: none
+}
+.showKeyboardFocus button.link:focus, .showKeyboardFocus button.link:active
+{
+    outline-style: solid
+}
+.showKeyboardFocus .immersiveHeroContent button:focus, .showKeyboardFocus .welcomePanelContainer .closeButton:focus, .showKeyboardFocus .welcomePanelContainer .welcomePanelButton:focus, .showKeyboardFocus .settingsPanelHeader .win-backbutton:focus, .showKeyboardFocus .music .homeHubNowPlayingTile.acc-keyboardFocusTarget, .showKeyboardFocus .findAlbumInfoBackButton button.win-command:focus, .showKeyboardFocus .acc-keyboardFocusTarget:focus, .showKeyboardFocus .acc-keyboardFocusTarget:active, .win-command.iconButton.acc-keyboardFocusTarget
+{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #fff
+}
+.showKeyboardFocus .welcomePanelContainer .welcomePanelButton:focus, .noContentPaneDetails .win-command.iconButton.acc-keyboardFocusTarget, .failedPanelDetails .win-command.iconButton.acc-keyboardFocusTarget, .failedPanelDetails .win-command.iconButton:focus, .downloadDetailsVideoButtons .win-command.iconButton:focus, .downloadDetailsVideoButtons .win-command.iconButton.active, .popOver button.iconButton.win-command, .popOver a.acc-keyboardFocusTarget:focus, .popOver a.acc-keyboardFocusTarget:active, .popOver .modifierControl.acc-keyboardFocusTarget:focus, .popOver .modifierControl.acc-keyboardFocusTarget:active, .popOver .mediaRatingControl.acc-keyboardFocusTarget:focus, .popOver .mediaRatingControl.acc-keyboardFocusTarget:active, .companionSearchButton .acc-keyboardFocusTarget:focus, .companionSearchButton .acc-keyboardFocusTarget:active, .showMoreLink.acc-keyboardFocusTarget:focus, .showMoreLink.acc-keyboardFocusTarget:active, .showKeyboardFocus .win-ui-light .acc-keyboardFocusTarget:focus, .showKeyboardFocus .win-ui-light .acc-keyboardFocusTarget:active, .showKeyboardFocus.win-ui-light .acc-keyboardFocusTarget:focus, .showKeyboardFocus.win-ui-light .acc-keyboardFocusTarget:active, .showKeyboardFocus .findAlbumInfoBackButton button.win-command:focus, .popOver.movie .bodyContainer
+{
+    outline-color: #000
+}
+.showKeyboardFocus .win-ui-dark .acc-keyboardFocusTarget:focus, .showKeyboardFocus .win-ui-dark .acc-keyboardFocusTarget:active, .showKeyboardFocus.win-ui-dark .acc-keyboardFocusTarget:focus, .showKeyboardFocus.win-ui-dark .acc-keyboardFocusTarget:active
+{
+    outline-color: #fff
+}
+.collectionMusicSongsGallery .win-focusedoutline, .nowPlayingPlaylistGalleryView .win-focusedoutline, .nowPlayingPlaylistGalleryViewSnapped .win-focusedoutline
+{
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px)
+}
+.win-container:focus
+{
+    outline-style: none
+}
+.pageNavigationOutline, .verticalPivotButtonOutline, .horizontalPivotButtonOutline, .overviewOutline
+{
+    display: none
+}
+.showKeyboardFocus .hcrHubPanel:focus>.hcrOutline, .showKeyboardFocus .musicPage .pageNavigation:focus+.pageNavigationOutline, .showKeyboardFocus .inboxPage .pageNavigation:focus+.pageNavigationOutline, .showKeyboardFocus .musicPage .horizontalPivotButton:focus+.verticalPivotButtonOutline, .showKeyboardFocus .musicPage .verticalPivotButton:focus+.verticalPivotButtonOutline, .showKeyboardFocus .inboxPage .verticalPivotButton:focus+.verticalPivotButtonOutline, .showKeyboardFocus .overview:focus+.overviewOutline
+{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #fff;
+    display: block
+}
+.showKeyboardFocus .bottomAppBarContainer .win-command.appBarIconButton.acc-keyboardFocusTarget, .showKeyboardFocus .bottomAppBarContainer .win-command.appBarIconButton.acc-keyboardFocusTarget:focus
+{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    margin-top: -2px;
+    outline-width: 0
+}
+.iconButton .win-commandimage:active
+{
+    color: #ebebeb
+}
+.popOverContentContainer .panelFragmentLoading div.failedPanelContainer, .failedPanelContainer, .noContentPane, .popOver .win-listview .win-container:hover, .popOver .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container, .popOver .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container .win-selectionbackground, .popOver .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover, .popOver .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover .win-selectionbackground, .popOver .invoked .inlineDetailsMusicTrack, .downloadDetailsEpisodeList .win-listview .win-container:hover, .downloadDetailsEpisodeList .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container, .downloadDetailsEpisodeList .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container .win-selectionbackground, .downloadDetailsEpisodeList .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover, .downloadDetailsEpisodeList .win-selectionstylefilled.win-listview .win-viewport.win-vertical .win-selected.win-container:hover .win-selectionbackground, .downloadDetailsEpisodeList .invoked .inlineDetailsMusicTrack, .achievementsGallery .cardThumbnailButton, .companion .gamesCollection .cardThumbnailButton, .companionNowPlaying .cardThumbnailButton, .dashboardPanel .heroActivityTile .cardThumbnailButton, .hcrHubPanel, .actionTile, .popOver .leftColumn, .popOverLeftColumnPlaceholder, .homeNowPlayingTile, .artistHeaderThumbnail, .albumHeaderThumbnail, .compareGamesColumn, .companionSearchPanelContent, .avatarEditorBodySizeButton:hover, .dashboardPanel .panelFailed, .dashboardGridItemContent .thumbnailButton .imageContainer, .miniProfilePanelControlsSignedOut, .games .dashboardPanel .signedOutPanel, .games .dashboardPanel .playGameAction button, .dashboardMyMusic button.iconButton, .musicCollection .appCriticalNotification .win-flipview .win-navbutton:hover, .musicCollection .appCriticalNotification .win-flipview .win-navbutton:hover:active, .musicCollection .appInfoNotification .win-flipview .win-navbutton:hover, .musicCollection .appInfoNotification .win-flipview .win-navbutton:hover:active, .musicMarketplace .appCriticalNotification .win-flipview .win-navbutton:hover, .musicMarketplace .appCriticalNotification .win-flipview .win-navbutton:hover:active, .musicMarketplace .appInfoNotification .win-flipview .win-navbutton:hover, .musicMarketplace .appInfoNotification .win-flipview .win-navbutton:hover:active, .musicNewReleases .appCriticalNotification .win-flipview .win-navbutton:hover, .musicNewReleases .appCriticalNotification .win-flipview .win-navbutton:hover:active, .musicNewReleases .appInfoNotification .win-flipview .win-navbutton:hover, .musicNewReleases .appInfoNotification .win-flipview .win-navbutton:hover:active, .music .searchPage .appCriticalNotification .win-flipview .win-navbutton:hover, .music .searchPage .appCriticalNotification .win-flipview .win-navbutton:hover:active, .music .searchPage .appInfoNotification .win-flipview .win-navbutton:hover, .music .searchPage .appInfoNotification .win-flipview .win-navbutton:hover:active, .musicTopMusic .appCriticalNotification .win-flipview .win-navbutton:hover, .musicTopMusic .appCriticalNotification .win-flipview .win-navbutton:hover:active, .musicTopMusic .appInfoNotification .win-flipview .win-navbutton:hover, .musicTopMusic .appInfoNotification .win-flipview .win-navbutton:hover:active, .popOver .messageBubble, .searchHCR .cardThumbnailButton, .pickProviderItemContainer:hover, .pickProviderItemContainer:hover:active
+{
+    background-color: #ebebeb
+}
+.messageBubblePointer
+{
+    border-color: #ebebeb
+}
+.popOver .win-listview .win-container, .popOver .win-listview .win-container:hover, .downloadDetailsEpisodeList .win-listview .win-container, .downloadDetailsEpisodeList .win-listview .win-container:hover
+{
+    outline-color: #ebebeb
+}
+.achievementDateAbbreviationControl .dateAbbreviationGroupHeader, .achievementsGallery .achievementByGame, .musicCollection .notificationContent, .musicMarketplace .notificationContent, .musicNewReleases .notificationContent, .music .searchPage .notificationContent, .music .flexHubPage .notificationContent, .musicTopMusic .notificationContent, .musicCollection .appCriticalNotification .win-flipview .win-navbutton, .musicCollection .appInfoNotification .win-flipview .win-navbutton, .musicMarketplace .appCriticalNotification .win-flipview .win-navbutton, .musicMarketplace .appInfoNotification .win-flipview .win-navbutton, .musicNewReleases .appCriticalNotification .win-flipview .win-navbutton, .musicNewReleases .appInfoNotification .win-flipview .win-navbutton, .music .searchPage .appCriticalNotification .win-flipview .win-navbutton, .music .searchPage .appInfoNotification .win-flipview .win-navbutton, .musicTopMusic .appCriticalNotification .win-flipview .win-navbutton, .musicTopMusic .appInfoNotification .win-flipview .win-navbutton
+{
+    background-color: #1b1b1b
+}
+.playPlaylistOverlay .label.subText, .pickProvidersMetadataText, .beaconCommentContainer .beaconCommentText, .iconButtonTwoLine button.iconButton.win-command .win-label.subtitle, .iconButtonWithSubtext button.iconButton.win-command .win-label.subtitle, .mediaPropertiesFlyoutTemplateFlyoutGrid .metadataTitle, .popOver .listContainerTitle, .popOver .inlineDetailsTvEpisodeDuration, .popOver .inlineDetailsTvEpisodeDate, .popOver .bodyContainer .title, .popOver .immersiveInlineTrackListAlbumName, .popOver .immersiveInlineTrackListDuration, .popOver .immersiveInlineTrackListArtistName, .popOver .subTitle, .popOver .collectionFilterText, .popOverList.verticalListHost .verticalListItem, .popOverList.verticalListHost .verticalListItem .secondaryText, .popOverList.verticalListHost .win-container.win-selected .verticalListItem .icon, .titleContainer .secondaryText, .achievementThumbnail .secondaryText, .companionHomeSearchBox, .cardThumbnailButton .textContainer, .homeNowPlayingTile.large .homeNowPlayingMetadataSubTitle, .homeNowPlayingTilePoster .homeNowPlayingMetadataSubTitle, .homeNowPlayingTilePoster .seasonEpisodeNumber, .homeNowPlayingTilePoster .homeNowPlayingMetadataClock, .homeNowPlayingTilePoster .homeNowPlayingMetadataDuration, .homeNowPlayingTilePoster .homeNowPlayingMetadataClockAndDuration, .popOver .gamerInfoSubText .friendInlineDisplayNameText, .popOver .gamerInfoSubText .friendInlineGamerScore, .hcrHubPanel .textContainer, .unearnedAchievement .achievementThumbnail .primaryText, .appBarNowPlayingMetadata .metadataDuration, .searchGalleryView .Modern .cardThumbnailButton .secondaryText, .searchGalleryView .Xbox .cardThumbnailButton .secondaryText, .dashboardPanel .failedPanelMessage, .previewBrowse p, .previewBrowseBar p, .popOverContainer .panelFragmentLoading .failedPanelMessage, .chatBubbleSecondaryLabel, .primaryPanelModifier.immersiveColumnPadding.seasonsSelector
+{
+    color: #6b6b6b
+}
+.achievementGameDetailsThumbnail .imageContainer, .achievementThumbnail.cardThumbnailButton .imageHolder, .chatBubbleStatusImageContainer, .compareGameThumbnail .imageContainer, .companion .gamesCollection .cardThumbnailButton .imageContainer, .companionNowPlaying .cardThumbnailButton .imageContainer, .gamerHeaderTileImage, .overview .metaDataContainer>.imageContainer, .popOver .gamerPic img, .homeNowPlayingTile.large .homeNowPlayingArtLarge, .HCRCoverArt .imageHolder, .searchHCR .imageContainer, .videoFlexHubBigItem .imageContainer, .gamesFlexHubBigItem .imageContainer, .companion .related.activities .control-immersiveListViewItem .part-imageContainer, .relatedHeroItem .imageContainer, .related .control-immersiveListViewItem .part-imageHolder, .immersiveMoreGalleryView .imageHolder, .part-imageContainer img, .pickProviderThumbnail, .pickProviderItemImageContainer, .homeNowPlayingTilePoster.companion .homeNowPlayingArt
+{
+    box-shadow: 1px 1px 4px rgba(0,0,0,.2)
+}
+.actionListFlyout, .playbackOptionListFlyoutColors, .adCompanion, .selectArtistFlyoutGrid, .playPlaylistOverlay, .popOverContainer, .overlayContainer .popOver.friend
+{
+    box-shadow: 0 4px 40px rgba(0,0,0,.2)
+}
+.related .control-immersiveListViewItem .part-imageHolder img
+{
+    box-shadow: none
+}
+.companion .dashboardGridItemContent:not(.thumbnailButtonGlyph) .primaryText, .dashboardGridItemContent .primaryTextBg, .dashboardGridItemContent .secondaryText, .dashboardGridItemContent .tertiaryText, .dashboardGridItemContent .quaternaryText, .previewBrowse .previewBrowseBar .buttonContainer
+{
+    background-color: rgba(0,0,0,.85)
+}
+.music .homeNowPlayingTile .nowPlayingTileBackground:after, .games .dashboardGridItemContent.engaged .content
+{
+    background-color: rgba(0,0,0,.36)
+}
+.immersiveFrame .overview .notificationItemContainer
+{
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666
+}
+.immersiveViewMorePopOverContentLayout>.headingRow
+{
+    border-bottom: 1px solid #666
+}
+.companionFullBleedNowPlayingTile .imageOverlay, .smartDJIcon:not(.smartDJNowPlaying), .immersiveHeroBackgroundImageOverlay, .activityOverlaySplashBackgroundImageImageOverlay, .videoAd .videoAdOverlayContentContainer, .related.activities .relatedListView .control-immersiveListViewItem:hover .activitiesOverlay, .folderVideoThumbnail .content
+{
+    background-color: rgba(0,0,0,.54)
+}
+.immersiveHeroBackgroundImageContainer.mediatype-game .immersiveHeroBackgroundImageOverlay.fullBleed
+{
+    background-color: transparent;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.54) 30%,rgba(0,0,0,1) 100%)
+}
+.userEngagementMessageTop
+{
+    background-image: linear-gradient(180deg,#ededed 0%,#d4d4d4 100%)
+}
+.companionSearchTermsList
+{
+    border-top: 1px solid #747474
+}
+.games .achievementPageContainer .achievementGameDetailsControl, .compareHeaderTextContainer, .music .engagePanel .actionTile, .music .engagePanel .horizontalFlow, .homeNowPlayingTilePoster, .heroActivityTile .cardThumbnailButton, .companionNowPlayingRelatedContent .cardThumbnailButton
+{
+    background-image: linear-gradient(180deg,#232525 0%,#1a1a1a 100%)
+}
+.immersiveHeroContent button:hover, .immersiveHeroContent button:focus, .immersiveHeroContent button:hover:active, .notificationContainer button:not(.beaconLink):hover, .notificationContainer button:not(.beaconLink):focus, .notificationContainer button:not(.beaconLink):hover:active, .closeButton button:hover, .closeButton button:focus, .closeButton button:hover:active, .cloudNotification .clearIcon:hover button .win-commandimage.iconSpan, .cloudNotification .clearIcon:hover button .win-commandimage.iconSpanPressed, .cloudNotification .clearIcon:hover button.iconButton .win-commandimage.modifier, .music .musicBrandActionLink button:hover .actionLinkLabel, .headingRow .internalActionLink:focus .actionLinkLabel.label, .headingRow .internalActionLink:hover .actionLinkLabel.label
+{
+    background-color: transparent;
+    color: rgba(255,255,255,.8)
+}
+.avatarEditorAssetThumbnailItem, .avatarEditorColorItem
+{
+    border-color: #eaeaea
+}
+.avatarEditorRemoveItem
+{
+    background-color: #eaeaea
+}
+.avatarEditorBodySizeButton:hover:active
+{
+    background-color: #d7d7d7
+}
+.chatBubble
+{
+    background-image: linear-gradient(180deg,#ebebeb 0%,#b2b2b2 100%)
+}
+.chatBubblePointer
+{
+    border-color: #b2b2b2
+}
+html[dir=rtl] .chatBubblePointer
+{
+    border-right-color: #b2b2b2
+}
+button.horizontalPivotButton, button.verticalPivotButton
+{
+    color: #b2b2b2
+}
+button:hover.horizontalPivotButton, button:hover.verticalPivotButton, .primaryPanelModifier .modifierControl .modifierDescription, .modifierControl:hover, .modifierControl.showingList, .dropDownDisabled .modifierSelectedItem
+{
+    color: #a5a5a7
+}
+button:hover:active.horizontalPivotButton, button:hover:active.verticalPivotButton
+{
+    color: #7c7d80
+}
+.companion .snappedIconContainer, .companion #htmlSnapped, .wecDialog .companionConnectionOverlayBackground, .companionConnectionDialog, .games .snappedIconContainer, .games #htmlSnapped, .dashboardGridItemContent.gamesThumb .thumbnailButton, .games .extendedSplashScreen, .companion .extendedSplashScreen, .games .control-upgradeTileContainer
+{
+    background-color: #008a00
+}
+.music .snappedIconContainer, .dashboardGridItemContent.musicThumb .thumbnailButton, .music .extendedSplashScreen, .music .control-upgradeTileContainer
+{
+    background-color: #d24726
+}
+.video .snappedIconContainer, .video #htmlSnapped, .dashboardGridItemContent.videoThumb .thumbnailButton, .video .extendedSplashScreen, .video .control-upgradeTileContainer
+{
+    background-color: #ac193d
+}
+.findAlbumInfo .keywords:not(:focus)+.searchIcon
+{
+    color: #bababa;
+    background-color: transparent;
+    border: 2px solid #bababa
+}
+.findAlbumInfo .keywords:hover+.searchIcon
+{
+    color: #8f8f8f;
+    background-color: transparent;
+    border: 2px solid #8f8f8f
+}
+.findAlbumInfo .keywords:focus+.searchIcon
+{
+    color: #000;
+    border: 2px solid #666;
+    background-color: transparent
+}
+.findAlbumInfo .keywords:focus+.searchIcon:hover
+{
+    background-color: #dedede
+}
+.findAlbumInfo .win-container.win-selected .win-selectioncheckmark, .findAlbumInfo .win-container.win-selected .win-selectioncheckmarkbackground
+{
+    display: none
+}
+.findAlbumInfo .win-container.win-selected .win-selectionbackground
+{
+    background-color: #333
+}
+.popOver.playlist .inlineCaretButtonText, .popOver.playlist .inlineCaretButtonIcon
+{
+    color: ButtonText
+}
+.popOver.playlist button.win-command.iconButton, .playPlaylistOverlay button.win-command.iconButton
+{
+    outline-color: ButtonText
+}
+.musicDialog.orange .dialogContainerBackground
+{
+    background-color: #be5f26
+}
+.musicDialog.blue .dialogContainerBackground
+{
+    background-color: #345a69
+}
+.musicDialog.green .dialogContainerBackground
+{
+    background-color: #467a79
+}
+.musicDialog.pink .dialogContainerBackground
+{
+    background-color: #972a50
+}
+.companionFullBleedNowPlayingTile .bottomProgress, .homeNowPlayingTilePoster.companion .bottomProgress
+{
+    background-color: rgba(146,146,146,.5)
+}
+.overlayAnchor.volumeContainer, .snapped .overlayAnchor.volumeContainer
+{
+    background-color: transparent
+}
+.volumeContainer
+{
+    background-color: #fff
+}
+.volumeIcon
+{
+    border-bottom: 1px solid #c2c2c2
+}
+.volumeIcon .win-commandring, .volumeIcon button:active .win-commandring
+{
+    border-color: transparent
+}
+.volumeIcon .win-commandimage
+{
+    color: #000
+}
+.volumeRange input[type=range].win-vertical::-ms-thumb
+{
+    background-color: #000
+}
+.volumeRange input[type=range].win-vertical::-ms-fill-upper
+{
+    background-color: #d4d4d4
+}
+.volumeRange input[type=range].win-vertical::-ms-fill-lower
+{
+    background-color: #d24726
+}
+.games .volumeRange input[type=range].win-vertical::-ms-fill-lower
+{
+    background-color: #008a00
+}
+.video .volumeRange input[type=range].win-vertical::-ms-fill-lower
+{
+    background-color: #ac193d
+}
+.volumeRange input[type=range].win-vertical.mute::-ms-fill-lower
+{
+    background-color: #c4c4c4
+}
+.volumeIcon button.iconButton.win-command .win-commandicon.win-commandring, .volumeIcon button.iconButton.win-command .win-commandicon.win-commandring:hover, .musicPage .verticalListItem .clearIcon button.iconButton.win-command .win-commandicon.win-commandring, .musicPage .verticalListItem .clearIcon button.iconButton.win-command .win-commandicon.win-commandring:hover
+{
+    border-bottom-style: none;
+    border-color: transparent;
+    border-width: 0;
+    background-color: transparent
+}
+.volumeIcon button.iconButton .win-commandimage.iconSpanPressed, .volumeIcon button.iconButton:active:hover .win-commandimage.iconSpan, .volumeIcon button.iconButton:active:hover .win-commandimage.modifier
+{
+    opacity: 1
+}
+.showKeyboardFocus .volumeRange input[type=range].win-vertical:focus, .showKeyboardFocus .volumeIcon button.iconButton.win-command:focus
+{
+    outline: 2px solid #000
+}
+@media screen and (-ms-high-contrast)
+{
+    .immersiveHeroSecondaryText, .albumThumbnail .thumbnailButtonSecondaryText, .appBarNowPlayingProgressPosition, .collectionMusicGalleryView .secondaryText, .music .marketplaceGalleryView .secondaryText, .collectionMessageGalleryView .secondaryText, .collectionVideoGallery .thumbnailButtonSecondaryText, .companionEventItemTime, .failedPanelMessage, .movieThumbnail .thumbnailButtonSecondaryText, .gamesThumbnail .thumbnailButtonSecondaryText, .tvSeriesThumbnail .thumbnailButtonSecondaryText, .horizontalPivotButton, .verticalPivotButton, .marketplaceGallery .win-groupheader, .collectionMusicGallery .win-groupheader, .collectionMessageGallery .win-groupheader, .popOver .win-item, .popOver, .videoDownloadManagerContent .win-item, .videoDownloadManagerContent, .aboutPageTitles, .achievementGameDetailsMetaDataText, .achievementGameDetailsProgressLabel, .achievementGameDetailsThumbnail, .activityGallery .win-item, .albumThumbnail, .win-item, .appBarNowPlayingMetadataSubTitle, .appBarNowPlayingMetadataTitle, .appBarTransportControlsMessageTitle, .avatarEditorGalleryPanelCancel .label, .avatarEditorGalleryPanelSave .label, .chatBubblePrimaryLabel, .companionEventItemData, .dashboardGridItemContent, .dateAbbreviationGroupHeader, .emptyGalleryContainerImmersiveDetailsColor .failedPanelMessage, .emptyGalleryContainerImmersiveDetailsColor .failedPanelTitle, .errorFeedbackLink, .eventContainer, .failedPanelTitle, .friendsSummaryGallery .win-item, .homeNowPlayingMetadataClock, .homeNowPlayingMetadataTitle, .hubDestination, .hubStripPreviewTitle, .hubStripTitle, .dialogXenonTitle, .dashboardTitle, .nowPlayingBranding, .immersiveDetailsContainer .PrimaryNavigationButton.selected, .immersiveDetailsExtrasOverviewGeneral, .immersiveDetailsFeaturedSecondaryText, .immersiveDetailsHub, .immersiveDetailsOverviewActionButton, .immersiveDetailsTitle, .inlineDetailsAlbumImmersive .immersiveInlineTrackListDuration, .inlineDetailsAlbumImmersive .immersiveInlineTrackListArtistName, .inlineDetailsAlbumImmersive .immersiveInlineTrackListName, .inlineDetailsAlbumImmersive .immersiveInlineTrackListNumber, .inlineDetailsAlbumImmersive .inlineDetailsInline.label, .inlineDetailsAlbumImmersive .inlineDetailsPrimaryBold, .inlineDetailsAlbumImmersive .inlineDetailsPrimaryBold.inlineDetailsInline.inlineDetailsContentRating, .inlineDetailsAlbumImmersive .inlineDetailsSubHeader, .inlineDetailsAlbumImmersive .inlineDetailsTitle, .inlineDetailsAlbumImmersive, .inlineDetailsExtrasList .win-item, .inlineDetailsLeaderBoardEntry, .inlineDetailsOverviewActionButtonAlbum, .inlineDetailsOverviewActionButtonArtist, .inlineDetailsOverviewActionButtonEpisode, .inlineDetailsOverviewActionButtonGame, .inlineDetailsOverviewActionButtonMusicVideo, .inlineDetailsOverviewActionButtonTrack, .inlineDetailsOverviewActionButtonTv, .inlineDetailsOverviewActionButtonVideo, .inlineDetailsTvImmersive .inlineDetailsFullDescription, .inlineDetailsTvImmersive .inlineDetailsInline.label, .inlineDetailsTvImmersive .inlineDetailsPrimaryBold, .inlineDetailsTvImmersive .inlineDetailsPrimaryBold.inlineDetailsInline.inlineDetailsContentRating, .inlineDetailsTvImmersive .inlineDetailsTitle, .inlineDetailsTvImmersive .inlineDetailsTvEpisodeNumber, .inlineDetailsTvImmersive .inlineDetailsTvEpisodeDate, .inlineDetailsTvImmersive .inlineDetailsTvEpisodeTitle, .inlineDetailsTvImmersive, .inPlaceDetailsItemActionButton, .marketplaceGallery .win-groupheader, .marketplaceGamesPage .marketplaceGallery .win-item, .marketplaceMoviePage .marketplaceGallery .win-item, .marketplaceMusicPage .marketplaceGallery .win-item, .marketplaceTvPage .marketplaceGallery .win-item, .marketplaceVideoSearchPage .marketplaceGallery .win-item, .marketplaceGamesSearchPage .marketplaceGallery .win-item, .miniSocialControlLabel, .nowPlayingMetadataMainTitle, .nowPlayingMetadataSubTitle, .nowPlayingMetadataTime, .nowPlayingPlaylistEntryMainTitle, .nowPlayingPlaylistEntryMainTitleSnapped, .nowPlayingPlaylistEntrySubTitles, .nowPlayingPlaylistTitle, .nowPlayingText, .pageHeader, .panelTitle, .pickProvidersTitle, .PlayButton, .primaryPanelModifier, .searchGroupHeaderText, .searchGroupHeaderInPlaceText, .searchResultTitle, .seekBarFont, .selectedModifierPopupEntry, .settingsFeedbackOptionLabel, .settingsPanelContent, .settingsPanelTitle, .settingsSignIn .signInComplete, .settingsSignIn .signInError, .settingsSignIn .signInProgress, .snappedDetailsHubStrip .PrimaryNavigationButton.selected, .snappedDetailsHubStrip, .snappedDetailsTitle, .snappedNowPlayingMetadata, .socialSummaryGallery .win-item, .summaryCollectionTile, .tvSeriesHeaderDetailsButton, .WatchOnXboxButton, .xboxTouchPadLabel, .adCompanionCloseButton, .adCompanionLabel, .whiteFontColor, .games .win-container:hover .compareGamesColumn .label, .adIconButton button.win-command .label, .videoAdText, .selectArtistEditBox input[type=text].editInput, .selectArtistEditBox input[type=text]:focus.editInput, .selectArtistEditBox input[type=text]:hover.editInput, .verticalListItem .smartDJIcon:not(.smartDJNowPlaying), .control-sendMessage .editBox textarea
+    {
+        color: WindowText
+    }
+    .actionListHRSeparator, .screenshotLocators .win-template
+    {
+        background-color: WindowText
+    }
+    html, body, .companion .artistDetailsOverviewPanel .nowPlayingContainer, .immersiveDetailsContainer, .immersiveDetailsHub, .immersiveDetailsOverview, .immersiveDetailsOverview, .immersiveDetailsOverviewContainer, .immersiveDetailsTableOfContents, .inlineDetailsExtrasList, .nowPlayingBackground, .nowPlayingPlaylistControl, .snappedContainer .SearchEditBox, .overlayContainer, .inlineAlbum, .appBarNowPlayingProgressFill, .snappedNowPlayingProgress::-ms-fill, .companionHomeSearchBox, .seekbarEventTick, .immersiveHeroContent, .homeNowPlayingMetadata, .nowPlayingTransportControls, .adCompanion, .metadataContainer, .xboxTouchPadSurface, .videoAd .videoAdOverlayContentContainer, .seekBarContainer
+    {
+        background-color: Window
+    }
+    .companion .related.activities .control-immersiveListViewItem:focus, .companion .related.activities .control-immersiveListViewItem:hover, a:active:hover, .switcherButtonControllerSelected, .switcherButtonControllerSelected:hover, .switcherButtonControllerSelected:active, .switcherButtonControllerSelected:active:hover, .switcherButtonBrowserSelected, .switcherButtonBrowserSelected:hover, .switcherButtonBrowserSelected:active, .switcherButtonBrowserSelected:active:hover, .showKeyboardFocus .beaconControlContainer button.win-command.iconButton:focus:-ms-keyboard-active .win-label, button.iconButton:disabled .win-commandimage.modifier, button.iconButton:disabled .win-commandimage.modifierPressed button.iconButton:disabled:active:hover .win-commandimage.iconSpanPressed, .popOver .inPlaceDetailsItemActions button.iconButton:disabled .win-commandimage.iconSpanPressed, .popOver .inPlaceDetailsItemActions button.iconButton:disabled:active:hover .win-commandimage.iconSpanPressed, .avatarEditorBodySizeButton .editInput:-ms-input-placeholder, .PrimaryNavigationButton:active:hover, button.iconButton:hover:active .win-commandimage, .win-ui-dark button.iconButton:hover:active .win-commandimage.iconSpanPressed, button.appBarIconButton:hover:active:not(:disabled) .win-commandimage, button.nowPlayingTransportControlsPlayPauseButton:hover:active .win-commandimage, button.nowPlayingTransportControlsSkipButton:hover:active .win-commandimage, button.iconButton.toggleButton.checked .win-commandimage.iconSpan, button.iconButton.toggleButton.checked .win-commandimage.iconSpanPressed, button.appBarIconButton.toggleButton.checked .win-commandimage.iconSpan, button.appBarIconButton.toggleButton.checked .win-commandimage.iconSpanPressed, .homeNowPlayingTile:hover:active .win-commandimage, .win-container.win-focused .companionSearchTermContainer .label, .companionSearchTermContainer:hover:active .label, .control-extrasListItem:active:hover, .games .engagePanel .actionTile button.win-command.iconButton:hover .win-label, .games .engagePanel .actionTile button.win-command.iconButton:active .win-label, .games .engagePanel .actionTile button.win-command.iconButton:hover:active .win-label, .games .engagePanel .actionTile button.win-command.iconButton:focus .win-label, .games .engagePanel .actionTile button.win-command.iconButton:hover .win-commandimage, .games .engagePanel .actionTile button.win-command.iconButton:active .win-commandimage, .games .engagePanel .actionTile button.win-command.iconButton:hover:active .win-commandimage, .games .engagePanel .actionTile button.win-command.iconButton:focus .win-commandimage
+    {
+        color: ButtonFace
+    }
+    .xboxTouchPadHitArea span, .allButton, .avatarEditorBodySizeButton, .avatarEditorBodySizeButton:hover, .avatarEditorBodySizeButton[disabled]:hover, .avatarEditorBodySizeButton[disabled] .win-commandring, .avatarEditorBodySizeButton[disabled]:hover .win-commandring, .avatarEditorBodySizeButton[disabled] .win-command.iconButton:active .win-commandring, .avatarEditorGalleryPanelCancel, .avatarEditorGalleryPanelSave, .avatarEditorRemoveItem, .BuyButton, .collectionAlbumGroupHeader, .collectionPlaylistGroupHeader, .collectionTVSeasonPage .win-groupheader, .collectionVideoGallery .win-groupheader, .dateAbbreviationGroupHeader, .DetailButton, .detailsTVGallery .win-item.win-selected, .externalActionLink, .friendsActionLink, .hubDestination, .immersiveDetailsExtrasOverviewBackground, .immersiveDetailsOverviewActionButton, .inlineDetailsContentRating, .inlineDetailsLeaderBoardEntry, .inlineDetailsOverviewActionButtonAlbum, .inlineDetailsOverviewActionButtonArtist, .inlineDetailsOverviewActionButtonEpisode, .inlineDetailsOverviewActionButtonGame, .inlineDetailsOverviewActionButtonMusicVideo, .inlineDetailsOverviewActionButtonTrack, .inlineDetailsOverviewActionButtonTv, .inlineDetailsOverviewActionButtonVideo, .inlineDetailsOverviewWideActionButton, .inPlaceDetailsItemActionButton, .internalActionLink, .marketplaceGallery .win-groupheader, .miniProfileControl, .miniProfileControl:active, .miniSocialGalleryContainer, .miniSocialGalleryContainer:active, .PlayButton, .playlistImageCollage .thumbnailButtonImage, .searchGroupHeader, .searchGroupHeaderInPlace, .summaryCollectionTile, .tvSeriesHeaderButtonFrame, .tvSeriesHeaderControl, .tvSeriesHeaderDetailsButton, .WatchOnXboxButton, .headingLink .internalActionLink:not(:disabled), .avatarEditorGalleryPanelCancel:active:hover, .avatarEditorGalleryPanelCancel:hover, .avatarEditorGalleryPanelSave:active:hover, .avatarEditorGalleryPanelSave:hover, .externalActionLink:active:hover, .externalActionLink:hover, .immersiveDetailsOverviewActionButton:active:hover, .immersiveDetailsOverviewActionButton:hover, .inlineDetailsLeaderBoardEntry:active:hover, .inlineDetailsLeaderBoardEntry:hover, .inlineDetailsOverviewActionButtonAlbum:active:hover, .inlineDetailsOverviewActionButtonAlbum:hover, .inlineDetailsOverviewActionButtonArtist:active:hover, .inlineDetailsOverviewActionButtonArtist:hover, .inlineDetailsOverviewActionButtonEpisode:active:hover, .inlineDetailsOverviewActionButtonEpisode:hover, .inlineDetailsOverviewActionButtonGame:active:hover, .inlineDetailsOverviewActionButtonGame:hover, .inlineDetailsOverviewActionButtonMusicVideo:active:hover, .inlineDetailsOverviewActionButtonMusicVideo:hover, .inlineDetailsOverviewActionButtonTrack:active:hover, .inlineDetailsOverviewActionButtonTrack:hover, .inlineDetailsOverviewActionButtonTv:active:hover, .inlineDetailsOverviewActionButtonTv:hover, .inlineDetailsOverviewActionButtonVideo:active:hover, .inlineDetailsOverviewActionButtonVideo:hover, .inlineDetailsOverviewWideActionButton:active:hover, .inlineDetailsOverviewWideActionButton:hover, .inPlaceDetailsItemActionButton:active:hover, .inPlaceDetailsItemActionButton:hover, .internalActionLink:hover, .miniSocialGalleryContainer:active:hover, .miniSocialGalleryContainer:hover, .actionListFlyout, .appBarTransportControlsMessage, .bottomAppBar, .companionEventItemContainer, .companionSearchTermContainer, .eventContainer, .adThumbnail .primaryText.label, .dialogContainerBackground, .iconButton .win-commandicon:active, .nowPlayingTileBackground, .dashboardGridItemContent .primaryText, .dashboardGridItemContent .secondaryText, .dashboardGridItemContent .tertiaryText, .dashboardGridItemContent .quaternaryText, .homeNowPlayingTile, .iconButton .win-commandicon:active, .inlineDetailsMoveTrackDownButton button.iconButton[disabled] .win-commandring, .inlineDetailsMoveTrackDownButton button.iconButton[disabled]:hover .win-commandring, .inlineDetailsMoveTrackUpButton button.iconButton[disabled] .win-commandring, .inlineDetailsMoveTrackUpButton button.iconButton[disabled]:hover .win-commandring, .nowPlayingTileBackground, button.iconButton .win-commandring, .imageChatBubble, .homeNowPlayingMetadataAndProgress
+    {
+        background-color: ButtonFace
+    }
+    .xboxTouchPadHitArea span:active, .messageButton, .messageEditBox .editMultiline, .recipientEditBox .editInput, .messageButton:hover, .immersiveDetailsTableOfContents, .messageButton.disabled:hover, button.iconButton:hover:active .win-commandimage, button.appBarIconButton:hover:active:not(:disabled) .win-commandimage, button.nowPlayingTransportControlsPlayPauseButton:hover:active .win-commandimage, button.nowPlayingTransportControlsSkipButton:hover:active .win-commandimage
+    {
+        border-color: ButtonFace
+    }
+    .companion .related.activities .control-immersiveListViewItem, .music .playPlaylistOverlay .inlineCaretButton, .music a, .games a, .video a, .companion a, button.iconButton.hideAdorner:active:hover .win-commandimage.iconSpanPressed, .xboxTouchPadHitArea span, .xboxTouchPadLabel.xboxTouchpadGiantLabel, .appSignIn .signInRetry:hover, .messageButton:hover, .settingsWebLinkText:hover, .actionButtonLabel, .actionLinkLabel.label, .actionLinkContainer .icon, .avatarEditorBodySizeButton .win-commandimage.iconSpan, .avatarEditorGalleryPanelSave:hover .iconButton .label, .avatarEditorGalleryPanelCancel:hover .iconButton .label, .allButton, .beaconLink, .BuyButton, .collectionGamesGallery .win-item, .collectionMusicGallery .win-groupheader, .collectionMusicGallery .win-item, .collectionMusicGalleryView .win-commandimage, .collectionMusicGalleryView .win-label, .music .marketplaceGalleryView .win-commandimage, .music .marketplaceGalleryView .win-label, .collectionMessageGallery .win-groupheader, .collectionMessageGallery .win-item, .collectionMessageGalleryView .win-commandimage, .collectionMessageGalleryView .win-label, .collectionMusicSongsGallery .win-groupheader, .collectionPlaylistGallery .win-item, .collectionTVEpisodePage .win-groupheader, .collectionTVEpisodeSeriesPage .win-groupheader, .collectionTVSeasonPage .win-groupheader, .collectionTVSeasonSeriesPage .win-groupheader, .collectionVideoGallery .win-groupheader, .collectionVideoGallery .win-item, .videoAdOverlayContentContainer .win-label, .DetailButton, .immersiveTableOfContentsItemContainer .label, .cardThumbnailButton .primaryText, .cardThumbnailButton .secondaryText, .cardThumbnailButton .tertiaryText, .cardThumbnailButton .quaternaryText, .cardThumbnailButton .activityTitleText, .detailsAlbumsGallery .thumbnailButtonPrimaryText, .detailsGamesGallery .thumbnailButtonPrimaryText, .detailsTVGallery .thumbnailButtonPrimaryText, .achievementsGallery .PrimaryText, .dialogCaption, .dialogContent, .dialogLink, .inlineDetailsTvContainer .inlineEpisodeName, .inlineDetailsTvContainer .inlineEpisodeNumber, .inlineDetailsTvContainer .inlineEpisodeDuration, .playlistItemTemplate .nowPlayingPlaylistEntrySubTitle1, .playlistItemTemplate .nowPlayingPlaylistEntryDuration, .internalActionLink .label, button.iconButton .win-commandimage, button.iconButton .win-commandimage.iconSpan, .win-ui-dark button.iconButton .win-commandimage.iconSpan, button.appBarIconButton:not(:disabled) .win-commandimage, button.playPauseIconButton .win-commandimage, button.nowPlayingTransportControlsPlayPauseButton .win-commandimage, button.nowPlayingTransportControlsSkipButton .win-commandimage, .homeNowPlayingMetadata .win-commandimage, .homeHubNowPlayingTile .homeNowPlayingPlayButton .win-commandicon.win-commandring .win-commandimage, .hcrHubPanel .primaryText, .hcrHubPanel .secondaryText, .chatBubblePrimaryLabel, .chatBubbleSecondaryLabel, .compareAchievementSecondaryText, .companionSearchTermContainer .label, .extrasItem, .xboxTouchpadGiantLabel, .inlineCaretButtonText, .inlineCaretButtonIcon, .verticalListItem .icon
+    {
+        color: ButtonText
+    }
+    a:active:hover, .switcherButtonControllerSelected, .switcherButtonControllerSelected:hover, .switcherButtonControllerSelected:active, .switcherButtonControllerSelected:active:hover, .switcherButtonBrowserSelected, .switcherButtonBrowserSelected:hover, .switcherButtonBrowserSelected:active, .switcherButtonBrowserSelected:active:hover, .xboxTouchPadTouchPoint, .showKeyboardFocus .beaconControlContainer button:focus:-ms-keyboard-active, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:focus:-ms-keyboard-active, .companionSearchButton button.win-command.iconButton.acc-keyboardFocusTarget:-ms-keyboard-active .win-commandring, .seekBarTrackBackground, .beaconLinkContainer:active .beaconLink, button.iconButton:hover:active .win-commandring, .avatarEditorBodySizeButton:not([disabled]) button.iconButton:hover:active .win-commandicon.win-commandring, .avatarEditorAverageButton:hover:active, .panelTitle .internalActionLink:active:hover:not(:disabled), button.appBarIconButton:hover:active:not(:disabled) .win-commandring, button.nowPlayingTransportControlsPlayPauseButton:hover:active .win-commandring, button.nowPlayingTransportControlsSkipButton:hover:active .win-commandring, button.iconButton.toggleButton.checked .win-commandring, button.appBarIconButton.toggleButton.checked .win-commandring, .homeHubNowPlayingTile .homeNowPlayingPlayButton button:hover:active .win-commandicon.win-commandring, .closeButton button:hover:active, .closeLink button:hover:active, .companionSearchTermContainer:hover:active, .extrasItem:hover:active, .musicOverlay .seekBarThumb
+    {
+        background-color: ButtonText
+    }
+    .xboxTouchPadHitArea span, .companionSearchButton button.win-command .win-commandring, .webHostIFrame, .cardThumbnailButton, .win-commandring, .win-commandicon.win-commandring, .homeHubNowPlayingTile .homeNowPlayingPlayButton .win-commandicon.win-commandring, .homeHubNowPlayingTile .homeNowPlayingPlayButton button:hover:active .win-commandicon.win-commandring, .inlineDetailsMoveTrackDownButton button.iconButton .win-commandring, .chatBubblePointer, .overlayContainer
+    {
+        border-color: ButtonText
+    }
+    html[dir=rtl] .chatBubblePointer
+    {
+        border-right-color: ButtonText
+    }
+    .music a:hover, .music a:focus, .games a:hover, .games a:focus, .video a:hover, .video a:focus, .companion a:hover, .companion a:focus, .showKeyboardFocus .webLinkContainer a:focus, .inlineDetailsExtrasList .win-item:hover, .win-container.win-focused .compareAchievementsItemContainer .label, .win-container.win-selected .compareAchievementsItemContainer .label, .compareAchievementsItemContainer .control-immersiveListViewItem.acc-keyboardFocusTarget, .win-container.win-focused .compareAchievementsItemContainer .control-immersiveListViewItem, .win-container.win-selected .compareAchievementsItemContainer .control-immersiveListViewItem, .win-container.win-focused .control-immersiveListViewItem, .relatedListView .control-immersiveListViewItem:focus, .relatedListView .control-immersiveListViewItem:hover, .win-container.invoked .control-immersiveListViewItem, .win-container .win-template.invoked .control-immersiveListViewItem, .control-immersiveListViewItem.acc-keyboardFocusTarget:hover, .control-extrasListItem:hover, .control-extrasListItem.focus, .win-container.win-focused .inlineDetailsTvEpisode, .win-container:hover .inlineDetailsTvEpisode, .inlineDetailsTvEpisode:hover .inlineDetailsTvEpisodeNumber, .win-container.win-focused .inlineDetailsTvEpisode .inlineDetailsTvEpisodeNumber, .inlineDetailsTvEpisode:hover .inlineDetailsTvEpisodeTitle, .win-container.win-focused .inlineDetailsTvEpisode .inlineDetailsTvEpisodeTitle, .inlineDetailsTvEpisode:hover .inlineDetailsTvEpisodeDate, .win-container.win-focused .inlineDetailsTvEpisode .inlineDetailsTvEpisodeDate, .modifierPopupEntry:hover .modifierPopupEntryLabel, .modifierPopupEntry:focus .modifierPopupEntryLabel, .playlistItemTemplate:hover .nowPlayingPlaylistEntryMainTitle, .win-container.win-focused .nowPlayingPlaylistEntryMainTitle, .playlistItemTemplate:hover .nowPlayingPlaylistEntrySubTitle1, .win-container.win-focused .nowPlayingPlaylistEntrySubTitle1, .playlistItemTemplate:hover .nowPlayingPlaylistEntryDuration, .win-container.win-focused .nowPlayingPlaylistEntryDuration, .PrimaryNavigationButton.selected, .internalActionLink:focus:not(:disabled) .actionLinkLabel.label, .internalActionLink:hover:not(:disabled) .actionLinkLabel.label, .internalActionLink:hover .actionLinkContainer .icon, .internalActionLink:focus .actionLinkContainer .icon, .snappedDetailsHubStrip .PrimaryNavigationButton.selected, .horizontalPivotButton.selected, .verticalPivotButton.selected, .win-container .primaryText .label, .beaconLink:focus, .beaconLink:hover, .cardThumbnailButton:hover .primaryText, .cardThumbnailButton:hover .secondaryText, .cardThumbnailButton:hover .tertiaryText, .cardThumbnailButton:hover .quaternaryText, .cardThumbnailButton:hover .activityTitleText, .cardThumbnailButton.acc-keyboardFocusTarget .primaryText, .cardThumbnailButton.acc-keyboardFocusTarget .secondaryText, .cardThumbnailButton.acc-keyboardFocusTarget .tertiaryText, .cardThumbnailButton.acc-keyboardFocusTarget .quaternaryText, .cardThumbnailButton.acc-keyboardFocusTarget .activityTitleText, .musicFlexHubBigItem:focus .primaryText, .musicFlexHubBigItem:focus .secondaryText, .closeButton button:hover .icon, .closeButton button:focus .icon, .closeButton button:hover:active .icon, .closeButton:focus .closeLink .icon, .closeButton:hover .closeLink .icon, .closeButton:hover:active .closeLink .icon, .thumbnailButton.acc-keyboardFocusTarget, .albumList .win-selected .primaryText, .albumList .win-selected .secondaryText, .win-container.win-selected .cardThumbnailButton .primaryText, .win-container.win-selected .cardThumbnailButton .secondaryText, .win-container.win-selected .cardThumbnailButton .tertiaryText, .win-container.win-selected .cardThumbnailButton .quaternaryText, .win-container.win-focused .cardThumbnailButton .primaryText, .win-container.win-focused .cardThumbnailButton .secondaryText, .win-container.win-focused .cardThumbnailButton .tertiaryText, .win-container.win-focused .cardThumbnailButton .quaternaryText, .win-container.win-focused .win-item.win-template .primaryText, .win-container.win-focused .win-item.win-template .secondaryText, .win-container.win-selected .verticalListItem .primaryText, .win-container.win-selected .verticalListItem .secondaryText, .win-container.invoked .verticalListItem .primaryText, .win-container.invoked .verticalListItem .secondaryText, .win-container .win-item.invoked .verticalListItem .primaryText, .win-container .win-item.invoked .verticalListItem .secondaryText, .popOverList .win-container.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListName, .popOverList .win-container.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListDurationStatus, .popOverList .win-container.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListAlbumName, .popOverList .win-container.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListNumber, .popOverList .win-container.invoked .inlineDetailsMusicTrack .inlineTrackListStatusIcon, .popOverList .win-container.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListArtistName, .popOverList .win-container:hover .inlineDetailsMusicTrack .inlineTrackListStatusIcon, .popOverList .win-container.invoked .iconButton .win-label.label, .popOverList .win-container .win-template.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListName, .popOverList .win-container .win-template.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListDurationStatus, .popOverList .win-container .win-template.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListAlbumName, .popOverList .win-container .win-template.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListNumber, .popOverList .win-container .win-template.invoked .inlineDetailsMusicTrack .immersiveInlineTrackListArtistName, .popOverList .win-container .win-template.invoked .win-label.label, .popOverList .win-container:hover .popOverCloudStateIcon, .popOverList .win-container.win-selected .popOverCloudStateIcon, .popOverList .win-template:focus .popOverCloudStateIcon, .popOverList .win-template:focus .inCollectionIcon, .popOverList .win-selected .inCollectionIcon, .popOverList .win-container.win-selected .verticalListItem .icon, .popOverList .win-container.win-selected .immersiveInlineTrackListArtistName, .immersiveTableOfContentsItemContainer:hover .label, .immersiveTableOfContentsItemContainer>button:focus, .win-container.win-selected .immersiveInlineTrackListNumber, .win-container.win-selected .immersiveInlineTrackListName, .win-container.win-selected .immersiveInlineTrackListDurationStatus, .win-container.win-selected .immersiveInlineTrackListAlbumName, .win-container.win-focused .immersiveInlineTrackListNumber, .win-container.win-focused .immersiveInlineTrackListName, .win-container.win-focused .immersiveInlineTrackListDurationStatus, .win-container.win-focused .immersiveInlineTrackListAlbumName, .win-container.win-focused .companionSearchTermContainer .label, .companionSearchTermContainer:hover .label, .win-container:hover .label, .win-container.win-focused .win-item.win-template .win-label.label, .win-container.invoked .win-item.win-template .win-label.label, .win-container.invoked .win-item.win-template, .win-container .win-template.invoked, .win-container .win-template.invoked .win-label.label, .immersiveMoreGalleryView .win-container.win-focused .control-immersiveListViewItem .win-label.label, .musicPage .win-container.win-focused .simpleHeader, .verticalListHost .win-container.win-focused .simpleHeader, .inboxPage .win-container.win-focused .simpleHeader, .musicPage .win-container:hover .simpleHeader, .inboxPage .win-container:hover .simpleHeader, .verticalListHost .win-container:hover .simpleHeader, button.iconButton:hover .win-commandimage, .win-ui-dark button.iconButton:hover .win-commandimage.iconSpan, .avatarEditorBodySizeButton:focus .win-commandimage.iconSpan, button.iconButton.acc-keyboardFocusTarget .win-commandimage, .showKeyboardFocus button.iconButton.win-command:focus .win-commandimage, button.appBarIconButton:hover:not(:disabled) .win-commandimage, button.appBarIconButton:focus .win-commandimage, button.nowPlayingTransportControlsPlayPauseButton:hover .win-commandimage, button.nowPlayingTransportControlsSkipButton:hover .win-commandimage, .avatarEditorGalleryPanelCancel:hover .label, .avatarEditorGalleryPanelSave:hover .label, .achievementGameDetailsButton:hover .actionLinkLabel, .homeNowPlayingTile.win-ui-dark:hover .homeNowPlayingPlayButton .win-commandimage, .homeNowPlayingTile.win-ui-dark:hover .opportunityIconButton .win-commandimage, .nowPlayingOverlaysContainer.win-ui-dark:hover .homeNowPlayingPlayButton .win-commandimage, .homeNowPlayingTile.win-ui-dark:hover .homeNowPlayingErrorButton .win-commandimage, .homeNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget .homeNowPlayingPlayButton .win-commandimage, .homeNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget .opportunityIconButton .win-commandimage, .nowPlayingOverlaysContainer.win-ui-dark.acc-keyboardFocusTarget .homeNowPlayingPlayButton .win-commandimage, .homeNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget .homeNowPlayingErrorButton .win-commandimage, .homeNowPlayingTile.acc-keyboardFocusTarget .win-commandimage, .homeHubNowPlayingTile.win-ui-dark:hover .nowPlayingTransportControlsPlayPauseButton .win-commandimage, .homeHubNowPlayingTile.win-ui-dark:hover .homeNowPlayingErrorButton .win-commandimage, .homeHubNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget .nowPlayingTransportControlsPlayPauseButton .win-commandimage, .homeHubNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget .homeNowPlayingErrorButton .win-commandimage, .homeHubNowPlayingTile.acc-keyboardFocusTarget .win-commandimage, .homeHubNowPlayingTile .homeNowPlayingPlayButton:hover .win-commandicon.win-commandring .win-commandimage, .hcrHubPanel:hover .primaryText, .hcrHubPanel:focus .primaryText, .hcrHubPanel:hover .secondaryText, .hcrHubPanel:focus .secondaryText, .win-template:active:hover>.miniProfileControl, .win-template:hover>.miniProfileControl, .actionButtonFlyoutButton:hover .label, .playbackOptionFlyoutButton:hover .label, .miniProfileAvatarAndBubbleContainer:hover .chatBubblePrimaryLabel, .miniProfileAvatarAndBubbleContainer:hover .chatBubbleSecondaryLabel, .win-template.acc-keyboardFocusTarget .chatBubblePrimaryLabel, .win-template.acc-keyboardFocusTarget .chatBubbleSecondaryLabel, .dashboardGridItemContent .thumbnailButton:hover .dashboardTileIcon, .dashboardGridItemContent .thumbnailButton:hover .primaryText, .dashboardGridItemContent .thumbnailButton:hover .secondaryText, .dashboardGridItemContent .thumbnailButton:hover .tertiaryText, .dashboardGridItemContent .thumbnailButton:hover .quaternaryText, .homeNowPlayingTile.acc-keyboardFocusTarget .homeNowPlayingMetadataClock, .homeNowPlayingTile.acc-keyboardFocusTarget .homeNowPlayingMetadataTitle, .homeNowPlayingTile.acc-keyboardFocusTarget .homeNowPlayingMetadataSubTitle, .homeNowPlayingTile.acc-keyboardFocusTarget .nowPlayingText, .homeHubNowPlayingTile:hover .homeNowPlayingMetadataClock, .homeHubNowPlayingTile:hover .homeNowPlayingMetadataTitle, .homeHubNowPlayingTile:hover .homeNowPlayingMetadataSubTitle, .homeHubNowPlayingTile:hover .homeNowPlayingMetadataDuration, .homeHubNowPlayingTile:hover .nowPlayingText, .homeHubNowPlayingTile:focus .homeNowPlayingMetadataClock, .homeHubNowPlayingTile:focus .homeNowPlayingMetadataTitle, .homeHubNowPlayingTile:focus .homeNowPlayingMetadataSubTitle, .homeHubNowPlayingTile:focus .homeNowPlayingMetadataDuration, .homeHubNowPlayingTile:focus .nowPlayingText, .playPlaylistOverlay .acc-keyboardFocusTarget, .win-container.invoked .verticalListStatusIcon, .win-container.win-focused .verticalListStatusIcon, .win-container:hover .verticalListStatusIcon, .win-container.win-focused .inlineGlyph, .win-container:hover .inlineGlyph, .win-container.win-focused .searchGroupHeaderInPlaceText, .headingLink .internalActionLink:focus:not(:disabled), .headingLink .internalActionLink:hover:not(:disabled), .inlineCaretButton:hover .inlineCaretButtonText, .inlineCaretButton:hover .inlineCaretButtonIcon, .inlineCaretButton:focus .inlineCaretButtonText, .inlineCaretButton:focus .inlineCaretButtonIcon, .videoAd:hover, .videoAd:focus, .verticalListItem:hover .icon, .win-container.win-focused .verticalListItem .icon, .win-container.win-selected .verticalListItem .icon, .extrasItem:hover, .extrasItem:focus, .albumListItem:active .primaryText.label, .albumListItem:focus .primaryText, .games .engagePanel .actionTile button.win-command.iconButton:hover, .games .engagePanel .actionTile button.win-command.iconButton:active, .games .engagePanel .actionTile button.win-command.iconButton:hover:active, .games .engagePanel .actionTile button.win-command.iconButton:hover .win-commandimage, .games .engagePanel .actionTile button.win-command.iconButton:active .win-commandimage, .games .engagePanel .actionTile button.win-command.iconButton:hover:active .win-commandimage, .splitHeroRotatorViewAll .inlineCaretButtonText, .splitHeroRotatorViewAll .inlineCaretButtonIcon
+    {
+        color: HighlightText
+    }
+    .companion .related.activities .control-immersiveListViewItem:hover, a:hover, a:focus, .showKeyboardFocus .webLinkContainer a:focus, .albumThumbnail:hover, .avatarEditorAverageButton:hover, .avatarEditorAverageButton:focus, .avatarEditorBodySizeButton:focus .win-commandring, .closeButton:hover .closeLink, .closeButton .closeLink:focus, .modifierPopupEntry:hover, .modifierPopupEntry:focus, .PrimaryNavigationButton.selected, .beaconLink:focus, .panelTitle .internalActionLink:focus:not(:disabled), .panelTitle .internalActionLink:hover:not(:disabled), .horizontalPivotButton.selected, .verticalPivotButton.selected, button.iconButton:hover .win-commandring, button.iconButton.acc-keyboardFocusTarget .win-commandring, .showKeyboardFocus button.iconButton.win-command:focus .win-commandring, button.appBarIconButton:hover:not(:disabled) .win-commandring, button.appBarIconButton:focus .win-commandring, button.nowPlayingTransportControlsPlayPauseButton:hover .win-commandring, button.nowPlayingTransportControlsSkipButton:hover .win-commandring, .prevNextIconButton:hover .win-commandicon.win-commandring, .avatarEditorGalleryPanelSave:hover, .avatarEditorGalleryPanelSave:active:hover, .avatarEditorGalleryPanelCancel:hover, .avatarEditorGalleryPanelCancel:active:hover, .achievementGameDetailsButton:hover .internalActionLink, .miniProfileAvatarAndBubbleContainer:hover .chatBubble, .win-template.acc-keyboardFocusTarget .chatBubble, .homeNowPlayingTile:hover .win-commandring, .homeNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget .win-commandring, .popOverList.verticalListHost .win-container.invoked, .popOverList.verticalListHost .win-container.win-focused, .popOverList.verticalListHost .win-container:hover, .popOverList.verticalListHost .win-container .win-template.invoked, .immersiveTableOfContentsItemContainer:hover, .immersiveTableOfContentsItemContainer>button:focus, .downloadDetailsEpisodeList .win-container:hover, .downloadDetailsEpisodeList .win-container.win-focused, .inlineDetailsEpisodeList .win-container:hover, .inlineDetailsEpisodeList .win-container.win-focused, .win-container.invoked, .win-container .win-template.invoked, .playlistItemTemplate:hover, .win-container.win-focused .playlistItemTemplate, .miniProfileControl:hover, .cardThumbnailButton:hover, .cardThumbnailButton.acc-keyboardFocusTarget, .musicFlexHubBigItem:focus .cardThumbnailButton, .win-container.win-selected .cardThumbnailButton, .win-container.win-focused .cardThumbnailButton, .win-container.win-selected .win-item.win-template, .achievementItemContainer .win-container:hover, .achievementItemContainer .win-container.win-focused, .win-container.win-focused .avatarEditorAssetThumbnailItem, .win-template .avatarEditorAssetThumbnailItem:hover, .win-container.win-focused .avatarEditorRemoveItem, .win-template .avatarEditorRemoveItem:hover, .music .marketplaceGallery .win-container:hover, .musicSubscriptionLink:hover .internalActionLink, .musicSubscriptionLink .internalActionLink:focus, .collectionFilterLink:hover .internalActionLink, .collectionFilterLink .internalActionLink:focus, .relatedActionLink:hover .internalActionLink, .relatedActionLink .internalActionLink:focus, .musicBrandActionLink:hover .internalActionLink, .musicBrandActionLink .internalActionLink:focus, .win-container.win-selected .verticalListItem, .win-container.win-focused .verticalListItem, .win-container.invoked .verticalListItem, .immersiveMoreGalleryView .control-immersiveListViewItem:focus, .immersiveMoreGalleryView .win-container.win-focused .control-immersiveListViewItem, .immersiveMoreGalleryView .control-immersiveListViewItem:hover, .relatedListView .control-immersiveListViewItem:focus, .relatedListView .control-immersiveListViewItem:hover, .win-container.win-focused .companionSearchTermContainer, .companionSearchTermContainer:hover, .searchGroupHeaderInPlace:hover, .win-container.win-focused .searchGroupHeaderInPlace, .win-container.win-focused .win-template.seasons, .win-template .miniProfileControl:hover, .win-template .miniProfileControl:hover:active, .miniProfileAvatarAndBubbleContainer:hover .imageChatBubble, .dashboardGridItemContent .thumbnailButton.acc-keyboardFocusTarget .primaryTextBg, .dashboardGridItemContent .thumbnailButton.acc-keyboardFocusTarget .primaryText, .dashboardGridItemContent .thumbnailButton.acc-keyboardFocusTarget .secondaryText, .dashboardGridItemContent .thumbnailButton.acc-keyboardFocusTarget .tertiaryText, .dashboardGridItemContent .thumbnailButton.acc-keyboardFocusTarget .quaternaryText, .dashboardGridItemContent .thumbnailButton:hover .primaryTextBg, .dashboardGridItemContent .thumbnailButton:hover .primaryText, .dashboardGridItemContent .thumbnailButton:hover .secondaryText, .dashboardGridItemContent .thumbnailButton:hover .tertiaryText, .dashboardGridItemContent .thumbnailButton:hover .quaternaryText, .hcrHubPanel:hover, .hcrHubPanel:focus, .homeNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget .homeNowPlayingMetadataAndProgress, .homeNowPlayingTile.win-ui-dark:hover .homeNowPlayingMetadataAndProgress, .homeNowPlayingTile.win-ui-dark.acc-keyboardFocusTarget, .headingLink .internalActionLink:focus:not(:disabled), .headingLink .internalActionLink:hover:not(:disabled), .inlineCaretButton.nowPlayingMetadataShowPlaylistButton:hover, .inlineCaretButton:focus, .videoAdLearnMoreLink.inlineCaretButton:hover, .videoAd:focus, .videoAdCloseButton button.win-command:hover .win-commandicon.win-commandring, .videoAdCloseButton button.win-command:active .win-commandicon.win-commandring, .videoAdCloseButton button.win-command:hover:active .win-commandicon.win-commandring, .control-extrasListItem:hover, .control-extrasListItem:focus, .companionFullBleedNowPlayingTile:hover .textContainer, .companionHomeNowPlayingTileContainer:focus .companionFullBleedNowPlayingTile .textContainer, .homeNowPlayingTilePoster.companion:hover, .games .engagePanel .actionTile button.win-command.iconButton:hover, .games .engagePanel .actionTile button.win-command.iconButton:active, .games .engagePanel .actionTile button.win-command.iconButton:hover:active, .games .engagePanel .actionTile button.win-command.iconButton:focus, .video .seekBarTrackBackground, .cloudNotification:hover, .popOverList .win-listview .win-container.invoked, .screenshotLocators .win-template .screenshotLocatorSelected
+    {
+        background-color: Highlight
+    }
+    .avatarEditorBodySizeButton:focus .win-commandring, .showKeyboardFocus button.iconButton.win-command:focus .win-commandring, .homeNowPlayingTile:hover .win-commandring, .homeNowPlayingTile.acc-keyboardFocusTarget .win-commandring
+    {
+        border-color: HighlightText
+    }
+    button.iconButton:hover .win-commandring, iconButtonHost:hover .win-commandring, button.appBarIconButton:hover:not(:disabled) .win-commandring, button.appBarIconButton:focus .win-commandring
+    {
+        border-color: Highlight
+    }
+    .comboUnavailableLabel, .selectArtistAutoCompleteLabel, .avatarEditorBodySizeButton[disabled] .win-commandimage.iconSpan, .avatarEditorBodySizeButton[disabled] button:hover:active .win-commandimage.iconSpanPressed, .inlineDetailsMoveTrackDownButton button.iconButton[disabled] .win-commandimage.iconSpan, .inlineDetailsMoveTrackDownButton button.iconButton[disabled] .win-commandimage.iconSpanPressed, .inlineDetailsMoveTrackUpButton button.iconButton[disabled] .win-commandimage.iconSpan, .inlineDetailsMoveTrackUpButton button.iconButton[disabled] .win-commandimage.iconSpanPressed
+    {
+        color: GrayText
+    }
+    .seekBarFill, .bottomProgress::-ms-fill
+    {
+        background-color: GrayText
+    }
+    .avatarEditorBodySizeButton[disabled], .avatarEditorBodySizeButton[disabled] .win-commandicon.win-commandring, .inlineDetailsMoveTrackDownButton button.iconButton[disabled] .win-commandring, .inlineDetailsMoveTrackDownButton button.iconButton[disabled]:hover .win-commandring, .inlineDetailsMoveTrackDownButton button.iconButton[disabled] .win-command.iconButton:active .win-commandring .inlineDetailsMoveTrackUpButton button.iconButton[disabled] .win-commandring, .inlineDetailsMoveTrackUpButton button.iconButton[disabled]:hover .win-commandring, .inlineDetailsMoveTrackUpButton button.iconButton[disabled] .win-command.iconButton:active .win-commandring
+    {
+        border-color: GrayText
+    }
+    .companionSearchButton .acc-keyboardFocusTarget:focus, .popOver a.acc-keyboardFocusTarget:focus, .popOver a.acc-keyboardFocusTarget:active, .avatarBodySizeControlRoot .showKeyboardFocus .acc-keyboardFocusTarget:focus:not([disabled]), .avatarBodySizeControlRoot .showKeyboardFocus .acc-keyboardFocusTarget:active:not([disabled]), .avatarEditorBodySizeButton.showKeyboardFocus.win-template.acc-keyboardFocusTarget:not([disabled]), .showKeyboardFocus .win-ui-dark .acc-keyboardFocusTarget:focus, .showKeyboardFocus .win-ui-dark .acc-keyboardFocusTarget:active, .showKeyboardFocus.win-ui-dark .acc-keyboardFocusTarget:focus, .showKeyboardFocus.win-ui-dark .acc-keyboardFocusTarget:active
+    {
+        outline-color: ButtonText
+    }
+    .popOver .win-template.invoked button.iconButton.win-command
+    {
+        outline-color: ButtonFace
+    }
+    .acc-backgroundTransparent, .video .nowPlayingTransportControls, button.iconButton.hideAdorner:active:hover .win-commandring, .companion .gamesCollection .cardThumbnailButton:after, .companionNowPlaying .cardThumbnailButton:after, .avatarEditorGalleryPanelCancel:hover, .avatarEditorGalleryPanelSave:hover, button.appBarIconButton:focus, button.appBarIconButton:hover, .refreshButtonImage:hover, .cardThumbnailButton, .collectionMusicGalleryView .win-item.win-template:hover, .music .marketplaceGalleryView .win-item.win-template:hover, .collectionMessageGalleryView .win-item.win-template:hover, button.iconButton.win-command:hover, .win-ui-dark button.iconButton.win-command:hover, .musicPage .win-container .verticalListCellMain, .inboxPage .win-container .verticalListCellMain, .win-ui-dark .verticalListHost .win-container .verticalListCellMain, .iconButton.internalActionLink, .dashboardPanel .homeNowPlayingTile:after, .dashboardPanel .homeNowPlayingTilePoster:after, .dashboardGridItemContent .thumbnailButton:after, .companion .dashboardPanel.gamesCollection .cardThumbnailButton:after, .dashboardPanel.companionNowPlaying .cardThumbnailButton:after, .flexibleItemsControlItemContainer .cardThumbnailButton:after, .homeNowPlayingTilePoster.companion.musicVisualizationVisible .nowPlayingTileBackground:after, .music .homeNowPlayingTile .nowPlayingTileBackground:after, .cardThumbnailButton .imageHolder, .pickProviderItemContainer:after, .companionFullBleedNowPlayingTile.fullBleedTileVisible:after, .modifierControl:before, .extras .control-extrasListItem:after, .relatedHeroItem:after, .related.albums .relatedListView .control-immersiveListViewItem:after, .related.activities .relatedListView .control-immersiveListViewItem:after, .related.games .relatedListView .control-immersiveListViewItem:after, .related.movies .relatedListView .control-immersiveListViewItem:after, .related.seasons .relatedListView .control-immersiveListViewItem:after, .video .metadataContainer, .video .seekBarContainer
+    {
+        background-color: transparent
+    }
+    button.win-command.appBarIconButton.hideAdorner .win-commandring, button.iconButton.hideAdorner .win-commandring, .appBarTransportControlsXboxContainer .appBarIconButton .win-commandring, .appBarTransportControlsXboxContainer .appBarIconButton:disabled:active .win-commandring, .companionSearchButton button.win-command:hover .win-commandring, .musicPage .win-vertical .win-item .verticalListItem.cloudNotification
+    {
+        border-color: transparent
+    }
+    .companionSearchTermContainer, .companion .searchHubStrip .PrimaryNavigationButton, .companion .related.activities .control-immersiveListViewItem, a, .companion .companionFullBleedNowPlayingTile:hover, .companion .companionHomeNowPlayingTileContainer:focus .companionFullBleedNowPlayingTile, .showKeyboardFocus .beaconControlContainer button:focus, .showKeyboardFocus .beaconControlContainer button:hover:focus, .showKeyboardFocus .beaconControlContainer button:active:hover:focus, .showKeyboardFocus .beaconControlContainer button:-ms-keyboard-active, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:hover:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:active:hover:focus, .showKeyboardFocus .beaconControlContainer button.bodyContent.beaconComment.label:-ms-keyboard-active, .failedPanelContainer, .noContentPane, .avatarSelectionButton, .avatarEditorAssetThumbnailItem, .avatarEditorBodySizeButton:not([disabled]), .marketplacePage .win-container, .collectionPage .win-container, .dialogContainer, .searchGalleryView .win-container, .cardThumbnailButton, .companion .homeNowPlayingTile.large, .achievementsGallery .win-container, .appBarNowPlayingOverlay, .avatarEditorRemoveItem, .dashboardGridItemContent, .dashboardHubContent .actionTile, .hcrHubPanel, .homeNowPlayingTile, .companionHomeSearchBox .editInput, .editProfileEditBox .editInput, .editProfileEditBox .editMultiline, .immersiveTableOfContentsItemContainer, .immersiveViewMorePopOverContentLayout, .popOverContainer, .popOver.friend, .nowPlayingPlaylistGallery, .overlayContainer, .bottomProgress::-ms-fill, .achievementGameDetailsButton.win-template, .win-template .miniProfileControl, .miniProfilePanelControlsSignedOut, .games .dashboardPanel .signedOutPanel, .games .dashboardPanel .playGameAction button, button.defaultButton.avatarEditorGalleryPanelSave, button.defaultButton.avatarEditorGalleryPanelCancel, .homeNowPlayingTilePoster, .compareGamesColumn, .compareActivitiesGallery .win-container, .achievementsGallery .win-groupheader, .chatBubble, .internalActionLink:not(:disabled), .avatarEditorGalleryPanelGallery .win-container, .music .nowPlayingControl, .noContentPane.noMusicContentPane, .companionFullBleedNowPlayingTile, .companionHomeNowPlayingTileContainer:focus .companionFullBleedNowPlayingTile, .music .selectArtistEditBox, .selectArtistButton, .webLinkContainer a, .homeNowPlayingTile .bottomProgress, .homeNowPlayingTilePoster .bottomProgress, .welcomePanelContainer, .welcomePanelButton
+    {
+        outline-style: solid;
+        outline-width: 2px;
+        outline-color: ButtonText
+    }
+    .bottomAppBarContainer, .compareAchievementsItemContainer
+    {
+        outline-style: solid;
+        outline-width: 1px
+    }
+    .avatarEditorBodySizeButton[disabled]
+    {
+        outline-style: solid;
+        outline-width: 2px;
+        outline-color: GrayText
+    }
+    .showKeyboardFocus .musicPage .verticalPivotButton:focus, .showKeyboardFocus .musicPage .horizontalPivotButton:focus, .showKeyboardFocus .inboxPage .verticalPivotButton:focus
+    {
+        outline-width: 0
+    }
+    .overlayContainer, .xboxTouchPadHitArea span, .control-sendMessage .editBox textarea, .dashboardPanel.homeSpotlight .heroItemContainer, .relatedHeroItem, .relatedHeroItem.selected
+    {
+        border-width: 2px;
+        border-style: solid;
+        border-color: ButtonText;
+        outline-style: none
+    }
+    .companion .related.activities .control-immersiveListViewItem .activitiesOverlay, .companion .related.activities .control-immersiveListViewItem .part-imageContainer, .emptyGalleryContainerImmersiveDetailsColor, .immersiveDetailsGallery .thumbnailButton, .immersiveDetailsGallery .win-selectionborder, .immersiveHeroBackgroundImageOverlay, .collectionGamesGallery .win-selectionborder, .musicPage .win-selectionborder, .inboxPage .win-selectionborder, .win-ui-dark .verticalListHost .win-selectionborder, .collectionVideoGallery .win-selectionborder, .marketplaceGallery .win-selectionborder, .searchGalleryView .win-selectionborder
+    {
+        display: none
+    }
+    .acc-preserveBackground, .selectArtistEditBox .editInput, .searchGalleryView .win-item, .dashboardMyMusic .cardThumbnailButton, .dashboardMyGames .cardThumbnailButton, .dashboardGridItemContent .thumbnailButton .imageContainer, .music .popOverContentContainer .leftColumn .imageContainer, .thumbnailButtonImageHolder, .cardThumbnailButton .imageHolder, .imageHolder, .smartDJIcon:not(.smartDJNowPlaying), .avatarEditorColorItem, .games .engaged .thumbnailButton, .splitHeroRotator, .video .seekBarThumb
+    {
+        -ms-high-contrast-adjust: none
+    }
+    .video .seekBarThumb
+    {
+        background-color: transparent
+    }
+    .imageCollageCell, .mediatype-artist.acc-preserveBackground>div
+    {
+        -ms-high-contrast-adjust: auto
+    }
+    .nowPlayingPlaylistControl, .splitHeroRotatorViewAll
+    {
+        background-image: none
+    }
+    .fadedNavigationContainer
+    {
+        opacity: 1
+    }
+    .related.relatedArtists .horizontalListItem.mediatype-artist .imageContainer, .immersiveDetails .gamesImmersiveRelatedItems .gamesRelatedImage, .immersiveDetails .related .horizontalListItem.mediatype-tvSeries, .immersiveDetails .related .horizontalListItem.mediatype-movie
+    {
+        outline-color: ButtonText
+    }
+    .immersiveMoreGalleryView .control-immersiveListViewItem:focus>div, .immersiveMoreGalleryView .control-immersiveListViewItem:hover>div, .immersiveDetails .related .template-fullBleedThumbnail.mediatype-tvSeries:focus .content, .immersiveDetails .related .template-fullBleedThumbnail.mediatype-tvSeries:hover .content, .related.relatedArtists .horizontalListItem.mediatype-artist .win-focusable:focus .content, .related.relatedArtists .horizontalListItem.mediatype-artist .win-focusable:hover .content, .related.albums .relatedHeroItem:focus, .related.albums .relatedHeroItem:hover, .related.albums .relatedListView .control-immersiveListViewItem.selected, .compareAchievementsItemContainer .control-immersiveListViewItem:hover, .leaderboards .control-immersiveListViewItem:hover, .win-container:hover .modernGameExtrasMoreItem, button.splitHeroRotatorViewAllLink:hover
+    {
+        background-color: Highlight;
+        color: HighlightText
+    }
+    .win-container:hover .modernGameExtrasMoreItem
+    {
+        outline-color: Highlight;
+        outline-style: solid;
+        outline-width: 10px
+    }
+    .win-ui-light .dialogButton:disabled, .win-ui-light .dialogButton:disabled:hover, .win-ui-light .dialogButton:disabled:active, .win-ui-light .dialogButton:disabled:hover:active, .win-ui-light .dialogButton:disabled.defaultButton, .win-ui-light .dialogButton.defaultButton:disabled:hover, .win-ui-light .dialogButton.defaultButton:disabled:active, .win-ui-light .dialogButton.defaultButton:disabled:hover:active
+    {
+        background-color: Highlight;
+        border-color: WindowFrame;
+        color: HighlightText
+    }
+    .games .nowPlayingPopover .seekBarContainer, .games .nowPlayingPopover .nowPlayingTransportControls, .games .nowPlayingPopover .metadataContainer
+    {
+        background-color: transparent
+    }
+    .games .nowPlayingPopover .nowPlayingTransportControlsPlayPauseButton button .win-commandring
+    {
+        background-color: Window;
+        border-color: WindowFrame
+    }
+    .games .nowPlayingPopover .nowPlayingTransportControlsPlayPauseButton button:hover .win-commandring
+    {
+        background-color: Highlight;
+        border-color: Highlight
+    }
+    .games .nowPlayingPopover .nowPlayingTransportControlsPlayPauseButton button .win-commandimage
+    {
+        color: WindowText
+    }
+    .games .nowPlayingPopover .nowPlayingTransportControlsPlayPauseButton button:hover .win-commandimage
+    {
+        color: HighlightText
+    }
+    .games .nowPlayingPopover .seekBarTrackBackground
+    {
+        background-color: Highlight
+    }
+    .video .seekBarFill, .games .nowPlayingPopover .seekBarFill
+    {
+        background-color: Background
+    }
+}
+@media screen and (-ms-high-contrast: black-on-white)
+{
+    .engaged .textContainer .label, .engaged .textContainer .progressTextPercentage, .verticalListItem .smartDJIcon:not(.smartDJNowPlaying), .smartDJPanelImageContainer .smartDJIcon, .simpleHeader .text-zoomedOutTitle, .simpleHeader .text-metadata.description, .video .nowPlayingMetadataMainTitle, .video .nowPlayingMetadataSubTitle, .video .nowPlayingText, .video .seekBarPositionText, .video .seekBarDurationText, .video .seekBarThumbText, .games .nowPlayingPopover .nowPlayingText, .games .nowPlayingPopover .seekBarThumbText, .games .nowPlayingPopover .videoProgressText>div, .games .nowPlayingPopover .metadataContainer .nowPlayingMetadataContainer>div
+    {
+        color: HighlightText
+    }
+    .verticalListItem .simpleHeader.lowCountResults .text-zoomedOutTitle, .verticalListItem .simpleHeader.lowCountResults .text-metadata.description
+    {
+        color: WindowText
+    }
+}
+@media screen and (-ms-high-contrast: white-on-black)
+{
+    .engaged .textContainer .label, .engaged .textContainer .progressTextPercentage, .win-container.win-selected .verticalListItem .smartDJIcon, .win-container .win-item:hover .smartDJIcon, .verticalListItem .simpleHeader.lowCountResults .text-zoomedOutTitle, .verticalListItem .simpleHeader.lowCountResults .text-metadata.description, .splitHeroRotatorViewAll .inlineCaretButtonText, .splitHeroRotatorViewAll .inlineCaretButtonIcon, .video .nowPlayingMetadataMainTitle, .video .nowPlayingMetadataSubTitle, .video .nowPlayingText, .video .seekBarPositionText, .video .seekBarDurationText, .video .seekBarThumbText, .games .nowPlayingPopover .nowPlayingText, .games .nowPlayingPopover .seekBarThumbText, .games .nowPlayingPopover .videoProgressText>div, .games .nowPlayingPopover .metadataContainer .nowPlayingMetadataContainer>div
+    {
+        color: WindowText
+    }
+    .simpleHeader .text-zoomedOutTitle, .simpleHeader .text-metadata.description
+    {
+        color: HighlightText
+    }
+}

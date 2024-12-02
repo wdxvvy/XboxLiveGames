@@ -1,0 +1,165 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Immersive Achievements</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Controls/ArcProgress.js" ></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/Label.js"></script>
+
+    
+    <script src="/Components/Immersive/Games/Achievements.js"></script>
+    <script src="/Components/Social/MiniProfile.js"></script>
+    
+</head>
+<body>
+    <div data-ent-templateid="ImmersiveAchievements" data-win-control="WinJS.Binding.Template">
+        <div class="achievements" style="-ms-grid-columns: 1fr; -ms-grid-rows: 315px 1fr;">
+            
+            <div class="userProgressContainers immersiveColumnPadding removeFromDisplay"
+                 data-win-bind="removeFromDisplay: showPrimary MS.Entertainment.Utilities.toggleClassNameNegate;">
+                
+                <div class="userProgressContainer">
+                    <div class="progressContainer">
+                        <div class="arcContainer"
+                             data-win-control="MS.Entertainment.UI.Controls.ArcProgress"
+                             data-win-options="{ foregroundColor: '#8cd600' }"
+                             data-win-bind="winControl.progress: primaryPercentageNumber;
+                                            winControl.strokeThickness: arcStrokeThickness;">
+                        </div>
+                        <div class="textContainer">
+                            <div class="progressTextPercentage label text-xxLarge text-weightLight"
+                                 data-win-bind="textContent: primaryPercentage"></div>
+                            <div class="listHeader label text-listItem"
+                                 data-win-bind="textContent: String.id.IDS_DETAILS_GAME_ACHIEVEMENTS_YOUR_PROG MS.Entertainment.Formatters.formatStringId;">
+                            </div>
+                            <div class="progressTextCount text-metadata text-breakWord"
+                                 data-win-bind="textContent: primaryProgress"></div>
+                            <div class="gamerscoreProgress">
+                                <div class="gamerscoreProgressText icon inlineGlyphSmall"
+                                     data-win-options="{ disableLayoutPass: true }"
+                                     data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineGamerScore MS.Entertainment.Formatters.formatIcon;
+                                                    removeFromDisplay: primaryGamerscoreProgressString MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                                <div class="gamerscoreProgressText label text-metadata"
+                                     data-win-bind="textContent: primaryGamerscoreProgressString;
+                                                    removeFromDisplay: primaryGamerscoreProgressString MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div class="userProgressContainers immersiveColumnPadding compareAchievements removeFromDisplay"
+                 data-win-bind="removeFromDisplay: showSecondary MS.Entertainment.Utilities.toggleClassNameNegate;">
+                
+                <div class="userProgressContainer">
+                    <div class="progressContainer">
+                        <div class="arcContainer"
+                             data-win-control="MS.Entertainment.UI.Controls.ArcProgress"
+                             data-win-options="{ foregroundColor: '#8cd600' }"
+                             data-win-bind="winControl.progress: primaryPercentageNumber;
+                                            winControl.strokeThickness: arcStrokeThickness;">
+                        </div>
+                        <div class="textContainer">
+                            <div class="progressTextPercentage label text-xxLarge text-weightLight"
+                                 data-win-bind="textContent: primaryPercentage"></div>
+                            <div class="listHeader label text-listItem"
+                                 data-win-bind="textContent: String.id.IDS_DETAILS_GAME_ACHIEVEMENTS_YOUR_PROG MS.Entertainment.Formatters.formatStringId;">
+                            </div>
+                            <div class="progressTextCount label text-metadata"
+                                 data-win-bind="textContent: primaryProgress"></div>
+                            <div class="gamerscoreProgress">
+                            <div class="gamerscoreProgressText icon inlineGlyphSmall"
+                                 data-win-options="{ disableLayoutPass: true }"
+                                 data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineGamerScore MS.Entertainment.Formatters.formatIcon;
+                                                removeFromDisplay: primaryGamerscoreProgressString MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                            <div class="gamerscoreProgressText label text-metadata"
+                                 data-win-bind="textContent: primaryGamerscoreProgressString;
+                                                removeFromDisplay: primaryGamerscoreProgressString MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="userProgressContainer secondaryUserProgressContainer"
+                     data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                     data-win-bind="winControl.visibility: showSecondary">
+                    <div class="progressContainer">
+                        <div class="arcContainer">
+                            <div data-win-control="MS.Entertainment.UI.Controls.ArcProgress"
+                                 data-win-options="{ foregroundColor: '#8cd600' }"
+                                 data-win-bind="winControl.progress: secondaryPercentageNumber;
+                                                winControl.strokeThickness: arcStrokeThickness;">
+                            </div>
+                        </div>
+                        <div class="textContainer">
+                            <div class="progressTextPercentage label text-xxLarge text-weightLight"
+                                data-win-bind="textContent: secondaryPercentage"></div>
+                            <div class="listHeader text-listItem"
+                                data-win-control="MS.Entertainment.UI.Controls.PanelHeaderActionLink"
+                                data-win-bind="
+                                    winControl.text: secondaryHeader;
+                                    winControl.action: secondaryAction;">
+                            </div>
+                            <div class="progressTextCount text-metadata text-breakWord"
+                                data-win-bind="textContent: secondaryProgress"></div>
+                            <div class="gamerscoreProgress">
+                                <div class="gamerscoreProgressText icon inlineGlyphSmall"
+                                     data-win-options="{ disableLayoutPass: true }"
+                                     data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineGamerScore MS.Entertainment.Formatters.formatIcon;
+                                                    removeFromDisplay: secondaryGamerscoreProgressString MS.Entertainment.Utilities.toggleClassNameNegate;"
+                                     style="-ms-grid-row: 1; -ms-grid-column: 1;"></div>
+                                <div class="gamerscoreProgressText label text-metadata"
+                                     data-win-bind="textContent: secondaryGamerscoreProgressString;
+                                                    removeFromDisplay: secondaryGamerscoreProgressString MS.Entertainment.Utilities.toggleClassNameNegate;"
+                                     style="-ms-grid-row: 1; -ms-grid-column: 3;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lastEarnedAchievement text-xSmall"
+                data-win-bind="textContent: String.id.IDS_SOCIAL_ACHIEVEMENTS_LAST_EARNED MS.Entertainment.Formatters.formatStringId">
+            </div>
+
+            
+            <div class="achievementItemContainer immersiveColumnPadding" 
+                 data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                 data-win-bind="winControl.dataSource: achievements;"
+                 data-win-options="{itemTemplate: 'Components/Immersive/Games/Achievements.html#immersiveAchievementTemplate'}"
+                 data-win-automationid="achievementsList"></div>
+
+        </div>
+    </div>
+
+    <div data-ent-templateid="immersiveAchievementTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="control-immersiveListViewItem">
+            <div class="part-imageContainer">
+                <div data-win-control="MS.Entertainment.UI.Controls.ThumbnailButton"
+                        data-win-bind="winControl.imagePrimaryUrl: imageUri" 
+                        data-win-options="{imageWidth: '50px', imageHeight: '50px', showNotifications: false}">
+                </div>
+            </div>
+            <div class="part-textContainer">
+                <div class="part-title label text-listItem"
+                    data-win-bind="textContent: title"></div>
+                <div class="part-subTitle label text-metadata"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: displayDescription"
+                    data-win-options="{wrap: true, numberOfLines: 2}"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaderboard control Template</title>
+
+        
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/settings.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/social.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/InlineDetails.css" />
+
+        
+        <script src="/Framework/debug.js"></script>
+
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Framework/formatters.js"></script>
+
+        
+        <script src="/ViewModels/Social/leaderboardViewModel.js"></script>
+        <script src="/Components/Social/LeaderboardRank.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="leaderboardRankTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="gameDetailsLeaderboardRanking"
+                 data-win-bind="removeFromDisplay: leaderboardPosition MS.Entertainment.Utilities.toggleClassNameNegate;">
+                <div class="label wrap"
+                     data-win-bind="textContent: leaderboardPosition MS.Entertainment.Formatters.formatLeaderboardPosition;"></div>
+                <div class="label wrap text-subTitle"
+                     data-win-bind="textContent: leaderboardLabel MS.Entertainment.Formatters.formatLeaderboardName;"></div>
+            </div>
+        </div>
+    </body>
+</html>

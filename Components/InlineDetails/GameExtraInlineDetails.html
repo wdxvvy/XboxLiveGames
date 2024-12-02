@@ -1,0 +1,214 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Game Extra Inline Details</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/disabled.js"></script>
+
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Animations/animations.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+    <script src="/Framework/formatters.js"></script>
+
+    <script src="/Controls/PriceLabel.js"></script>
+    <script src="/ViewModels/MediaItemModel.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateEngine.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyButtons.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateHandlers.js"></script>
+    <script src="/Components/InlineDetails/ActionButtonsControl.js"></script>
+    <script src="/Components/InlineDetails/BaseInlineDetails.js"></script>
+    <script src="/Components/InlineDetails/GameExtraInlineDetails.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/Controls/Controls.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/InlineDetails.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/ImmersiveDetails.css" />
+</head>
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="gameExtraInlineTemplate" 
+         data-win-control="WinJS.Binding.Template" 
+         data-win-automationid="gameExtraInlineDetails">
+        <div class="inlineDetailsGameExtra"
+             style="display: -ms-grid; -ms-grid-columns: 90% 10%; -ms-grid-rows: auto;">
+            
+            <div class="inlineDetailsGameExtraMetadata" style="-ms-grid-column: 1;">
+                <div class="inlineDetailsGameExtraMetadataLine inlineDetailsPrimaryBold"
+                    data-win-bind="textContent: title;"></div>
+            </div>
+            
+            <div class="inlineDetailsGameExtraPrice" style="-ms-grid-column: 2;"
+                data-win-control="MS.Entertainment.UI.Controls.PriceLabel"
+                data-win-bind="winControl.text: priceSilver">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="xboxGameExtraInlineDetailsTemplate"
+         data-win-control="WinJS.Binding.Template"
+         data-win-automationid="xboxGameExtraInlineDetailsTemplate">
+        <div class="popOverContentContainer">
+
+            
+            <div class="loadingContainer hideFromDisplay" data-ent-member="loadingContainer"
+                data-ent-hideanimation="inlineDetailsFadeOut">
+                <progress class="win-ring win-medium"></progress>
+            </div>
+
+            <div class="popOver game gameExtra" data-ent-member="fragmentContainer">
+                <div class="leftColumn">
+                    <div class="imageContainer">
+                        <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                             data-win-bind="winControl.target: media WinJS.Binding.oneTime"
+                             data-win-options="{
+                                    show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                    hide: MS.Entertainment.Utilities.doNothing,
+                                    allowAnimations: false,
+                                    desiredImageSize: {width: 215, height: 294},
+                                    defaultImagePath: ''}"
+                             class="imageHolder hideFromDisplay" />
+                    </div>
+
+                    <div class="actions"
+                         data-win-control="MS.Entertainment.Pages.ActionButtonsControl"
+                         data-win-bind="winControl.buttons: smartBuyStateEngine.currentButtons"
+                         data-win-options="{defaultButtonClass: 'iconActionButton'}">
+                    </div>
+                </div>
+
+                <div class="rightColumn">
+                    <div class="titleContainer"
+                         data-ent-showanimation="enterContent"
+                         data-ent-enteranimation="enterContent">
+                        <div class="title label text-popoverTitle" 
+                            data-win-control="MS.Entertainment.UI.Controls.Label" 
+                            data-win-bind="winControl.text: media.name">
+                        </div>
+                        <div class="subTitle label text-metadata" 
+                            data-win-control="MS.Entertainment.UI.Controls.Label" 
+                            data-win-bind="winControl.text: media MS.Entertainment.Formatters.formatGameExtrasDownloadTypeAndReleaseDate">
+                        </div>
+                    </div>
+
+                    <div class="bodyContainer"
+                         data-ent-showanimation="enterContent"
+                         data-ent-enteranimation="enterContent">
+                        <div class="text-bodyContent bodyContent editorialContent label acc-keyboardFocusTarget" 
+                            tabindex="0" 
+                            data-win-control="MS.Entertainment.UI.Controls.Label"  
+                            data-win-bind="winControl.text: media.description; removeFromDisplay: media.description MS.Entertainment.Utilities.toggleClassNameNegate"
+                            data-win-options="{wrap: true}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="panelFragmentLoading panelFragmentContainer movieInlineDetailsPanelFragmentContainer hideFromDisplay"
+                 data-ent-member="failedControl">
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="modernGameExtraInlineDetailsTemplate"
+         data-win-control="WinJS.Binding.Template"
+         data-win-automationid="modernGameExtraInlineDetailsTemplate">
+        <div class="popOverContentContainer">
+
+            
+            <div class="loadingContainer hideFromDisplay" data-ent-member="loadingContainer"
+                data-ent-hideanimation="inlineDetailsFadeOut">
+                <progress class="win-ring win-medium"></progress>
+            </div>
+
+            <div class="popOver game gameExtra" data-ent-member="fragmentContainer">
+                <div class="leftColumn">
+                    <div class="imageContainer">
+                        <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                             data-win-bind="winControl.target: media WinJS.Binding.oneTime"
+                             data-win-options="{
+                                    show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                    hide: MS.Entertainment.Utilities.doNothing,
+                                    allowAnimations: false,
+                                    desiredImageSize: {width: 215, height: 294},
+                                    defaultImagePath: ''}"
+                             class="imageHolder hideFromDisplay" />
+                    </div>
+
+                    <div class="actions"
+                         data-win-control="MS.Entertainment.Pages.ActionButtonsControl"
+                         data-win-bind="winControl.buttons: smartBuyStateEngine.currentButtons"
+                         data-win-options="{defaultButtonClass: 'iconActionButton'}">
+                    </div>
+                </div>
+
+                <div class="rightColumn">
+                    <div class="modernExtraTitleHeader">
+                        <div class="modernExtraImageContainer">
+                            <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                                 data-win-bind="winControl.target: media.extraImage.resizeUrl WinJS.Binding.oneTime"
+                                 data-win-options="{
+                                        show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                        hide: MS.Entertainment.Utilities.doNothing,
+                                        allowAnimations: false,
+                                        desiredImageSize: {width: 100, height: 100},
+                                        defaultImagePath: ''}"
+                                 class="imageHolder hideFromDisplay" />
+                        </div>
+                        <div class="modernExtraTitleContainer">
+                            <div class="title label text-popoverTitle" 
+                                data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                data-win-bind="winControl.text: media.name">
+                            </div>
+                            <div class="subTitle label text-metadata" 
+                                data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                data-win-bind="winControl.text: media MS.Entertainment.Formatters.formatGameExtrasDownloadTypeAndGameTitle">
+                            </div>
+                            <div class="subTitle label text-metadata" 
+                                data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                data-win-bind="winControl.text: media MS.Entertainment.Formatters.formatGameExtrasGenreAndPlatformType">
+                            </div>
+                            <div class="subTitle label text-metadata" 
+                                data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                data-win-bind="winControl.text: media.releaseDate MS.Entertainment.Formatters.formatShortDate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bodyContainer"
+                         data-ent-showanimation="enterContent"
+                         data-ent-enteranimation="enterContent">
+                        <div class="text-bodyContent bodyContent editorialContent label acc-keyboardFocusTarget" 
+                            tabindex="0" 
+                            data-win-control="MS.Entertainment.UI.Controls.Label"  
+                            data-win-bind="winControl.text: media.description; removeFromDisplay: media.description MS.Entertainment.Utilities.toggleClassNameNegate"
+                            data-win-options="{wrap: true}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="panelFragmentLoading panelFragmentContainer movieInlineDetailsPanelFragmentContainer hideFromDisplay"
+                 data-ent-member="failedControl">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

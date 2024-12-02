@@ -1,0 +1,115 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/Styles/settings.css" />
+
+        <title>Settings Control Template</title>
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/UserFeedbackDialog.js"></script>
+        
+        <script src="/Components/Settings/Settings.js"></script>
+    </head>
+    <body>
+        
+        
+        <div id="SettingsPreferences" 
+             data-win-control="WinJS.UI.SettingsFlyout"
+             data-win-options="{width:'wide', lightDismiss:'false'}">
+            
+            
+            <div class="settingsWrapper win-ui-light" data-win-control="MS.Entertainment.Utilities.PreferenceSettingsWrapper">
+                
+                <div class="settingsPanelHeaderBackground"></div>
+                
+                <div class="settingsPanelHeader win-ui-dark">
+                    <button class="win-backbutton"
+                        data-win-automationid="preferencesBackButton"
+                        data-ent-event="click: backToSettings" tabindex="0"
+                        data-ent-member="_backButton">
+                    </button>
+                    <div class="settingsPanelTitle label text-medium text-weightLight" 
+                         data-win-control="MS.Entertainment.UI.Controls.Label"
+                         data-win-options="{stringId:String.id.IDS_SETTINGS_PREFERENCE_TITLE}">
+                    </div>
+                </div>
+
+                
+                <div class="settingsPanelContent">
+
+                    
+                    <div class="settingsPreferenceGroup">
+                        
+                        <div data-ent-member="switchUserContainer">
+                            <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                class="preferenceSwitchUser label text-preferencesGroupHeader" 
+                                data-win-options="{stringId:String.id.IDS_SETTINGS_SWITCH_USER, wrap:true}">
+                            </div>
+                            <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                class="preferenceCurrentUser label" 
+                                data-ent-member="currentUserId">
+                            </div>
+                            <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                class="preferenceUserDesc label" 
+                                data-ent-member="forgetMeDesc"
+                                data-win-options="{stringId:String.id.IDS_SETTINGS_SWITCH_USER_DESCRIPTION, wrap:true}">
+                            </div>
+                            <button class="dialogButton defaultButton acc-keyboardFocusTarget" style="margin-top: 10px;"
+                                data-ent-event="click: forgetMe" 
+                                type="button"
+                                data-ent-member="forgetMeButton">
+                                <div class="label"
+                                     data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                     data-win-options="{stringId:String.id.IDS_SETTINGS_FORGET_ME, wrap:true}">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="settingsPreferenceGroup">
+                        
+                        <div data-ent-member="purchasesContainer" class="preferencePurchasesContainer">
+                            <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                 class="label text-preferencesGroupHeader"
+                                 data-win-options="{stringId:String.id.IDS_VIDEO_SETTINGS_PURCHASES_LABEL, wrap:true}">
+                            </div>
+                            <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                 class="label"
+                                 data-win-options="{stringId:String.id.IDS_VIDEO_SETTINGS_PURCHASES_RESTORE_DESCRPTION, wrap:true}">
+                            </div>
+                            <button class="dialogButton defaultButton acc-keyboardFocusTarget" style="margin-top: 10px;"
+                                data-ent-event="click: restorePurchases"
+                                type="button"
+                                data-ent-member="restorePurchaseButton">
+                                <div class="label"
+                                     data-win-control="MS.Entertainment.UI.Controls.Label"
+                                     data-ent-member="restorePurchaseButtonLabel"
+                                     data-win-options="{stringId:String.id.IDS_VIDEO_SETTINGS_PURCHASES_RESTORE_BUTTON, wrap:true}">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="settingsPreferenceGroup">
+                        <div data-ent-member="promptOnPurchaseContainer" class="genericContainer">
+                            <div data-win-control="MS.Entertainment.UI.Controls.Label" 
+                                 class="label text-preferencesGroupHeader"
+                                 data-win-options="{stringId:String.id.IDS_VIDEO_SETTINGS_PURCHASES_LABEL, wrap:true}">
+                            </div>
+                            <div data-ent-member="promptOnPurchase" 
+                                data-win-control="WinJS.UI.ToggleSwitch" class="promptOnPurchaseToggle" 
+                                data-ent-event="change: promptToggleChange">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

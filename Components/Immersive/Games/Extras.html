@@ -1,0 +1,39 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Immersive Extras</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Components/Immersive/Games/Extras.js"></script>
+    <script src="/Controls/Label.js"></script>
+</head>
+<body>
+    <div data-ent-templateid="ImmersiveExtras" data-win-control="WinJS.Binding.Template">
+        <div class="extras">          
+            <div data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                 data-ent-event="click: onItemClicked; keydown: onKeyDown;"
+                 data-win-bind="winControl.dataSource: dataContext.extrasTypes;"
+                 data-win-options="{itemTemplate: 'Components/Immersive/Games/Extras.html#immersiveExtrasTypeTemplate'}"
+                 data-win-automationid="extrasTypesList">
+            </div>
+        </div>
+    </div>
+
+    <div data-ent-templateid="immersiveExtrasTypeTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="control-extrasListItem acc-keyboardFocusTarget" tabindex="0">
+            <div class="part-countText label text-listItem text-weightHeavy" 
+                 data-win-bind="textContent: count MS.Entertainment.Formatters.formatDecimalNumber">
+            </div>
+            <div class="part-descriptionText label text-listItem wrap"
+                data-win-bind="textContent: label">
+            </div>
+            <div class="hidden modifierIndex"
+                 data-win-bind="textContent: index">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

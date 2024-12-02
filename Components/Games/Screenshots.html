@@ -1,0 +1,67 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Screenshot Panels</title>
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <link rel="Stylesheet" type="text/css" href="../../styles/Games.css" />
+</head>
+
+<body>
+    
+    <div data-ent-templateid="screenshotsPopoverTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="screenshotLayoutBox">
+            <div class="screenshotContainer" data-ent-member="mainContent"></div>
+            <div class="screenshotLocators" 
+                 data-ent-member="locatorList"
+                 data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                 data-win-bind="winControl.dataSource: locators;"
+                 data-win-options="{itemTemplate: 'Components/Games/Screenshots.html#screenshotsLocatorTemplate'}">
+            </div>
+        </div>
+    </div>
+
+    <div data-ent-templateid="screenshotsLocatorTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-bind="screenshotLocatorSelected: selected MS.Entertainment.Utilities.toggleClassName"></div>
+    </div>
+
+    <div data-ent-templateid="screenshotImageTemplate" data-win-control="WinJS.Binding.Template" style="display:none">
+        <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                data-win-bind="winControl.target: ResizeUrl"
+                data-win-options="{
+                    show: MS.Entertainment.Utilities.showElementNoAnimation,
+                    hide: MS.Entertainment.Utilities.doNothing,
+                    suppressSourceClear: true,
+                    allowAnimations: false,
+                    desiredImageSize: {width: 1000, height: 562},
+                    defaultImagePath: ''}"
+                class="screenshotImageHolder hideFromDisplay acc-keyboardFocusTarget" 
+                width="1000" height="562" />
+    </div>
+</body>
+
+</html>

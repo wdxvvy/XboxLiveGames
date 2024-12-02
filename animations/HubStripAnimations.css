@@ -1,0 +1,213 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+.hubStripFadeIn
+{
+    transition-duration: 3000ms,2000ms;
+    transition-property: transform,opacity;
+    transition-timing-function: cubic-bezier(.15,.02,0,.99),cubic-bezier(0,0,1,1)
+}
+.navigationContainerStartLocation
+{
+    opacity: 0;
+    transform: translateY(70px)
+}
+.navigationContainerEndLocation
+{
+    opacity: 1;
+    transform: translateY(0)
+}
+.scrollerStartLocation
+{
+    opacity: 0;
+    transform: translateY(90px)
+}
+.scrollerEndLocation
+{
+    opacity: 1;
+    transform: translateY(0)
+}
+.panelContainerTransition
+{
+    transition-duration: 930ms;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.24,1,0,.99)
+}
+.panelActionContainerTransition
+{}
+.panelActionContainer.collapsed
+{}
+.panelActionWrapper.overflowHidden
+{
+    overflow: hidden
+}
+.enterPage
+{
+    animation-name: baseEnterKeys,baseFadeInKeys;
+    animation-duration: 1000ms,170ms;
+    animation-delay: 167ms,167ms;
+    animation-timing-function: cubic-bezier(.1,.89,.2,1),linear;
+    animation-fill-mode: both
+}
+html[dir=rtl] .enterPage {
+    animation-name: baseEnterKeysRTL,baseFadeInKeys
+}
+.enterPage.enterPageOffset2 {
+    animation-delay: 250ms,250ms
+}
+.enterPage.enterPageOffset3 {
+    animation-delay: 333ms,333ms
+}
+@keyframes baseEnterKeys
+{
+    0%
+    {
+        transform: translateX(100px)
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+@keyframes baseEnterKeysRTL
+{
+    0%
+    {
+        transform: translateX(-100px)
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+@keyframes baseFadeInKeys
+{
+    0%
+    {
+        opacity: 0
+    }
+    30%
+    {
+        opacity: 0
+    }
+    100%
+    {
+        opacity: 1
+    }
+}
+.exitPage
+{
+    animation-name: baseExitKeys,baseFadeOutKeys;
+    animation-duration: 167ms,167ms;
+    animation-delay: 0,0;
+    animation-timing-function: linear,linear;
+    animation-fill-mode: both,both
+}
+html[dir=rtl] .exitPage {
+    animation-name: baseExitKeysRTL,baseFadeOutKeys
+}
+@keyframes baseFadeOutKeys
+{
+    0%
+    {
+        opacity: 1
+    }
+    100%
+    {
+        opacity: 0
+    }
+}
+@keyframes baseExitKeys
+{
+    0%
+    {
+        transform: translateX(0)
+    }
+    100%
+    {
+        transform: translateX(-10px)
+    }
+}
+@keyframes baseExitKeysRTL
+{
+    0%
+    {
+        transform: translateX(0)
+    }
+    100%
+    {
+        transform: translateX(10px)
+    }
+}
+.enterContent
+{
+    animation-name: contentEnterKeys,baseFadeInKeys;
+    animation-duration: 550ms,170ms;
+    animation-delay: 167ms,167ms;
+    animation-timing-function: cubic-bezier(.1,.9,.2,1),cubic-bezier(.1,.9,.2,1);
+    animation-fill-mode: both
+}
+html[dir=rtl] .enterContent
+{
+    animation-name: baseEnterKeysRTL,baseFadeInKeys
+}
+.enterContentSnapped
+{
+    animation-name: contentEnterSnappedKeys,baseFadeInKeys;
+    animation-duration: 550ms,170ms;
+    animation-delay: 167ms,167ms;
+    animation-timing-function: cubic-bezier(.1,.9,.2,1),cubic-bezier(.1,.9,.2,1);
+    animation-fill-mode: both
+}
+html[dir=rtl] .enterContentSnapped
+{
+    animation-name: baseEnterSnappedKeysRTL,baseFadeInKeys
+}
+@keyframes contentEnterKeys
+{
+    0%
+    {
+        transform: translateX(40px)
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+@keyframes contentEnterKeysRTL
+{
+    0%
+    {
+        transform: translateX(-40px)
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+@keyframes contentEnterSnappedKeys
+{
+    0%
+    {
+        transform: translateX(20px)
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+@keyframes contentEnterSnappedKeysRTL
+{
+    0%
+    {
+        transform: translateX(-20px)
+    }
+    100%
+    {
+        transform: translateX(0)
+    }
+}
+.hubStripScrollTransition
+{
+    transition-duration: 1500ms;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.24,1,0,.99)
+}

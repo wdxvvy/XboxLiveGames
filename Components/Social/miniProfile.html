@@ -1,0 +1,484 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mini Profile</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/Link.js"></script>
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/galleryGrouper.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/thumbnailButton.js"></script>
+    <script src="/Controls/expander.js"></script>
+    <script src="/Controls/IconButton.js"></script>
+
+    
+    <script src="/Components/ImmersiveDetails/ShowImmersiveDetailsAction.js"></script>
+
+    
+    <script src="/ViewModels/MediaItemModel.js"></script>
+    <script src="/Components/InlineDetails/BaseInlineDetails.js"></script>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+    <script src="/Components/Social/editProfileDialog.js"></script>
+    <script src="/Components/Social/friendsGallery.js"></script>
+    <script src="/Components/Social/achievementGallery.js"></script>
+    <script src="/Components/Social/avatarSelectionPage.js"></script>
+
+    
+    <script src="/Framework/Data/Augmenters/commonAugmenters.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <script src="/ViewModels/social/shareFactory.js"></script>
+    <script src="/ViewModels/social/shareSender.js"></script>
+    <script src="/ViewModels/social/shareHost.js"></script>
+    <script src="/Components/social/shareTemplates.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/Animations/SocialAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Social.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Colors.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/Images.css" />
+    <link rel="Stylesheet" type="text/css" href="/styles/InlineDetails.css" />
+    <link rel="stylesheet" type="text/css" href="/Controls/Controls.css" />
+
+</head>
+<body>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniProfileAvatarTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="container" data-ent-member="container">
+
+            
+            
+            <div class="miniProfileAvatarAndBubbleContainer"
+                data-win-bind="style.width: avatarWidth">
+
+                
+                <div class="chatBubbleContainer"
+                     data-ent-member="chatBubble"
+                     style="-ms-grid-row: 1; -ms-grid-column: 1;">
+
+                    <div class="chatBubble" style="-ms-grid-row: 1;">
+
+                        <div class="chatBubbleStatusImageContainer"
+                             style="-ms-grid-column: 2; -ms-grid-row: 2; -ms-grid-row-span: 3;">
+                            <img style="width: 46px; height: 60px"
+                                 data-win-control="MS.Entertainment.UI.Shell.ImageControl"
+                                 data-ent-showanimation="fadeIn"
+                                 data-win-bind="winControl.target: bubbleModel.actionMediaItem;
+                                     removeFromDisplay: bubbleModel.actionMediaItem.titleId MS.Entertainment.Utilities.toggleClassNameNegate"
+                                 data-win-options="{ desiredImageSize: {width: 46, height: 60},
+                                                        defaultImagePath: '' }" />
+                        </div>
+
+                        <div class="chatBubbleLabel chatBubblePrimaryLabel label text-cardTitle"
+                             style="-ms-grid-column: 4; -ms-grid-row: 2;"
+                             data-win-bind="textContent: bubbleModel.primaryText;
+                                removeFromDisplay: bubbleModel.primaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;
+                                chatBubblePrimaryLabelOnly: bubbleModel.secondaryText MS.Entertainment.Utilities.toggleClassNameNegate">
+                        </div>
+
+                        <div class="chatBubbleLabel chatBubbleSecondaryLabel label text-metadata"
+                             style="-ms-grid-column: 4; -ms-grid-row: 4;"
+                             data-win-bind="textContent: bubbleModel.secondaryText;
+                                removeFromDisplay: bubbleModel.secondaryText MS.Entertainment.Utilities.toggleClassNameNegate">
+                        </div>
+
+                    </div>
+
+                    <div class="chatBubblePointer acc-preserveBackground"
+                         style="-ms-grid-row: 2;">
+                    </div>
+                </div>
+
+                
+                <div class="avatarControlContainer"
+                    style="-ms-grid-row: 2; -ms-grid-column: 1;">
+                    <div class="avatarControl avatarPlaceHolder"
+                         data-ent-member="placeHolder">
+                        <div data-win-bind="style.width: avatarWidth; 
+                                            style.height: avatarHeight;">
+                            <div class="avatarElementContainer avatarImageContainer">
+                                <img class="avatarImage" width="255" height="511" src="/Images/avatar-body.png" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="avatarControl removeFromDisplay"
+                        data-ent-member="avatarControl"
+                        data-win-control="MS.Entertainment.UI.Controls.AvatarControl"
+                        data-win-bind="winControl.display: avatarDisplay; 
+                            winControl.shutdownOnFreeze: shutdownOnFreeze;
+                            winControl.visibility: showAvatar;
+                            winControl.renderMode: avatarRenderMode;
+                            winControl.allowPropAnimations: allowPropAnimations;
+                            winControl.userModel: model;
+                            winControl.width: avatarWidth;
+                            winControl.height: avatarHeight;
+                            winControl.action: clickAction;
+                            winControl.alwaysAnimate: alwaysAnimate">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniProfileFriendsPanelTemplate" data-win-control="WinJS.Binding.Template">
+            
+        
+        
+
+        <div data-ent-member="signedIn"
+            class="friendsPanelSignedIn">
+
+            <div class="friendsPanel"
+                data-win-automationid="socialFriendsPanel">
+
+                <div class="friendsGalleryContainer"
+                     data-ent-member="friendsGallery"
+                     data-win-control="MS.Entertainment.Social.FriendsGallery"
+                     data-win-options ="{ detailPanelWidth: 730, 
+                                         detailPanelEdgePadding: 40,
+                                         maxFriends: 3,
+                                         popOverClass: 'profilePopOverDashboardOverlay',
+                                         scrollHubStrip: true }"
+                     data-win-bind="winControl.userModel: model;
+                                    winControl.currentUserAsFriend: currentUserAsFriend;
+                                    winControl.poppedAvatarClass: poppedAvatarClass;
+                                    winControl.inDashboard: inDashboard;
+                                    winControl.friendButtonType: friendButtonType;
+                                    winControl.friendButtonTemplate: friendButtonTemplate ">
+                </div>
+            </div>
+
+        </div>
+
+        <div data-ent-member="signedOut" class="hideFromDisplay">
+            <div class="friendsPanelSignedOut"></div>
+            <div class="friendsPanelFriendsSignedOut imageSignOutSocialHubFriends acc-preserveBackground"></div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="profileActionButtonTemplateHost" data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.Social.ProfileActionButton"
+             data-win-bind="winControl.model: model">
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="profileActionButtonTemplate" data-win-control="WinJS.Binding.Template">
+        <div data-win-control="MS.Entertainment.UI.Controls.IconButton"
+             data-win-bind="winControl.stringId: model.stringId;
+                            winControl.icon: model.icon;
+                            winControl.model: model;
+                            winControl.doClick: execute;"
+            data-win-options="{focusable: false}">
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div data-ent-templateid="gamerInfoHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="titleContainer gamerInfo">
+            
+            <div class="gamerPic">
+                <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                     data-win-bind="winControl.target: model.gamerPictureUrl"
+                     data-ent-showanimation="fadeIn"
+                     data-win-options="{desiredImageSize: {width: 64, height: 64}}"/>
+            </div>
+            <div class="gamerInfoText">
+                
+                <div class="friendInlineDetailsGamerTag label text-popoverTitle"
+                    data-win-automationid="miniProfileGamerTag"
+                    data-win-bind="textContent: model.gamerTag">
+                </div>
+
+                
+                <div class="gamerInfoSubText">
+                    <div class="friendInlineDisplayNameText label noClip text-metadata"
+                        style="-ms-grid-column: 1;"
+                        data-win-bind="textContent: model.name; removeFromDisplay: model.name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;">
+                    </div>
+
+                    
+                    <div class="friendInlineGamerScoreText gamerScoreContainer"
+                         style="-ms-grid-column: 2;">
+                        
+                        <div class="icon inlineGlyphSmall inlineGamerScoreIcon"
+                             data-win-bind="removeFromDisplay: model.formattedGamerScore MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+
+                        <div class="hiddenNarratorText">
+                            <div data-ent-member="gamerScoreLabel">
+                            </div>
+                        </div>
+
+                        <div class="inlineGamerScoreContainer" aria-hidden="true">
+                            <div class="friendInlineGamerScore label text-metadata"
+                                 data-win-bind="textContent: model.formattedGamerScore; removeFromDisplay: model.formattedGamerScore MS.Entertainment.Utilities.toggleClassNameOnEmptyString;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="profileButtonListTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="profileButtons win-ui-light">
+
+            <div class="itemList"
+                data-ent-member="itemList"
+                data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                data-win-bind="winControl.dataSource: actionButtons;"
+                data-win-options="{itemTemplate: 'Components/Social/miniProfile.html#profileActionButtonTemplateHost'}">
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniProfileInfoCardTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="bodyContainer" 
+            data-ent-member="loadingContainer"
+            data-ent-hideanimation="inlineDetailsFadeOut">
+
+            <div class="inlineDetailsPanelFragmentLoadingProgress"
+                data-ent-member="loadingLabel">
+            </div>
+
+        </div>
+
+        
+        <div class="titleContainer hideFromDisplay"
+             data-ent-showanimation="enterContent"
+             data-ent-enteranimation="enterContent"
+             data-win-control="MS.Entertainment.Social.GamerInfoHeader"
+             data-ent-member="headerContainer"
+             data-win-bind="winControl.model: model">
+        </div>
+
+        
+        <div class="bodyContainer hideFromDisplay"
+             data-ent-member="bodyContainer"
+             data-ent-showanimation="enterContent"
+             data-ent-enteranimation="enterContent">
+
+            
+            <div class="bodyContent label wrap incomingFriendRequest" 
+                data-ent-member="incomingFriendLabel" 
+                data-win-bind="removeFromDisplay: showIncomingFriendLabel MS.Entertainment.Utilities.toggleClassNameNegate">
+            </div>
+
+            
+            <div data-win-control="MS.Entertainment.Social.ProfileButtonList"
+                 data-win-bind="hideFromDisplay: isOnline MS.Entertainment.Utilities.toggleClassNameNegate;"
+                 data-ent-member="buttons">
+            </div>
+
+            <hr class="listDivider" />
+
+            
+            <div class="bodyContent label text-small newUserProfileText"
+                data-win-bind="removeFromDisplay: showEmptyProfileLabel MS.Entertainment.Utilities.toggleClassNameNegate;
+                               textContent: String.id.IDS_SOCIAL_MY_EMPTY_PROFILE_LABEL MS.Entertainment.Formatters.formatStringId;"></div>
+
+            
+            <div class="removeFromDisplay"
+                data-win-bind="removeFromDisplay: showNewUserPanel MS.Entertainment.Utilities.toggleClassName;">
+                
+                <div class="title label text-metadata" data-win-bind="textContent: String.id.IDS_SOCIAL_PROFILE_MOTTO MS.Entertainment.Formatters.formatStringId"></div>
+                <div class="bodyContent label text-bodyContent" 
+                        data-win-bind="textContent: model.motto; removeFromDisplay: model.motto MS.Entertainment.Utilities.toggleClassNameOnEmptyString;">
+                </div>
+
+                
+                <div class="title label text-metadata" data-win-bind="textContent: String.id.IDS_SOCIAL_PROFILE_LOCATION MS.Entertainment.Formatters.formatStringId"></div>
+                <div class="bodyContent label text-bodyContent" 
+                        data-win-bind="textContent: model.location; removeFromDisplay: model.location MS.Entertainment.Utilities.toggleClassNameOnEmptyString;">
+                </div>
+
+                
+                <div class="title label text-metadata" data-win-bind="textContent: String.id.IDS_SOCIAL_PROFILE_BIO MS.Entertainment.Formatters.formatStringId"></div>
+                <div class="bodyContent label text-bodyContent profileBioText" 
+                        data-win-bind="textContent: model.bio; removeFromDisplay: model.bio MS.Entertainment.Utilities.toggleClassNameOnEmptyString;">
+                </div>
+            </div>
+
+            
+            <div data-win-bind="removeFromDisplay: showNewUserPanel MS.Entertainment.Utilities.toggleClassNameNegate;">
+                <div class="bodyContent label newUserProfileText text-cardTitle" data-win-bind="textContent: String.id.IDS_SOCIAL_MY_EMPTY_PROFILE_TITLE MS.Entertainment.Formatters.formatStringId;"></div>
+                <div class="bodyContent label" data-win-bind="textContent: String.id.IDS_SOCIAL_MY_EMPTY_PROFILE_DESC MS.Entertainment.Formatters.formatStringId;"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="profilePopOverTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="popOver friend"
+             data-win-automationid="miniProfileHubPanel">
+
+            <div class="leftColumn"
+                style="-ms-grid-row: 1; -ms-grid-column: 1;"
+                data-ent-member="_avatar">
+            </div>
+
+            <div class="rightColumn" 
+                style="-ms-grid-row: 1; -ms-grid-column: 2;"
+                data-win-control="MS.Entertainment.Social.AvatarInfoCard"
+                data-win-bind="winControl.model: data; 
+                               winControl.closeOverlay: closeOverlay; 
+                               winControl.currentUserAsFriend: currentUserAsFriend;
+                               winControl.friendRelationLookupType: friendRelationLookupType;">
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="gamercardPopOverTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="popOver friend"
+             data-win-automationid="miniProfileHubPanel">
+
+            <div class="leftColumn gamercardAvatar"
+                style="-ms-grid-row: 1; -ms-grid-column: 1;"
+                data-win-control="MS.Entertainment.Social.MiniProfileAvatar"
+                data-ent-member="avatarControl"
+                data-win-options="{ showChatBubble: false,
+                                    alwaysAnimate: true,
+                                    avatarRenderMode: MS.Entertainment.UI.Controls.avatarRenderMode.play,
+                                    avatarDisplay: MS.Entertainment.UI.Controls.avatarDisplay.any }"
+                data-win-bind="winControl.model: data">
+            </div>
+
+            <div class="rightColumn gamercardDetails" 
+                style="-ms-grid-row: 1; -ms-grid-column: 2;"
+                data-win-control="MS.Entertainment.Social.AvatarInfoCard"
+                data-win-bind="winControl.model: data; 
+                               winControl.closeOverlay: closeOverlay; 
+                               winControl.currentUserAsFriend: currentUserAsFriend;
+                               winControl.friendRelationLookupType: friendRelationLookupType;">
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid="miniProfileHubPanelTemplate" data-win-control="WinJS.Binding.Template">
+
+        
+        <div data-ent-member="signedIn">
+            
+            <div class="popOver friend"
+                 data-win-automationid="miniProfileHubPanel">
+
+                <div class="leftColumn"
+                    style="-ms-grid-row: 1; -ms-grid-column: 1;"
+                    data-win-control="MS.Entertainment.Social.MiniProfileAvatar"
+                    data-ent-member="avatarControl"
+                    data-win-options="{ showChatBubble: true,
+                                        avatarRenderMode: MS.Entertainment.UI.Controls.avatarRenderMode.play,
+                                        avatarDisplay: MS.Entertainment.UI.Controls.avatarDisplay.any,
+                                        alwaysAnimate: true }"
+                    data-win-bind="winControl.model: model.profile">
+
+                </div>
+
+                <div class="rightColumn" 
+                    style="-ms-grid-row: 1; -ms-grid-column: 2;"
+                    data-win-control="MS.Entertainment.Social.AvatarInfoCard"
+                    data-win-bind="winControl.model: model.profile; winControl.profilePageView: profilePageView">
+                </div>
+
+            </div>
+
+        </div>
+
+        
+        <div data-ent-member="signedOut" class="hideFromDisplay">
+            <div class="miniProfilePanelControlsSignedOut imageSignOutSocialHubControls acc-backgroundTransparent win-focusable">
+
+                <div data-ent-member="signedOutPanel"                   
+                     data-win-control="MS.Entertainment.UI.Controls.FailedPanel"
+                     data-win-options="{
+                         defaultPrimaryStringId: String.id.IDS_SOCIAL_ERROR_OFFLINE_SELF_PROFILE_TITLE,
+                         defaultSecondaryStringId: null }">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

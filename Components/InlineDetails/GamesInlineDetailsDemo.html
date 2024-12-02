@@ -1,0 +1,157 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Games Inline Details</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Animations/animations.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+    <script src="/Framework/formatters.js"></script>
+    <script src="/Framework/disabled.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../Controls/Controls.css" />
+    <link rel="stylesheet" type="text/css" href="../../Animations/Animations.css" />
+    <link rel="stylesheet" type="text/css" href="../../Animations/GalleryAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/InlineDetails.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/DemoMode.css" />
+</head>
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="gamesInlineDetailsSpotlightDemoTemplate"
+         data-win-control="WinJS.Binding.Template"
+         data-win-automationid="gameInlineDetailsSpotlightDemoTemplate">
+        <div class="popOverContentContainer">
+            <div class="demoPopOver win-ui-light" data-ent-member="fragmentContainer">
+                 
+                <div class="imageClippingContainer">
+                    <img class="heroImage" src="/Images/Demo/games_spotlightHero.png"/>
+                </div>
+                <div class="heroImageTextGrid">
+                    <div class="textContainer">
+                        <div class="secondaryText label text-cardTitle">Wordament</div>
+                    </div>                            
+                </div>
+                <div class="demoPopoverTextContainer">
+                    <div class="primaryText label text-xxLarge text-weightLight"
+                        data-win-bind="textContent: String.id.IDS_DEMO_GAMES_SPOTLIGHT_POPOVER_FIRST_LINE MS.Entertainment.Formatters.formatStringId"></div>     
+                    <div class="secondaryText label text-small"
+                        data-win-bind="textContent: String.id.IDS_DEMO_GAMES_SPOTLIGHT_POPOVER_SECOND_LINE MS.Entertainment.Formatters.formatStringId"></div>
+                </div>
+                <div class="footNote label text-xxSmall"
+                     data-win-bind="textContent: String.id.IDS_DEMO_GAMES_XBOX_POPOVER_FOOTNOTE MS.Entertainment.Formatters.formatStringId"></div> 
+            </div>
+
+            
+            <div class="panelFragmentLoading panelFragmentContainer gameInlineDetailsPanelFragmentContainer hideFromDisplay"
+                    data-ent-member="failedControl">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="gamesInlineDetailsWindowsDemoTemplate"
+         data-win-control="WinJS.Binding.Template"
+         data-win-automationid="gameInlineDetailsWindowsDemoTemplate">
+        <div class="popOverContentContainer">
+            <div class="demoPopOver win-ui-light" data-ent-member="fragmentContainer">
+                
+                <div class="imageClippingContainer">
+                    <img class="heroImage" src="/Images/Demo/games_windowsHero.png"/>
+                </div>
+                <div class="heroImageTextGrid">
+                    <div class="textContainer">
+                        <div class="secondaryText label text-cardTitle">Microsoft Solitaire Collection</div>
+                    </div>                            
+                </div>
+                <div class="demoPopoverTextContainer"> 
+                    <div class="primaryText label text-xxLarge text-weightLight"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_WINDOWS_POPOVER_FIRST_LINE MS.Entertainment.Formatters.formatStringId"></div>     
+                    <div class="secondaryText label text-small"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_WINDOWS_POPOVER_SECOND_LINE MS.Entertainment.Formatters.formatStringId"></div>
+                </div>
+                <div class="footNote label text-xxSmall"
+                     data-win-bind="textContent: String.id.IDS_DEMO_GAMES_XBOX_POPOVER_FOOTNOTE MS.Entertainment.Formatters.formatStringId"></div> 
+            </div>
+
+            
+            <div class="panelFragmentLoading panelFragmentContainer gameInlineDetailsPanelFragmentContainer hideFromDisplay"
+                 data-ent-member="failedControl">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="gamesInlineDetailsXboxDemoTemplate"
+         data-win-control="WinJS.Binding.Template"
+         data-win-automationid="gameInlineDetailsXboxDemoTemplate">
+        <div class="popOverContentContainer">
+            <div class="demoPopOver win-ui-light" data-ent-member="fragmentContainer">
+                
+                <div class="imageClippingContainer">
+                    <img class="heroImage" src="/Images/Demo/games_featuredHero.png"/>
+                </div>
+                <div class="heroImageTextGrid">
+                    <div class="textContainer">
+                        <div class="secondaryText label text-cardTitle">Adera</div>
+                    </div>                            
+                </div>
+                <div class="demoPopoverTextContainer"> 
+                    <div class="primaryText label text-xxLarge text-weightLight"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_XBOX_POPOVER_FIRST_LINE MS.Entertainment.Formatters.formatStringId"></div>     
+                    <div class="secondaryText label text-small"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_XBOX_POPOVER_SECOND_LINE MS.Entertainment.Formatters.formatStringId"></div>
+                </div>
+                <div class="footNote label text-xxSmall"
+                     data-win-bind="textContent: String.id.IDS_DEMO_GAMES_XBOX_POPOVER_FOOTNOTE MS.Entertainment.Formatters.formatStringId"></div> 
+            </div>
+
+            
+            <div class="panelFragmentLoading panelFragmentContainer gameInlineDetailsPanelFragmentContainer hideFromDisplay"
+                 data-ent-member="failedControl">
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="gamesInlineDetailsSocialDemoTemplate"
+         data-win-control="WinJS.Binding.Template"
+         data-win-automationid="gamesInlineDetailsSocialDemoTemplate">
+        <div class="popOverContentContainer">
+            <div class="demoPopOver win-ui-light" data-ent-member="fragmentContainer">
+                
+                <img class="socialPopOverImage" src="/Images/Demo/profile_image.png"/>
+                <div class="demoPopoverTextContainer"> 
+                    <div class="primaryText label text-xxLarge text-weightLight"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_SOCIAL_POPOVER_FIRST_LINE MS.Entertainment.Formatters.formatStringId"></div>     
+                    <div class="secondaryText label text-small"
+                         data-win-bind="textContent: String.id.IDS_DEMO_GAMES_SOCIAL_POPOVER_SECOND_LINE MS.Entertainment.Formatters.formatStringId"></div>
+                </div>
+                <div class="footNote label text-xxSmall"
+                     data-win-bind="textContent: String.id.IDS_DEMO_GAMES_XBOX_POPOVER_FOOTNOTE MS.Entertainment.Formatters.formatStringId"></div> 
+            </div>
+
+            
+            <div class="panelFragmentLoading panelFragmentContainer gameInlineDetailsPanelFragmentContainer hideFromDisplay"
+                 data-ent-member="failedControl">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

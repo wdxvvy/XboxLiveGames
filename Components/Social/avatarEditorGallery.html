@@ -1,0 +1,258 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Avatar Editor Gallery Template</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/Data/Augmenters/avatarEditorAugmenters.js"></script>
+    <script src="/Framework/Data/queries/avatarEditorQueries.js"></script>
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/Social/avatarEditor.js"></script>
+    <script src="/ViewModels/Social/profileHydrator.js"></script>
+
+    
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/HubStrip.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/ThumbnailButton.js"></script>
+    <script src="/Controls/LoadingControl.js"></script>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/Components/Social/avatarEditorGallery.js"></script>
+    <script src="/Components/Social/avatarEditorPage.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="../../Animations/GalleryAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../Animations/SocialAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Colors.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Images.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+
+</head>
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="avatarEditorGalleryAssetItemControlTemplate"
+        data-win-control="WinJS.Binding.Template">
+        <div class="avatarEditorAssetThumbnailItemRoot removeFromDisplay"
+            data-win-bind="removeFromDisplay: isAssetType MS.Entertainment.Utilities.toggleClassNameNegate;">
+
+            <label data-ent-member="itemTitle" style="display: none" role="button"></label>
+            <div class="avatarEditorAssetThumbnailItem" style="display: -ms-grid; -ms-grid-columns: 1fr; -ms-grid-rows: 1fr;"
+                data-win-control="MS.Entertainment.Social.MiniProfileImage"
+                data-win-bind="winControl.uri: thumbnailSource;"
+                data-win-options="{
+                    loadingUri: MS.Entertainment.Social.AvatarEditorGallery.loadingUri}">
+            </div>
+            <div class="avatarEditorAssetThumbnailItemSelected removeFromDisplay"
+                data-win-bind="removeFromDisplay: isEquipped MS.Entertainment.Utilities.toggleClassNameNegate;">
+            </div>
+            <div class="avatarEditorAssetThumbnailItemTileContainer">
+                <div class="removeFromDisplay"
+                    data-win-bind="removeFromDisplay: isColorizable MS.Entertainment.Utilities.toggleClassNameNegate;">
+                     <div class="icon inlineGlyph label" 
+                         data-win-control="MS.Entertainment.UI.Controls.Label" 
+                         data-win-options="{wrap: false, text: MS.Entertainment.UI.Icon.inlineColorable}"></div>
+                </div>
+                <div class="removeFromDisplay"
+                    data-win-bind="removeFromDisplay: isMarketplace MS.Entertainment.Utilities.toggleClassNameNegate;">
+                     <div class="icon inlineGlyph label" 
+                         data-win-control="MS.Entertainment.UI.Controls.Label" 
+                         data-win-options="{wrap: false, text: MS.Entertainment.UI.Icon.shop}"></div>
+                </div>
+                <div class="removeFromDisplay"
+                    data-win-bind="removeFromDisplay: isAwardable MS.Entertainment.Utilities.toggleClassNameNegate;">
+                     <div class="icon inlineGlyph label" 
+                         data-win-control="MS.Entertainment.UI.Controls.Label" 
+                         data-win-options="{wrap: false, text: MS.Entertainment.UI.Icon.inlineAwarded}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="avatarEditorAssetThumbnailItemRoot removeFromDisplay"
+            data-win-bind="removeFromDisplay: isColorType MS.Entertainment.Utilities.toggleClassNameNegate;">
+            <div class="avatarEditorColorItem avatarEditorColorTile acc-preserveBackground"
+                data-win-bind="style.backgroundColor: itemColor">
+            </div>
+            <div class="avatarEditorAssetThumbnailItemSelected removeFromDisplay"
+                data-win-bind="removeFromDisplay: isEquipped MS.Entertainment.Utilities.toggleClassNameNegate;">
+                <div class="avatarEditorAssetThumbnailItemSelectedBorder">
+                </div>
+            </div>
+        </div>
+        <div class="avatarEditorRemoveItem removeFromDisplay avatarEditorRemoveItemImage acc-preserveBackground"
+            data-win-bind="removeFromDisplay: isRemoveType MS.Entertainment.Utilities.toggleClassNameNegate;">
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="avatarEditorGalleryItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div
+            data-win-control="MS.Entertainment.Social.AvatarEditorGalleryItem"
+            data-win-bind="winControl.dataObject: instance;">
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="avatarEditorGalleryTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="avatarEditorGalleryPanelRoot">
+            <div class="avatarEditorGalleryPanelGallery">
+                <div class="removeFromDisplay"
+                    data-win-control="MS.Entertainment.UI.Controls.GalleryControl"
+                    data-ent-member="_gallery"
+                    data-win-options="{
+                        tap: MS.Entertainment.UI.Controls.GalleryControl.Tap.directSelect,
+                        itemTemplate: 'Components/Social/avatarEditorGallery.html#avatarEditorGalleryItemTemplate',
+                        invokeBehavior: MS.Entertainment.UI.Controls.GalleryControl.InvokeBehavior.none,
+                        itemSize: { width: 128, height: 128 },
+                        slotSize: { width: 128, height: 128 },
+                        maxRows: 3,
+                        selectionHelperOptions: { allowShare: false },
+                        focusFirstItemOnPageLoad: false}"
+                    data-win-bind="winControl.dataSource: galleryDataSource;
+                        removeFromDisplay: showGallery MS.Entertainment.Utilities.toggleClassNameNegate;">
+                </div>
+                <div class="removeFromDisplay"
+                    data-win-control="MS.Entertainment.Social.AvatarBodySizeControl"
+                    data-ent-member="_bodySizeControl"
+                    data-win-bind="removeFromDisplay: showBodyControl MS.Entertainment.Utilities.toggleClassNameNegate;">
+                </div>
+            </div>
+
+            <div class="avatarEditorGallerySavingCursorContainer"
+                 data-win-bind="removeFromDisplay: hideAllButtons MS.Entertainment.Utilities.toggleClassNameNegate
+                                avatarEditorGallerySavingCursorContainer: hideAllButtons MS.Entertainment.Utilities.toggleClassName">
+
+                 
+                <progress data-ent-member="_waitCursor"
+                          class="removeOverlayWaitCursor avatarEditorGallerySaveWaitCursor"
+                          style="-ms-grid-column: 1;"
+                          data-win-control="MS.Entertainment.UI.Controls.LoadingControl"
+                          data-win-options="{width: '52px', height: '52px'}"></progress>
+
+                <div class="avatarEditorGallerySavingLabel"
+                     style="-ms-grid-column: 2"
+                     data-win-control ="MS.Entertainment.UI.Controls.Label"
+                     data-win-options="{stringId: String.id.IDS_AVATAR_EDITOR_SAVING}">
+                </div>
+            </div>
+
+            <div class="avatarEditorGalleryPanelButtonsContainer"
+                 data-win-bind="removeFromDisplay: hideAllButtons MS.Entertainment.Utilities.toggleClassName;
+                                avatarEditorGalleryPanelButtonsContainer: hideAllButtons MS.Entertainment.Utilities.toggleClassNameNegate">
+
+                <div class="avatarEditorGalleryPanelSave acc-keyboardFocusTarget win-focusable"
+                     style="-ms-grid-column: 1;"
+                     data-ent-event="click: _onSaveClick"
+                     data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                     data-win-bind="winControl.isDisabled: disableSave;
+                        removeFromDisplay: showColorIcon MS.Entertainment.Utilities.toggleClassName"
+                     data-win-options="{icon: WinJS.UI.AppBarIcon.save,
+                        stringId: String.id.IDS_AVATAR_EDITOR_SAVE,
+                        tabIndex: 0}">
+                </div>
+
+                <div class="avatarEditorGalleryPanelCancel acc-keyboardFocusTarget win-focusable"
+                     style="-ms-grid-column: 2;"
+                     data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                     data-ent-event="click: _onCancelClick"
+                     data-win-bind="removeFromDisplay: showColorIcon MS.Entertainment.Utilities.toggleClassName"
+                     data-win-options="{icon: WinJS.UI.AppBarIcon.cancel,
+                        stringId: String.id.IDS_AVATAR_EDITOR_CANCEL,
+                        tabIndex: 0}">
+                </div>
+
+                <div class="galleryToggleButtons"
+                     style="-ms-grid-column: 3;"
+                     data-win-bind="removeFromDisplay: canToggle MS.Entertainment.Utilities.toggleClassNameNegate;">
+
+                    <div data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                         data-ent-event="click: _onStyleGalleryToggle"
+                         data-win-bind="winControl.isDisabled: showStyleIcon;
+                                        removeFromDisplay: showStyleIcon MS.Entertainment.Utilities.toggleClassName"
+                         data-win-options="{icon: WinJS.UI.AppBarIcon.back, 
+                            stringId: String.id.IDS_AVATAR_EDITOR_PERSON_BUTTON_NAR,
+                            tabIndex: 0}">
+                    </div>
+
+                    <div data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                         data-ent-event="click: _onColorGalleryToggle"
+                         data-win-bind="winControl.isDisabled: showColorIcon;
+                                        removeFromDisplay: showColorIcon MS.Entertainment.Utilities.toggleClassName"
+                         data-win-options="{icon: MS.Entertainment.UI.Icon.inlineColorable, 
+                            stringId: String.id.IDS_AVATAR_EDITOR_COLOR_BUTTON_NAR,
+                            tabIndex: 0}">
+                    </div>
+
+                </div>
+
+            </div> 
+        </div> 
+    </div> 
+
+    
+    
+    
+    <div data-ent-templateid="avatarBodySizeControlTemplate"
+        data-win-control="WinJS.Binding.Template">
+        <div class="avatarBodySizeControlRoot" data-ent-member="_bodyControl">
+            <div class="avatarEditorBodySizeButton showKeyboardFocus acc-keyboardFocusTarget acc-preserveBackground win-focusable"
+                 style="-ms-grid-row: 1; -ms-grid-column: 2;"
+                 data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                 data-ent-member="buttonHeightIncrease"
+                 data-ent-event="click: _onHeightIncrease"
+                 data-win-bind="disabled: maxHeightReached"
+                 data-win-options="{icon: WinJS.UI.AppBarIcon.add, tabIndex: -1}">
+            </div>
+            <div class="avatarEditorBodySizeButton showKeyboardFocus acc-keyboardFocusTarget acc-preserveBackground win-focusable"
+                 style="-ms-grid-row: 2; -ms-grid-column: 1;"
+                 data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                 data-ent-member="buttonWeightDecrease"
+                 data-ent-event="click: _onWeightDecrease"
+                 data-win-bind="disabled: minWeightReached"
+                 data-win-options="{icon: WinJS.UI.AppBarIcon.remove, tabIndex: -1}">
+            </div>
+            <button type="button" class="avatarEditorBodySizeButton avatarEditorAverageButton showKeyboardFocus acc-keyboardFocusTarget acc-preserveBackground win-focusable"
+                data-ent-member="buttonAverage"
+                style="-ms-grid-row: 2; -ms-grid-column: 2;"
+                data-ent-event="click: _onSizeReset">
+            </button>
+            <div class="avatarEditorBodySizeButton showKeyboardFocus acc-keyboardFocusTarget acc-preserveBackground win-focusable"
+                 style="-ms-grid-row: 2; -ms-grid-column: 3;"
+                 data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                 data-ent-member="buttonWeightIncrease"
+                 data-ent-event="click: _onWeightIncrease"
+                 data-win-bind="disabled: maxWeightReached"
+                 data-win-options="{icon: WinJS.UI.AppBarIcon.add, tabIndex: -1}">
+            </div>
+            <div class="avatarEditorBodySizeButton showKeyboardFocus acc-keyboardFocusTarget acc-preserveBackground win-focusable"
+                 style="-ms-grid-row: 3; -ms-grid-column: 2;"
+                 data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                 data-ent-member="buttonHeightDecrease"
+                 data-ent-event="click: _onHeightDecrease"
+                 data-win-bind="disabled: minHeightReached"
+                 data-win-options="{icon: WinJS.UI.AppBarIcon.remove, tabIndex: -1}">
+            </div>
+        </div> 
+    </div> 
+</body>
+</html>

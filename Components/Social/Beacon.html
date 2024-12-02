@@ -1,0 +1,144 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/settings.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/social.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/InlineDetails.css" />
+        <title>Beacon control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/Label.js"></script>
+        <script src="/Controls/EditBox.js"></script>
+        <script src="/Components/Social/Beacon.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="BeaconControlTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="beaconControlContainer"
+                data-win-bind="removeFromDisplay: hideContainer MS.Entertainment.Utilities.toggleClassName;">
+                
+                
+                <div class="beaconLinkContainer"
+                    style="-ms-grid-column: 1; -ms-grid-column-span: 3; -ms-grid-row: 1; -ms-grid-row-align: center;">
+                    <button class="bodyContent beaconLink label text-bodyContent" 
+                         data-win-bind="textContent: String.id.IDS_SOCIAL_SET_BEACON MS.Entertainment.Formatters.formatStringId;
+                                        removeFromDisplay: hideSetBeaconButton MS.Entertainment.Utilities.toggleClassName"
+                         data-ent-event="click: _onClickSetBeaconButton">
+                    </button>
+                </div>
+
+                
+                <div class="beaconTitle label" 
+                     style="-ms-grid-column: 1; -ms-grid-column-span: 3; -ms-grid-row: 1; -ms-grid-row-align: center;" 
+                     data-ent-member="_setBeaconTitle"
+                     data-win-bind="removeFromDisplay: hideSetBeaconTitle MS.Entertainment.Utilities.toggleClassName">
+                </div>
+
+                <div class="beaconCommentEditTitle"
+                     data-win-bind="collapse: hideBeaconComment MS.Entertainment.Utilities.toggleClassName"
+                     style="-ms-grid-column: 1; -ms-grid-column-span: 3; -ms-grid-row: 1;"> 
+                    
+                    <div class="beaconCommentContainer"
+                         style="-ms-grid-column: 1;"> 
+                        <button class="bodyContent beaconComment label text-bodyContent acc-keyboardFocusTarget"
+                                data-ent-member="_beaconComment"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-ent-event="click: _onClickBeaconComment"
+                                data-win-options="{wrap: true}">
+                            <span class="beaconCommentLabel" 
+                                data-ent-member="_beaconCommentLabel"></span>
+                            <span class="beaconCommentText" 
+                                data-ent-member="_beaconCommentText"></span>
+                        </button>
+                    </div>
+
+                    
+                    <button class="beaconTitle editBeacon label acc-keyboardFocusTarget"
+                         style="-ms-grid-column: 3;"
+                         data-ent-member="_beaconSetEditLabel"
+                         data-win-control="MS.Entertainment.UI.Controls.Label"
+                         data-ent-event="click: _onClickBeaconComment"
+                         data-win-options="{stringId:String.id.IDS_EDIT_BUTTON}">
+                    </button>
+                </div>
+                        
+                
+                <div class="icon inlineGlyphSolid label"
+                        style="-ms-grid-column: 1; -ms-grid-row: 2;"
+                        data-ent-member="_errorMessageIcon"
+                        data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{text: MS.Entertainment.UI.Icon.inlineError, autoResizeFont: false}"
+                        data-win-bind="removeFromDisplay: hideErrorMessage MS.Entertainment.Utilities.toggleClassName">
+                </div>
+                <div class="errorMessage label text-bodyContent"
+                        style="-ms-grid-column: 3; -ms-grid-row: 2;"
+                        data-ent-member="_errorMessage"
+                        data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{wrap: true}"
+                        data-win-bind="removeFromDisplay: hideErrorMessage MS.Entertainment.Utilities.toggleClassName"
+                        role="alert" 
+                        aria-atomic="true">
+                </div>
+                
+                
+                <div class="beaconCommentEditBox" 
+                     style="-ms-grid-column: 1; -ms-grid-row: 3; -ms-grid-column-span: 5; -ms-grid-column-align: stretch;"
+                     data-ent-member="_commentEditBox"
+                     data-win-control="MS.Entertainment.UI.Controls.EditBox"
+                     data-win-automationid="setBeaconEditbox"
+                     data-win-bind="removeFromDisplay: hideCommentEditBox MS.Entertainment.Utilities.toggleClassName"
+                     data-win-options="{maxLength: 40, 
+                                        rows: 1, columns: 60,
+                                        watermarkText: '',
+                                        autoFocus: true,
+                                        showRemainingChars: true}">
+                </div>
+
+                <div class="beaconButtonContainer"
+                     style="-ms-grid-column: 1; -ms-grid-row: 5; -ms-grid-column-span: 5;" 
+                     data-ent-member="_buttonsContainer" 
+                     data-win-bind="removeFromDisplay: hideButtonsContainer MS.Entertainment.Utilities.toggleClassName">
+                    <div style="display: -ms-flexbox; -ms-flex-direction: row; -ms-flex-wrap: wrap">
+                        
+                        <div class="beaconButton"
+                             data-ent-event="click: _onClickSaveButton"
+                             data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                             data-ent-member="_saveButton"
+                             data-win-options="{icon: WinJS.UI.AppBarIcon.save, stringId:String.id.IDS_SET_BUTTON, tabIndex: 1}"
+                             data-win-bind="removeFromDisplay: hideSaveButton MS.Entertainment.Utilities.toggleClassName">
+                        </div>
+
+                        
+                        <div class="beaconButton"
+                             data-ent-event="click: _onClickCancelButton"
+                             data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                             data-win-options="{icon: WinJS.UI.AppBarIcon.cancel, stringId:String.id.IDS_CANCEL_BUTTON, tabIndex: 1}"
+                             data-win-bind="removeFromDisplay: hideCancelButton MS.Entertainment.Utilities.toggleClassName">
+                        </div>
+
+                        
+                        <div class="beaconButton"
+                             data-ent-event="click: _onClickRemoveButton"
+                             data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                             data-win-options="{icon: WinJS.UI.AppBarIcon.remove, stringId:String.id.IDS_REMOVE_BUTTON, tabIndex: 1}"
+                             data-win-bind="removeFromDisplay: hideRemoveButton MS.Entertainment.Utilities.toggleClassName">
+                        </div>
+
+                        
+                        <div class="beaconButton"
+                             data-ent-event="click: _onClickOkButton"
+                             data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                             data-win-options="{icon: WinJS.UI.AppBarIcon.accept, stringId:String.id.IDS_OK_BUTTON, tabIndex: 1}"
+                             data-win-bind="removeFromDisplay: hideOKButton MS.Entertainment.Utilities.toggleClassName">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

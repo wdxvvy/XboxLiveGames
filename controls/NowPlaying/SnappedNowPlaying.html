@@ -1,0 +1,111 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>NowPlaying</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/NowPlaying.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/Snapped.css" />
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/formatters.js"></script>
+    <script src="/Framework/disabled.js"></script>
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Animations/animations.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+    <script src="/controls/listcontrols.js"></script>
+
+    <script src="/Components/Marketplace.js"></script>
+    <script src="/Components/Shell/PurchaseHelpers.js"></script>
+    
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateEngine.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyButtons.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateHandlers.js"></script>
+    <script src="/Components/InlineDetails/BaseInlineDetails.js"></script>
+    <script src="/Components/InlineDetails/ActionButtonsControl.js"></script>
+    
+    
+    <script src="/Components/Playback/Controls/PlaybackControl.js"></script>
+    <script src="/Controls/MediaItemThumbnail.js"></script>
+    <script src="/Controls/NowPlaying/NowPlayingMetadata.js"></script>
+    <script src="/Controls/TransportControls/TransportControls.js"></script>
+    <script src="/Components/ImmersiveDetails/SnappedDetails.js"></script>
+    <script src="/Controls/NowPlaying/SnappedNowPlayingMetadata.js"></script>
+</head>
+<body>
+    <div data-ent-templateid="template" data-win-control="WinJS.Binding.Template">
+        <div class="snappedContainer"
+             style="display: -ms-grid; -ms-grid-columns: 320px; -ms-grid-rows: auto 1fr auto 98px;"
+             data-win-control="MS.Entertainment.UI.Framework.UserControl"
+             data-ent-hideanimation="nowPlayingControlsFadeOut"
+             data-ent-showanimation="nowPlayingControlsFadeIn"
+             data-win-bind="winControl.visibility : visible">
+            
+            <div class="snappedBackgroundImage" 
+                 style="-ms-grid-row-span: 4; -ms-grid-row-align: stretch; -ms-grid-column-align: stretch;">
+            </div>
+            
+            <div class="snappedNowPlaying snappedNPAnimation" 
+                 style="display: -ms-grid; -ms-grid-columns: 1fr auto; -ms-grid-rows: auto auto; -ms-grid-row: 0; -ms-grid-row-align: stretch;"
+                 data-win-bind="snappedWithExtraData : detailsVisible MS.Entertainment.Utilities.toggleClassName;">
+                
+                <div class="snappedNowPlayingThumbnail" 
+                     style="-ms-grid-row: 1; -ms-grid-column-span: 2;"
+                     data-ent-member="_nowPlayingThumbnail" 
+                     data-win-bind="removed : videoVisible MS.Entertainment.Utilities.toggleClassNameNegate;">
+                </div>
+                
+                <div class="homeHubNowPlayingTile" style='-ms-grid-row: 1; -ms-grid-column-span: 2;'
+                     data-ent-member="_nowPlaying"
+                     data-win-control="MS.Entertainment.UI.Controls.HomeNowPlayingTileMusicSnapped"
+                     data-win-options="{ isRemoteSession: false }"
+                     data-win-bind="
+                         removed : artVisible MS.Entertainment.Utilities.toggleClassNameNegate;
+                         label: IDS_HOME_NOW_PLAYING MS.Entertainment.Framework.AccUtils.setAriaAttributeFromStaticStringId">
+                </div>
+                
+                <div class="snappedNowPlayingMetadata" 
+                     style="-ms-grid-row: 2; -ms-grid-column: 1;"
+                     data-ent-member="_nowPlayingMetadata"
+                     data-win-options="{ tertiaryTitleVisible: true }"
+                     data-win-control="MS.Entertainment.UI.Controls.SnappedNowPlayingMetadata">
+                </div>
+            </div>
+            
+            <div class="snappedDetails snappedNPAnimation" 
+                 style="-ms-grid-row: 2;"
+                 data-win-control="MS.Entertainment.UI.Controls.SnappedDetails"
+                 data-ent-member="_snappedDetails" 
+                 data-win-automationid="SnappedDetails" 
+                 data-win-bind="snappedWithExtraData : detailsVisible MS.Entertainment.Utilities.toggleClassName;">
+            </div>
+        </div>
+        
+        <div class="snappedContainer snappedIconContainer"
+             style="display: -ms-grid; -ms-grid-columns: 20px 1fr 20px; -ms-grid-rows: 50vh auto 1fr;"
+             data-win-control="MS.Entertainment.UI.Framework.UserControl"
+             data-ent-hideanimation="nowPlayingControlsFadeOut"
+             data-ent-showanimation="nowPlayingControlsFadeIn"
+             data-win-bind="winControl.visibility : appIconVisible;">
+            <div style="-ms-grid-row: 1; -ms-grid-column: 2; -ms-grid-row-align: end; -ms-grid-column-align: center;" 
+                 data-ent-event="click: appIconClick"
+                 data-win-bind="className: currentAppIconClass;">
+            </div>
+            <div class="snappedIconAppTitle text-medium text-weightHeavy" style="-ms-grid-row: 2; -ms-grid-column: 2; -ms-grid-column-align: center;"
+                data-ent-member="appTitleLabel"
+                data-win-control="MS.Entertainment.UI.Controls.Label">
+            </div>
+            <div class="iconButtonHost snappedUnsnapIcon win-ui-dark" style="-ms-grid-row: 3; -ms-grid-column: 2; -ms-grid-row-align: start; -ms-grid-column-align: center;"
+                    data-ent-member="unsnapButton"                
+                    data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                    data-win-bind="winControl.action: _unsnapAction; removeFromDisplay: unsnapButtonVisible MS.Entertainment.Utilities.toggleClassNameNegate;"
+                    data-win-options="{icon: WinJS.UI.AppBarIcon.download}">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

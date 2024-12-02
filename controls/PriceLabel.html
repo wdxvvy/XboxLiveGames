@@ -1,0 +1,22 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <title>Price Label Control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/PriceLabel.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="priceLabelTemplate" data-win-control="WinJS.Binding.Template">
+            <img src="../images/points_inline.png"  alt="pts" data-ent-member="_xboxPointImage" class="priceLabelPoints"/>
+            <div class="priceLabel label"
+                data-ent-member="label"
+                data-win-bind="textContent: displayText; wrap: wrap MS.Entertainment.Utilities.toggleClassName; autoResizeFont: autoResizeFont MS.Entertainment.Utilities.toggleClassName;"></div>
+        </div>
+    </body>
+</html>

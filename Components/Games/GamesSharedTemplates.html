@@ -1,0 +1,803 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Games Shared Templates</title>
+        
+        <script src="/Framework/debug.js"></script>
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/utilities.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Animations/animations.js"></script>
+        <script src="/Animations/GalleryAnimations.js"></script>
+        <script src="/Framework/imageLoader.js"></script>
+        <script src="/Components/Games/GamesSharedTemplatesControls.js"></script>
+        <script src="/Controls/thumbnailButton.js"></script>
+        <script src="/Controls/MediaItemThumbnail.js"></script>
+        <script src="/Controls/galleryThumbnail.js"></script>
+
+        <link rel="Stylesheet" type="text/css" href="/Animations/GalleryAnimations.css" />
+        <link rel="Stylesheet" type="text/css" href="/styles/Galleries.css" />
+        <link rel="Stylesheet" type="text/css" href="/Controls/Controls.css" />
+    </head>
+    <body>
+
+        
+        
+        
+        <div data-ent-templateid="searchGroupHeader" data-win-control="WinJS.Binding.Template">
+            <div class="searchGroupHeader">
+                <div class="searchGroupHeaderText maxLines-two-xSmall" 
+                     data-win-control="MS.Entertainment.Pages.SearchResultsGroupHeader"
+                     data-win-bind="winControl.groupType: title">
+                </div>
+            </div>
+        </div>
+
+        <div data-ent-templateid="searchGroupHeaderInPlace" data-win-control="WinJS.Binding.Template">
+            <div class="searchGroupHeaderInPlace">
+                <div class="searchGroupHeaderInPlaceText label wrap text-weightHeavy"
+                     data-win-control="MS.Entertainment.Pages.SearchResultsGroupHeader"
+                     data-win-bind="winControl.groupType: title">
+                </div>
+            </div>
+        </div>
+
+        <div data-ent-templateid="gamesSearchHCRViewTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="searchHCR gamesThumbnail" data-win-automationid="hcrItem">
+
+                <div class="cardThumbnailButton win-focusable">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                             data-win-control="MS.Entertainment.UI.Shell.ImageControl"
+                             data-ent-showanimation="fadeIn"
+                             data-win-bind="winControl.target: instance WinJS.Binding.oneTime;"
+                             data-win-options="{
+                                    enableDelayInitialization: true,
+                                    loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                    hide: MS.Entertainment.Utilities.doNothing,
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true,
+                                    desiredImageSize: {width: 234, height: 320},
+                                    defaultImagePath: ''}"
+                             width="265" height="360"
+                             style="width: 265px; height: auto;"/>
+                    </div>
+
+                    <div class="content">
+                        <div class="textContainer">
+                            <div class="primaryText specificLineCount text-cardTitle"
+                                 data-win-bind="textContent: name WinJS.Binding.oneTime;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="secondaryText specificLineCount text-metadata"
+                                 data-win-bind="textContent: primaryGenre WinJS.Binding.oneTime;
+                                                removeFromDisplay: primaryGenre MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText specificLineCount text-metadata">
+                                <div data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                     data-win-options="{
+                                        allowAnimations: false,
+                                        preventHideDuringInitialize: true}"
+                                     data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                                <div class="icon smartGlassGem"
+                                     style="-ms-grid-column: 2;"
+                                     data-win-bind="textContent: MS.Entertainment.UI.Icon.smartGlassGem MS.Entertainment.Formatters.formatIcon;
+                                                    removeFromDisplay: hasActivities MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <div data-ent-templateid='gameThumbnailButtonTemplate' data-win-control="WinJS.Binding.Template">
+            <div class="cardThumbnailButton win-focusable"
+                 data-ent-member="thumbnailButton"
+                 data-ent-event="click: clicked; keydown: onKeyDown;">
+                
+                <div class="imageContainer" data-ent-member="imageContainer">
+                    <div data-ent-member="imageHolder" class="imageHolder"></div>
+                </div>
+
+                <div class="content" data-ent-member="content">
+                    <div class="textContainer" data-ent-member="textContainer">
+                        <div class="secondaryText text-metadata" data-ent-member="secondaryTextLabel"
+                             data-win-bind="textContent: secondaryText; removeFromDisplay: secondaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                        <div class="primaryText text-cardTitle" data-ent-member="primaryTextLabel"
+                             data-win-bind="textContent: primaryText; removeFromDisplay: primaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                        <div class="tertiaryText text-metadata" data-ent-member="tertiaryTextLabel" 
+                             data-win-bind="textContent: tertiaryText; removeFromDisplay: tertiaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                        <div class="quaternaryText text-metadata" data-ent-member="quaternaryTextLabel" 
+                             data-win-bind="textContent: quaternaryText; removeFromDisplay: quaternaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                    </div>
+                    <div class="iconContainer"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="dashboardGameTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="gameThumbnail" data-win-bind="className: defaultPlatformType MS.Entertainment.Utilities.appendClassName;">
+                <div class="cardThumbnailButton win-focusable"
+                    data-win-bind="clickDataContext: this WinJS.Binding.oneTime"
+                    role="button">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: instance WinJS.Binding.oneTime"
+                            data-win-options="{
+                                loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                hide: MS.Entertainment.Utilities.doNothing,
+                                allowAnimations: false,
+                                preventHideDuringInitialize: true,
+                                desiredImageSize: { width: 99, height: 135 },
+                                defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="99" height="135" />
+                    </div>
+
+                    <div class="content" data-ent-member="content">
+                        <div class="textContainer">
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: primaryGenre;
+                                                removeFromDisplay: primaryGenre MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="primaryText text-cardTitle"
+                                 data-win-bind="textContent: name;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText text-metadata"
+                                data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                data-win-options="{
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true}"
+                                data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        <div data-ent-templateid="gameFlexHubTemplate" data-win-control="WinJS.Binding.Template">
+            
+            <div class="gameThumbnail" data-win-bind="className: defaultPlatformType MS.Entertainment.Utilities.appendClassName;">
+                <div class="cardThumbnailButton win-focusable"
+                    data-win-bind="clickDataContext: this">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: imageUri WinJS.Binding.oneTime"
+                            data-win-options="{
+                                enableDelayInitialization: true,
+                                loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                hide: MS.Entertainment.Utilities.doNothing,
+                                allowAnimations: false,
+                                preventHideDuringInitialize: true,
+                                desiredImageSize: { width: 99, height: 135 },
+                                defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="99" height="135" />
+                    </div>
+
+                    <div class="content" data-ent-member="content">
+                        <div class="textContainer primaryTextOnTop">
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: flexHubItemDescription;
+                                                removeFromDisplay: flexHubItemDescription MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="primaryText text-cardTitle"
+                                 data-win-bind="textContent: title;
+                                                removeFromDisplay: title MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText text-metadata"
+                                data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                data-win-options="{
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true}"
+                                data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="gameTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="gameThumbnail" data-win-bind="className: defaultPlatformType MS.Entertainment.Utilities.appendClassName;">
+                <div class="cardThumbnailButton win-focusable">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: instance WinJS.Binding.oneTime"
+                            data-win-options="{
+                                enableDelayInitialization: true,
+                                loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                hide: MS.Entertainment.Utilities.doNothing,
+                                allowAnimations: false,
+                                preventHideDuringInitialize: true,
+                                desiredImageSize: { width: 99, height: 135 },
+                                defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="99" height="135" />
+                    </div>
+
+                    <div class="content" data-ent-member="content">
+                        <div class="textContainer">
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: primaryGenre;
+                                                removeFromDisplay: primaryGenre MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="primaryText text-cardTitle"
+                                 data-win-bind="textContent: name;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText text-metadata">
+                                 <div data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                     data-win-options="{
+                                        allowAnimations: false,
+                                        preventHideDuringInitialize: true}"
+                                     data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                                <div class="icon smartGlassGem"
+                                     style="-ms-grid-column: 2;"
+                                     data-win-bind="textContent: MS.Entertainment.UI.Icon.smartGlassGem MS.Entertainment.Formatters.formatIcon;
+                                                    removeFromDisplay: hasActivities MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="gameTemplateNoGenre" data-win-control="WinJS.Binding.Template">
+            <div class="gameThumbnail" data-win-bind="className: defaultPlatformType MS.Entertainment.Utilities.appendClassName;">
+                <div class="cardThumbnailButton win-focusable">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: instance  WinJS.Binding.oneTime"
+                            data-win-options="{
+                               enableDelayInitialization: true,
+                               loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                               hide: MS.Entertainment.Utilities.doNothing,
+                               allowAnimations: false,
+                               preventHideDuringInitialize: true,
+                               desiredImageSize: { width: 99, height: 135 },
+                               defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="99" height="135" />
+                    </div>
+
+                    <div class="content">
+                        <div class="textContainer">
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: defaultPlatformType MS.Entertainment.Formatters.formatGamePlatformString;
+                                                removeFromDisplay: defaultPlatformType MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="primaryText text-cardTitle"
+                                 data-win-bind="textContent: name;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText text-metadata"
+                                data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                data-win-options="{
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true}"
+                                data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="gameTemplateNoGenreNoPlatform" data-win-control="WinJS.Binding.Template">
+            <div class="gameThumbnail" data-win-bind="className: defaultPlatformType MS.Entertainment.Utilities.appendClassName;">
+                <div class="cardThumbnailButton win-focusable">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: instance  WinJS.Binding.oneTime"
+                            data-win-options="{
+                               enableDelayInitialization: true,
+                               loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                               hide: MS.Entertainment.Utilities.doNothing,
+                               allowAnimations: false,
+                               preventHideDuringInitialize: true,
+                               desiredImageSize: { width: 99, height: 135 },
+                               defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="99" height="135" />
+                    </div>
+
+                    <div class="content">
+                        <div class="textContainer">
+                            <div class="primaryText text-cardTitle"
+                                 data-win-bind="textContent: name;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText text-metadata"
+                                data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                data-win-options="{
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true}"
+                                data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="dashboardGameTemplateNoGenre" data-win-control="WinJS.Binding.Template">
+            <div class="gameThumbnail" data-win-bind="className: defaultPlatformType MS.Entertainment.Utilities.appendClassName;">
+                <div class="cardThumbnailButton win-focusable"
+                    data-win-bind="clickDataContext: this WinJS.Binding.oneTime"
+                    role="button">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: instance  WinJS.Binding.oneTime"
+                            data-win-options="{
+                               loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                               hide: MS.Entertainment.Utilities.doNothing,
+                               allowAnimations: false,
+                               preventHideDuringInitialize: true,
+                               desiredImageSize: { width: 99, height: 135 },
+                               defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="99" height="135" />
+                    </div>
+
+                    <div class="content">
+                        <div class="textContainer">
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: defaultPlatformType MS.Entertainment.Formatters.formatGamePlatformString;
+                                                removeFromDisplay: defaultPlatformType MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="primaryText text-cardTitle"
+                                 data-win-bind="textContent: name;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText text-metadata"
+                                data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                data-win-options="{
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true}"
+                                data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <div data-ent-templateid='gameListItemButtonTemplate' data-win-control="WinJS.Binding.Template">
+            <div class="control-immersiveListViewItem"
+                 tabindex="-1"
+                 data-ent-member="thumbnailButton"
+                 data-ent-event="click: clicked; keydown: onKeyDown;">
+
+                <div class="part-imageContainer" data-ent-member="imageContainer" data-win-bind="removeFromDisplay: showImage MS.Entertainment.Utilities.toggleClassNameNegate">
+                    <div data-ent-member="imageHolder" class="part-imageHolder"></div>
+                </div>
+
+                <div class="part-content" data-ent-member="content">
+                    <div class="part-textContainer" data-ent-member="textContainer">
+                        <div class="part-title label text-listItem" data-ent-member="primaryTextLabel"
+                             data-win-control="MS.Entertainment.UI.Controls.Label" 
+                             data-win-bind="winControl.text: primaryText; removeFromDisplay: primaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                        <div class="part-subTitle label text-metadata" data-ent-member="secondaryTextLabel"
+                             data-win-control="MS.Entertainment.UI.Controls.Label" 
+                             data-win-bind="winControl.text: secondaryText; removeFromDisplay: secondaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div data-ent-templateid="gameExtrasItemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="control-immersiveListViewItemContainer">
+                <div data-win-control="MS.Entertainment.UI.Controls.GameListItem" 
+                     data-win-bind="winControl.mediaItem: instance;
+                        winControl.primaryText: title;
+                        winControl.secondaryText: instance MS.Entertainment.Formatters.formatGameExtrasDownloadTypeAndReleaseDate;
+                        winControl.action: action;
+                        winControl.actionParam: actionParam;
+                        winControl.doclick: doclick;"
+                     data-win-options="{containerWidth: '100%',
+                        containerHeight: '60px',
+                        imageContainerWidth: '60px',
+                        imageContainerHeight: '60px',
+                        imageWidth: '60px',
+                        imageHeight: '60px',
+                        contentWidth: '100%',
+                        showImage: false}">
+                </div>
+            </div>
+        </div>
+
+        
+        <div data-ent-templateid="modernGameExtrasItemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="modernGameExtrasMoreItem">
+                <img data-win-control="MS.Entertainment.UI.Shell.ImageControl"
+                     data-win-bind="winControl.target: extraImage.resizeUrl WinJS.Binding.oneTime"
+                     data-win-options="{
+                        show: MS.Entertainment.Utilities.showElementNoAnimation,
+                        hide: MS.Entertainment.Utilities.doNothing,
+                        allowAnimations: false,
+                        desiredImageSize: {width: 50, height: 50},
+                        defaultImagePath: '',
+                        enableDelayInitialization: true}"
+                     class="imageHolder hideFromDisplay" />
+                <div class="modernGameExtrasMoreOverview">
+                    <div class="part-title label text-listItem" 
+                         data-win-bind="textContent: name">
+                    </div>
+                    <div class="subTitle text-subTitle label" 
+                         data-win-bind="textContent: instance MS.Entertainment.Formatters.formatGamePriceAndPurchaseHistory">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div data-ent-templateid="gameRelatedItemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="control-immersiveListViewItemContainer">
+                <div data-win-control="MS.Entertainment.UI.Controls.GameListItem"
+                    data-ent-action="MS.Entertainment.UI.Actions.ActionIdentifiers.showPopOver"
+                    data-win-bind="winControl.mediaItem: instance;
+                        winControl.primaryText: name;
+                        winControl.secondaryText: primaryGenre;
+                        winControl.actionParam.dataContext.data: instance;"
+                    data-win-options="{containerWidth: '100%',
+                        containerHeight: '60px',
+                        imageContainerWidth: '45px',
+                        imageContainerHeight: '60px',
+                        imageHolderWidth: '45px',
+                        imageHolderHeight: '60px',
+                        imageWidth: '45px',
+                        imageHeight: 'auto',
+                        contentWidth: '100%',
+                        actionAutomationId: 'relatedGamePopOver',
+                        actionParam: {
+                            itemConstructor: 'MS.Entertainment.Pages.GameInlineDetails',
+                            dataContext: { data: null, location: MS.Entertainment.Pages.BaseMediaInlineDetails.Location.marketplace }
+                        },
+                        forceInteractive: true,
+                        focusTarget: true,
+                        }">
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        <div data-ent-templateid="gameRelatedMoreItemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="control-immersiveListViewItemContainer">
+                <div data-win-control="MS.Entertainment.UI.Controls.GameListItem"
+                    data-ent-action="MS.Entertainment.UI.Actions.ActionIdentifiers.showPopOver"
+                    data-win-bind="winControl.mediaItem: instance;
+                        winControl.primaryText: name;
+                        winControl.secondaryText: primaryGenre;
+                        winControl.actionParam.dataContext.data: instance;"
+                    data-win-options="{containerWidth: '100%',
+                        containerHeight: '60px',
+                        imageContainerWidth: '45px',
+                        imageContainerHeight: '60px',
+                        imageHolderWidth: '45px',
+                        imageHolderHeight: '60px',
+                        imageWidth: '45px',
+                        imageHeight: 'auto',
+                        contentWidth: '100%',
+                        actionAutomationId: 'relatedMoreItemGamePopOver',
+                        actionParam: {
+                            itemConstructor: 'MS.Entertainment.Pages.GameInlineDetails',
+                            dataContext: { data: null, location: MS.Entertainment.Pages.BaseMediaInlineDetails.Location.marketplace }
+                        },
+                        forceInteractive: true,
+                        focusTarget: false,
+                        }">
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        <div data-ent-templateid="gamesFlexHubBigItemViewTemplate" data-win-control="WinJS.Binding.Template">
+            
+            <div class="gamesFlexHubBigItem gamesThumbnail" data-win-automationid="flexHubBigItem">
+
+                <div class="cardThumbnailButton win-focusable">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                             data-win-control="MS.Entertainment.UI.Shell.ImageControl"
+                             data-ent-showanimation="fadeIn"
+                             data-win-bind="winControl.target: imageUri WinJS.Binding.oneTime;"
+                             data-win-options="{
+                                    enableDelayInitialization: true,
+                                    loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                    hide: MS.Entertainment.Utilities.doNothing,
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true,
+                                    desiredImageSize: {width: 234, height: 320},
+                                    defaultImagePath: ''}"
+                             width="265" height="360"
+                             style="width: 265px; height: auto;"/>
+                    </div>
+
+                    <div class="content">
+                        <div class="textContainer primaryTextOnTop">
+                            <div class="primaryText specificLineCount text-cardTitle"
+                                 data-win-bind="textContent: title WinJS.Binding.oneTime;
+                                                removeFromDisplay: title MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: flexHubItemDescription;
+                                                removeFromDisplay: flexHubItemDescription MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="quaternaryText specificLineCount text-metadata" 
+                                 data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                 data-win-options="{
+                                        allowAnimations: false,
+                                        preventHideDuringInitialize: true}"
+                                 data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+        
+        
+        
+        <div data-ent-templateid="dashboardEngagePanelButton"
+             data-win-control="WinJS.Binding.Template">
+            <div class="actionTile"
+                data-win-control="MS.Entertainment.UI.Controls.GamesEngageIconButton"
+                data-win-bind="winControl.text: title;
+                               winControl.icon: iconInfo.icon;
+                               winControl.iconPressed: iconInfo.iconPressed;
+                               winControl.adornerMode: iconInfo.adornerMode;
+                               winControl.adornerRing: iconInfo.adornerRing;
+                               winControl.isToggleButton: iconInfo.isToggleButton;
+                               winControl.className: iconInfo.className MS.Entertainment.Utilities.appendClassName;
+                               winControl.isDisabled: isEnabled MS.Entertainment.Utilities.toggleBoolean;
+                               winControl.hideDefaultRing: iconInfo.hideDefaultRing;
+                               winControl.automationId: automationId;
+                               winControl.action: this;
+                               winControl.subIcon: iconInfo.subIcon;
+                               winControl.subTextString: subTextString;
+                               winControl.celebration: celebration;
+                               winControl.count: count;
+                               winControl.timeout: timeout;"
+                data-win-options="{tabIndex: MS.Entertainment.Utilities.buttonTabIndex}"
+                data-ent-logicalfocustarget="true">
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="dashboardGameExtraTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="gameThumbnail gameExtra">
+                <div class="cardThumbnailButton win-focusable"
+                    data-win-bind="clickDataContext: this WinJS.Binding.oneTime"
+                    role="button">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: extraImage.resizeUrl WinJS.Binding.oneTime"
+                            data-win-options="{
+                                loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                hide: MS.Entertainment.Utilities.doNothing,
+                                allowAnimations: false,
+                                preventHideDuringInitialize: true,
+                                desiredImageSize: { width: 135, height: 135 },
+                                defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="135" height="135" />
+                    </div>
+
+                    <div class="content" data-ent-member="content">
+                        <div class="textContainer">
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: downloadTypeString;
+                                                removeFromDisplay: downloadTypeString MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="primaryText maxLines-three-small text-cardTitle"
+                                 data-win-bind="textContent: name;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="tertiaryText text-metadata"
+                                 data-win-bind="textContent: parentItemName;
+                                                removeFromDisplay: parentItemName MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="dashboardFullBleedTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="dashboardGridItemContent"
+                data-win-bind="clickDataContext: this WinJS.Binding.oneTime"
+                data-ent-showanimation="fadeIn">
+                <div class="thumbnailButton win-focusable" 
+                    role="button"
+                    aria-atomic="true">                
+                    <div class="imageContainer" 
+                        aria-hidden="true">
+                        
+                        <img class="imageHolder hideFromDisplay"
+                                data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                                data-win-bind="winControl.target: imagePrimaryUrl WinJS.Binding.oneTime"
+                                data-win-options="{
+                                        loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                        show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                        hide: MS.Entertainment.Utilities.doNothing,
+                                        allowAnimations: false,
+                                        preventHideDuringInitialize: true,
+                                        desiredImageSize: {width: 293}}"
+                                height="165" width="293"/>
+                    </div>
+                    
+                    <div class="content">
+                        <div class="textContainer">
+                            <div class="primaryTextBg"></div>
+                            <div class="primaryText label removeFromDisplay text-cardTitle"
+                                 data-win-bind="textContent: primaryText;
+                                                removeFromDisplay: primaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="secondaryText label removeFromDisplay text-metadata"
+                                 data-win-bind="textContent: secondaryText;
+                                                removeFromDisplay: secondaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="icon dashboardTileIcon removeFromDisplay icon-xxSmall"
+                                 data-win-bind="textContent: MS.Entertainment.UI.Icon.dpadRight MS.Entertainment.Formatters.formatIcon;
+                                                removeFromDisplay: isFlexHub MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                            <div class="icon dashboardTileIcon gameIcon removeFromDisplay icon-xxSmall"
+                                 data-win-bind="textContent: icon;
+                                                removeFromDisplay: icon MS.Entertainment.Utilities.toggleClassNameNegate;"></div>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div data-ent-templateid="dashboardBoxArtTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="gameThumbnail">
+                <div class="cardThumbnailButton win-focusable"
+                    data-win-bind="clickDataContext: this WinJS.Binding.oneTime"
+                    role="button">
+
+                    <div class="imageContainer">
+                        <img class="imageHolder hideFromDisplay"
+                            data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: instance.imageUri"
+                            data-win-options="{
+                                loadDelay: MS.Entertainment.UI.Controls.GalleryControl.maxItemRenderTime,
+                                hide: MS.Entertainment.Utilities.doNothing,
+                                allowAnimations: false,
+                                preventHideDuringInitialize: true,
+                                desiredImageSize: { width: 99, height: 135 },
+                                defaultImagePath: '' }"
+                            data-ent-showanimation="fadeIn"
+                            width="99" height="135" />
+                    </div>
+
+                    <div class="content" data-ent-member="content">
+                        <div class="textContainer">
+                            <div class="secondaryText text-metadata"
+                                 data-win-bind="textContent: defaultPlatformType MS.Entertainment.Formatters.formatGamePlatformString;
+                                                removeFromDisplay: defaultPlatformType MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="primaryText maxLines-three-small text-cardTitle"
+                                 data-win-bind="textContent: name;
+                                                removeFromDisplay: name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                            <div class="tertiaryText text-metadata"
+                                 data-win-bind="textContent: String.id.IDS_SOCIAL_ENGAGE_FEATURED_LABEL MS.Entertainment.Formatters.formatStringId;"></div>
+                            <div class="quaternaryText text-metadata"
+                                data-win-control="MS.Entertainment.Pages.ContentNotificationShortTextTileItem"
+                                data-win-options="{
+                                    allowAnimations: false,
+                                    preventHideDuringInitialize: true}"
+                                data-win-bind="winControl.contentNotifications: contentNotifications WinJS.Binding.oneTime;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

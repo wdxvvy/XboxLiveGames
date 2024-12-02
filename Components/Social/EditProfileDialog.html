@@ -1,0 +1,124 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/settings.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/social.css" />
+        <title>Edit Profile Dialog Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/Label.js"></script>
+        <script src="/Components/Social/EditProfileDialog.js"></script>
+        <script src="/Controls/LoadingControl.js"></script>
+        <script src="/Controls/EditBox.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="editProfileDialogTemplate" data-win-control="WinJS.Binding.Template">
+
+            <div class="editProfileErrorContainer">
+                
+                <div class="icon inlineGlyph label"
+                     data-ent-member="_errorIcon"
+                     data-win-control="MS.Entertainment.UI.Controls.Label">
+                </div>
+                
+                <div class="label"
+                     data-ent-member="_errorMessage"
+                     style="-ms-grid-column: 3; -ms-grid-row-align: center;"
+                     data-win-control="MS.Entertainment.UI.Controls.Label">
+                </div>
+            </div>
+
+            
+            <div class="webLinkContainer">
+                <a data-win-bind="textContent: changeGamertagLinkText"
+                    data-ent-member="_changeGamerTagLink"
+                    data-ent-event="click: _onChangeGamertag">
+                </a>
+            </div>
+
+            
+            <div class="editProfileEditBoxLabel label text-small"
+                 data-win-control="MS.Entertainment.UI.Controls.Label"
+                 data-win-options="{stringId:String.id.IDS_SOCIAL_PROFILE_NAME}">
+            </div>
+
+            <div class="editProfileEditBox"
+                 data-ent-member="_nameEditBox"
+                 data-win-control="MS.Entertainment.UI.Controls.EditBox"
+                 data-win-automationid="editProfileNameEditbox"
+                 data-win-options="{editType: MS.Entertainment.UI.Controls.EditBox.EditTypes.text, 
+                                    maxLength: 129, 
+                                    rows: 1, columns: 60, 
+                                    watermarkText: '', 
+                                    accessibleNameStringId:String.id.IDS_SOCIAL_PROFILE_NAME,
+                                    showRemainingChars: true}">
+            </div>
+
+            
+            <div class="editProfileEditBoxLabel label text-small"
+                 data-win-control="MS.Entertainment.UI.Controls.Label"
+                 data-win-options="{stringId:String.id.IDS_SOCIAL_PROFILE_MOTTO}">
+            </div>
+
+            <div class="editProfileEditBox"
+                 data-ent-member="_mottoEditBox"
+                 data-win-control="MS.Entertainment.UI.Controls.EditBox"
+                 data-win-automationid="editProfileMottoEditbox"
+                 data-win-options="{editType: MS.Entertainment.UI.Controls.EditBox.EditTypes.text, 
+                                    maxLength: 21, 
+                                    rows: 1, columns: 200, 
+                                    watermarkText: '', 
+                                    accessibleNameStringId:String.id.IDS_SOCIAL_PROFILE_MOTTO,
+                                    showRemainingChars: true}">
+            </div>
+
+            
+            <div class="editProfileEditBoxLabel label text-small"
+                 data-win-control="MS.Entertainment.UI.Controls.Label"
+                 data-win-options="{stringId:String.id.IDS_SOCIAL_PROFILE_LOCATION}">
+            </div>
+
+            <div class="editProfileEditBox"
+                 data-ent-member="_locationEditBox"
+                 data-win-control="MS.Entertainment.UI.Controls.EditBox"
+                 data-win-automationid="editProfileLocationEditbox"
+                 data-win-options="{editType: MS.Entertainment.UI.Controls.EditBox.EditTypes.text, 
+                                    maxLength: 40, 
+                                    rows: 1, columns: 60, 
+                                    watermarkText: '', 
+                                    accessibleNameStringId:String.id.IDS_SOCIAL_PROFILE_LOCATION,
+                                    showRemainingChars: true}">
+            </div>
+
+            
+            <div class="editProfileEditBoxLabel label text-small"
+                 data-win-control="MS.Entertainment.UI.Controls.Label"
+                 data-win-options="{stringId:String.id.IDS_SOCIAL_PROFILE_BIO}">
+            </div>
+
+            <div class="editProfileEditBox"
+                 data-ent-member="_bioEditBox"
+                 data-win-control="MS.Entertainment.UI.Controls.EditBox"
+                 data-win-automationid="editProfileBioEditbox"
+                 data-win-options="{editType: MS.Entertainment.UI.Controls.EditBox.EditTypes.multiLine, 
+                                    maxLength: 499, 
+                                    rows: 3, columns: 60, 
+                                    watermarkText: '', 
+                                    accessibleNameStringId:String.id.IDS_SOCIAL_PROFILE_BIO,
+                                    showRemainingChars: true}">
+            </div>
+
+            
+            <progress data-ent-member="_waitCursor"
+                      class="removeOverlayWaitCursor"
+                      data-win-control="MS.Entertainment.UI.Controls.LoadingControl"
+                      data-win-options="{width: '60px', height: '60px'}"></progress>
+
+        </div>
+    </body>
+</html>

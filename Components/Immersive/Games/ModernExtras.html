@@ -1,0 +1,63 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+    <title>Immersive Extras</title>
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Components/Immersive/Games/ModernExtras.js"></script>
+    <script src="/Controls/Label.js"></script>
+</head>
+<body>
+    <div data-ent-templateid="ModernImmersiveExtras" data-win-control="WinJS.Binding.Template">
+        <div class="modernExtrasOverview">
+            <div data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                 data-win-bind="winControl.dataSource: dataContext.newExtras;"
+                 data-ent-event="click: onItemClicked; keydown: onKeyDown;"
+                 data-win-options="{
+                    itemTemplate: 'Components/Immersive/Games/ModernExtras.html#modernImmersiveExtrasTypeTemplate'}"
+                 data-win-automationid="extrasTypesList">
+            </div>
+        </div>
+    </div>
+
+    <div data-ent-templateid="modernImmersiveExtrasTypeTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="modernExtraOverviewItem"
+             data-win-bind="clickDataContext: instance WinJS.Binding.oneTime">
+            <div class="modernExtraContent showKeyboardFocus acc-keyboardFocusTarget" tabindex="0" role="button">
+                <hr class="listDivider" />
+                <div class="modernExtraOverviewThumnail">
+                    <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                            data-win-bind="winControl.target: extraImage.resizeUrl WinJS.Binding.oneTime"
+                            data-win-options="{
+                                show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                hide: MS.Entertainment.Utilities.doNothing,
+                                allowAnimations: false,
+                                desiredImageSize: {width: 100, height: 100},
+                                defaultImagePath: ''}"
+                            class="imageHolder hideFromDisplay" />
+                </div>
+                <div class="modernExtraOverviewInfo">
+                    <div class="part-title label text-listItem" 
+                         data-win-bind="textContent: name">
+                    </div>
+                    <div class="subTitle text-subTitle label" 
+                         data-win-bind="textContent: instance MS.Entertainment.Formatters.formatGamePriceAndPurchaseHistory">
+                    </div>
+                </div>
+                <div class="modernExtraContentDescription editorialContent subTitle text-subTitle label"
+                    data-win-control="MS.Entertainment.UI.Controls.Label"
+                    data-win-bind="winControl.text: description; removeFromDisplay: description MS.Entertainment.Utilities.toggleClassNameNegate"
+                    data-win-options="{
+                        wrap: true, 
+                        numberOfLines: 4,
+                        clip: true
+                     }">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

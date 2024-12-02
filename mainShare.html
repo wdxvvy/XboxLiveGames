@@ -1,0 +1,39 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script src="/WinJS/base.js"></script>
+        <script src="/WinJS/ui.js"></script>
+
+        
+        <script src="/Framework/debug.js"></script>
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/utilities.js"></script>
+        <script src="/Framework/shell.js"></script>
+        <script src="/Framework/corefx.js"></script>
+
+        
+        <script src="/Framework/serviceLocator.js"></script>
+
+        
+        <script src="/ViewModels/social/shareFactory.js"></script>
+        <script src="/ViewModels/social/shareReceiver.js"></script>
+        <script src="/ViewModels/social/shareHost.js"></script>
+
+        
+        
+        <script>
+            MS.Entertainment.ServiceLocator.getService(MS.Entertainment.Services.shareReceiver).initialize();
+
+            window.addEventListener("DOMContentLoaded", function () {
+                MS.Entertainment.Utilities.loadHtmlPage("Components/Social/shareDialog.html", "shareDialogContainer");
+            }, false);
+        </script>
+    </head>
+
+    <body>
+        <div id="shareDialogContainer" class="shareDialog">
+        </div>
+    </body>
+</html>

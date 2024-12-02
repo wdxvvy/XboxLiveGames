@@ -1,0 +1,108 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Find Friends template</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Controls/Editbox.js"></script>
+    <script src="/Controls/LoadingControl.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/friendsGallery.js"></script>
+    <script src="/Components/Social/FindFriends.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../Styles/Images.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+</head>
+
+<body>
+
+    <div data-ent-templateid="findFriendsFlyoutTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div class="findFriendLabel label wrap text-small"
+            disabled="true"
+            data-win-bind="textContent: String.id.IDS_SOCIAL_FIND_FRIEND_LABEL MS.Entertainment.Formatters.formatStringId"
+            tabindex="-1">
+        </div>
+
+        
+        <div class="findFriendSearchBox"
+            data-ent-member="searchBox"
+            data-win-control="MS.Entertainment.UI.Controls.EditBox"
+            data-win-automationid="findFriendSearchBox"
+            data-ent-event="keydown: onSearchBoxKeyDown"
+            data-win-options="{
+                        editType: MS.Entertainment.UI.Controls.EditBox.EditTypes.text, 
+                        maxLength: 15,
+                        rows: 1, columns: 15,
+                        watermarkStringId: String.id.IDS_SOCIAL_FIND_FRIEND_PLACEHOLDER,
+                        autoFocus: true,
+                        selectOnFocus: false}">
+        </div>
+
+        
+        <div class="findFriendIconButton acc-keyboardFocusTarget"
+            data-ent-event="click: onSearchButtonClick"
+            data-win-control="MS.Entertainment.UI.Controls.IconButton"
+            data-win-bind="removeFromDisplay: showSearchProgress MS.Entertainment.Utilities.toggleClassName"
+            data-win-options="{
+                icon: WinJS.UI.AppBarIcon.find,
+                stringId: String.id.IDS_SOCIAL_FIND_FRIEND_BUTTON_LABEL,
+                showRemainingChars: true,
+                tabIndex: 0}">
+        </div>
+
+        
+        <div class="findFriendSearchProgressContainer"
+            data-win-bind="hideFromDisplay: showSearchProgress MS.Entertainment.Utilities.toggleClassNameNegate">
+
+            
+            <progress data-ent-member="waitCursor"
+                class="findFriendWaitCursor"
+                style="-ms-grid-column: 1;"
+                data-win-control="MS.Entertainment.UI.Controls.LoadingControl"
+                data-win-options="{width: '26px', height: '26px'}">
+            </progress>
+
+            
+            <div class="findFriendSearchingLabel label"
+                style="-ms-grid-column: 2"
+                data-win-bind="textContent: String.id.IDS_SOCIAL_FIND_FRIEND_SEARCHING_TEXT MS.Entertainment.Formatters.formatStringId">
+            </div>
+        </div>
+    </div>
+
+    <div data-ent-templateid="findFriendsButtonTemplate"  data-win-control="WinJS.Binding.Template">
+        <button
+            class="bigFindFriendButton acc-keyboardFocusTarget"
+            data-ent-event="click: onButtonClick"
+            data-ent-member="button">
+            <img class="findFriendButtonImage" src="/images/green_add_button.png" />
+        </button>
+    </div>
+
+</body>
+</html>

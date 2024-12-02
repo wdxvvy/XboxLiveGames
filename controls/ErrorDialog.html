@@ -1,0 +1,56 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <title>Error Dialog Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/utilities.js"></script>
+
+        
+        <script src="/Framework/shell.js"></script>
+        <script src="/Framework/corefx.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="errorDialogTemplate" data-win-control="WinJS.Binding.Template">
+
+            <div class="errorDialogContent">
+
+                
+                <span class="errorDescription"
+                      style="-ms-grid-row: 1"
+                      data-win-bind ="innerText: description"
+                      data-win-automationid="wecErrorDialogDescription"></span>
+
+                
+                <div class="webLinkContainer"
+                     style="-ms-grid-row: 2">
+                    <a data-win-bind="textContent: webLinkText"
+                       data-ent-event="click: onWebLinkClick"
+                       data-win-automationid="wecErrorDialogLink"
+                       target="_blank"></a>
+                </div>
+
+                
+                <button style="-ms-grid-row: 3"
+                   class="errorFeedbackLink" type="button"
+                   data-win-bind="textContent: feedbackLinkText"
+                   data-ent-event="click: onFeedbackLinkClick"
+                   data-win-automationid="wecErrorDialogFeedbackLink"></button>
+
+                
+                <div style="-ms-grid-row: 4"
+                     class="errorDialogErrorCode"
+                     data-ent-member="errorDialogErrorCode">
+                    <div data-win-bind="textContent: errorCode"
+                         data-win-automationid="wecErrorDialogErrorCode"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

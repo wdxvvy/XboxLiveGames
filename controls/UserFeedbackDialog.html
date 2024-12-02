@@ -1,0 +1,116 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/settings.css" />
+        <title>User Feedback Dialog Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/Label.js"></script>
+        <script src="/Controls/EditBox.js"></script>
+        <script src="/Controls/UserFeedbackDialog.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="userFeedbackDialogTemplate" data-win-control="WinJS.Binding.Template">
+            <div data-ent-member="_contentContainer" class="settingsFeedbackContent">
+                <div class="settingsPanelContent label"
+                     data-ent-member="_descriptionLabel" 
+                     data-win-control="MS.Entertainment.UI.Controls.Label"
+                     data-win-options="{wrap:true}">
+                </div>
+                <div class="settingsPanelContent label"
+                     data-ent-member="_optionDescriptionLabel"
+                     data-win-control="MS.Entertainment.UI.Controls.Label"
+                     data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_OPTION_DESCRIPTION, wrap:true}">
+                </div>
+                <div data-ent-member="_optionsContainer" class="settingsFeedbackOptions">
+                    <div >
+                        <label>
+                            <input type="radio" class="feedbackRadioButton" name="feedbackType" value="Like" data-ent-member="_like" data-ent-event="change: _onIssueSelect" /> 
+                            <span class="settingsFeedbackOptionLabel label font-weightBold"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_OPTION_LIKE}">
+                            </span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" class="feedbackRadioButton" name="feedbackType" value="Dislike" data-ent-member="_dislike" data-ent-event="change: _onIssueSelect" />
+                            <span class="settingsFeedbackOptionLabel label font-weightBold"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_OPTION_DISLIKE}">
+                            </span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" class="feedbackRadioButton" name="feedbackType" value="App Issue" data-ent-member="_appIssue" data-ent-event="change: _onIssueSelect" />
+                            <span class="settingsFeedbackOptionLabel label font-weightBold"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_OPTION_APPISSUE}">
+                            </span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" class="feedbackRadioButton" name="feedbackType" value="Content Issue" data-ent-member="_contentIssue" data-ent-event="change: _onIssueSelect" />
+                            <span class="settingsFeedbackOptionLabel label font-weightBold"
+                                data-win-control="MS.Entertainment.UI.Controls.Label"
+                                data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_OPTION_CONTENTISSUE}">
+                            </span>
+                        </label>
+                        <select class="hidden settingsFeedbackSelect" data-ent-member="_contentIssueSelector">
+                            <option value="Media Playback" data-ent-member="_playbackOption">
+                            </option>
+                            <option value="Content Info" data-ent-member="_contentOption">
+                            </option>
+                        </select>
+                    </div>              
+                </div>
+                <div class="settingsPanelContent label"
+                        data-ent-member="_commentDescription"
+                        data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_COMMENT_DESCRIPTION}">
+                </div>
+                <div class="settingsFeedbackCommentBox"
+                    data-ent-member="_editControl"
+                    data-win-control="MS.Entertainment.UI.Controls.EditBox"
+                    data-win-options="{editType: MS.Entertainment.UI.Controls.EditBox.EditTypes.multiLine, 
+                                       maxLength: 1024, rows: 6, columns: 60, watermarkText: '', 
+                                       showRemainingChars: true, accessibleNameStringId:String.id.IDS_SETTINGS_FEEDBACK_COMMENT_DESCRIPTION}">
+                </div>
+                <div data-ent-member="_bottomContainer" class="settingsFeedbackBottom">
+                    <a class="settingsWebLinks settingsWebLinkText label text-xSmall text-weightBold" 
+                        href="http://go.microsoft.com/fwlink/?LinkId=103433"
+                        data-win-automationid="feedbackPrivacyLink" 
+                        data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{stringId:String.id.IDS_SETTINGS_ABOUT_PRIVACY_STATEMENT}">
+                    </a>
+                </div>
+                <div class="feedbackButtons win-ui-light" data-ent-member="_feedbackButtonContainers">
+                    <button class="dialogButton disabled defaultButton acc-keyboardFocusTarget" type="button" data-ent-event="click: _onSubmit" disabled="disabled" data-ent-member="_submitButton">
+                        <span class="label"
+                            data-win-control="MS.Entertainment.UI.Controls.Label"
+                            data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_SUBMIT}">
+                        </span>
+                    </button>
+                    <button class="dialogButton acc-keyboardFocusTarget" type="button" data-ent-event="click: _onCancel">
+                        <span class="label"
+                            data-win-control="MS.Entertainment.UI.Controls.Label"
+                            data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_CANCEL}">
+                        </span>
+                    </button>
+                </div>  
+                <div class="settingsPanelContent feedbackConnectionError hidden label"
+                        data-ent-member="_connectionError"
+                        data-win-control="MS.Entertainment.UI.Controls.Label"
+                        data-win-options="{stringId:String.id.IDS_SETTINGS_FEEDBACK_NOCONNECTION, wrap:true}">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

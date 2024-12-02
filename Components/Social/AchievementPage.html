@@ -1,0 +1,58 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Social Page</title>
+    <link rel="stylesheet" type="text/css" href="../../Controls/controls.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+
+    
+    <script src="/Controls/galleryGrouper.js"></script>
+
+    
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/achievementGallery.js"></script>
+
+</head>
+
+<body>
+    <div data-ent-templateid="achievementGalleryTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="achievementPageContainer" 
+            data-win-control="MS.Entertainment.Social.AchievementGallery"
+            data-win-bind="winControl.userModel: dataContext.userModel;
+                winControl.primaryModifiers: dataContext.primaryModifier;
+                winControl.secondaryModifiers: dataContext.secondaryModifier;
+                winControl.selectAchievement: dataContext.selectAchievement">
+        </div>
+    </div>
+</body>
+
+</html>

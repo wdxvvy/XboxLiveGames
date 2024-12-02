@@ -1,0 +1,99 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Action Buttons Control</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Framework/formatters.js"></script>
+
+    
+    <script src="/Framework/actionIdentifiers.js"></script>
+    <script src="/Framework/action.js"></script>
+    <script src="/Framework/navigateAction.js"></script>
+    <script src="/Framework/externalNavigateAction.js"></script>
+    <script src="/Framework/disabled.js"></script>
+
+    <script src="/Controls/listControls.js"></script>
+    <script src="/Controls/IconButton.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/Controls/Controls.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/InlineDetails.css" />
+</head>
+<body>
+    <div data-ent-templateid="actionButtonsControlTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="hideFromDisplay verticalBox"
+             data-ent-member="_actionButtons"
+             data-win-control="MS.Entertainment.Pages.ActionButtonsListControl"
+             data-win-bind="winControl.dataSource: currentButtons; winControl.applyItemTemplate: applyItemTemplate"
+             data-win-options="{selectTemplate: MS.Entertainment.ViewModels.SmartBuyButtons.smartBuyButtonTemplateSelector}">
+        </div>
+    </div>
+
+    <div data-ent-templateid="actionButtonTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="iconButtonHost"
+            data-win-control="MS.Entertainment.UI.Controls.IconButton"
+            data-win-bind="
+                winControl.text: title; 
+                winControl.icon: iconInfo.icon;
+                winControl.iconPressed: iconInfo.iconPressed;
+                winControl.adornerMode: iconInfo.adornerMode;
+                winControl.adornerRing: iconInfo.adornerRing;
+                winControl.isToggleButton: iconInfo.isToggleButton;
+                winControl.className: iconInfo.className MS.Entertainment.Utilities.appendClassName; 
+                winControl.isDisabled: isEnabled MS.Entertainment.Utilities.toggleBoolean;
+                winControl.tabIndex: tabIndex;
+                winControl.hideDefaultRing: iconInfo.hideDefaultRing;
+                winControl.automationId: automationId;
+                winControl.action: this"> 
+        </div>
+    </div>
+
+    <div data-ent-templateid="actionButtonTemplateNoAnimations" data-win-control="WinJS.Binding.Template">
+        <div class="iconButtonHost"
+            data-win-control="MS.Entertainment.UI.Controls.IconButton"
+            data-win-options="{allowAnimations: false}"
+            data-win-bind="
+                winControl.text: title; 
+                winControl.icon: iconInfo.icon;
+                winControl.iconPressed: iconInfo.iconPressed;
+                winControl.adornerMode: iconInfo.adornerMode;
+                winControl.adornerRing: iconInfo.adornerRing;
+                winControl.isToggleButton: iconInfo.isToggleButton;
+                winControl.className: iconInfo.className MS.Entertainment.Utilities.appendClassName; 
+                winControl.isDisabled: isEnabled MS.Entertainment.Utilities.toggleBoolean;
+                winControl.tabIndex: tabIndex;
+                winControl.hideDefaultRing: iconInfo.hideDefaultRing;
+                winControl.automationId: automationId;
+                winControl.action: this"> 
+        </div>
+    </div>
+
+    <div data-ent-templateid="actionButtonTemplateWithSubtext" data-win-control="WinJS.Binding.Template">
+        <div class="iconButtonHost iconButtonWithSubtext"
+            data-win-control="MS.Entertainment.UI.Controls.IconButtonTwoLine"
+            data-win-bind="
+                winControl.text: title; 
+                winControl.subTextString: subTitle; 
+                winControl.icon: iconInfo.icon;
+                winControl.iconPressed: iconInfo.iconPressed;
+                winControl.adornerMode: iconInfo.adornerMode;
+                winControl.adornerRing: iconInfo.adornerRing;
+                winControl.isToggleButton: iconInfo.isToggleButton;
+                winControl.className: iconInfo.className MS.Entertainment.Utilities.appendClassName; 
+                winControl.doClick: execute; 
+                winControl.isDisabled: isEnabled MS.Entertainment.Utilities.toggleBoolean;
+                winControl.tabIndex: tabIndex;
+                winControl.hideDefaultRing: iconInfo.hideDefaultRing;
+                winControl.automationId: automationId"> 
+        </div>
+    </div>
+
+</body>
+</html>

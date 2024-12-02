@@ -1,0 +1,181 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Games Inline Details</title>
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Animations/animations.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+    <script src="/Framework/formatters.js"></script>
+    <script src="/Framework/disabled.js"></script>
+
+    
+    <script src="/Controls/PriceLabel.js"></script>
+    <script src="/Controls/WebHostExperience.js"></script>
+    <script src="/Components/Games/PurchaseGame.js"></script>
+    <script src="/Components/Marketplace.js"></script>
+    <script src="/Components/Shell/PurchaseHelpers.js"></script>
+    <script src="/ViewModels/MediaItemModel.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateEngine.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyButtons.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateHandlers.js"></script>
+    <script src="/Components/InlineDetails/ActionButtonsControl.js"></script>
+    <script src="/Components/InlineDetails/BaseInlineDetails.js"></script>
+    <script src="/Components/InlineDetails/GameInlineDetails.js"></script>
+    <script src="/Components/Shell/ContentNotificationList.js"></script>
+    <script src="/Components/Social/Beacon.js"></script>
+    <script src="/Components/Social/LeaderboardRank.js"></script>
+
+    
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    <script src="/Controls/ArcProgress.js" ></script>
+    <script src="/Controls/Label.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../../Controls/Controls.css" />
+    <link rel="stylesheet" type="text/css" href="../../Animations/Animations.css" />
+    <link rel="stylesheet" type="text/css" href="../../Animations/GalleryAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/InlineDetails.css" />
+</head>
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="gameInlineDetailsTemplate"
+         data-win-control="WinJS.Binding.Template"
+         data-win-automationid="gameInlineDetailsTemplate">
+        <div class="popOverContentContainer">
+
+            
+            <div class="loadingContainer hideFromDisplay" data-ent-member="loadingContainer"
+                data-ent-hideanimation="inlineDetailsFadeOut">
+                <progress class="win-ring win-medium"></progress>
+            </div>
+
+            <div class="popOver game" data-ent-member="fragmentContainer">
+                <div class="leftColumn">
+                    <div class="imageContainer">
+                        <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                             data-win-bind="winControl.target: media.imageUri"
+                             data-win-options="{
+                                    show: MS.Entertainment.Utilities.showElementNoAnimation,
+                                    hide: MS.Entertainment.Utilities.doNothing,
+                                    allowAnimations: false,
+                                    desiredImageSize: {width: 215, height: 294},
+                                    defaultImagePath: ''}"
+                             class="imageHolder hideFromDisplay" 
+                             width="215" height="294" />
+                    </div>
+                    <div class="actions"
+                         data-win-control="MS.Entertainment.Pages.ActionButtonsControl"
+                         data-win-bind="winControl.buttons: smartBuyStateEngine.currentButtons"
+                         data-win-options="{defaultButtonClass: 'iconActionButton'}">
+                    </div>
+                </div>
+                <div class="rightColumn">
+                    <div class="titleContainer"
+                         data-ent-showanimation="enterContent"
+                         data-ent-enteranimation="enterContent">
+                        <div class="title label text-popoverTitle" 
+                             data-win-bind="textContent: media.name">
+                        </div>
+                        <div class="secondaryText label removeFromDisplay text-xSmall" 
+                             data-win-bind="textContent: media.secondaryText;
+                                            removeFromDisplay: media.secondaryText MS.Entertainment.Utilities.toggleClassNameOnEmptyString;">
+                        </div>
+                        <div class="subTitle label text-metadata"
+                             data-win-bind="textContent: detailString;">
+                        </div>
+                        <div class="subTitle label text-metadata" 
+                             data-win-bind="textContent: media.defaultPlatformType MS.Entertainment.Formatters.formatGamePlatformString;">
+                        </div>
+                    </div>
+
+                    <div class="bodyContainer"
+                         data-ent-showanimation="enterContent"
+                         data-ent-enteranimation="enterContent">
+
+                        <div class="bodyContent editorialContent label wrap removeFromDisplay"
+                             data-win-bind="textContent: String.id.IDS_GAMES_ARCHITECTURE_UNAVAILABLE MS.Entertainment.Formatters.formatStringId
+                                            removeFromDisplay: media.supportsCurrentArchitecture MS.Entertainment.Utilities.toggleClassName">
+                        </div>
+
+                        <div data-win-bind="removeFromDisplay: isSignedIn MS.Entertainment.Utilities.toggleClassNameNegate">
+                            <div class="removeFromDisplay popOverProgressContainer acc-keyboardFocusTarget"
+                                 data-win-bind="removeFromDisplay: hasBeenPlayed MS.Entertainment.Utilities.toggleClassNameNegate"
+                                 data-ent-event="click: onClickProgressContainer; keydown: onKeyDownProgressContainer"
+                                 tabindex="0">
+                                <div class="gameDetailsProgressContainer">
+                                    <div class="arcContainer gameDetailsArcContainer">
+                                        <div id="arcProgressControl"
+                                            data-win-control="MS.Entertainment.UI.Controls.ArcProgress"
+                                            data-win-options="{ strokeThickness: 30, foregroundColor: '#008A00', backgroundColor: 'rgb(196, 196, 196)' }"
+                                            data-win-bind="winControl.progress: percentageProgressNumber">
+                                        </div>
+                                    </div>
+                                    <div class="progressContainer">
+                                        <div class="textContainer">
+                                            <div class="progressTextPercentage label text-xxLarge text-weightLight"
+                                                data-win-bind="textContent: percentageProgress"></div>
+                                            <div class="listHeader label text-listTitle"
+                                                data-win-bind="textContent: String.id.IDS_DETAILS_GAME_ACHIEVEMENTS_YOUR_PROG MS.Entertainment.Formatters.formatStringId;">
+                                            </div>
+                                            <div class="progressTextCount text-metadata text-breakWord"
+                                                data-win-bind="textContent: percentageProgressString"></div>
+                                            <div class="gamerscoreProgress">
+                                                <div class="gamerscoreProgressText icon inlineGlyphSmall"
+                                                     data-win-options="{ disableLayoutPass: true }"
+                                                     data-win-bind="textContent: MS.Entertainment.UI.Icon.inlineGamerScore MS.Entertainment.Formatters.formatIcon;"></div>
+                                                <div class="progressTextCount label text-metadata"
+                                                     data-win-bind="textContent: gamerscoreProgressString"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div data-win-control="MS.Entertainment.Social.LeaderboardRank"
+                                 class="acc-keyboardFocusTarget ui-expandable-collapsed"
+                                 data-ent-member="leaderboardRank"
+                                 data-win-bind="removeFromDisplay: media.isGame MS.Entertainment.Utilities.toggleClassNameNegate;"
+                                 data-ent-event="click: onClickLeaderboardRank; keydown: onKeyDownLeaderboardRank"
+                                 tabindex="0">
+                            </div>
+
+                            <div class="contentNotificationListItems ui-expandable-collapsed"
+                                 data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                                 data-ent-member="notifications"
+                                 data-win-options="{itemTemplate: 'Components/Shell/ContentNotificationList.html#contentNotificationListImagesItemTemplate'}"
+                                 data-win-automationid="contentNotificationsList">
+                            </div>
+                        </div>
+
+                        <div class="bodyContent editorialContent label wrap text-bodyContent"
+                             data-ent-member="descriptionText"
+                             data-win-bind="textContent: media.description MS.Entertainment.Formatters.formatStringOrEmpty;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="panelFragmentLoading panelFragmentContainer gameInlineDetailsPanelFragmentContainer hideFromDisplay"
+                    data-ent-member="failedControl">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

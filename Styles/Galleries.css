@@ -1,0 +1,451 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+.galleryHubStrip .panelShadowImage
+{
+    bottom: -50px
+}
+.win-semanticzoom
+{
+    height: 100%;
+    width: 100%
+}
+html[dir=ltr] .win-semanticzoom-button-location
+{
+    right: 41px
+}
+html[dir=rtl] .win-semanticzoom-button-location
+{
+    left: 41px
+}
+.musicPage .win-listview, .inboxPage .win-listview, .musicPage .marketplaceGallery .win-listview, .collectionPlaylistGallery .win-listview, .collectionMusicGalleryView, .collectionMessageGalleryView, .galleryViewHubPanel .win-listview, .detailsTVGallery .win-listview, .detailsAlbumsGallery .win-listview, .detailsGamesGallery .win-listview, .nowPlayingPlaylistGalleryView>.win-listview, .nowPlayingPlaylistGalleryViewSnapped>.win-listview
+{
+    height: 100%;
+    width: 100%
+}
+.collectionVideoGallery, .collectionGamesGallery, .marketplaceGallery, .marketplaceGalleryView, .collectionVideoGallery .win-listview, .marketplaceGallery .win-listview, .collectionGamesGallery .win-listview
+{
+    height: 100%;
+    width: 100vw
+}
+.galleryViewHubPanel .win-listview
+{
+    height: 100%;
+    width: calc(100% + 20px)
+}
+.detailsAlbumsGallery .inlineDetailsAlbumContent .contentNotificationListWrapper, .detailsAlbumsGallery .inlineDetailsOverviewActionBlock .win-template
+{
+    height: auto
+}
+.detailsTVGallery, .detailsAlbumsGallery
+{
+    margin-top: 6px;
+    height: calc(100vh - 6px)
+}
+.detailsGamesGallery {
+    height: calc(100vh - 237px);
+    width: calc(100vw - 135px);
+    margin-top: 50px
+}
+.friendsGallery>.win-listview, .activityGallery>.win-listview, .achievementsGallery>.win-listview, .compareActivitiesGallery>.win-listview
+{
+    height: 100%;
+    width: 100%
+}
+.friendsGallery .win-listview .win-surface
+{
+    overflow: visible
+}
+.miniSocialGallery .win-listview
+{
+    width: 164px;
+    height: 100%
+}
+.socialSummaryGallery .win-listview
+{
+    width: 340px;
+    height: 450px;
+    margin-top: 11px
+}
+.friendsSummaryGallery, .friendsSummaryGallery .win-listview
+{
+    width: 216px;
+    height: 276px
+}
+.compareActivitiesGallery .win-item
+{
+    width: 187px;
+    height: 505px
+}
+@media screen and (min-height: 1080px)
+{
+    .compareActivitiesGallery .win-item
+    {
+        width: 308px;
+        height: 675px
+    }
+}
+.socialSummaryGallery .win-item
+{
+    margin: 0 5px 5px 0;
+    width: 162px;
+    height: 220px
+}
+.achievementsGallery .win-item
+{
+    width: 295px;
+    height: 165px
+}
+.miniSocialGallery .win-item
+{
+    margin: 2px 2px 2px 2px;
+    width: 50px;
+    height: 50px
+}
+.activityGallery .win-item
+{
+    margin: 0 10px 18px 0;
+    width: 137px;
+    height: 220px
+}
+.friendsSummaryGallery .win-item
+{
+    margin: 0 5px 5px 0;
+    width: 64px;
+    height: 64px
+}
+.nowPlayingPlaylistGalleryViewSnapped .win-selectionbackground, .nowPlayingPlaylistGalleryView .win-selectionbackground, .achievementsGallery .win-selectionbackground, .achievementsGalleryControl .win-selectionbackground, .friendsGallery .win-selectionbackground, .compareActivitiesGallery .win-selectionbackground, .collectionPage .win-selectionbackground, .marketplaceGallery .win-selectionbackground, .immersiveDetailsGallery .win-selectionbackground, .searchGalleryView .win-selectionbackground, .popOverList .win-selectionbackground, .removed
+{
+    display: none
+}
+.popOverList .win-selected.win-container .win-selectionborder
+{
+    border-width: 1px;
+    border-style: solid
+}
+.friendsGallery .win-item
+{
+    overflow: visible
+}
+.miniSocialGallery .win-item
+{
+    overflow: hidden
+}
+.detailsGamesGallery .win-item, .detailsAlbumsGallery .win-item, .detailsTVGallery .win-item
+{
+    margin: 0;
+    overflow: hidden;
+    width: 369px;
+    height: 369px
+}
+.collectionPage .win-item, .marketplacePage .win-item, .searchGalleryView .win-item, .marketplaceVideoSearchPage.noMarketplace .win-item
+{
+    width: 295px;
+    height: 165px
+}
+.video .flexHubPage .marketplacePage .win-item, .games .flexHubPage .marketplacePage .win-item
+{
+    width: auto;
+    height: 100%
+}
+.marketplaceVideoSearchPage .win-item, .marketplaceGamesSearchPage .win-item
+{
+    width: 100%;
+    height: 100%
+}
+.achievementsGallery .win-listview>.win-horizontal .win-container
+{
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 0
+}
+html[dir=rtl] .achievementsGallery .win-listview>.win-horizontal .win-container
+{
+    margin-right: 0;
+    margin-left: 5px
+}
+.compareActivitiesGallery .win-listview .win-viewport
+{
+    margin-left: 1px;
+    padding-left: 4px
+}
+html[dir=rtl] .compareActivitiesGallery .win-listview .win-viewport
+{
+    margin-left: 0;
+    margin-right: 1px;
+    padding-left: 0;
+    padding-right: 4px
+}
+.compareActivitiesGallery .win-listview>.win-horizontal .win-container
+{
+    margin-right: 5px;
+    margin-left: 0
+}
+html[dir=rtl] .compareActivitiesGallery .win-listview>.win-horizontal .win-container
+{
+    margin-right: 0;
+    margin-left: 5px
+}
+.achievementsGallery .achievementByDate
+{
+    width: 115px
+}
+.achievementsGallery .emptyGalleryContainer
+{
+    top: 4px;
+    right: 80px;
+    left: 120px
+}
+html[dir=rtl] .achievementsGallery .emptyGalleryContainer
+{
+    right: 120px;
+    left: 80px
+}
+.marketplacePage, .marketplaceGamesPage, .collectionPage
+{
+    height: 100%;
+    width: auto
+}
+.marketplacePage.marketplaceMoviePage, .marketplacePage.marketplaceTvPage, .marketplacePage.marketplaceVideoSearchPage, .marketplacePage.marketplaceGamesSearchPage
+{
+    width: calc(100vw)
+}
+.marketplaceGamesPage>.win-template, .marketplacePage:not(.musicPage)>.win-template, .collectionPage:not(.musicPage)>.win-template
+{
+    height: 100%
+}
+.collectionVideo, .collectionGames, .marketplace
+{
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr
+}
+.collectionVideoGalleryView, .marketplaceGalleryView
+{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1
+}
+.musicPage .thumbnailButtonPrimaryText, .inboxPage .thumbnailButtonPrimaryText, .collectionGamesGallery .thumbnailButtonPrimaryText, .collectionVideoGallery .thumbnailButtonPrimaryText, .detailsGamesGallery .thumbnailButtonPrimaryText, .detailsAlbumsGallery .thumbnailButtonPrimaryText, .detailsTVGallery .thumbnailButtonPrimaryText, .marketplaceGallery .thumbnailButtonPrimaryText
+{
+    padding-bottom: 1px
+}
+.detailsAlbumsGallery .thumbnailButtonPrimaryText
+{
+    margin-bottom: 4px
+}
+.searchGalleryView .albumThumbnail .thumbnailButtonImageHolder img
+{
+    min-height: 215px
+}
+.tvSeriesHeaderControl
+{
+    width: 215px;
+    height: 215px;
+    border-bottom: 1px solid
+}
+.tvSeriesHeaderControl .headerTitle
+{
+    position: absolute;
+    width: 200px;
+    top: 180px;
+    padding-left: 15px
+}
+.tvSeriesHeaderButtonFrame
+{
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0
+}
+.tvSeriesHeaderDetailsButton
+{
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    padding: 0;
+    margin: 2px;
+    padding-right: 13px;
+    padding-left: 13px;
+    border: none;
+    text-align: left;
+    outline: none
+}
+html[dir=rtl] .tvSeriesHeaderDetailsButton
+{
+    text-align: right
+}
+.musicPage .win-groupheader, .inboxPage .win-groupheader, .collectionVideoGallery .win-groupheader, .marketplaceGallery .win-groupheader, html[dir=rtl] .musicPage .win-groupheader, html[dir=rtl] .inboxPage .win-groupheader, html[dir=rtl] .collectionVideoGallery .win-groupheader, html[dir=rtl] .marketplaceGallery .win-groupheader
+{
+    margin-top: 4px;
+    padding: 0
+}
+.collectionPlaylistGroupHeader, .collectionVideoHeader, .collectionVideoTvHeader, .marketplaceAlbumGroupHeader, .marketplaceVideoHeader, .marketplaceVideoTvHeader
+{
+    position: relative;
+    width: 115px;
+    height: 215px;
+    bottom: 0;
+    margin-right: 5px;
+    padding: 0;
+    vertical-align: text-bottom
+}
+.videoHeaderLabel, .tvHeaderLabel
+{
+    position: absolute;
+    width: calc(100% - 30px);
+    height: auto;
+    bottom: 17px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 1px;
+    white-space: normal;
+    word-wrap: break-word
+}
+.collectionTVEpisodeSeriesPage .win-groupheader, .collectionTVSeasonSeriesPage .win-groupheader
+{
+    width: 215px;
+    height: 266px
+}
+.collectionGamesGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .musicPage .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .inboxPage .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .collectionVideoGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .immersiveDetailsGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .marketplaceGallery .win-listview:not(.win-selectionstylefilled) .win-selectionborder, .searchGalleryView .win-listview:not(.win-selectionstylefilled) .win-selectionborder
+{
+    border-style: solid;
+    border-width: 4px;
+    outline-style: solid;
+    outline-width: 1px
+}
+.marketplaceGalleryStudioLogo
+{
+    position: absolute;
+    top: -60px;
+    max-height: 60px;
+    max-width: 500px
+}
+html[dir=ltr] .marketplaceGalleryStudioLogo
+{
+    right: 80px
+}
+html[dir=rtl] .marketplaceGalleryStudioLogo
+{
+    left: 80px
+}
+.galleryHubStrip.isolateHubs .panelFragmentLoading
+{
+    display: none
+}
+.music .dashboardMyMusic .cardThumbnailButton, .music .searchGalleryView .win-item, .searchHubStrip .musicPanel1 .win-item, .searchHubStrip .musicPanel2 .win-item, .searchHubStrip .musicPanel3 .win-item, .searchHubStrip .musicPanel4 .win-item, .searchHubStrip .musicPanel5 .win-item, .searchHubStrip .musicPanel6 .win-item
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_Music.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+html[dir=rtl] .music .dashboardMyMusic .cardThumbnailButton, html[dir=rtl] .music .searchGalleryView .win-item, html[dir=rtl] .searchHubStrip .musicPanel1 .win-item, html[dir=rtl] .searchHubStrip .musicPanel2 .win-item, html[dir=rtl] .searchHubStrip .musicPanel3 .win-item, html[dir=rtl] .searchHubStrip .musicPanel4 .win-item, html[dir=rtl] .searchHubStrip .musicPanel5 .win-item, html[dir=rtl] .searchHubStrip .musicPanel6 .win-item
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_MusicRTL.png')
+}
+.dashboardMyVideo .movieThumbnail .cardThumbnailButton, .marketplaceMoviePage .win-item, .marketplaceVideoSearchPage .win-item .cardThumbnailButton, .searchHubStrip .videosPanel1 .win-item, .searchHubStrip .videosPanel2 .win-item, .flexHubPage .win-item .movieThumbnail .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_Video.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+html[dir=rtl] .dashboardMyVideo .movieThumbnail .cardThumbnailButton, html[dir=rtl] .marketplaceMoviePage .win-item, html[dir=rtl] .marketplaceVideoSearchPage .win-item .cardThumbnailButton, html[dir=rtl] .marketplaceGamesSearchPage .win-item .cardThumbnailButton, html[dir=rtl] .searchHubStrip .videosPanel1 .win-item, html[dir=rtl] .searchHubStrip .videosPanel2 .win-item, html[dir=rtl] .flexHubPage .win-item .movieThumbnail .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_VideoRTL.png')
+}
+.flexHubPage .win-item .videoFlexHubBigItem .cardThumbnailButton, .marketplaceVideoSearchPage .win-item .searchHCR .cardThumbnailButton, .marketplaceGamesSearchPage .win-item .searchHCR .cardThumbnailButton, html[dir=rtl] .flexHubPage .win-item .videoFlexHubBigItem .cardThumbnailButton, html[dir=rtl] .marketplaceVideoSearchPage .win-item .searchHCR .cardThumbnailButton, html[dir=rtl] .marketplaceGamesSearchPage .win-item .searchHCR .cardThumbnailButton
+{
+    background-image: none
+}
+.collectionVideoGallery .otherVideoThumbnail, .collectionVideoGallery .tvThumbnail
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_VideoSquare.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+.collectionVideoGallery .otherVideoThumbnail.moviePoster, .collectionVideoGallery .movieThumbnail
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_Video.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+html[dir=rtl] .collectionVideoGallery .otherVideoThumbnail, html[dir=rtl] .collectionVideoGallery .tvThumbnail
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_VideoSquareRTL.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+html[dir=rtl] .collectionVideoGallery .otherVideoThumbnail.moviePoster, html[dir=rtl] .collectionVideoGallery .movieThumbnail
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_VideoRTL.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+.dashboardMyVideo .otherVideoThumbnail .cardThumbnailButton, .dashboardMyVideo .tvThumbnail .cardThumbnailButton, .marketplaceTvPage .win-item, .tvCollectionPanel .collectionVideoGallery .win-item, .searchHubStrip .videosPanel3 .win-item, .searchHubStrip .videosPanel4 .win-item, .flexHubPage .win-item .tvThumbnail .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_VideoSquare.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+html[dir=rtl] .dashboardMyVideo .otherVideoThumbnail .cardThumbnailButton, html[dir=rtl] .dashboardMyVideo .tvThumbnail .cardThumbnailButton, html[dir=rtl] .marketplaceTvPage .win-item, html[dir=rtl] .tvCollectionPanel .collectionVideoGallery .win-item, html[dir=rtl] .searchHubStrip .videosPanel3 .win-item, html[dir=rtl] .searchHubStrip .videosPanel4 .win-item, html[dir=rtl] .flexHubPage .win-item .tvThumbnail .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_VideoSquareRTL.png')
+}
+.collectionGamesGallery .win-item, .dashboardMyGames .cardThumbnailButton, .games .dashboardPanel .cardThumbnailButton, .marketplaceGamesPage.xboxMarketplace .win-item, .marketplaceGamesSearchPage .win-item .cardThumbnailButton, .windowsMarketplace .win-surface .win-item, .xboxGamesContent .cardThumbnailButton, .searchHubStrip .gamesPanel1 .win-item, .searchHubStrip .gamesPanel2 .win-item, .flexHubPage .win-item .gameThumbnail .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_Games.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+.games .dashboardPanel.homeSpotlight .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_Games_dark.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+html[dir=rtl] .collectionGamesGallery .win-item, html[dir=rtl] .dashboardMyGames .cardThumbnailButton, html[dir=rtl] .games .dashboardPanel .cardThumbnailButton, html[dir=rtl] .marketplaceGamesPage.xboxMarketplace .win-item, html[dir=rtl] .marketplaceGamesSearchPage .win-item .cardThumbnailButton, html[dir=rtl] .windowsMarketplace .win-surface .win-item, html[dir=rtl] .xboxGamesContent .cardThumbnailButton, html[dir=rtl] .searchHubStrip .gamesPanel1 .win-item, html[dir=rtl] .searchHubStrip .gamesPanel2 .win-item, html[dir=rtl] .flexHubPage .win-item .gameThumbnail .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_GamesRTL.png')
+}
+html[dir=rtl] .games .homeSpotlight.dashboardPanel .cardThumbnailButton
+{
+    background-image: url('/Images/LoadingCardTemplateBg/LoadingCardTemplateBg_Games_darkRTL.png')
+}
+div:not(.songsGallery)>.nowPlayingPlaylistGalleryView.collectionMusic .win-item, div:not(.songsGallery)>.nowPlayingPlaylistGalleryViewSnapped.collectionMusic .win-item, div:not(.songsGallery)>.nowPlayingPlaylistGalleryViewSnappedFlipView.collectionMusic .win-item, html[dir=rtl] div:not(.songsGallery)>.nowPlayingPlaylistGalleryView.collectionMusic .win-item, html[dir=rtl] div:not(.songsGallery)>.nowPlayingPlaylistGalleryViewSnapped.collectionMusic .win-item, html[dir=rtl] div:not(.songsGallery)>.nowPlayingPlaylistGalleryViewSnappedFlipView.collectionMusic .win-item
+{
+    background-image: none
+}
+.compareActivitiesGallery .win-item
+{
+    background-image: url('/Images/LoadingCardTemplateBg/CompareGamesTemplateBg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+.collectionTVEpisodePage .win-listview .win-container, .collectionTVEpisodeSeriesPage .win-listview .win-container, .downloadDetailsEpisodeList .win-listview .win-container, .inlineDetailsEpisodeList .win-listview .win-container, .popOverList .win-listview .win-container
+{
+    background-image: none;
+    background-color: transparent
+}
+.musicPage.win-ui-dark .win-listview .win-vertical :not(.win-footprint).win-container, .inboxPage.win-ui-dark .win-listview .win-vertical :not(.win-footprint).win-container
+{
+    background-image: none
+}
+.noContentPaneDescription, .failedPanelDetailsMessage
+{
+    margin-top: 12px
+}
+html[dir=ltr] .noContentPaneDetails .actionLinkLabel, html[dir=ltr] .failedPanelDetailsLink .actionLinkLabel
+{
+    text-align: left
+}
+html[dir=rtl] .noContentPaneDetails .actionLinkLabel, html[dir=rtl] .failedPanelDetailsLink .actionLinkLabel
+{
+    text-align: right
+}

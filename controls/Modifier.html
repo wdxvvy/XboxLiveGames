@@ -1,0 +1,72 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <link rel="stylesheet" type="text/css" href="/Animations/animations.css" />
+        <link rel="stylesheet" type="text/css" href="/Animations/ShellAnimations.css" />
+        <title>Modifier Control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Controls/Modifier.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="modifierTemplate" data-win-control="WinJS.Binding.Template">
+            <div data-ent-event="click: onClicked; keydown: onKeyDown" data-ent-member="_modifierContainer" 
+                 class="modifierControl acc-keyboardFocusTarget win-focusable" 
+                 role="button">
+                <div class="modifierDescription label text-filterDescription" 
+                     data-win-bind="removeFromDisplay: descriptionLabelVisible MS.Entertainment.Utilities.toggleClassNameNegate"
+                     data-ent-member="labelDescription"></div>
+                <div class="modifierSelectedItem label text-filterTitle" 
+                     data-win-automationid="modifierSelectedItem" 
+                     data-ent-member="labelControl"></div>
+                <div class="dropDownArrowContainer" 
+                    data-ent-member="dropDownArrow">
+                    <div class="modifierDropDownArrow icon label text-weightHeavy" 
+                        data-win-automationid="modifierDropDownArrow" 
+                        data-win-control="MS.Entertainment.UI.Controls.Label" 
+                        data-win-options="{ text: MS.Entertainment.UI.Icon.downChevron }">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-ent-templateid="modifierPopupTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="modifierPopupScroller"
+                    data-ent-member="scroller"
+                    role="menu">
+                <div data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                     data-win-options="{itemTemplate: 'Controls/Modifier.html#modifierPopupEntry', animateIn: false, deferForLongLists: true }"
+                     data-ent-member="entryList"
+                     data-win-automationid="modifierItemsControl">
+                </div>
+
+            </div>
+        </div>
+
+        <div data-ent-templateid="modifierPopupEntry" data-win-control="WinJS.Binding.Template">
+            <div data-win-control="MS.Entertainment.UI.Controls.ModifierPopupEntry"
+                 data-win-bind="winControl.data: this">
+            </div>
+        </div>
+
+        <div data-ent-templateid="modifierPopupEntryTemplate" data-win-control="WinJS.Binding.Template">
+            <div data-ent-member="background"
+                 data-ent-event="click: onClicked"
+                 class="modifierPopupEntry win-focusable"
+                 data-win-automationid="modifierPopupEntry" 
+                 role="menuitem">
+                <div class="modifierEntryTextContainer">
+                    <div class="modifierPopupEntryLabel text-small"
+                         data-ent-member="text"
+                         data-win-automationid="modifierPopupEntryLabel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

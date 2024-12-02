@@ -1,0 +1,83 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Immersive</title>
+        <link rel="stylesheet" type="text/css" href="/styles/ImmersiveDetails.css" />
+        <link rel="stylesheet" type="text/css" href="/Styles/Immersive.css" />
+        <link rel="stylesheet" type="text/css" href="/Styles/Galleries.css" />
+        <link rel="stylesheet" type="text/css" href="/animations/ImmersiveDetailsAnimations.css" />
+
+        
+        <script src="/Controls/PopOver.js"></script>
+        <script src="/Controls/WebHostExperience.js"></script>
+        <script src="/Controls/MediaItemThumbnail.js"></script>
+        <script src="/Controls/GalleryThumbnail.js"></script>
+        <script src="/ViewModels/MediaItemModel.js"></script>
+        <script src="/Components/Marketplace.js"></script>
+        <script src="/Components/Shell/PurchaseHelpers.js"></script>
+        <script src="/Controls/PivotControls.js"></script>
+        
+        <script src="/Components/InlineDetails/BaseInlineDetails.js"></script>
+        <script src="/Components/InlineDetails/ActionButtonsControl.js"></script>
+
+        <script src="/Controls/listControls.js"></script>
+        <script src="/Controls/ImmersiveLayout.js"></script>
+
+        <script src="/Components/Immersive/Shared/BaseImmersiveSummary.js"></script>
+        <script src="/Components/Immersive/Shared/BaseImmersiveOverviewSummary.js"></script>
+        <script src="/Components/Immersive/Shared/RelatedItems.js"></script>
+        <script src="/ViewModels/Immersive/ImmersiveViewModels.js"></script>
+
+        
+        <script src="/ViewModels/Social/leaderboardViewModel.js"></script>
+        <script src="/viewmodels/social/social.js"></script>
+        <script src="/viewmodels/social/profilehydrator.js"></script>
+        <script src="/ViewModels/Social/ProfileComparer.js"></script>
+        <script src="/ViewModels/Social/CompareAchievements.js"></script>
+        <script src="/ViewModels/Games/ExtrasViewModel.js"></script>
+        <script src="/ViewModels/Games/RelatedViewModel.js"></script>
+        <script src="/Components/Immersive/Games/SplitHero.js"></script>
+        <script src="/Components/Immersive/Games/GameOverview.js"></script>
+        <script src="/Components/Immersive/Games/Extras.js"></script>
+        <script src="/Components/Immersive/Games/ModernExtras.js"></script>
+        <script src="/Components/Immersive/Games/Achievements.js"></script>
+        <script src="/Components/Immersive/Games/Leaderboards.js"></script>
+        <script src="/Components/Games/GamesConfirmationDialogs.js"></script>
+        <script src="/Components/Immersive/Games/GamesRelatedItems.js"></script>
+        <script src="/ViewModels/Games/GamesImmersiveViewModel.js"></script>
+    </head>
+    <body>
+        <div data-ent-templateid="immersivePivots" data-win-control="WinJS.Binding.Template">
+            
+            <div class="immersiveHeroPrimaryText text-immersiveHeroTitle" 
+                 data-win-bind="textContent: mediaName"></div>
+
+            <div class="immersivePivotsContainer">
+                <div data-ent-enteranimation="enterPage"
+                     data-ent-exitanimation="exitPage"
+                     data-win-control="MS.Entertainment.UI.Controls.ImmersivePivotControl"
+                     data-win-options="{ itemTemplate: '/Controls/ImmersiveLayout.html#pivotButtonTemplate', focusItemOnSelectedIndexChanged: false, }"
+                     data-win-automationid="hubNavigationContainer"
+                     data-win-bind="winControl.dataSource: frameViewModel.frames; winControl.selectedIndex: immersiveControl.currentFrameIndex;"
+                     role="tablist">
+                </div>
+            </div>
+        </div>
+        <div data-ent-templateid="immersiveTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="immersiveDetailsScrollContainer"
+                 data-ent-member="_scroller"
+                 role="region">
+                
+                <div class="immersiveDetailsContainer hideBackground win-ui-dark" role="region" aria-label=""
+                     data-win-options="{ useParentAsScrollContainer: true }"
+                     data-ent-member="immersiveControl"
+                     data-win-control="MS.Entertainment.UI.Controls.ImmersiveLayout"
+                     data-ent-hideanimation="immersiveDetailsHide"
+                     data-ent-showanimation="immersiveDetailsShow"
+                     data-win-bind="winControl.dataSource: frameViewModel.frames">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

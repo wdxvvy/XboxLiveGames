@@ -1,0 +1,111 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Social Page</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/queries/modelQueries.js"></script>
+
+    
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/expander.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/ViewModels/social/profileHydrator.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="../../Animations/SocialAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../Styles/Social.css" />
+    <link rel="Stylesheet" type="text/css" href="../../styles/Galleries.css" />
+
+</head>
+
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="dashboardProfilePanelTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="miniProfilePanelContainer" 
+            data-win-control="MS.Entertainment.Social.MiniProfileHubPanel"
+            data-win-options="{showAvatar: false,
+                avatarDisplay: MS.Entertainment.UI.Controls.avatarDisplay.image}"
+            data-win-bind="winControl.hub: hub">
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="dashboardFriendsPanelTemplate" data-win-control="WinJS.Binding.Template">
+        
+        <div data-win-control="MS.Entertainment.Social.MiniProfileFriendsPanel"
+            data-win-options="{ poppedAvatarClass: 'poppedOverAvatarDashboardPosition',
+                                inDashboard: true,
+                                friendButtonType: MS.Entertainment.Social.friendButtonType.none }"
+            class="miniFriendsPanelContainer"
+            data-win-bind="winControl.hub: hub">
+        </div>
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="profileDetailsPanelTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="miniProfilePanelContainer" 
+            data-win-control="MS.Entertainment.Social.MiniProfileHubPanel"
+            data-win-bind="winControl.hub: hub"
+            data-win-options="{ profilePageView: true }">
+        </div>
+    </div>
+    
+    
+    
+    
+    <div data-ent-templateid="profileFriendsPanelTemplate"
+        data-win-control="WinJS.Binding.Template">
+        
+        <div data-win-control="MS.Entertainment.Social.MiniProfileFriendsPanel"
+            class="miniFriendsPanelContainer profileFriendsPanelContainer"
+            data-win-bind="winControl.hub: hub"
+            data-win-options="{ currentUserAsFriend: true, poppedAvatarClass: 'poppedOverAvatarFriendProfilePosition' }">
+        </div>
+    </div>
+
+</body>
+
+</html>

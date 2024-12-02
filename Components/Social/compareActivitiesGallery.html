@@ -1,0 +1,336 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Compare Activities Gallery</title>
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    <script src="/Framework/endpoints.js"></script>
+    <script src="/Framework/uriFactory.js"></script>
+    <script src="/Framework/imageIdTypes.js"></script>
+    <script src="/Framework/imageLoader.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Framework/serviceLocator.js"></script>
+
+    
+    <script src="/Framework/Data/xhr.js"></script>
+    <script src="/Framework/Data/factory.js"></script>
+    <script src="/Framework/Data/query.js"></script>
+    <script src="/Framework/Data/list.js"></script>
+    <script src="/Framework/Data/xboxLive.js"></script>
+    <script src="/Framework/queryWatcher.js"></script>
+    <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+    <script src="/Framework/Data/queries/modelProperties.js"></script>
+    <script src="/Framework/Data/queries/modelQueries.js"></script>
+
+    
+    <script src="/Animations/GalleryAnimations.js"></script>
+    <script src="/Controls/GalleryControl.js"></script>
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/templateSelector.js"></script>
+
+    
+    <script src="/ViewModels/MediaItemModel.js"></script>
+
+    
+    <script src="/Components/ImmersiveDetails/ShowImmersiveDetailsAction.js"></script>
+
+        
+    <script src="/Controls/GalleryThumbnail.js"></script>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/ViewModels/Social/social.js"></script>
+    <script src="/ViewModels/Social/profileHydrator.js"></script>
+    <script src="/ViewModels/Social/profileComparer.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+    <script src="/Components/Social/compareActivitiesGallery.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/Animations/SocialAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/Social.css" />
+    <link rel="Stylesheet" type="text/css" href="/Styles/Galleries.css" />
+    <link rel="Stylesheet" type="text/css" href="/Styles/Images.css" />
+</head>
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="compareActivitiesPanelTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="compareActivitiesPanel"
+            data-win-control="MS.Entertainment.Social.CompareActivitiesGallery"
+            data-win-bind="winControl.secondaryUserXuid: dataContext.userXuid; 
+                           winControl.secondaryUserModel: dataContext.userModel;">
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid='compareActivitiesGalleryTemplate' data-win-control="WinJS.Binding.Template">
+        <div data-ent-member="container" class="compareActivitiesGalleryContainer">
+
+            <div class="compareHeaderContainer"
+                style="-ms-grid-column: 1; -ms-grid-row: 1;"
+                data-win-bind="winControl.primaryProfile: model.primaryProfile; 
+                    winControl.secondaryProfile: model.secondaryProfile;
+                    winControl.primaryActivitiesCount: model.primaryActivitiesCount;
+                    winControl.secondaryActivitiesCount: model.secondaryActivitiesCount"
+                data-win-control="MS.Entertainment.Social.CompareHeader">
+            </div>
+
+            
+            <div class="compareActivitiesGallery"
+                style="-ms-grid-column: 2; -ms-grid-row: 1;"
+                data-win-control="MS.Entertainment.UI.Controls.ListViewModelGalleryControl"
+                data-win-automationid="activitiesGallery"
+                data-ent-member="gallery"
+                data-win-options="{
+                    raisePanelReadyEvents: false,
+                    itemTemplate: 'Components/Social/compareActivitiesGallery.html#compareGameTileTemplate', 
+                    panelTemplate: 'MS.Entertainment.Pages.CompareGameActivityInlineDetails',
+                    panelOptions: { location: MS.Entertainment.Pages.BaseMediaInlineDetails.Location.collection },
+                    canInvokeForItem: MS.Entertainment.Social.CompareActivitiesGallery.canInvokeForItem,
+                    maxRows: 1,
+                    tap: MS.Entertainment.UI.Controls.GalleryControl.Tap.invokeOnly,
+                    emptyGalleryTemplate: 'Controls/GalleryControl.html#defaultEmptyGalleryNoMarginsTemplate',
+                    focusFirstItemOnPageLoad: true,
+                    backdropColor: '#EBEBEB' }"
+                data-win-bind="
+                    winControl.dataSource: activitiesDataSource;
+                    winControl.listViewModel: listViewModel;
+                    winControl.inlineExtraData: listViewModel;
+                    winControl.emptyGalleryModel: emptyGalleryModel;">
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    <div data-ent-templateid='compareHeaderTemplate' data-win-control="WinJS.Binding.Template">
+
+        <div class="compareGamesColumn">
+            <div class="compareHeaderTextContainer"
+                 style="-ms-grid-column: 1; -ms-grid-column-span: 3; -ms-grid-row: 1;">
+                <div style="-ms-grid-column: 2; -ms-grid-row: 3;"
+                     data-win-bind="removeFromDisplay: hasTwoProfiles MS.Entertainment.Utilities.toggleClassNameNegate;">
+                    <div class="compareHeaderText label text-medium"
+                         style="-ms-grid-column: 2; -ms-grid-row: 3;"
+                         data-win-bind="textContent: primaryProfile.gamerTag">
+                    </div>
+                    <div class="compareHeaderText label text-medium"
+                         style="-ms-grid-column: 2; -ms-grid-row: 4;"
+                         data-win-bind="textContent: String.id.IDS_SOCIAL_VERSUS_HEADER_STATIC MS.Entertainment.Formatters.formatStringId;">
+                    </div>
+                    <div class="compareHeaderText label text-medium"
+                         style="-ms-grid-column: 2; -ms-grid-row: 5;"
+                         data-win-bind="textContent: secondaryProfile.gamerTag">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gamerGameTileContainer"
+                 style="-ms-grid-column: 2; -ms-grid-row: 2;"
+                 data-win-control="MS.Entertainment.Social.GamerHeaderTile"
+                 data-win-bind="winControl.model: primaryProfile; winControl.totalActivities: primaryActivitiesCount">
+            </div>
+
+            <hr class="listDivider" style="-ms-grid-column: 2; -ms-grid-row: 4" />
+
+            <div class="gamerGameTileContainer"
+                 style="-ms-grid-column: 2; -ms-grid-row: 6;"
+                 data-win-control="MS.Entertainment.Social.GamerHeaderTile"
+                 data-win-bind="winControl.model: secondaryProfile; winControl.totalActivities: secondaryActivitiesCount">
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid='gamerHeaderTileTemplate' data-win-control="WinJS.Binding.Template">
+
+        <div class="compareGalleryDefaultText compareGalleryTile gamerHeaderTile"
+             style="-ms-grid-column: 2;">
+
+            <div class="gamerHeaderTileImage"
+                 style="-ms-grid-column: 1;"
+                 data-win-bind="winControl.uri: model.imageUri"
+                 data-win-control="MS.Entertainment.Social.MiniProfileImage">
+            </div>
+
+            <div class="gamerHeaderMetaData text-xSmall text-weightHeavy"
+                 style="-ms-grid-column: 3;">
+
+                <div class="label"
+                     tabindex="0"
+                     data-win-bind="textContent: model.gamerTag">
+                </div>
+
+                <div class="hiddenNarratorText">
+                    <div data-ent-member="gamerScoreLabel"></div>
+                    <div data-ent-member="totalActivitiesLabel"></div>
+                </div>
+
+                <div aria-hidden="true">
+                    
+                    <div class="compareGallerySecondaryMetaDataContainer">
+                        <div class="icon inlineGlyphSolid inlineGamerScoreIcon label"></div>
+                        <div class="label" data-win-bind="textContent: model.formattedGamerScore"></div>
+                    </div>
+
+                    
+                    <div class="compareGallerySecondaryMetaDataContainer">
+                        <div class="icon inlineGlyphSolid inlineGameIcon label"></div>
+                        <div class="label" data-win-bind="textContent: totalActivities MS.Entertainment.Formatters.formatDecimalNumber"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    
+    
+    
+    
+    <div data-ent-templateid='compareGameTileTemplate' data-win-control="WinJS.Binding.Template">
+
+        <div class="compareGamesColumn">
+            <div class="compareGameThumbnailContainer"
+                 style="-ms-grid-column: 2; -ms-grid-column-span: 2; -ms-grid-row: 1;">
+                <div class="compareGameThumbnail" style="-ms-grid-row: 2;">
+                    <div class="imageContainer">
+                        <img data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                             data-win-bind="winControl.target: data.media;"
+                             data-win-options="{desiredImageSize: {width: 278, height: 381},
+                                defaultImagePath: '',
+                                enableDelayInitialization: true}"
+                             data-ent-showanimation="fadeIn"
+                             class="imageHolder" />
+                    </div>
+
+                    <div class="primaryText label specificLineCount text-xSmall text-weightHeavy"
+                            data-win-bind="textContent: data.media.name;
+                                           removeFromDisplay: data.media.name MS.Entertainment.Utilities.toggleClassNameOnEmptyString;"></div>
+                </div>
+            </div>
+
+            
+            <div style="-ms-grid-column: 2; -ms-grid-row: 2">
+                <div class="gamerGameTile compareGalleryTile compareGalleryDefaultText"
+                     style="-ms-grid-column: 2;">
+
+                    
+                    <div class="compareGalleryNotPlayedMetaDataContainer"
+                         data-win-bind="removeFromDisplay: data.primaryUserActivity.lastPlayed MS.Entertainment.Utilities.toggleClassName">
+
+                        <div class="icon inlineGlyphSolid inlineLockIcon label"></div>
+
+                        <div class="compareGameMetaDataText label text-xSmall text-weightHeavy"
+                             data-win-bind="textContent: String.id.IDS_SOCIAL_GAME_NOT_PLAYED MS.Entertainment.Formatters.formatStringId">
+                        </div>
+
+                    </div>
+
+                    
+                    <div data-win-bind="hideFromDisplay: data.primaryUserActivity.lastPlayed MS.Entertainment.Utilities.toggleClassNameNegate">
+                        <div class="hiddenNarratorText">
+                            <div data-win-bind="textContent: data.primaryUserActivity.narratorGameProgress"></div>
+                        </div>
+
+                        <div aria-hidden="true">
+                            
+                            <div class="label text-xSmall text-weightHeavy" data-win-bind="textContent: data.primaryUserActivity.percentageProgress"></div>
+
+                            
+                            <div class="compareGallerySecondaryMetaDataContainer">
+                                <div class="icon inlineGlyphSolid inlineGamerScoreIcon label text-xSmall text-weightHeavy"></div>
+                                <div class="compareGameMetaDataText fractionProgressText label text-xSmall text-weightHeavy" data-win-bind="textContent: data.primaryUserActivity.gamerScoreProgress"></div>
+                            </div>
+
+                            
+                            <div class="compareGallerySecondaryMetaDataContainer">
+                                <div class="icon inlineGlyphSolid inlineAchievementsIcon label"></div>
+                                <div class="compareGameMetaDataText fractionProgressText label text-xSmall text-weightHeavy" data-win-bind="textContent: data.primaryUserActivity.achievementProgress"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="listDivider" style="-ms-grid-column: 2; -ms-grid-row: 4" />
+
+            
+            <div style="-ms-grid-column: 2; -ms-grid-row: 6">
+                <div class="gamerGameTile compareGalleryTile compareGalleryDefaultText"
+                     style="-ms-grid-column: 2;">
+
+                    
+                    <div class="compareGalleryNotPlayedMetaDataContainer"
+                         data-win-bind="removeFromDisplay: data.secondaryUserActivity.lastPlayed MS.Entertainment.Utilities.toggleClassName">
+
+                        <div class="icon inlineGlyphSolid inlineLockIcon label"></div>
+
+                        <div class="compareGameMetaDataText label text-xSmall text-weightHeavy"
+                             data-win-bind="textContent: String.id.IDS_SOCIAL_GAME_NOT_PLAYED MS.Entertainment.Formatters.formatStringId">
+                        </div>
+
+                    </div>
+
+                    
+                    <div data-win-bind="hideFromDisplay: data.secondaryUserActivity.lastPlayed MS.Entertainment.Utilities.toggleClassNameNegate">
+                        <div class="hiddenNarratorText">
+                            <div data-win-bind="textContent: data.secondaryUserActivity.narratorGameProgress"></div>
+                        </div>
+
+                        <div aria-hidden="true">
+                            
+                            <div class="label text-xSmall text-weightHeavy" data-win-bind="textContent: data.secondaryUserActivity.percentageProgress"></div>
+
+                            
+                            <div class="compareGallerySecondaryMetaDataContainer">
+                                <div class="icon inlineGlyphSolid inlineGamerScoreIcon label"></div>
+                                <div class="compareGameMetaDataText fractionProgressText label text-xSmall text-weightHeavy" data-win-bind="textContent: data.secondaryUserActivity.gamerScoreProgress"></div>
+                            </div>
+
+                            
+                            <div class="compareGallerySecondaryMetaDataContainer">
+                                <div class="icon inlineGlyphSolid inlineAchievementsIcon label"></div>
+                                <div class="compareGameMetaDataText fractionProgressText label text-xSmall text-weightHeavy" data-win-bind="textContent: data.secondaryUserActivity.achievementProgress"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

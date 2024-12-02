@@ -1,0 +1,42 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Games Confirmation Dialogs</title>
+
+        
+        <script src="/Framework/corefx.js"></script>
+        <script src="/Components/Games/GamesConfirmationDialogs.js"></script>
+
+        
+        <link rel="Stylesheet" type="text/css" href="/Styles/Games.css" />
+    </head>
+    <body>
+        
+        
+        
+        <div data-ent-templateid="pdlcConfirmationDialogTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="pdlcConfirmationMetadata" style="float: left; margin-right: 30px">
+                <img class="pdlcConfirmationThumbnail win-focusable"
+                    data-win-control="MS.Entertainment.UI.Shell.ImageControl" 
+                    data-win-bind="winControl.target: media;"
+                    data-ent-event="click: onGameDetailsClick; keydown: onGameDetailsKeyDown"
+                    data-win-options="{ desiredImageSize: {width: 75},
+                                        defaultImagePath: '' }"
+                    data-win-automationid="pickProviderMediaThumbnail"
+                    tabindex="0" />
+            </div>
+            <div class="label wrap"
+                 data-win-bind="textContent: messageText"></div>
+
+            <div class="webLinkContainer"
+                 data-win-bind="removeFromDisplay: webLinkText MS.Entertainment.Utilities.toggleClassName;">
+                <a class="win-focusable" 
+                   data-win-bind="textContent: webLinkText"
+                   data-ent-event="click: onGameDetailsClick; keydown: onGameDetailsKeyDown"
+                   tabindex="0"
+                   target="_blank"></a>
+            </div>
+        </div>
+    </body>
+</html>

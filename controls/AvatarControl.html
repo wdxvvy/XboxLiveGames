@@ -1,0 +1,65 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Avatar Control</title>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="/Controls/Controls.css" />
+    <link rel="stylesheet" type="text/css" href="../../Animations/SocialAnimations.css" />
+</head>
+<body>
+    <div data-ent-templateid="AvatarControlTemplate" data-win-control="WinJS.Binding.Template" >
+
+        <div data-ent-member="_container"
+            role="button"
+            data-ent-event="click: clickEvent;"
+            data-win-bind="style.width: width;
+                style.height: height">
+
+            
+            <div class="avatarElementContainer"
+                tabindex="-1"
+                data-ent-member="_avatarVideoContainer"
+                data-ent-event="
+                    click: passThroughMouseEvent;
+                    contextmenu: preventEvent">
+
+                <video class="avatarVideo imageResize"
+                    tabindex="-1"
+                    data-ent-member="_avatarVideoElement">
+                </video>
+
+            </div>
+
+            
+            <div class="avatarElementContainer avatarImageContainer"
+                tabindex="-1"
+                data-ent-event="click: passThroughMouseEvent"
+                data-ent-member="_avatarPictureContainer">
+
+                <div class="avatarImageShadow"></div>
+
+                <div class="avatarImage"
+                    tabindex="-1"
+                    role="button"
+                    data-win-control="MS.Entertainment.Social.MiniProfileImage"
+                    data-win-bind="winControl.uri: imageUri"
+                    data-win-options="{
+                        width: 'auto',
+                        height: '100%',
+                        defaultUri: MS.Entertainment.UI.Controls.AvatarControl.avatarShadowImageFallback,
+                        loadingUri: MS.Entertainment.UI.Controls.AvatarControl.avatarShadowImageFallback}">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

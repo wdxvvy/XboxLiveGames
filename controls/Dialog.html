@@ -1,0 +1,70 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <title>Dialog Control Template</title>
+
+        
+        <script src="/Framework/debug.js"></script>
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/utilities.js"></script>
+
+        
+        <script src="/Framework/shell.js"></script>   
+        <script src="/Framework/corefx.js"></script>
+
+        
+        <script src="/Controls/Overlay.js" ></script>
+        <script src="/Controls/Dialog.js" ></script>
+    </head>
+    <body>
+        <span data-ent-templateid="dialogButtonTemplate" data-win-control="WinJS.Binding.Template">
+            <button class="dialogButton acc-keyboardFocusTarget"
+                data-win-bind="type: buttonType; textContent: title; performClick: doExecute; removeFromDisplay: isHidden MS.Entertainment.Utilities.toggleClassName; defaultButton: isDefault MS.Entertainment.Utilities.toggleClassName; disabled: isDisabled;"
+                type="button"></button>
+        </span>
+
+        <div data-ent-templateid="dialogTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="wecDialog" data-win-automationid="wecDialog">
+                
+                <div class="overlayBackground"
+                     data-ent-member="overlayBackground"
+                     data-win-automationid="wecDialogBackground"></div>
+
+                
+                <div class="win-ui-light overlayContainer dialogContainerBackground" 
+                     data-win-bind="winControl.className: className MS.Entertainment.Utilities.appendClassName"
+                     data-ent-member="overlayContainer" role="dialog" aria-label="">
+
+                    <div class="dialogContainer" 
+                         data-win-bind="style.left: left; style.right: right" data-ent-member="dialogContainer">
+                        <form action="javascript:MS.Entertainment.UI.Controls.Dialog.dialogFormSubmit();"
+                              style="display: -ms-grid; -ms-grid-rows: auto 1fr 100px; -ms-grid-columns: 1fr;">
+                            
+                            <div class="dialogCaption text-medium" data-win-automationid="wecDialogCaption" 
+                                 data-win-bind="textContent: title;" style="-ms-grid-row: 1"></div>
+
+                            
+                            <div class="overlayContent dialogContent text-bodyContent"
+                                 data-ent-member="overlayContent"
+                                 data-win-automationid="wecDialogContainer"
+                                 style="-ms-grid-row: 2"></div>
+                
+                            
+                            <div class="dialogFooter" style="-ms-grid-row: 3"> 
+                                <div class="dialogButtons"
+                                    data-ent-member="_buttonList"
+                                    data-ent-event="click: _handleButtonClick"
+                                    data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                                    data-win-options="{itemTemplate: 'Controls/Dialog.html#dialogButtonTemplate', applyItemTemplate: MS.Entertainment.UI.Controls.Dialog.focusDefaultItemWhenCreated }"
+                                    data-win-automationid="wecDialogButtons">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

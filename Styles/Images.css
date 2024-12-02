@@ -1,0 +1,441 @@
+﻿/* Copyright (C) Microsoft Corporation. All rights reserved. */
+.imageGamerScore
+{
+    background-image: url("../images/gamerscore-icon.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    width: 24px;
+    height: 24px
+}
+.imageGamerScoreSmall
+{
+    background-image: url("../images/gamerscore-icon.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    width: 15px;
+    height: 15px
+}
+.imageErrorLight
+{
+    background-image: url("../images/ico_19x_Error_Light.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    width: 19px;
+    height: 19px
+}
+.imageSignOutSocialHubFriends
+{
+    background-image: url("../images/signout-social-hub-friends.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 875px;
+    height: 505px
+}
+.imageSignOutSocialHubFriendsWithShadow
+{
+    background-image: url("../images/signout-social-hub-friends+shadow.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 437px;
+    height: 505px
+}
+.imageMiniAvatars
+{
+    background-image: url("../images/mini-Avatars.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 103px;
+    height: 101px
+}
+.avatarImageShadow
+{
+    visibility: hidden;
+    background-image: url("../images/avatar_shadow.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+.imageSmallerGamerScore, .imageSmallerGamerScoreLight
+{
+    background-image: url("../images/gamerscore-icon.png");
+    background-repeat: no-repeat;
+    background-position: 50% 3px;
+    background-size: 18px 18px;
+    width: 18px;
+    height: 21px
+}
+.imageSmallerGamerScoreLight
+{
+    background-image: url("../images/gamerscore-icon_light.png")
+}
+.thumbnailButtonTextContainer
+{
+    background-image: url("../images/thumbnailTextGradient.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% 100%;
+    background-position: bottom;
+    background-clip: inherit
+}
+.streamingStatusIconDark
+{
+    background-image: url("/images/streaming_dark.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    padding-right: 5px
+}
+.panelShadowImage
+{
+    position: absolute;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    background-image: url("../images/floor_shadow.png");
+    background-size: 100% 100%;
+    background-position: bottom;
+    visibility: hidden
+}
+.avatarEditorRemoveItemImage
+{
+    background-image: url(../../images/AvatarEditor/remove_icon.png);
+    background-position: center;
+    background-repeat: no-repeat
+}
+.avatarEditorBodySizeButton
+{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0
+}
+.avatarEditorAverageButton
+{
+    background-image: url(../../images/AvatarEditor/body_control_average.png)
+}
+.avatarEditorColorTile
+{
+    background-image: url(../../images/AvatarEditor/colorTileGradientMask.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+.signInRetryRing
+{
+    background-image: url("../images/notification_retry_ring_dark.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 42px;
+    height: 42px
+}
+.signInRetrySpinner
+{
+    background-image: url("../images/notification_retry_spinner_dark.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 42px;
+    height: 42px
+}
+.externalLinkBackground
+{
+    background-image: url(/Images/link_asset.png);
+    background-repeat: no-repeat;
+    background-size: 19px 19px;
+    background-position: 10px center
+}
+.refreshButtonImage:hover
+{
+    background-image: url("../images/refresh_hover.png")
+}
+.refreshButtonImage:active
+{
+    background-image: url("../images/refresh_down.png")
+}
+.immersiveDetailsBackgroundGradient
+{
+    background-image: url("../images/immersive_details_background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+.immersiveDetailsBackgroundImageOverlay
+{
+    background-image: url("../images/NowPlaying/now_playing_mask.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+.immersiveTwoColumn .related.relatedArtists .horizontalListItem
+{
+    background-image: url("/Images/GenericIcons/ico_74x_GenericMusic_Large.scale-180.png");
+    background-repeat: no-repeat;
+    background-position: center -13px
+}
+.nowPlayingBrandingContainer .xboxIcon
+{
+    background-image: url("../images/NowPlaying/XenonSquare.png")
+}
+.nowPlayingBrandingContainer .xboxIconMaskAntialiasing
+{
+    background-image: url("../images/NowPlaying/XenonMaskAntialiasing.png")
+}
+.movieDetailsBackgroundImageShadow
+{
+    background-image: url("../images/floor_shadow.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+.companionConnectionDialog
+{
+    background-image: none
+}
+.companionSplashImage
+{
+    background-image: url("../images/XBL_COMP_Splash.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: auto;
+    height: 224px;
+    margin-bottom: 30px
+}
+.albumThumbnail .imageOverlay, .artistThumbnail .imageOverlay, .otherVideoThumbnail .imageOverlay, .songThumbnail .imageOverlay, .tvThumbnail .imageOverlay
+{
+    background-image: url("../images/standard_card_square_art_overlay.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% 100%
+}
+.immersiveViewMorePopOverContentLayout
+{
+    background-image: url("/images/immersive_details_viewMore_background_gradient.png");
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-size: 100% 100%
+}
+.xboxControls_switcherButton
+{
+    background-image: -ms-radial-gradient(center,#5ac01c 0%,#5ac01c 100%)
+}
+.xboxControls_switcherButton:active
+{
+    background-image: -ms-radial-gradient(center,#5ac01c 0%,#219403 100%);
+    transition-property: background-image;
+    transition-duration: .33s;
+    height: 110px;
+    width: 110px
+}
+.switcherButtonControllerSelected, .switcherButtonControllerSelected:hover, .switcherButtonControllerSelected:active, .switcherButtonControllerSelected:active:hover, .switcherButtonBrowserSelected, .switcherButtonBrowserSelected:hover, .switcherButtonBrowserSelected:active, .switcherButtonBrowserSelected:active:hover
+{
+    background-image: none
+}
+.switcherButtonGuideDisabled, .switcherButtonGuideDisabled:hover, .switcherButtonGuideDisabled:focus:active, .switcherButtonControllerDisabled, .switcherButtonControllerDisabled:hover, .switcherButtonControllerDisabled:focus:active, .switcherButtonControllerDisabled, .switcherButtonControllerDisabled:hover, .switcherButtonControllerDisabled:focus:active, .switcherButtonKeyboardDisabled, .switcherButtonKeyboardDisabled:hover, .switcherButtonKeyboardDisabled:focus:active, .switcherButtonBrowserDisabled, .switcherButtonBrowserDisabled:hover, .switcherButtonBrowserDisabled:focus:active
+{
+    background-color: #000;
+    background-image: none;
+    opacity: .45
+}
+.chatBubbleStatusImageContainer, .achievementGameDetailsThumbnail .imageContainer, .companion .related.activities .control-immersiveListViewItem .part-imageContainer, .compareGameThumbnail .imageContainer, .dashboardGridItemContent .thumbnailButton .imageContainer, .overview .metaDataContainer>.imageContainer, .popOverContentContainer .leftColumn .imageContainer, .popOver.activity .popoverSlideshow .win-item>.win-template, .searchHCR .imageContainer, .videoFlexHubBigItem .imageContainer, .gamesFlexHubBigItem .imageContainer, .musicFlexHubBigItem .imageContainer, .related .relatedHeroItem .imageContainer, .pickProviderItemImageContainer, .homeNowPlayingTilePoster.companion .homeNowPlayingArt, .activityOverlaySplash, .xboxXenonBackground, .activityOverlaySplashMetadataImageContainer, .music .horizontalListItem .thumbnailButton, .video2 .template-fullBleedThumbnail .imageContainer, .video2 .template-fullBleedCardThumbnail .imageContainer, .video2 .template-searchHCR .imageContainer, .music2 .dashboardMyMusic .cardThumbnailButton .imageContainer
+{
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center
+}
+.dashboardGridItemContent .thumbnailButton .imageContainer
+{
+    background-position-y: calc(50% - 21px)
+}
+.music .horizontalListItem .thumbnailButton
+{
+    background-position-y: 32%
+}
+.xboxXenonBackground
+{
+    background-size: auto 100%
+}
+.chatBubbleStatusImageContainer
+{
+    background-size: 30px auto
+}
+.pickProviderItemImageContainer
+{
+    background-size: 40px auto
+}
+.chatBubbleStatusImageContainer, .companionFeaturedGamesPanel .dashboardGridItemContent .thumbnailButton .imageContainer, .companion .companionQuickplay .gameThumbnail.disableClick .imageHolder, .games .dashboardGridItemContent .thumbnailButton .imageContainer, .overview.game .metaDataContainer>.imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericGames_Small.png")
+}
+.achievementGameDetailsThumbnail .imageContainer, .companionFeaturedGamesPanel .dashboardGridItemContent.medium .thumbnailButton .imageContainer, .companion .popOver.game .imageContainer, .compareGameThumbnail .imageContainer, .games .dashboardGridItemContent.medium .thumbnailButton .imageContainer, .games .popOverContentContainer .leftColumn .imageContainer, .games .searchHCR .imageContainer, .gamesFlexHubBigItem .imageContainer, .homeNowPlayingTilePoster.companion .homeNowPlayingArt, .homeNowPlayingTilePoster.companion .homeNowPlayingArt.gameThumbnailVisible, .related.games .relatedHeroItem .imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericGames_Medium.png")
+}
+.companionFeaturedGamesPanel .dashboardGridItemContent.large .thumbnailButton .imageContainer, .games .dashboardPanel:not(.homeSpotlight) .dashboardGridItemContent.large .thumbnailButton .imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericGames_Large.png")
+}
+.companionFeaturedMusicPanel .dashboardGridItemContent .thumbnailButton .imageContainer, .music .dashboardGridItemContent .thumbnailButton .imageContainer, .overview.artist .metaDataContainer>.imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericMusic_Small.png")
+}
+.musicFlexHubBigItem .imageContainer, .music .dashboardGridItemContent.medium .thumbnailButton .imageContainer, .music .horizontalListItem .thumbnailButton, .music2 .dashboardGridItemContent .thumbnailButton .imageContainer, .music2 .dashboardMyMusic .cardThumbnailButton .imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericMusic_Medium.png")
+}
+.companionFeaturedMusicPanel .dashboardGridItemContent.large .thumbnailButton .imageContainer, .music .dashboardGridItemContent.large .thumbnailButton .imageContainer, .related.albums .relatedHeroItem .imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericMusic_Large.png")
+}
+.activityOverlaySplashMetadataImageContainer, .popOver.activity .leftColumn .imageContainer, .popOver.activity .popoverSlideshow .win-item>.win-template
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericSmartGlass_Medium.png")
+}
+.companion .related.activities .control-immersiveListViewItem .part-imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericSmartGlass_Large.png")
+}
+.activityOverlaySplash
+{
+    background-image: url("../images/GenericIcons/ico_GenericSmartGlass_L3_Hero.png")
+}
+.companionFeaturedMoviesPanel .dashboardGridItemContent .thumbnailButton .imageContainer, .movie .overview .metaDataContainer>.imageContainer, .pickProviderItemImageContainer, .tv .overview .metaDataContainer>.imageContainer, .video .dashboardGridItemContent .thumbnailButton .imageContainer, .video2 .template-fullBleedCardThumbnail .imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericVideo_Small.png")
+}
+.companion .popOver.movie .imageContainer, .companion .popOver.tv .imageContainer, .homeNowPlayingTilePoster.companion .homeNowPlayingArt.movieThumbnailVisible, .homeNowPlayingTilePoster.companion .homeNowPlayingArt.tvThumbnailVisible, .related.movies .relatedHeroItem .imageContainer, .related.seasons .relatedHeroItem .imageContainer, .video .dashboardGridItemContent.medium .thumbnailButton .imageContainer, .video .popOverContentContainer .leftColumn .imageContainer, .video .searchHCR .imageContainer, .videoFlexHubBigItem .imageContainer, .video2 .template-fullBleedThumbnail .imageContainer, .video2 .template-searchHCR .imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericVideo_Medium.png")
+}
+.companionFeaturedMoviesPanel .dashboardGridItemContent.large .thumbnailButton .imageContainer, .video .dashboardGridItemContent.large .thumbnailButton .imageContainer
+{
+    background-image: url("../images/GenericIcons/ico_74x_GenericVideo_Large.png")
+}
+.xboxXenonBackground
+{
+    background-image: url("../images/Companion/XboxXenon_Background.png")
+}
+.companion .dashboardGridItemContent.action .thumbnailButton .imageContainer, .dashboardGridItemContent .thumbnailButton.adThumbnail .imageContainer, .games .dashboardPanel.homeSpotlight .dashboardGridItemContent.large .thumbnailButton .imageContainer
+{
+    background-image: none
+}
+.cloudMatchIcon .overlayContainer.dialogContainerBackground, .cloudMatchOptIn .overlayContainer.dialogContainerBackground, .cloudGrovelInfo .overlayContainer.dialogContainerBackground
+{
+    background-image: url("../images/CloudDialog/bg-gradient-cloud-dialog.png");
+    background-repeat: repeat-x
+}
+.cloudInfoImage
+{
+    background-image: url("../images/CloudDialog/Cloud_3Screen_Dialog.png");
+    background-repeat: no-repeat;
+    background-position-x: -65px;
+    background-position-y: top;
+    background-size: 1075px;
+    overflow: visible;
+    -ms-grid-row: 1
+}
+.cloudGrovelInfoContentContainer .cloudInfoImage
+{
+    height: 325px
+}
+.cloudLegendIcon
+{
+    background-position-y: bottom;
+    background-repeat: no-repeat
+}
+.cloudLegendIcon.streamingOnly
+{
+    background-image: url(../images/CloudDialog/streaming.png)
+}
+.cloudLegendIcon.localAndStreaming
+{
+    background-image: url("../images/CloudDialog/cloud.png")
+}
+.cloudNotification {
+    background-image: url(../images/cloudNotificationHeaderBlue1.png)
+}
+.cloudNotification.localContent {
+    background-image: url(../images/cloudNotificationHeaderBlue2.png)
+}
+.cloudNotification.partialContent {
+    background-image: url(../images/cloudNotificationHeaderBlue3.png)
+}
+.cloudNotification.cloudContent {
+    background-image: url(../images/cloudNotificationHeaderBlue4.png)
+}
+@media screen and (max-height: 800px)
+{
+    .cloudInfoImage, .cloudGrovelInfoContentContainer .cloudInfoImage
+    {
+        background-position-x: center;
+        background-position-y: top;
+        background-size: cover;
+        height: 260px
+    }
+}
+@media screen and (-ms-high-contrast)
+{
+    .albumThumbnail .imageOverlay, .artistThumbnail .imageOverlay, .otherVideoThumbnail .imageOverlay, .songThumbnail .imageOverlay, .tvThumbnail .imageOverlay
+    {
+        display: none
+    }
+    .avatarEditorBodySizeButton
+    {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+    .signInRetryRing
+    {
+        background-image: url("../images/notification_retry_ring_light.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: transparent;
+        z-index: 1
+    }
+    .signInRetrySpinner
+    {
+        background-image: url("../images/notification_retry_spinner_light.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: transparent;
+        z-index: 2
+    }
+}
+@media screen and (-ms-high-contrast: black-on-white)
+{
+    .avatarEditorAverageButton:hover, .avatarEditorAverageButton:focus
+    {
+        background-image: url(../../images/AvatarEditor/contrast-black/body_control_average.contrast-black.png)
+    }
+    .win-container:hover .avatarEditorRemoveItemImage, .win-container.win-focused .avatarEditorRemoveItemImage
+    {
+        background-image: url(../../images/AvatarEditor/contrast-black/remove_icon.contrast-black.png)
+    }
+    .signInRetryRing
+    {
+        background-image: url("../images/notification_retry_ring_dark.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: transparent;
+        z-index: 1
+    }
+    .signInRetrySpinner
+    {
+        background-image: url("../images/notification_retry_spinner_dark.png");
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: transparent;
+        z-index: 2
+    }
+}
+@media screen and (-ms-high-contrast: white-on-black)
+{
+    .avatarEditorAverageButton:hover, .avatarEditorAverageButton:focus
+    {
+        background-image: url(../../images/AvatarEditor/contrast-white/body_control_average.contrast-white.png)
+    }
+    .win-container:hover .avatarEditorRemoveItemImage, .win-container.win-focused .avatarEditorRemoveItemImage
+    {
+        background-image: url(../../images/AvatarEditor/contrast-white/remove_icon.contrast-white.png)
+    }
+}

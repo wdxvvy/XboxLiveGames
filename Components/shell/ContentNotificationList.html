@@ -1,0 +1,67 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/Controls/controls.css" />
+        <title>EditBox Control Template</title>
+        <script src="/Framework/corefx.js"></script>
+
+        <script src="/Controls/listControls.js"></script>
+        <script src="/Controls/Label.js"></script>
+    </head>
+    <body>
+        
+        <div data-ent-templateid="contentNotificationListTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="contentNotificationListItems" data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                 data-win-bind="winControl.dataSource: source"
+                 data-win-options="{itemTemplate: 'Components/Shell/ContentNotificationList.html#contentNotificationListItemTemplate'}"
+                 data-win-automationid="contentNotificationsList">
+            </div>
+        </div>
+
+        
+        <div data-ent-templateid="contentNotificationListItemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="contentNotificationListItemWrapper">
+                <div class="contentNotificationListIcon icon"
+                    data-win-bind="hidden : icon MS.Entertainment.Utilities.toggleClassNameNegate;
+                                   textContent: icon">
+                </div>
+                <div class="contentNotificationListItemDescription"
+                    data-win-bind="contentNotificationListItemDescriptionNoIcon : icon MS.Entertainment.Utilities.toggleClassNameNegate">
+                    <span class="label text-bodyContent"
+                          data-win-control="MS.Entertainment.UI.Controls.Label"
+                          data-win-bind="winControl.text: longText"
+                          data-win-options="{wrap: true}">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div data-ent-templateid="contentNotificationListImagesItemTemplate" data-win-control="WinJS.Binding.Template">
+            <div class="contentNotificationListImagesWrapper">
+                <div style="-ms-grid-row: 1; -ms-grid-row-align: center;">
+                    <span class="label text-bodyContent"
+                          data-win-control="MS.Entertainment.UI.Controls.Label"
+                          data-win-bind="winControl.text: longText"
+                          data-win-options="{wrap: true}">
+                    </span>
+                </div>
+                <div style="-ms-grid-row: 2; -ms-grid-row-align: center;"
+                     data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+                     data-win-bind="winControl.dataSource: params;"
+                     data-win-options="{itemTemplate: 'Components/Shell/ContentNotificationList.html#contentNotificationImageTemplate'}"
+                     data-win-automationid="contentNotificationsList">
+                </div>
+            </div>
+        </div>
+
+        
+        <div data-ent-templateid="contentNotificationImageTemplate" data-win-control="WinJS.Binding.Template">
+            <div data-win-control="MS.Entertainment.UI.Controls.ImageActionLink"
+                 data-win-bind="winControl.action: action; winControl.imageUrl: imageUrl; winControl.text: toolText; winControl.holdAction: holdAction; title: toolText;"
+                 class="contentNotificationImage"></div>
+        </div>
+
+    </body>
+</html>

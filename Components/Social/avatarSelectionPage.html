@@ -1,0 +1,137 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Avatar Selection Page</title>
+
+    <script src="/Framework/debug.js"></script>
+
+    
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+
+    
+    <script src="/Framework/shell.js"></script>
+    <script src="/Framework/corefx.js"></script>
+
+    
+    <script src="/Controls/Label.js"></script>
+    <script src="/Controls/Link.js"></script>
+    <script src="/Controls/AvatarControl.js"></script>
+    <script src="/Controls/listControls.js"></script>
+
+    
+    <script src="/Animations/SocialAnimations.js"></script>
+    <script src="/ViewModels/social/social.js"></script>
+    <script src="/Components/Social/miniProfile.js"></script>
+
+    
+    <link rel="stylesheet" type="text/css" href="../../Animations/SocialAnimations.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/Animations.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/Social.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/Colors.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/Fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/Images.css" />
+    <link rel="stylesheet" type="text/css" href="../../Controls/Controls.css" />
+
+</head>
+<body>
+
+    
+    
+    
+    <div data-ent-templateid="avatarSelectionPageHost"
+        data-win-control="WinJS.Binding.Template">
+
+        <div class="avatarSelectionPageHost"
+            data-win-control="MS.Entertainment.Social.AvatarSelectionPage">
+        </div>
+
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="avatarSelectionPageTemplate"
+        data-win-control="WinJS.Binding.Template">
+
+        
+        <div class="avatarSelectionGallery"
+            style="-ms-grid-column: 1; -ms-grid-row: 1;"
+            data-win-control="MS.Entertainment.UI.Controls.ItemsControl"
+            data-ent-member="galleryView"
+            data-win-automationid="selectAvatarGallery"
+            data-win-options="{
+                itemTemplate: 'Components/Social/avatarSelectionPage.html#generitarItemTemplate',
+                containerStyle: MS.Entertainment.UI.Controls.ItemsControl.ContainerStyles.horizontalFlow }"
+            data-win-bind="
+                winControl.dataSource: generitarModels">
+        </div>
+
+        
+        <div class="avatarSelectionRefreshButtonContainer"
+             style="-ms-grid-column: 2; -ms-grid-row: 1;">
+            <div class="avatarSelectionRefreshButton"
+                 data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                 data-ent-event="click: refresh"
+                 data-win-bind="winControl.isDisabled: disableRefresh"
+                 data-win-options="{icon: WinJS.UI.AppBarIcon.sync, 
+                    tabIndex: 0}">
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="generitarItemTemplate"
+        data-win-control="WinJS.Binding.Template">
+
+        <div data-win-control="MS.Entertainment.Social.GeneritarControl"
+            data-win-bind="winControl.model: instance">
+        </div>
+
+    </div>
+
+    
+    
+    
+    <div data-ent-templateid="generitarControlTemplate"
+        data-win-control="WinJS.Binding.Template">
+
+        <div class="avatarSelectionItemContainer">
+
+            <div class="avatarSelectionItem win-focusable"
+                style="-ms-grid-column: 1; -ms-grid-row: 1"
+                tabindex="0"
+                data-win-control="MS.Entertainment.UI.Controls.AvatarControl"
+                data-ent-member="avatar"
+                data-ent-event="click: toggleSelection;"
+                data-win-options="{
+                    width: '270px',
+                    height: '700px',
+                    renderMode: MS.Entertainment.UI.Controls.avatarRenderMode.play,
+                    gamerTag: MS.Entertainment.UI.Controls.AvatarControl.genericGamerTag,
+                    alwaysAnimate: true }"
+                data-win-bind="winControl.generitarGender: model.gender">
+            </div>
+
+            <div class="avatarSelectionButton"
+                style="-ms-grid-column: 1; -ms-grid-row: 2"
+                data-ent-member="button"
+                data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                data-ent-event="click: commit;"
+                data-win-options="{ icon: WinJS.UI.AppBarIcon.accept,
+                    stringId: String.id.IDS_AVATAR_EDITOR_SELECT_GENERITAR,
+                    focusable: true}"
+                data-win-bind="
+                    hideFromDisplay: selected MS.Entertainment.Utilities.toggleClassNameNegate">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

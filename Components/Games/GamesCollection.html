@@ -1,0 +1,49 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Games Collection Page Template</title>
+        <script src="/Framework/Data/Augmenters/xboxLiveAugmenters.js"></script>
+        <script src="/Framework/Data/list.js"></script>
+        <script src="/Framework/Data/queries/modelProperties.js"></script>
+        <script src="/Framework/Data/queries/modelQueries.js"></script>
+        <script src="/Framework/Data/query.js"></script>
+        <script src="/Framework/queryWatcher.js"></script>
+        <script src="/Framework/stringids.js"></script>
+        <script src="/Framework/endpoints.js"></script>
+        <script src="/Framework/uriFactory.js"></script>
+        <script src="/Framework/imageIdTypes.js"></script>
+        <script src="/Framework/imageLoader.js"></script>
+        <script src="/Animations/GalleryAnimations.js"></script>
+        <script src="/Controls/GalleryControl.js"></script>
+        <script src="/Controls/Overlay.js"></script>
+
+        <script src="/ViewModels/Social/social.js"></script>
+        <script src="/ViewModels/Social/profileHydrator.js"></script>
+        <script src="/Components/Games/GamesCollection.js"></script>
+
+        <link rel="Stylesheet" type="text/css" href="../../styles/Galleries.css" />
+    </head>
+    <body>
+        
+        <div data-ent-templateid="gamesCollectionTemplate" data-win-control="WinJS.Binding.Template">
+            
+            <div  class="collectionGamesGallery collectionGames"
+                    data-win-control="MS.Entertainment.UI.Controls.GalleryControl"
+                    data-ent-member="_galleryView"
+                    data-win-options="{ tap: MS.Entertainment.UI.Controls.GalleryControl.Tap.invokeOnly,
+                                        selectionMode: MS.Entertainment.UI.Controls.GalleryControl.SelectionMode.none,
+                                        itemTemplate: 'Components/Games/GamesSharedTemplates.html#gameTemplateNoGenre', 
+                                        panelTemplate: 'MS.Entertainment.Pages.GameInlineDetails',
+                                        panelOptions: { location: MS.Entertainment.Pages.BaseMediaInlineDetails.Location.collection },
+                                        emptyGalleryTemplate: 'Controls/GalleryControl.html#listViewEmptyGalleryTemplate',
+                                        canInvokeForItem: MS.Entertainment.Pages.GamesCollection.canInvokeForItem,
+                                        invokeBehavior: MS.Entertainment.UI.Controls.GalleryControl.InvokeBehavior.popOver,
+                                        slotSize: { width: 295, height: 165 },
+                                        itemSize: { width: 295, height: 165 },
+                                        grouped: false,
+                                        focusFirstItemOnPageLoad: true }">
+            </div>
+        </div>
+    </body>
+</html>

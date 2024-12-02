@@ -1,0 +1,74 @@
+﻿<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>NowPlayingTransportControls</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/TransportControls.css" />
+
+    
+    <script src="/Framework/debug.js"></script>
+    <script src="/Framework/stringids.js"></script>
+    <script src="/Framework/utilities.js"></script>
+    
+    <script src="/Framework/corefx.js"></script>
+    <script src="/Controls/TransportControls/TransportControls.js"></script>
+</head>
+<body>
+    <div data-ent-templateid="transportControlsTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="nowPlayingTransportControlsContainer">
+            
+            <div class="nowPlayingTransportControlsPrevious nowPlayingTransportControlsSkipButton prevNextIconButton acc-keyboardFocusTarget"
+                    style="-ms-grid-row: 1;"
+                    data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                    data-win-options="{icon: WinJS.UI.AppBarIcon.previous, accessibilityStringId: String.id.IDS_TRANSPORT_CONTROLS_PREVIOUS_BUTTON}"
+                    data-ent-member="_skipBackButton"
+                    data-win-automationid="nowPlayingTransportControlsPrevious"
+                    data-ent-event="click: skipBackButtonClick"
+                    data-win-bind="removeFromDisplay: nowPlayingSkipBackVisible MS.Entertainment.Utilities.toggleClassNameNegate;
+                                   winControl.isDisabled: skipBackDisabled;
+                                   label: IDS_TRANSPORT_CONTROLS_PREVIOUS_BUTTON MS.Entertainment.Framework.AccUtils.setAriaAttributeFromStaticStringId">
+            </div>
+
+            
+            <div class="nowPlayingTransportControlsPlayPauseButton acc-keyboardFocusTarget playPauseIconButton"
+                data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                data-ent-member="_playPauseButton"
+                data-ent-event="click: playPauseButtonClick"
+                data-win-bind="
+                    nowPlayingTransportControlsPause: playVisible MS.Entertainment.Utilities.toggleClassNameNegate;
+                    nowPlayingTransportControlsPlay:  playVisible MS.Entertainment.Utilities.toggleClassName">
+            </div>
+
+            
+            <div class="nowPlayingTransportControlsNext nowPlayingTransportControlsSkipButton prevNextIconButton acc-keyboardFocusTarget"
+                    style="-ms-grid-row: 1;"
+                    data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                    data-win-options="{
+                        icon: WinJS.UI.AppBarIcon.next, 
+                        accessibilityStringId: String.id.IDS_TRANSPORT_CONTROLS_NEXT_BUTTON}"
+                    data-ent-member="_skipNextButton"
+                    data-win-automationid="appBarTransportControlsForward"
+                    data-ent-event="click: skipForwardButtonClick"
+                    data-win-bind="removeFromDisplay: nowPlayingSkipForwardVisible MS.Entertainment.Utilities.toggleClassNameNegate;
+                                   winControl.isDisabled: skipForwardDisabled;
+                                   label: IDS_TRANSPORT_CONTROLS_NEXT_BUTTON MS.Entertainment.Framework.AccUtils.setAriaAttributeFromStaticStringId">
+            </div>
+
+            
+            <div class="nowPlayingTransportControlsVolume nowPlayingTransportControlsVolumeButton volumeIconButton acc-keyboardFocusTarget"
+                    style="-ms-grid-row: 1; -ms-grid-column: 4;"
+                    data-win-control="MS.Entertainment.UI.Controls.IconButton"
+                    data-win-options="{
+                        icon: WinJS.UI.AppBarIcon.volume, 
+                        accessibilityStringId: String.id.IDS_TRANSPORT_CONTROLS_VOLUME_SLIDER_LABEL}"
+                    data-ent-member="_volumeButton"
+                    data-win-automationid="appBarTransportControlsVolume"
+                    data-ent-event="click: volumeButtonClick"
+                    data-win-bind="
+                        removeFromDisplay: nowPlayingVolumeVisible MS.Entertainment.Utilities.toggleClassNameNegate;
+                        winControl.isDisabled: volumeDisabled;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
