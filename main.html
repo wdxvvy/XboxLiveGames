@@ -1,9 +1,9 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
     
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    
+
     <script>
         window.msWriteProfilerMark("ent:Startup.ScriptsStart,StartTM");
 
@@ -49,7 +49,10 @@
     <link rel="stylesheet" type="text/css" href="..\..\Styles\Social.css" />
     <link rel="stylesheet" type="text/css" href="..\..\Styles\Inbox.css" />
     <link rel="stylesheet" type="text/css" href="..\..\Animations\SocialAnimations.css" />
+
+
     
+     
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
     <script src="/components/perftrack/perftrack.js"></script>
@@ -138,72 +141,225 @@
     <script src="/viewmodels/mediaitemmodel.js"></script>
     <script src="/components/immersivedetails/informationarchitecture.js"></script>
     <script src="/framework/interactionnotifier.js"></script>
-    <script src="/framework/accelstub.js"></script>
-    <script src="/components/favicons.js"></script>
-    <script src="/components/ratings.js"></script>
-    <script src="/framework/spotlight.js"></script>
-    <script src="/framework/landingpages.js"></script>
-    <script src="/framework/mediaelement.js"></script>
-    <script src="/framework/uisettings.js"></script>
-    <script src="/framework/mediaquery.js"></script>
-    <script src="/framework/mediaelementcontainer.js"></script>
-    <script src="/components/shell/mediaplaybackcontroller.js"></script>
-    <script src="/components/inbox/toolbar.js"></script>
-    <script src="/components/inbox/convertformails.js"></script>
-    <script src="/components/telemetry.js"></script>
-    <script src="/components/mediaplayer.js"></script>
-    <script src="/components/apps.js"></script>
-    <script src="/components/search.js"></script>
-    <script src="/components/shell/verticalnavigationbar.js"></script>
-    <script src="/components/ads.js"></script>
-    <script src="/components/sidebar.js"></script>
-    <script src="/components/actions.js"></script>
-    <script src="/components/shell/verticalnavbutton.js"></script>
-    <script src="/components/automation.js"></script>
-    <script src="/components/hub.js"></script>
-    <script src="/components/collections.js"></script>
-    <script src="/components/telemetryactions.js"></script>
-    <script src="/components/webhost.js"></script>
-    <script src="/components/game.js"></script>
-    <script src="/components/gameitem.js"></script>
-    <script src="/components/social.js"></script>
-    <script src="/components/profilesettings.js"></script>
-    <script src="/components/pinnedstate.js"></script>
-    <script src="/components/mediatoolbar.js"></script>
-    <script src="/components/news.js"></script>
-    <script src="/components/mediatoolbarcontainer.js"></script>
-    <script src="/components/history.js"></script>
-    <script src="/components/experiments.js"></script>
-    <script src="/components/productcatalog.js"></script>
-    <script src="/components/purchase.js"></script>
-    <script src="/components/shell/showspinner.js"></script>
-    <script src="/components/showpage.js"></script>
-    <script src="/components/currency.js"></script>
-    <script src="/components/channels.js"></script>
-    <script src="/components/searchcontext.js"></script>
-    <script src="/components/media.js"></script>
-    <script src="/components/pinnedcategory.js"></script>
-    <script src="/components/uicontroller.js"></script>
-    <script src="/components/navigate.js"></script>
-    <script src="/components/featuretoggle.js"></script>
-    <script src="/components/systemhelpers.js"></script>
-    <script src="/components/shell/abaplogger.js"></script>
-    <script src="/components/quickstatus.js"></script>
-    <script src="/components/mediatoolbar.js"></script>
-    <script src="/components/appstatus.js"></script>
-    <script src="/components/onboarding.js"></script>
-    <script src="/components/video.js"></script>
-    <script src="/components/table.js"></script>
-    <script src="/components/loader.js"></script>
-    <script src="/components/formatted.js"></script>
-    <script src="/components/usersettings.js"></script>
-    <script src="/components/visualfxtoggler.js"></script>
-    <script src="/components/configurator.js"></script>
-    <script src="/components/uierrorlogging.js"></script>
-    <script src="/components/errors.js"></script>
-    <script src="/components/accountsetup.js"></script>
-    <script src="/components/streamingdata.js"></script>
+    <script src="/framework/accUtils.js"></script>
+    <script src="/framework/data/xboxlive.js"></script>
+    <script src="/controls/templateselector.js"></script>
+    <script src="/viewmodels/home/spotlightviewmodel.js"></script>
+    <script src="/viewmodels/search/searchcontractviewmodel.js"></script>
+    <script src="/framework/upgradereminderdisplayer.js"></script>
+    <script src="/components/signin/signin.js"></script>
+    <script src="/components/signin/signinerrors.js"></script>
+    <script src="/controls/signincontrol.js"></script>
+    <script src="/controls/WebHostExperience.js"></script>
+    <script src="/components/Marketplace.js"></script>
+    <script src="/components/Shell/PurchaseHelpers.js"></script>
+    <script src="/framework/purchasehistoryservice.js"></script>
+    <script src="/controls/popover.js"></script>
+    <script src="/components/playback/playlist/playlist.js"></script>
+    <script src="/components/playback/concurrentstreamingrestriction.js"></script>
+    <script src="/components/playback/playlog.js"></script>
+    <script src="/components/playback/session/playbacksession.js"></script>
+    <script src="/components/companion/lrcsession.js"></script>
+    <script src="/components/session/sessionmgr.js"></script>
+    <script src="/components/accounts/createaccount.js"></script>
+    <script src="/components/accounts/accepttermsofservice.js"></script>
+    <script src="/framework/shortcutmanager.js"></script>
+    <script src="/framework/keyboardshortcuthandler.js"></script>
+    <script src="/components/shell/shellkeyboardshortcuts.js"></script>
+    <script src="/animations/hubstripanimations.js"></script>
+    <script src="/animations/socialanimations.js"></script>
+    <script src="/controls/hub.js"></script>
+    <script src="/components/shell/adcontrol.js"></script>
+    <script src="/controls/videoad.js"></script>
+    <script src="/controls/transportcontrols/transportcontrols.js"></script>
+    <script src="/controls/transportcontrols/seekbar.js"></script>
+    <script src="/controls/thumbnailbutton.js"></script>
+    <script src="/controls/link.js"></script>
+    <script src="/controls/IconButton.js"></script>
+    <script src="/controls/actionlist.js"></script>
+    <script src="/framework/imageidtypes.js"></script>
+    <script src="/controls/modifier.js"></script>
+    <script src="/controls/togglemodifier.js"></script>
+    <script src="/controls/failedpanel.js"></script>
+    <script src="/animations/animations.js"></script>
+    <script src="/viewmodels/command.js"></script>
+    <script src="/controls/libraryfeaturedcontent.js"></script>
+    <script src="/viewmodels/social/sharefactory.js"></script>
+    <script src="/viewmodels/social/sharesender.js"></script>
+    <script src="/viewmodels/social/sharehost.js"></script>
+    <script src="/framework/launchappaction.js"></script>
+    <script src="/components/immersivedetails/showimmersivedetailsaction.js"></script>
+    <script src="/components/social/sharetemplates.js"></script>
+    <script src="/framework/UserTimeTelemetryManager.js"></script>
+    <script src="/Components/Settings/settings.js"></script>
+    <script src="/Controls/ImageCollage.js"></script>
+    <script src="/ViewModels/PurchaseFlow/SmartBuyStateEngine.js"></script>
+    <script src="/Framework/DownloadInfo.js"></script>
+    <script src="/controls/dashboard.js"></script>
+    <script src="/controls/mediaitemthumbnail.js"></script>
+    <script src="/controls/gallerythumbnail.js"></script>
+    <script src="/framework/disabled.js"></script>
+    <script src="/viewmodels/purchaseflow/smartbuybuttons.js"></script>
+    <script src="/viewmodels/purchaseflow/SmartAppbarActions.js"></script>
+    <script src="/viewmodels/purchaseflow/smartbuystatehandlers.js"></script>
+    <script src="/components/inlinedetails/actionbuttonscontrol.js"></script>
+    <script src="/components/inlinedetails/baseinlinedetails.js"></script>
+    <script src="/controls/nowplaying/nowplaying.js"></script>
+    <script src="/MSAdvertisingJS/ads/ad.js"></script>
+    <script src="/Components/Search/TypeToSearchService.js"></script>
+    <script src="/Controls/UpgradeTile.js"></script>
+    <script src="/components/playback/videoscrubber.js"></script>
+    <script src="/components/playback/closedcaptions/renderer.js"></script>
+    <script src="/components/playback/closedcaptions/presenter.js"></script>
+    <script src="/controls/arcprogress.js"></script>
+    <script src="/controls/pricelabel.js"></script>
+    <script src="/controls/games/gamesengageiconbutton.js"></script>
+    <script src="/controls/nowplaying/homenowplayingtile.js"></script>
+    <script src="/framework/ratingUtilities.js"></script>
+    <script src="/framework/data/augmenters/gameHydrators.js"></script>
+    <script src="/framework/data/augmenters/xboxLiveAugmenters.js"></script>
+    <script src="/framework/data/queries/libraryqueries.js"></script>
+    <script src="/framework/data/queries/marketplacequeries.js"></script>
+    <script src="/framework/data/queries/edsqueries.js"></script>
+    <script src="/framework/data/queries/spotlightqueries.js"></script>
+    <script src="/framework/data/queries/modelproperties.js"></script>
+    <script src="/framework/data/queries/modelqueries.js"></script>
+    <script src="/framework/data/queries/gamesqueries.js"></script>
+    <script src="/viewmodels/queryviewmodel.js"></script>
+    <script src="/viewmodels/social/social.js"></script>
+    <script src="/viewmodels/social/profilehydrator.js"></script>
+    <script src="/viewModels/social/profileComparer.js"></script>
+    <script src="/viewmodels/social/compareachievements.js"></script>
+    <script src="/viewmodels/social/leaderboardviewmodel.js"></script>
+    <script src="/viewmodels/social/socialDashboardHelper.js"></script>
+    <script src="/components/games/gamesFeatures.js"></script>
+    <script src="/controls/games/gameslibraryfeaturedcontent.js"></script>
+    <script src="/controls/avatarcontrol.js"></script>
+    <script src="/viewmodels/social/actions.js"></script>
+    <script src="/components/social/informationarchitecture.js"></script>
+    <script src="/viewmodels/games/gamesengageviewmodel.js"></script>
+    <script src="/viewmodels/games/gamesspotlight.js"></script>
+    <script src="/viewmodels/games/gamesspotlightviewmodel.js"></script>
+    <script src="/viewmodels/games/gameshub.js"></script>
+    <script src="/viewmodels/games/gameshubwindowspanel.js"></script>
+    <script src="/components/social/miniprofile.js"></script>
+    <script src="/viewmodels/social/socialbuzzsource.js"></script>
+    <script src="/viewmodels/games/gamescollectionviewmodel.js"></script>
+    <script src="/viewModels/games/gamesmarketplaceviewmodel.js"></script>
+    <script src="/components/Games/PurchaseGame.js"></script>
+    <script src="/components/Games/PurchaseHistory.js"></script>
+    <script src="/components/Games/AppServices.js"></script>
+    <script src="/components/games/gamesia.js"></script>
+    <script src="/components/games/GamesDemoModel.js"></script>
+    <script src="/components/inlinedetails/GamesInlineDetailsDemo.js"></script>
+    <script src="/components/inlinedetails/GameInlineDetails.js"></script>
+    <script src="/components/inlinedetails/GameExtraInlineDetails.js"></script>
+    <script src="/Components/Playback/VolumeController.js"></script>
+    <script src="/controls/transportcontrols/VolumeBar.js"></script>
+    <script src="/controls/expander.js"></script>
+    <script src="/components/social/editprofiledialog.js"></script>
+    <script src="/components/social/friendsgallery.js"></script>
+    <script src="/components/social/achievementgallery.js"></script>
+    <script src="/components/social/avatarselectionpage.js"></script>
+    <script src="/components/social/SocialDemoModel.js"></script>
+    <script src="/controls/editbox.js"></script>
+    <script src="/components/social/findfriends.js"></script>
+    <script src="/components/social/sendmessage.js"></script>
+    <script src="/controls/gallerygroupheader.js"></script>
+    <script src="/components/social/achievementthumbnailbutton.js"></script>
+    <script src="/components/games/gamessharedtemplatescontrols.js"></script>
+    <script src="/msadvertisingjs/ads/ad.js"></script>
+    <script src="/Components/Search/SearchView.js"></script>
+    <script src="/Components/Search/GamesSearchView.js"></script>
+    <script src="/ViewModels/Search/SearchViewModel.js"></script>
+    <script src="/ViewModels/Search/GamesHCRResultViewModel.js"></script>
+    <script src="/viewmodels/search/NewSearchViewModel.js"></script>
+    <script src="/viewmodels/search/GamesSearchViewModel.js"></script>
+
+    
+    <script src="/main.js"></script>
+    
+
+    
+    <script>
+        window.msWriteProfilerMark("ent:Startup.ScriptsStart,StartTM");
+    </script>
+
 </head>
 <body>
+    
+    <div id="htmlUnsnapped" class="hideFromDisplay">
+        <div class="mainParentGrid" data-win-automationid="contentContainer">            
+
+
+            <h1> Welcome to my website!! h1>
+
+            
+            <div class="mainContentGrid" style="-ms-grid-row: 2" id="pageContainer" data-win-automationid="pageContainer" role="main"></div>
+
+            
+            <header class="mainHeader" data-ent-id="MainHeader"
+                    data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                    data-win-options="{controlName: 'mainHeader'}">
+
+                    
+                    <div class="navigationWrapper tranFadeShort"
+                         data-win-automationid="navigationWrapper"
+                         data-ent-id="NavigationWrapper">
+                        <div class="navigationContainer" data-win-automationid="navigationContainer">
+                            <div class="win-ui-dark shellBackButtonContainer hideFromDisplay" data-ent-id="BackButton"
+                                 data-win-control="MS.Entertainment.UI.Framework.UserControl"
+                                 data-win-options="{controlName: 'backButton'}"
+                                 data-ent-showanimation="enterPage"
+                                 data-ent-hideanimation="exitPage"                                 
+								 onclick="MS.Entertainment.UI.Application.Helpers.navigateBack()">
+                                <button class="win-backbutton acc-keyboardFocusTarget"
+                                    data-win-automationid="shellBackButton"
+                                    tabindex="0">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="appNotifications"
+                         data-win-control="MS.Entertainment.UI.Framework.BindingBlock">
+                        <div class="appInfoNotification" 
+                             data-win-automationid="appNotification" 
+                             data-win-control="MS.Entertainment.UI.Controls.InfoNotification"
+                             data-ent-id="AppInfoNotification">
+                        </div>
+                        <div class="appCriticalNotification"
+                             data-win-automationid="appCriticalNotification" 
+                             data-win-control="MS.Entertainment.UI.Controls.CriticalNotification"
+                             data-ent-id="AppCriticalNotification">
+                        </div>
+                    </div>
+            </header>
+        </div>
+    </div>
+
+    
+    <div id="htmlSnapped" class="hideFromDisplay"></div>
+
+    
+    <div class="extendedSplashScreen">
+        
+        <img class="extendedSplashScreenImage" src="/Images/Tiles/XBL_GAMES_620x300_A.png" onload=""/>
+        <div class="extendedSplashScreenProgressContainer">
+            <progress class="extendedSplashScreenProgress win-medium win-ring"></progress>
+            <div class="extendedSplashScreenTitle"></div>
+            <div class="extendedSplashScreenMessage"></div>
+        </div>
+    </div>
+
+    
+    <div class="bottomAppBar "
+         data-win-control="WinJS.UI.AppBar" 
+         data-win-options="{placement:'bottom',layout:'custom'}"
+         data-win-automationid="bottomAppBar">
+        <div data-ent-id="BottomAppBar" data-win-control="MS.Entertainment.UI.Controls.BottomAppBar">
+        </div>
+    </div>
 </body>
 </html>
