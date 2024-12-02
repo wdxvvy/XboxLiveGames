@@ -52,11 +52,34 @@
     <link rel="stylesheet" type="text/css" href="..\..\Animations\SocialAnimations.css" />
 
     <style>
+      body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;  /* Sayfa yüksekliğini ayarlıyoruz */
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;  /* Resmi ve yazıyı dikeyde ortalar */
+            justify-content: center;
+        }
+	    
 h1 {
     font-family: Verdana, sans-serif;  /* Fontu Verdana olarak ayarlıyoruz */
     text-align: center;  /* Yazıyı ortaya alıyoruz */
     color: white;  /* Yazının rengini beyaz yapıyoruz */
 }
+
+ .profile-img {
+            width: 150px;  /* Resmin genişliği */
+            height: 150px;  /* Resmin yüksekliği */
+            border-radius: 50%;  /* Resmi yuvarlak yapmak için */
+            object-fit: cover;  /* Resmin doğru şekilde kesilmesini sağlarız */
+        }
     </style>
     
      
@@ -298,7 +321,10 @@ h1 {
     <div id="htmlUnsnapped" class="hideFromDisplay">
         <div class="mainParentGrid" data-win-automationid="contentContainer">            
 
+    <div class="container">
+        <img src="profil.jpg" alt="Profil Resmi" class="profile-img">
 
+		
             <h1> Welcome to my website!! </h1>
 
             
